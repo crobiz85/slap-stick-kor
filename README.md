@@ -24,6 +24,7 @@
     `translation/decoded-text-blocks.tsv`, `translation/decoded-anchored-text.tsv`,
     `translation/decoded-static-strings.tsv`에 추출
   - 후보 블록에는 오탐이 남아 있어 게임 화면 대조 전에는 패치 입력으로 사용하지 않음
+  - 검토용 대사 원고 240개를 `translation/script.tsv`로 분리했으며 한국어 칸은 비워 둠
 
 ## 작업 방향
 
@@ -37,7 +38,7 @@
 `translation/pointer-report.tsv`, `translation/anchored-text.tsv`, `translation/static-strings.tsv`,
 `translation/text-blocks-raw.tsv`, `translation/control-annotated.tsv`,
 `translation/decoded-text-blocks.tsv`, `translation/decoded-anchored-text.tsv`,
-`translation/decoded-static-strings.tsv`입니다.
+`translation/decoded-static-strings.tsv`, `translation/script.tsv`입니다.
 마지막 파일은 오탐이 포함된 연구용 후보 목록이므로 번역 원고로 사용하지 않습니다.
 
 ## 로컬 자료
@@ -57,6 +58,7 @@
 - `scripts/annotate_control_codes.py`: 확인 전 제어코드를 보수적으로 표시
 - `scripts/extract_font_test_codes.py`: 내장 폰트 테스트의 글리프 코드 목록 추출
 - `scripts/decode_japanese_strings.py`: 일본판 문자표·사전·제어코드로 후보 대사 해독
+- `scripts/build_script_catalog.py`: 해독 후보를 대화 단위 검토 원고로 정리
 
 도구 사용법과 출처는 `tools/README.md`에 기록합니다. 실행 파일 자체는 저장소에 올리지 않습니다.
 
