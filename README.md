@@ -13,6 +13,12 @@
 - 대사 추출: 구조 분석 진행 중
   - `CF + 3바이트 포인터 + CC` 참조 형식 확인
   - 포인터 참조 6개 확인, 유효한 고유 문자열 2개를 `translation/anchored-text.tsv`에 보존
+  - `$84:F7C2`의 16비트 포인터 표와 56개 `CC` 종료 문자열을
+    `translation/static-strings.tsv`로 원문 바이트 그대로 추출
+  - 반복되는 `C2/C3/CD/D1` 제어코드 후보를 `translation/control-codes.tsv`에 정리하고,
+    `translation/control-annotated.tsv`에 위치를 표시
+  - 내장 폰트 테스트 데이터에서 1바이트/2바이트 글리프 코드 후보를
+    `translation/font-test-codes.tsv`로 분리
   - 일본어 TBL/제어코드 해독 전이라 아직 한글 대사로 읽을 수 있는 단계는 아님
 
 ## 작업 방향
@@ -24,7 +30,8 @@
 5. 결과물은 원본 ROM을 요구하는 BPS/IPS 패치로 배포합니다.
 
 추출 작업의 구체적인 주소 범위와 순서는 `docs/extraction-plan.md`에 기록합니다. 현재 원시 분석 결과는
-`translation/pointer-report.tsv`, `translation/anchored-text.tsv`, `translation/text-blocks-raw.tsv`입니다.
+`translation/pointer-report.tsv`, `translation/anchored-text.tsv`, `translation/static-strings.tsv`,
+`translation/text-blocks-raw.tsv`, `translation/control-annotated.tsv`입니다.
 마지막 파일은 오탐이 포함된 연구용 후보 목록이므로 번역 원고로 사용하지 않습니다.
 
 ## 로컬 자료
@@ -36,6 +43,13 @@
 - `United_Script_Editor_v241015.1.exe`: 스크립트 편집 보조
 - `6502_65816_Assembler_v1.1.zip`: 65816 어셈블러 자료
 - `le120.zip`: 번역 작업 관련 보조 자료로 보이며, 내용 확인 후 필요한 파일만 사용
+
+분석 스크립트는 다음과 같습니다.
+
+- `scripts/analyze_script_pointers.py`: 포인터 참조와 `CC` 종료 후보 추출
+- `scripts/extract_static_strings.py`: `$84:F7C2` 포인터 표 기반 정적 문자열 추출
+- `scripts/annotate_control_codes.py`: 확인 전 제어코드를 보수적으로 표시
+- `scripts/extract_font_test_codes.py`: 내장 폰트 테스트의 글리프 코드 목록 추출
 
 도구 사용법과 출처는 `tools/README.md`에 기록합니다. 실행 파일 자체는 저장소에 올리지 않습니다.
 

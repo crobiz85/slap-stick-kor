@@ -1,0 +1,9 @@
+# Candidate control codes for Slap Stick (J) text streams.
+# A ? means the meaning still needs emulator/runtime confirmation.
+code	length	current interpretation	evidence
+C0	1	dialog end?	Repeated at dialogue-like block tails; reported as dialog close in Robotrek US hacking notes
+C2 xx	2	runtime variable?	Repeated C2 00 near name-like dialogue; reported as player-name variable in Robotrek US hacking notes
+C3 xx	2	text color	C3 00/02/03 repeatedly bracket text; reported as white/yellow/pink in Robotrek US hacking notes
+CC	1	encoded-record end	Consistent terminator for pointer-anchored streams and static strings in this ROM
+CD	1	line break?	Repeated between short text segments; reported as line break in Robotrek US hacking notes
+D1	1	next page?	Repeated at page-like boundaries; reported as next dialogue page in Robotrek US hacking notes

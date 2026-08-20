@@ -10,6 +10,13 @@
 - HiROM 미러 주소를 파일 오프셋으로 변환할 수 있음
 - ROM 전체에서 이 패턴 6개 확인
 - 중복을 제거하고 `CC`까지 확인되는 고유 문자열 2개 확인
+- `$84:F7C2`부터 이어지는 16비트 포인터 56개와 `$84:F832`부터 이어지는
+  `CC` 종료 정적 문자열 56개 확인
+- 결과: `translation/static-strings.tsv`
+- `C2`, `C3`, `CD`, `D1`의 반복 패턴을 보수적으로 표시한
+  `translation/control-codes.tsv`, `translation/control-annotated.tsv` 생성
+- 내장 폰트 테스트 영역에서 1바이트 및 little-endian 2바이트 글리프 후보를
+  `translation/font-test-codes.tsv`로 추출
 - 결과: `translation/pointer-report.tsv`, `translation/anchored-text.tsv`
 - 휴리스틱 후보 167개는 코드와 데이터가 섞여 있으므로 `translation/text-blocks-raw.tsv`는 연구용으로만 사용
 
@@ -33,11 +40,17 @@ Data Crystal의 ROM map은 문자열 처리 코드와 스크립트 코드가 여
 
 ## 다음 작업
 
-1. 문자열 출력 루틴에서 `CD`, `D0-D8`, `C0`, `CC` 등의 제어코드 길이와 의미를 확정합니다.
-2. 폰트/문자 인덱스 영역을 확인해 일본어 TBL을 작성합니다.
+1. 정적 문자열을 읽는 호출부와 문자열 출력 루틴에서 `C0`, `C2`, `C3`, `CD`, `D0-D8`,
+   `CC` 등의 제어코드 길이와 의미를 확정합니다.
+2. 폰트/문자 인덱스 영역을 확인해 일본어 TBL을 작성합니다. 폰트 테스트의
+   2바이트 코드는 Shift-JIS 힌트를 함께 기록하지만, 실제 대화 스트림에
+   그대로 적용되는지는 실행 화면으로 검증합니다.
 3. 포인터가 가리키는 문자열부터 시험 해독하고, 게임 화면과 대조합니다.
 4. 같은 레코드 구조를 전체 스크립트 페이지에 적용해 누락·오탐을 제거합니다.
 5. 확인된 항목만 `translation/script.tsv`로 정리합니다.
+
+제어코드 후보를 비교할 때는 [Robotrek 프랑스어 번역 연구 글](https://romhack.org/viewtopic.php?t=817)을
+참고하되, 해당 글은 미국판/번역판 분석 메모이므로 일본판의 의미는 ROM과 실행 결과로 재확인합니다.
 
 처음부터 ROM을 확장하지 않습니다. 텍스트 공간이 실제로 부족한지 확인한 뒤, 필요할 때만
 `Lunar Expand`의 호환 ExHiROM 방식을 검토합니다. Lunar Expand 문서에도 RoboTrek이 해당
