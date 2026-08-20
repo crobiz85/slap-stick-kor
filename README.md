@@ -26,6 +26,9 @@
   - 후보 블록에는 오탐이 남아 있어 게임 화면 대조 전에는 패치 입력으로 사용하지 않음
   - 검토용 대사 원고 240개를 `translation/script.tsv`로 분리했으며
     초반 메뉴·이벤트 17개에는 `translation/korean-draft.tsv`의 한국어 초안을 덧씌움
+  - 일본판 폰트 위치와 반전 Game Boy 2BPP 형식을 확인하고, 초안에 필요한 한글 글리프
+    131자를 `translation/korean-glyph-map.tsv`로 생성
+  - 현재 초안 17개는 일본어 원문 슬롯보다 길어 모두 재배치 대상이며, 아직 ROM 패치는 만들지 않음
 
 ## 작업 방향
 
@@ -40,7 +43,8 @@
 `translation/text-blocks-raw.tsv`, `translation/control-annotated.tsv`,
 `translation/decoded-text-blocks.tsv`, `translation/decoded-anchored-text.tsv`,
 `translation/decoded-static-strings.tsv`, `translation/script.tsv`,
-`translation/korean-draft.tsv`입니다.
+`translation/korean-draft.tsv`, `translation/korean-glyph-map.tsv`,
+`translation/font-layout.tsv`입니다.
 마지막 파일은 오탐이 포함된 연구용 후보 목록이므로 번역 원고로 사용하지 않습니다.
 
 ## 로컬 자료
@@ -61,6 +65,9 @@
 - `scripts/extract_font_test_codes.py`: 내장 폰트 테스트의 글리프 코드 목록 추출
 - `scripts/decode_japanese_strings.py`: 일본판 문자표·사전·제어코드로 후보 대사 해독
 - `scripts/build_script_catalog.py`: 해독 후보를 대화 단위 검토 원고로 정리하고 한국어 초안을 병합
+- `scripts/render_font.py`: 일본판 2BPP 글꼴 영역을 미리보기 PNG로 렌더링
+- `scripts/build_korean_font.py`: 초안에서 한글 글리프를 뽑아 후보 코드·타일 바이트·미리보기 생성
+- `scripts/encode_translation_drafts.py`: 제어코드를 유지한 한글 바이트열과 원문 슬롯 길이 사전 검사
 
 도구 사용법과 출처는 `tools/README.md`에 기록합니다. 실행 파일 자체는 저장소에 올리지 않습니다.
 

@@ -23,6 +23,14 @@
 - `D7` 대화 상태 마커 기준으로 일본어가 포함된 세그먼트 240개를
   `translation/script.tsv` 검토 원고로 분리하고, 초반 메뉴·이벤트 17개는
   `translation/korean-draft.tsv`에서 한국어 초안을 병합하도록 구성
+- 일본판 글꼴을 `0x40000`(기본), `0x42000`(가타카나),
+  `0x50000`·`0x52000`·`0x60000`·`0x61000`(한자 페이지)에서 확인
+- 각 글리프는 8×8 Game Boy 2BPP 타일이고 색상값 `3`이 배경인 반전 형식으로 확인
+- 일반 추출 대사에는 등장하지 않고 폰트 테스트 데이터에만 등장하는 `0x83xx` 페이지를
+  한글 글리프 후보 영역으로 잡아 131자를 `translation/korean-glyph-map.tsv`에 기록
+  (`translation/font-layout.tsv`에 확정 영역과 후보 영역을 구분해 기록)
+- 폰트 페이지와 제어코드 교차 확인에는 [동일 일본판을 대상으로 한 공개 영문 패치의 기술 메모](https://github.com/brianblakely/slapstick-english-translation/blob/master/docs/technical-notes.md)를 참고했으며,
+  그 저장소의 실행 파일·ROM은 이 프로젝트에 포함하지 않음
 - 결과: `translation/pointer-report.tsv`, `translation/anchored-text.tsv`
 - 휴리스틱 후보 167개는 코드와 데이터가 섞여 있으므로 원시 파일과 디코드 파일 모두 연구용으로만 사용
 
@@ -51,7 +59,9 @@ Data Crystal의 ROM map은 문자열 처리 코드와 스크립트 코드가 여
 1. `decoded-text-blocks.tsv`의 실제 대화 블록을 게임 화면·일본어 대본과 대조합니다.
 2. 같은 디코더를 정적 문자열·포인터 문자열에 적용해 누락·오탐을 줄입니다.
 3. `translation/korean-draft.tsv`에 `script.tsv` ID별 한국어 초안을 작성하고 제어코드를 유지합니다.
-4. 한국어 글리프를 넣을 폰트 위치와 텍스트 길이 제약을 검증한 뒤 삽입기를 작성합니다.
+4. 한국어 글리프 위치와 텍스트 길이 제약을 검증합니다. 현재 초안 17개 모두 원문 슬롯을
+   초과하므로, 문자열 재배치 영역과 포인터 갱신 방식을 먼저 확정해야 합니다.
+5. 재배치된 문자열을 삽입하고 65816 포인터·은행 매핑을 갱신한 뒤 BPS/IPS 패치를 빌드합니다.
 
 제어코드 후보를 비교할 때는 [일본판 String 정의](https://datacrystal.tcrf.net/wiki/Robotrek/Strings_JP)를
 우선 사용하고, [Robotrek 프랑스어 번역 연구 글](https://romhack.org/viewtopic.php?t=817)은
