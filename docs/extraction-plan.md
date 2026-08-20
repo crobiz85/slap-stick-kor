@@ -21,7 +21,8 @@
   C0~E3 명령 목록을 확인하고 `scripts/decode_japanese_strings.py`에 반영
 - 167개 후보 블록을 일본어·제어코드가 보이는 형태로 `translation/decoded-text-blocks.tsv`에 출력
 - `D7` 대화 상태 마커 기준으로 일본어가 포함된 세그먼트 240개를
-  `translation/script.tsv` 검토 원고로 분리하고, 한국어 번역 칸은 비워 둠
+  `translation/script.tsv` 검토 원고로 분리하고, 초반 메뉴·이벤트 17개는
+  `translation/korean-draft.tsv`에서 한국어 초안을 병합하도록 구성
 - 결과: `translation/pointer-report.tsv`, `translation/anchored-text.tsv`
 - 휴리스틱 후보 167개는 코드와 데이터가 섞여 있으므로 원시 파일과 디코드 파일 모두 연구용으로만 사용
 
@@ -49,7 +50,7 @@ Data Crystal의 ROM map은 문자열 처리 코드와 스크립트 코드가 여
 
 1. `decoded-text-blocks.tsv`의 실제 대화 블록을 게임 화면·일본어 대본과 대조합니다.
 2. 같은 디코더를 정적 문자열·포인터 문자열에 적용해 누락·오탐을 줄입니다.
-3. `script.tsv`의 일본어 원문을 한국어로 옮기고 제어코드를 유지합니다.
+3. `translation/korean-draft.tsv`에 `script.tsv` ID별 한국어 초안을 작성하고 제어코드를 유지합니다.
 4. 한국어 글리프를 넣을 폰트 위치와 텍스트 길이 제약을 검증한 뒤 삽입기를 작성합니다.
 
 제어코드 후보를 비교할 때는 [일본판 String 정의](https://datacrystal.tcrf.net/wiki/Robotrek/Strings_JP)를

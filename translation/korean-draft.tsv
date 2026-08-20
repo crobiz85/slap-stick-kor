@@ -1,0 +1,21 @@
+# Korean draft overlay; literal \n markers represent in-game line breaks.
+# Control/style markers such as [CLR], [DFT], [END], [FIN], [PAL:*], [NAM:*],
+# [PAU:*], [KATAKANA], and [HIRAGANA] are retained for later encoding work.
+# id	Korean draft	status
+0002	소지품이 가득 차서 주울 수 없습니다.	draft-ko
+0003	[CLR]뭘 원해? 골라 봐.˳[WAI]	draft-ko
+0004	[CLR]이런, 소지품이 가득 차서\n건네줄 수가 없잖아.˳[WAI]	draft-ko
+0005	[CLR][TBL:3CE2800B]을 버릴까요?\n 아니요\n 버리기	draft-ko
+0006	[CLR][KATAKANA]아이템[HIRAGANA]의 빈자리를 정리할까요?\n 빈자리 정리\n 그만두기	draft-ko
+0007	[CLR][KATAKANA]아이템[HIRAGANA]을 순서대로 정렬할까요?\n 정렬하기\n 그만두기	draft-ko
+0008	[CLR][TBL:3CE2800B]을 만들려면\n[NUM:04820B] [KATAKANA]트론[HIRAGANA]이 필요합니다.˳\n 만들기      그만두기	draft-ko
+0009	[CLR]소지품이 가득 차서\n새로운 물건은 만들 수 없습니다.˳[WAI]	draft-ko
+0010	[CLR]이건 이미 가지고 있잖아.\n많이 만들어도 소용없어.˳[WAI]	draft-ko
+0011	[CLR]이건 합성할 수 없어.˳[WAI]	draft-ko
+0012	[CLR]이 [KATAKANA]아이템[HIRAGANA]은 [KATAKANA]리사이클[HIRAGANA]\n할 수 없네요.˳[WAI]	draft-ko
+0058	[KATAKANA]버튼[HIRAGANA]으로\n[KATAKANA]차임[HIRAGANA]을 울린다는 거야[PAL:00].\n\n답례는 이사 떡이면 충분하니까.˳[END]	draft-ko
+0059	[DFT]지금 놀러 갈 얘기 중이야.\n저쪽으로 가 있어.˳[END]	draft-ko
+0060	[DFT]지난번엔 고마웠어.\n이상한 녀석이라고 생각했는데,\n오빠 꽤 의지가 되네![END]	draft-ko
+0061	[DFT]뭐? 지난번 발명품을 돌려달라고?\n싫어.\n재미있는걸.˳[END]	draft-ko
+0062	[DFT]…누, 누구?[END]	draft-ko
+0063	[DFT]우…[PAU:1E]우와앙, 미안해!\n다시는 장난 안 칠게!\n이것도 돌려줄게!![FIN] [NAM:00]은 [PAL:02]깜짝 혼[PAL:00]을\n 되찾았다!	draft-ko
