@@ -1,0 +1,33 @@
+# Original ROMs and generated ROMs
+*.smc
+*.sfc
+*.fig
+*.ips
+*.bps
+*.ups
+
+# Bundled Windows tools and archives
+*.exe
+*.zip
+
+# Local emulator/runtime files
+*.srm
+*.sav
+*.cht
+*.state
+
+# Build output and local scratch data
+/build/
+/work/
+/tmp/
+/logs/
+__pycache__/
+*.pyc
+
+# Generated local previews
+/font-preview.png
+
+# OS/editor files
+Thumbs.db
+Desktop.ini
+.vscode/

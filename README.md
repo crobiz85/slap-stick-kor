@@ -1,0 +1,59 @@
+# Slap Stick 한국어화 프로젝트
+
+슈퍼패미컴판 `Slap Stick`(スラップスティック, Enix/Quintet, 1994)의 한국어화 작업 공간입니다.
+
+## 현재 상태
+
+- 기준 ROM: `Slap Stick (J).smc`
+- ROM 형식: 무헤더 HiROM / FastROM
+- ROM 크기: 1,572,864 bytes (12 Mbit)
+- 내부 타이틀: `SLAP STICK 1 JPN`
+- SHA-256: `08144EA1CE3CF6AB107837278D308E4E859574A047A2EE8EB456F7900AD4BE21`
+- 일본판 원본 ROM과 실행 파일은 저작권·재배포 문제 때문에 저장소에 포함하지 않습니다.
+- 대사 추출: 구조 분석 진행 중
+  - `CF + 3바이트 포인터 + CC` 참조 형식 확인
+  - 포인터 참조 6개 확인, 유효한 고유 문자열 2개를 `translation/anchored-text.tsv`에 보존
+  - 일본어 TBL/제어코드 해독 전이라 아직 한글 대사로 읽을 수 있는 단계는 아님
+
+## 작업 방향
+
+1. 원본 ROM의 무결성과 헤더를 `scripts/verify_rom.ps1`로 확인합니다.
+2. 문자 테이블과 제어코드를 확정하고, 전체 대사/메뉴를 추출해 `translation/`에 저장합니다.
+3. 한국어 글리프와 가변폭/문자 출력 제약을 확인합니다.
+4. 스크립트와 65816 패치를 재현 가능한 방식으로 빌드합니다.
+5. 결과물은 원본 ROM을 요구하는 BPS/IPS 패치로 배포합니다.
+
+추출 작업의 구체적인 주소 범위와 순서는 `docs/extraction-plan.md`에 기록합니다. 현재 원시 분석 결과는
+`translation/pointer-report.tsv`, `translation/anchored-text.tsv`, `translation/text-blocks-raw.tsv`입니다.
+마지막 파일은 오탐이 포함된 연구용 후보 목록이므로 번역 원고로 사용하지 않습니다.
+
+## 로컬 자료
+
+현재 제공된 도구는 다음과 같습니다.
+
+- `Hex_Search.exe`: ROM 내 바이트/문자열 검색
+- `Table_Generator.exe`: 테이블 파일 작성 보조
+- `United_Script_Editor_v241015.1.exe`: 스크립트 편집 보조
+- `6502_65816_Assembler_v1.1.zip`: 65816 어셈블러 자료
+- `le120.zip`: 번역 작업 관련 보조 자료로 보이며, 내용 확인 후 필요한 파일만 사용
+
+도구 사용법과 출처는 `tools/README.md`에 기록합니다. 실행 파일 자체는 저장소에 올리지 않습니다.
+
+## 검증
+
+PowerShell에서 다음처럼 실행합니다.
+
+```powershell
+.\scripts\verify_rom.ps1 -RomPath '.\Slap Stick (J).smc'
+```
+
+깨끗한 기준 ROM이 확인된 뒤에만 추출·패치 작업을 진행합니다.
+
+## 참고 자료
+
+- [Data Crystal: Robotrek / Slap Stick ROM map](https://datacrystal.tcrf.net/wiki/Robotrek)
+- [SuperFamicom.org: Slap Stick ROM information](https://superfamicom.org/info/slap-stick)
+- [네이버 카페 자료 31021](https://cafe.naver.com/f-e/cafes/16259867/articles/31021)
+- [네이버 카페 자료 32509](https://cafe.naver.com/f-e/cafes/16259867/articles/32509)
+- [네이버 카페 자료 32457](https://cafe.naver.com/f-e/cafes/16259867/articles/32457)
+- [네이버 카페 자료 12357](https://m.cafe.naver.com/ca-fe/web/cafes/16259867/articles/12357)

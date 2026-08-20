@@ -1,0 +1,4 @@
+# Pointer-anchored encoded text; custom TBL/control codes are not applied.
+# reference source	text file offset	length	raw bytes	placeholder rendering
+0x05F0C6	0x05F14B	002D	4F 68 0A 3C 20 18 3D 5E CD 58 46 3C 5D 53 0D 5D 20 3B 63 53 40 3C 0F CD 20 80 8C 80 6D 67 80 11 3C 50 80 10 4A CD 20 81 B9 6E 4A 0A 43	Oh<0A>< <18>=^<CD>XF<]S<0D>] ;cS@<<0F><CD> <80><8C><80>mg<80><11><P<80><10>J<CD> <81><B9>nJ<0A>C
+0x08C776	0x08C886	0019	20 81 8B 3E 4D 5E 61 68 0D 5D 4F 3C CD 20 4E 50 40 42 20 5E 4F 44 6E 4A 3C	 <81><8B>>M^ah<0D>]O<<CD> NP@B ^ODnJ<
