@@ -1,9 +1,22 @@
-# Candidate control codes for Slap Stick (J) text streams.
-# A ? means the meaning still needs emulator/runtime confirmation.
+# Names and parameter lengths follow the Japanese Robotrek/Strings JP
+# definition; display effects still deserve in-game confirmation.
 code	length	current interpretation	evidence
-C0	1	dialog end?	Repeated at dialogue-like block tails; reported as dialog close in Robotrek US hacking notes
-C2 xx	2	runtime variable?	Repeated C2 00 near name-like dialogue; reported as player-name variable in Robotrek US hacking notes
-C3 xx	2	text color	C3 00/02/03 repeatedly bracket text; reported as white/yellow/pink in Robotrek US hacking notes
-CC	1	encoded-record end	Consistent terminator for pointer-anchored streams and static strings in this ROM
-CD	1	line break?	Repeated between short text segments; reported as line break in Robotrek US hacking notes
-D1	1	next page?	Repeated at page-like boundaries; reported as next dialogue page in Robotrek US hacking notes
+C0	1	END	Data Crystal JP String command table
+C1 xx yy	3	POS	Data Crystal JP String command table
+C2 xx	2	NAM/name variable	Data Crystal JP String command table; repeated before player-name text
+C3 xx	2	PAL/palette or color	Data Crystal JP String command table; 00/02/03 bracket colored text
+C5 xxxx	5	TBL/table reference	Data Crystal JP String command table
+C6 xxx	4	NUM/number	Data Crystal JP String command table
+C7 xxx	4	BOX/text box	Data Crystal JP String command table
+CC	1	TER/string terminator	Data Crystal JP String command table and repeated CC boundaries
+CD	1	N/newline	Data Crystal JP String command table and decoded line breaks
+CE xx	2	SKP/skip	Data Crystal JP String command table
+CF aa bb cc	4	STR/string pointer	ROM scan: CF + 3-byte pointer + CC
+D0	1	CLR/clear	Data Crystal JP String command table
+D1	1	FIN/finish current section	Data Crystal JP String command table
+D2	1	WAI/wait	Data Crystal JP String command table
+D4	1	katakana-layer switch	Data Crystal JP String layer definition (on=0xD4)
+D5	1	hiragana/default-layer switch	Data Crystal JP String layer definition (on=0xD5)
+DA xx	2	DLY/delay	Data Crystal JP String command table
+DC	1	NXT/next section	Data Crystal JP String command table
+DF	1	ESC/escape	Data Crystal JP String command table

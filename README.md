@@ -19,7 +19,11 @@
     `translation/control-annotated.tsv`에 위치를 표시
   - 내장 폰트 테스트 데이터에서 1바이트/2바이트 글리프 코드 후보를
     `translation/font-test-codes.tsv`로 분리
-  - 일본어 TBL/제어코드 해독 전이라 아직 한글 대사로 읽을 수 있는 단계는 아님
+  - 일본판 문자표·K1~K3 사전·문자열 명령을 반영한 일본어 디코더 추가
+  - 후보 블록 167개, 포인터 문자열 2개, 정적 문자열 56개를 일본어/제어코드 형태로
+    `translation/decoded-text-blocks.tsv`, `translation/decoded-anchored-text.tsv`,
+    `translation/decoded-static-strings.tsv`에 추출
+  - 후보 블록에는 오탐이 남아 있어 게임 화면 대조 전에는 패치 입력으로 사용하지 않음
 
 ## 작업 방향
 
@@ -31,7 +35,9 @@
 
 추출 작업의 구체적인 주소 범위와 순서는 `docs/extraction-plan.md`에 기록합니다. 현재 원시 분석 결과는
 `translation/pointer-report.tsv`, `translation/anchored-text.tsv`, `translation/static-strings.tsv`,
-`translation/text-blocks-raw.tsv`, `translation/control-annotated.tsv`입니다.
+`translation/text-blocks-raw.tsv`, `translation/control-annotated.tsv`,
+`translation/decoded-text-blocks.tsv`, `translation/decoded-anchored-text.tsv`,
+`translation/decoded-static-strings.tsv`입니다.
 마지막 파일은 오탐이 포함된 연구용 후보 목록이므로 번역 원고로 사용하지 않습니다.
 
 ## 로컬 자료
@@ -50,6 +56,7 @@
 - `scripts/extract_static_strings.py`: `$84:F7C2` 포인터 표 기반 정적 문자열 추출
 - `scripts/annotate_control_codes.py`: 확인 전 제어코드를 보수적으로 표시
 - `scripts/extract_font_test_codes.py`: 내장 폰트 테스트의 글리프 코드 목록 추출
+- `scripts/decode_japanese_strings.py`: 일본판 문자표·사전·제어코드로 후보 대사 해독
 
 도구 사용법과 출처는 `tools/README.md`에 기록합니다. 실행 파일 자체는 저장소에 올리지 않습니다.
 
@@ -66,6 +73,7 @@ PowerShell에서 다음처럼 실행합니다.
 ## 참고 자료
 
 - [Data Crystal: Robotrek / Slap Stick ROM map](https://datacrystal.tcrf.net/wiki/Robotrek)
+- [Data Crystal: Robotrek / Strings JP](https://datacrystal.tcrf.net/wiki/Robotrek/Strings_JP)
 - [SuperFamicom.org: Slap Stick ROM information](https://superfamicom.org/info/slap-stick)
 - [네이버 카페 자료 31021](https://cafe.naver.com/f-e/cafes/16259867/articles/31021)
 - [네이버 카페 자료 32509](https://cafe.naver.com/f-e/cafes/16259867/articles/32509)

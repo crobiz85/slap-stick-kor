@@ -26,6 +26,7 @@ __pycache__/
 
 # Generated local previews
 /font-preview.png
+font-*bpp.png
 
 # OS/editor files
 Thumbs.db

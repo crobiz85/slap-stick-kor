@@ -2,9 +2,9 @@
 
 ## 현재 판정
 
-대사 저장 구조 분석을 시작했고, 실제 문자열 참조 형식을 확인했습니다. 다만 일본어 문자 테이블과
-제어코드가 아직 해독되지 않았으므로, 현재 산출물은 “번역 가능한 대사 덤프”가 아니라 원시 바이트
-분석 결과입니다.
+대사 저장 구조 분석을 시작했고, 실제 문자열 참조 형식과 일본판 문자표를 확인했습니다. 후보
+블록에는 오탐이 남아 있으므로 자동 결과는 검토용 대사 덤프이며, 그대로 패치 입력으로 사용하지
+않습니다.
 
 - 포인터 형식: `CF [주소 low] [주소 high] [은행] CC`
 - HiROM 미러 주소를 파일 오프셋으로 변환할 수 있음
@@ -17,8 +17,11 @@
   `translation/control-codes.tsv`, `translation/control-annotated.tsv` 생성
 - 내장 폰트 테스트 영역에서 1바이트 및 little-endian 2바이트 글리프 후보를
   `translation/font-test-codes.tsv`로 추출
+- Data Crystal의 일본판 String 정의에서 기본 히라가나/가타카나 레이어와 K1~K3 사전,
+  C0~E3 명령 목록을 확인하고 `scripts/decode_japanese_strings.py`에 반영
+- 167개 후보 블록을 일본어·제어코드가 보이는 형태로 `translation/decoded-text-blocks.tsv`에 출력
 - 결과: `translation/pointer-report.tsv`, `translation/anchored-text.tsv`
-- 휴리스틱 후보 167개는 코드와 데이터가 섞여 있으므로 `translation/text-blocks-raw.tsv`는 연구용으로만 사용
+- 휴리스틱 후보 167개는 코드와 데이터가 섞여 있으므로 원시 파일과 디코드 파일 모두 연구용으로만 사용
 
 ## 확인된 ROM 구조
 
@@ -29,9 +32,11 @@ Data Crystal의 Robotrek 자료에 따르면 이 게임은 다음과 같이 나�
 - `0x2E9AA-0x2FF66`: 스크립트 코드
 - `0x48000-0x4FFB3`: 문자열 처리 루틴과 일부 스크립트
 - `0x58000-0x5FCD6`, `0x68000-0x6F7D5`, `0x78000-0x7F3B4`, `0x88000-0x8F51E`, `0x98000-0x9F478`: 스크립트 코드/문자열 템플릿 영역
-- `0x80000-0x81FFF`: 압축되지 않은 2BPP 폰트 그래픽
+- `0x80000-0x81FFF`: 기존 ROM map에서 그래픽/폰트 후보로 언급된 영역. 현재 2BPP 미리보기는
+  노이즈로 확인되어 실제 폰트 위치·압축 여부를 아직 확정하지 않음
 
-압축 데이터는 2바이트 비압축 크기 헤더와 Quintet LZ 계열 압축을 사용합니다. 따라서 대사는 단순히 Shift-JIS 문자열 검색으로 끝나지 않습니다. 현재 확인된 대사 후보도 Shift-JIS가 아니라 게임 전용 바이트 테이블입니다.
+게임은 Quintet 계열 압축 데이터를 포함하므로 그래픽 분석은 별도 압축 해제가 필요할 수 있습니다.
+대사는 Shift-JIS가 아니라 게임 전용 바이트 테이블입니다.
 
 Data Crystal의 ROM map은 문자열 처리 코드와 스크립트 코드가 여러 코드 페이지에 나뉘어 있고,
 `0x80000-0x81FFF`는 2BPP 원시 그래픽(font) 영역으로 기록합니다. Snes-Projects의 Robotrek
@@ -40,17 +45,14 @@ Data Crystal의 ROM map은 문자열 처리 코드와 스크립트 코드가 여
 
 ## 다음 작업
 
-1. 정적 문자열을 읽는 호출부와 문자열 출력 루틴에서 `C0`, `C2`, `C3`, `CD`, `D0-D8`,
-   `CC` 등의 제어코드 길이와 의미를 확정합니다.
-2. 폰트/문자 인덱스 영역을 확인해 일본어 TBL을 작성합니다. 폰트 테스트의
-   2바이트 코드는 Shift-JIS 힌트를 함께 기록하지만, 실제 대화 스트림에
-   그대로 적용되는지는 실행 화면으로 검증합니다.
-3. 포인터가 가리키는 문자열부터 시험 해독하고, 게임 화면과 대조합니다.
-4. 같은 레코드 구조를 전체 스크립트 페이지에 적용해 누락·오탐을 제거합니다.
-5. 확인된 항목만 `translation/script.tsv`로 정리합니다.
+1. `decoded-text-blocks.tsv`의 실제 대화 블록을 게임 화면·일본어 대본과 대조합니다.
+2. 같은 디코더를 정적 문자열·포인터 문자열에 적용해 누락·오탐을 줄입니다.
+3. 확인된 항목만 `translation/script.tsv`로 정리합니다.
+4. 한국어 글리프를 넣을 폰트 위치와 텍스트 길이 제약을 검증한 뒤 삽입기를 작성합니다.
 
-제어코드 후보를 비교할 때는 [Robotrek 프랑스어 번역 연구 글](https://romhack.org/viewtopic.php?t=817)을
-참고하되, 해당 글은 미국판/번역판 분석 메모이므로 일본판의 의미는 ROM과 실행 결과로 재확인합니다.
+제어코드 후보를 비교할 때는 [일본판 String 정의](https://datacrystal.tcrf.net/wiki/Robotrek/Strings_JP)를
+우선 사용하고, [Robotrek 프랑스어 번역 연구 글](https://romhack.org/viewtopic.php?t=817)은
+미국판/번역판 보조 자료로만 사용합니다.
 
 처음부터 ROM을 확장하지 않습니다. 텍스트 공간이 실제로 부족한지 확인한 뒤, 필요할 때만
 `Lunar Expand`의 호환 ExHiROM 방식을 검토합니다. Lunar Expand 문서에도 RoboTrek이 해당
