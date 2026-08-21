@@ -5,6 +5,8 @@
 *.ips
 *.bps
 *.ups
+!patches/*.ips
+!patches/*.bps
 
 # Bundled Windows tools and archives
 *.exe
