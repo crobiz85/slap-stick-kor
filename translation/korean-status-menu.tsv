@@ -1,0 +1,7 @@
+# Fixed strings in the status/settings menu's raw Other Menus block.
+# id	offset	slot length	expected source bytes	Korean preview	status
+STATUS-EQUIP-NONE	0x01E349	0005	49 3D 15 4F 46	없음	status-menu-fixed-slot
+STATUS-SETTING	0x01EA33	0004	48 6E 4D 3C	설정	status-menu-fixed-slot
+STATUS-CONFIRM	0x01EA3B	0004	43 6E 4D 3C	확인	status-menu-fixed-slot
+STATUS-CANCEL	0x01EA4A	0004	4E 62 43 46	취소	status-menu-fixed-slot
+STATUS-SETTING-ALT	0x01EAA1	0004	48 6E 4D 3C	설정	status-menu-fixed-slot

@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DRAFT_PATH = ROOT / "translation" / "korean-draft.tsv"
 MENU_PREVIEW_PATH = ROOT / "translation" / "korean-menu-preview.tsv"
 GAME_MENU_PATH = ROOT / "translation" / "korean-game-menu.tsv"
+STATUS_MENU_PATH = ROOT / "translation" / "korean-status-menu.tsv"
 EARLY_GAME_PATH = ROOT / "translation" / "korean-early-game.tsv"
 C0_DIALOGUE_PATH = ROOT / "translation" / "korean-c0-dialogue.tsv"
 ITEM_PREVIEW_PATH = ROOT / "translation" / "korean-item-preview.tsv"
@@ -28,6 +29,7 @@ HANGUL_START = 0xAC00
 HANGUL_END = 0xD7A3
 GLYPH_WIDTH = 16
 GLYPH_HEIGHT = 16
+GLYPH_SAFE_MARGIN = 1
 TILE_WIDTH = 8
 TILE_HEIGHT = 8
 GLYPH_BYTES = 64
@@ -64,7 +66,7 @@ def find_default_font() -> Path:
 
 def read_draft_characters() -> list[str]:
     characters = set()
-    for source_path in (DRAFT_PATH, MENU_PREVIEW_PATH, GAME_MENU_PATH, EARLY_GAME_PATH, C0_DIALOGUE_PATH, ITEM_PREVIEW_PATH):
+    for source_path in (DRAFT_PATH, MENU_PREVIEW_PATH, GAME_MENU_PATH, STATUS_MENU_PATH, EARLY_GAME_PATH, C0_DIALOGUE_PATH, ITEM_PREVIEW_PATH):
         if not source_path.exists():
             continue
         for line in source_path.read_text(encoding="utf-8").splitlines():
@@ -75,7 +77,12 @@ def read_draft_characters() -> list[str]:
                 continue
             if source_path == DRAFT_PATH and columns[0] not in PREVIEW_DRAFT_IDS:
                 continue
-            korean_column = 3 if source_path in (GAME_MENU_PATH, EARLY_GAME_PATH, C0_DIALOGUE_PATH) else 1
+            if source_path in (GAME_MENU_PATH, EARLY_GAME_PATH, C0_DIALOGUE_PATH):
+                korean_column = 3
+            elif source_path == STATUS_MENU_PATH:
+                korean_column = 4
+            else:
+                korean_column = 1
             if len(columns) <= korean_column:
                 continue
             korean = CONTROL_MARKER.sub("", columns[korean_column])
@@ -162,8 +169,21 @@ def render_mask(character: str, font: ImageFont.FreeTypeFont, render_size: int) 
     bbox = draw.textbbox((0, 0), character, font=font)
     width = bbox[2] - bbox[0]
     height = bbox[3] - bbox[1]
+    # The game's 16x16 renderer places neighbouring glyphs directly beside
+    # each other.  Keeping one blank pixel around the ink prevents Hangul
+    # strokes from being clipped or visually joined at tile boundaries.
+    safe_width = GLYPH_WIDTH - (GLYPH_SAFE_MARGIN * 2)
+    safe_height = GLYPH_HEIGHT - (GLYPH_SAFE_MARGIN * 2)
+    if width > safe_width or height > safe_height:
+        raise ValueError(
+            f"glyph {character!r} is {width}x{height}; "
+            f"font size {render_size} exceeds the {safe_width}x{safe_height} safe area"
+        )
     draw.text(
-        ((GLYPH_WIDTH - width) // 2 - bbox[0], (GLYPH_HEIGHT - height) // 2 - bbox[1]),
+        (
+            GLYPH_SAFE_MARGIN + (safe_width - width) // 2 - bbox[0],
+            GLYPH_SAFE_MARGIN + (safe_height - height) // 2 - bbox[1],
+        ),
         character,
         font=font,
         fill=255,
@@ -260,7 +280,7 @@ def write_map(
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build Korean glyph map and preview without modifying the ROM.")
     parser.add_argument("--font", type=Path, default=None, help="Korean-capable TTF/TTC font")
-    parser.add_argument("--font-size", type=int, default=14)
+    parser.add_argument("--font-size", type=int, default=13)
     parser.add_argument("--preview-scale", type=int, default=8)
     parser.add_argument("--output-map", type=Path, default=DEFAULT_MAP_PATH)
     parser.add_argument("--output-preview", type=Path, default=DEFAULT_PREVIEW_PATH)

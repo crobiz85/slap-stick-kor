@@ -3,6 +3,15 @@
 C0-05A3A8	0x05A3A8	0041	[DF4][DF2:00][NAM:00] [PAU:3C][NAM:00]\n[PAU:3C]일어나![TPL:D8][DF2:00]…[PAU:1E]그래?\n아직 안 일어날래?\n그럼…	cold-boot-opening
 C0-05A3EA	0x05A3EA	008F	[DLY:E0]하하하!\n잠이 깼지?\n푹 잤구나.[FIN]네가 자는 동안\n이삿짐은\n벌써 끝났단다.[FIN]자, 일어나\n[PAL:02]나기사[PAL:00]에게 인사해.\n네 몫까지\n정리해 주었단다.˳	cold-boot-opening
 C0-05A4DD	0x05A4DD	002C	[DFT][DF2:00]부탁해![NAM:00]!\n[PAU:32]어서 깨어나.\n힘내!	cold-boot-opening
+C0-05A245	0x05A245	003F	[DFT]갑자기 지진이 나서 밖으로 나왔어.\n숲 쪽에서 빛이 났어!	cold-boot-early-scene
+C0-05A9BE	0x05A9BE	0036	[DFT][E2:0258]오늘은 촌장님 댁에 인사 가야지?\n늦으면 해가 져.˳	cold-boot-early-scene
+C0-05A9F5	0x05A9F5	00FC	[DFT][E2:023F][NAM:00]야, 인사는 끝냈니?[FIN]응? 이 책?\n아키하바라 가문의 책이다.[FIN]네게 주마.\n먼저 [E2:1A67]만드는 법을 읽고 직접 만들어라.[FIN]그럼…[PAU:28]아빠는 교외 집에 돌아간다.\n어려운 일은 찾아오렴.[FIN]오늘부터 [PAL:02]나기사[PAL:00]가 네 조수다.\n열심히 해.˳	cold-boot-early-scene
+C0-05AB04	0x05AB04	00BB	[DFT][E2:02C2]아이들을 도왔다며?[FIN]정말 잘했다.[PAU:1E]아빠는 플라보노 씨와 여행을 간다.\n언제 올지 모르겠구나.[FIN]아빠가 없어도 잘 지내라.[FIN][NAM:00] 힘내.˳	cold-boot-early-scene
+C0-05ABC0	0x05ABC0	0134	[DFT][E2:0260]·[PAU:3C][NXT]다행이다! 깨어났구나![NXT]무슨 일이냐?[FIN]뭐? 과거 로코코 마을?\n[PAU:32]하하, 꿈이란다.[PAU:1E]여긴 네 집.[FIN]기억나니?[PAU:28]스위치가 눌리면 자폭하도록 레이저를 개조했지.[FIN]요새가 폭발했고… 넌 잔해에 쓰러져 있었단다.[PAU:28]무사해 다행이야.[FIN]뭐?[PAU:3C][E2:000F][PAU:1E]걱정 마라. 잔해에서 찾았다.[PAU:1E]다음에 말하자.˳	cold-boot-early-scene
+C0-05AD49	0x05AD49	0032	[DFT][E2:023F]일어났구나. 괜찮아?[PAU:1E]아직 무리하지 마.˳	cold-boot-early-scene
+C0-05AD7C	0x05AD7C	003A	[DFT][E2:02C2]그래.[PAU:1E]괜찮으냐? 무리하지 마라.˳	cold-boot-early-scene
+C0-05AF11	0x05AF11	002B	[DFT][E2:0280]소지품이 가득 찼나?[FIN]정리할까?˳	cold-boot-early-scene
+C0-05AFDA	0x05AFDA	002D	[DFT][E2:027E]··[NAM:00] 맞지?\n아빠 눈은 못 속여!˳	cold-boot-early-scene
 C0-06C3BE	0x06C3BE	003C	[DFT][E2:043B]내가 볼게.\n[PAL:02]개를 찾아줘![PAL:00]\n개가 약을 갖고 있대.˳	live-game-screen
 C0-06C3FB	0x06C3FB	002B	[DFT][E2:043E]너구나!\n다행이야.\n이제 움직여!	live-game-screen
 C0-06C427	0x06C427	006D	[DF4][E2:0481]너! 아직 있었네!?\n[PAU:28]…라고 할 뻔했지만\n마침 잘 왔어.[FIN]이 사람 다쳤어.\n[PAL:02]개를 찾아줘![PAL:00]\n개가 약을 갖고 있대.˳	live-game-screen
