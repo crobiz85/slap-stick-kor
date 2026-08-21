@@ -163,70 +163,70 @@ C0-05D52C	0x05D52C	0x0037	early-town	P2		translated	[DFT]···あのぉ\n[PAU:3
 C0-05D564	0x05D564	0x0031	early-story	P1		translated	[DFT][NAM:00]さん\n今は 中に入らない方がいいわよ\nまだ あなたの疑いは\nはれていないんでしょ?
 C0-05D596	0x05D596	0x004E	early-story	P1		translated	[DFT][NAM:00]さん\n中に入らない方がいいわよ[FIN][NXT]ぞ···[NXT]がごぞんじないの?\n[PAU:1E]あなたには 町長の[PAL:02]宝石[PAL:00]をぬすんだ\n疑いが かかってるのよ˳
 C0-05D5E5	0x05D5E5	0x0014	early-town	P2		translated	[DFT][KATAKANA]ネズミ[HIRAGANA]さん 中に入らないでね˳
-C0-05D5FA	0x05D5FA	0x0021	early-town	P2		pending	[DFT]あらやだ [KATAKANA]ネズミ[HIRAGANA]だわ\n中に入られちゃ 困るのに···˳
-C0-05D61C	0x05D61C	0x0032	early-town	P2		pending	[DFT]あの町長が\nにせものだったなんてねえ\n仕事も まじめにこなして\nいい人だったのに···˳
+C0-05D5FA	0x05D5FA	0x0021	early-town	P2		translated	[DFT]あらやだ [KATAKANA]ネズミ[HIRAGANA]だわ\n中に入られちゃ 困るのに···˳
+C0-05D61C	0x05D61C	0x0032	early-town	P2		translated	[DFT]あの町長が\nにせものだったなんてねえ\n仕事も まじめにこなして\nいい人だったのに···˳
 C0-05D720	0x05D720	0x00F9	early-story	P1		translated	[DF4]ぅぐぽN[DF5]ぐT[CMD:F0][CMD:FF]ぐだ[CA]技[STR:C4D685]ぅ[DFT][E2:0481]きいたわよ 君\n町長の宝石を ぬすんだ疑いで\nつかまってたんですって?[FIN]だいじょうぶ あたしは知ってるわ\n君は ちょっと まがぬけてるけど\n人のものを取ったりする子じゃない\nだれかの いんぼうにちがいないわ[FIN]町長の樣子が 変だっていう\nうわさは聞いてる?\nあたしは ぜったいこれには\n何かあると思ってるのよ[FIN]でも 何度町長に会っても\nちっとも しっぽがつかめないのよ\nあ[KATAKANA]ーーーーーー[HIRAGANA]っ くやしいっ!
-C0-05D81A	0x05D81A	0x003C	early-town	P2		pending	[DFT][E2:0480][BYTE:99]長のことと言い 君のことと言い\nなにか事件のにおいがするのよ\nまあ 事件記者の[KATAKANA]カン[HIRAGANA]ね˳
+C0-05D81A	0x05D81A	0x003C	early-town	P2		translated	[DFT][E2:0480][BYTE:99]長のことと言い 君のことと言い\nなにか事件のにおいがするのよ\nまあ 事件記者の[KATAKANA]カン[HIRAGANA]ね˳
 C0-05D857	0x05D857	0x006D	early-town	P2		translated	[DFT][E2:04DC]ぎ···え?[PAU:1E]なんですって!?\n今 町長室にいる町長は\nにせものですって!?[FIN][NXT]がふふんっ[PAU:1E] やっぱりあたしの\nにらんだ通りね!\nもう一回 取材に行って\n正体をあばいてやるわっ!
-C0-05D8C5	0x05D8C5	0x0033	early-town	P2		pending	[DF4][E2:043B]あっ!だめっ!\nちっとも しっぽがつかめないわ!\n本物の町長と 見分けがつかない!
-C0-05D8F9	0x05D8F9	0x0034	early-town	P2		pending	[DFT][E2:044F]にか 町長の正体をあばく\n方法はないかしら···\nねえ [PAU:1E]なにか 思いつかない?
+C0-05D8C5	0x05D8C5	0x0033	early-town	P2		translated	[DF4][E2:043B]あっ!だめっ!\nちっとも しっぽがつかめないわ!\n本物の町長と 見分けがつかない!
+C0-05D8F9	0x05D8F9	0x0034	early-town	P2		translated	[DFT][E2:044F]にか 町長の正体をあばく\n方法はないかしら···\nねえ [PAU:1E]なにか 思いつかない?
 C0-05D92E	0x05D92E	0x007E	early-story	P1		translated	[DFT][E2:04DC]ぞ······[PAU:3C][NXT]ぎそれよっ!\n[PAU:1E]町長が 犬が大きらいなのは\n町の人は だれだって知ってるわ![FIN][NXT]がねえ [NAM:00]\nその犬を 町長室まで\nつれてきてちょうだい\nあたしは 先に行って\n取材の もうしこみをしてくるわ!
-C0-05D9D4	0x05D9D4	0x0025	early-town	P2		pending	[DFT]おっと ぼうや\nこの先は 職員以外は\n立入り禁止だよ˳
+C0-05D9D4	0x05D9D4	0x0025	early-town	P2		translated	[DFT]おっと ぼうや\nこの先は 職員以外は\n立入り禁止だよ˳
 C0-05DA21	0x05DA21	0x007D	early-town	P2		translated	[DFT]最近の 町長ときたら\nちっとも 仕事をしないばかりか\n注意をうながした職員を\n次々に [KATAKANA]クビ[HIRAGANA]にしているんだ![FIN]それもこれも\nあの 秘書の[PAL:03][KATAKANA]ローズ[HIRAGANA][PAL:00]とかいう女が\nやってきてからさ\nおれは まったく情けないよ!
-C0-05DADC	0x05DADC	0x005C	early-town	P2		pending	[DLY:DA]ぐ名ぐ[BYTE:97]報ぐりぐがぢ[DD]ぐぢ[DES]前[DD]ぐぢ 策[DLY:02]ぽ┌[DD]ぅぐぽぉ[DD]ぅぐぽY[DD]ぅぐぽ[BYTE:98][DD]ぅぐぽ[TBL:DB6BD7E0]ぢ町長は いそがしい方なの\nお話があるのなら\nかんたんにね ぼうや˳
-C0-05DB39	0x05DB39	0x0033	early-town	P2		pending	[DFT][E2:0B3C]たずらはだめよ ぼうや\n町長は 犬が おきらいなの\n犬を 外へ出してらっしゃいな˳
-C0-05DB6D	0x05DB6D	0x002A	early-town	P2		pending	[DFT][E2:0B59]た あなたなの?\nあまり 大人の仕事の\nじゃまをしてはいけなくてよ˳
-C0-05DB98	0x05DB98	0x002C	early-town	P2		pending	[DFT][E2:0B80][CMD:EA]をしてたのかですって?\n[PAU:1E]ふふふ···\n[PAU:1E]とってもいいことよ [PAU:1E]ぼうや˳
-C0-05DBC5	0x05DBC5	0x001A	early-town	P2		pending	[DFT][E2:0B56]んっ まぬけな顔をした\n[KATAKANA]ネズミ[HIRAGANA]だこと˳
-C0-05DD72	0x05DD72	0x0019	early-town	P2		pending	[DF4][NXT]ぎ[E2:093C]や···[PAU:1E]これは [PAU:1E]あの···[NXT]が
-C0-05DD8C	0x05DD8C	0x001F	early-town	P2		pending	[DF4][NXT]ぎ[E2:093C]やあ 今日はとっても\nあついねえ わはははは˳
+C0-05DADC	0x05DADC	0x005C	early-town	P2		translated	[DLY:DA]ぐ名ぐ[BYTE:97]報ぐりぐがぢ[DD]ぐぢ[DES]前[DD]ぐぢ 策[DLY:02]ぽ┌[DD]ぅぐぽぉ[DD]ぅぐぽY[DD]ぅぐぽ[BYTE:98][DD]ぅぐぽ[TBL:DB6BD7E0]ぢ町長は いそがしい方なの\nお話があるのなら\nかんたんにね ぼうや˳
+C0-05DB39	0x05DB39	0x0033	early-town	P2		translated	[DFT][E2:0B3C]たずらはだめよ ぼうや\n町長は 犬が おきらいなの\n犬を 外へ出してらっしゃいな˳
+C0-05DB6D	0x05DB6D	0x002A	early-town	P2		translated	[DFT][E2:0B59]た あなたなの?\nあまり 大人の仕事の\nじゃまをしてはいけなくてよ˳
+C0-05DB98	0x05DB98	0x002C	early-town	P2		translated	[DFT][E2:0B80][CMD:EA]をしてたのかですって?\n[PAU:1E]ふふふ···\n[PAU:1E]とってもいいことよ [PAU:1E]ぼうや˳
+C0-05DBC5	0x05DBC5	0x001A	early-town	P2		translated	[DFT][E2:0B56]んっ まぬけな顔をした\n[KATAKANA]ネズミ[HIRAGANA]だこと˳
+C0-05DD72	0x05DD72	0x0019	early-town	P2		translated	[DF4][NXT]ぎ[E2:093C]や···[PAU:1E]これは [PAU:1E]あの···[NXT]が
+C0-05DD8C	0x05DD8C	0x001F	early-town	P2		translated	[DF4][NXT]ぎ[E2:093C]やあ 今日はとっても\nあついねえ わはははは˳
 C0-05DDAC	0x05DDAC	0x008C	early-story	P1		translated	[DF4][E2:093C]やあ このたびは\n大変なかつやくだったね\n今後も よろしくたのむよ[FIN]これは 町からの\n感謝の 気持ちだ\nうけとってくれたまえ[FIN] [NAM:00]は\n[PAL:02] 1000[KATAKANA]トロン[HIRAGANA][PAL:00]を もらった![TER][DF4][E2:093C]や 私は最初から君に\n期待しておったよ\nわっはっはっ˳
 C0-05DE39	0x05DE39	0x0126	early-story	P1		translated	[DF4][E2:093C]やあ 私は町民との\n[KATAKANA]コミュニケーション[HIRAGANA]を\n大切にしているからね[FIN]ぼうやのような小さな町民とも\n[KATAKANA]スケジュール[HIRAGANA]の間をぬって\n話す機会を もうけているんだよ\nわははははは[FIN]君も 今日からこの[KATAKANA]ロココ町[HIRAGANA]の\n住人というわけだ\n世のため 人のため 町のために\n若い力を 使ってくれたまえ[FIN]こちらにいる[PAL:02][KATAKANA]ペッパー[HIRAGANA]さん[PAL:00]は\n有名な発明家なんだそうだ\n[KATAKANA]ハッカー[HIRAGANA]のうわさを聞きつけて\n力を貸しに きてくださったんだ[FIN][JMP]T[ESC][DF4][E2:0918]うやも [KATAKANA]ペッパー[HIRAGANA]さんのような\nりっぱな おとなになりなさいよ\nはっはっはっはっ˳
 C0-05DF60	0x05DF60	0x0070	early-town	P2		translated	[DF4][E2:0944]ちらの方は\n[PAL:02][KATAKANA]ペッパー[HIRAGANA][PAL:00]さんとおっしゃって\n有名な 発明家だそうだ[FIN][KATAKANA]ハッカー[HIRAGANA]のうわさを聞きつけて\n[KATAKANA]ハッカー退治[HIRAGANA]に\n協力してくださると言うんだ\nいや[KATAKANA]ー[HIRAGANA] ありがたいことだねえ˳
-C0-05DFD1	0x05DFD1	0x002D	early-town	P2		pending	[DF4][E2:0981]しも [KATAKANA]ペッパー[HIRAGANA]さんのような\nりっぱな 発明家に\nなれるといいもんだねえ˳
+C0-05DFD1	0x05DFD1	0x002D	early-town	P2		translated	[DF4][E2:0981]しも [KATAKANA]ペッパー[HIRAGANA]さんのような\nりっぱな 発明家に\nなれるといいもんだねえ˳
 C0-05DFFF	0x05DFFF	0x0092	early-story	P1		translated	[DF4][E2:09D4]ぺっぱ0[HIRAGANA]さんなら\nもう ここにはいないよ\nぼうや[FIN]あの方は 河原のどうくつに\n子供が とじこめられたと聞いて\nご自分の発明品で 救出に\n協力してくださると言うんだ[FIN][JMP]ぇ[E2:D8E0]ぞいやあ まったく\nあの方は うわさどおりの\nりっぱな 発明家だよ˳
-C0-05E092	0x05E092	0x006C	early-town	P2		pending	[DFT][E2:094F]んだね ぼうや\n[PAU:1E][KATAKANA]ペッパー[HIRAGANA]?\n[PAU:1E]あんな男のことは 知らん![FIN]高い仕事料をはらったのに\n[KATAKANA]ロク[HIRAGANA]に はたらきもせんで!\n[PAU:1E]私は あんな男にまかせるのは\nはじめから 反対だったんだ!
-C0-05E0FF	0x05E0FF	0x0035	early-town	P2		pending	[DF4][E2:09DC]ぞ···いっ·[PAU:1E][NXT]ぎいぬっ!\n[PAU:1E]きっ·きっ·きみっ!\nその生き物を 外に出してくれっ!
-C0-05E135	0x05E135	0x0034	early-town	P2		pending	[DFT][E2:097E]··なんで こんな所に\n[KATAKANA]ネズミ[HIRAGANA]がいるんだっ?!\n[KATAKANA]クリーン[HIRAGANA]な[KATAKANA]イメージ[HIRAGANA]がだいなしだっ!
-C0-05E16A	0x05E16A	0x0029	early-town	P2		pending	[DFT][E2:093E]?[KATAKANA]ローズ[HIRAGANA]はどこにいるかだと?\n知らん!\nどこかに消えてしまったよ!
-C0-05E194	0x05E194	0x0033	early-town	P2		pending	[DFT][E2:0959]ったく 女は男をまどわせる\nおそろしい 生き物だよ\n君も よくおぼえておきたまえよ˳
-C0-05E246	0x05E246	0x003A	early-town	P2		pending	[DFT][E2:094F]んだね 君は\n石?[PAU:1E]なんのことかね?[FIN]すまんが 今いそがしいんでね\n用があるなら またにしてくれ˳
-C0-05E281	0x05E281	0x0033	early-town	P2		pending	[DFT][E2:0980][SKP:5D]いそがしい身なのだが\n取材とあれば 仕方ない\n[PAU:1E]さて 何が聞きたいのかな?
+C0-05E092	0x05E092	0x006C	early-town	P2		translated	[DFT][E2:094F]んだね ぼうや\n[PAU:1E][KATAKANA]ペッパー[HIRAGANA]?\n[PAU:1E]あんな男のことは 知らん![FIN]高い仕事料をはらったのに\n[KATAKANA]ロク[HIRAGANA]に はたらきもせんで!\n[PAU:1E]私は あんな男にまかせるのは\nはじめから 反対だったんだ!
+C0-05E0FF	0x05E0FF	0x0035	early-town	P2		translated	[DF4][E2:09DC]ぞ···いっ·[PAU:1E][NXT]ぎいぬっ!\n[PAU:1E]きっ·きっ·きみっ!\nその生き物を 外に出してくれっ!
+C0-05E135	0x05E135	0x0034	early-town	P2		translated	[DFT][E2:097E]··なんで こんな所に\n[KATAKANA]ネズミ[HIRAGANA]がいるんだっ?!\n[KATAKANA]クリーン[HIRAGANA]な[KATAKANA]イメージ[HIRAGANA]がだいなしだっ!
+C0-05E16A	0x05E16A	0x0029	early-town	P2		translated	[DFT][E2:093E]?[KATAKANA]ローズ[HIRAGANA]はどこにいるかだと?\n知らん!\nどこかに消えてしまったよ!
+C0-05E194	0x05E194	0x0033	early-town	P2		translated	[DFT][E2:0959]ったく 女は男をまどわせる\nおそろしい 生き物だよ\n君も よくおぼえておきたまえよ˳
+C0-05E246	0x05E246	0x003A	early-town	P2		translated	[DFT][E2:094F]んだね 君は\n石?[PAU:1E]なんのことかね?[FIN]すまんが 今いそがしいんでね\n用があるなら またにしてくれ˳
+C0-05E281	0x05E281	0x0033	early-town	P2		translated	[DFT][E2:0980][SKP:5D]いそがしい身なのだが\n取材とあれば 仕方ない\n[PAU:1E]さて 何が聞きたいのかな?
 C0-05E2B5	0x05E2B5	0x0163	early-story	P1		translated	[DFT][E2:093F]や[PAU:1E] かわいい犬だね\nでも君 大人の仕事場に\n犬を 持ってきてはいけないよ[FIN][E2:044B]ょっと まった[KATAKANA]ー[HIRAGANA]っ!\n[PAU:3C]町長っ!いつから犬ぎらいが\nなおったんですかっ!?[FIN]前は 犬がそばにいるだけでも\nひめいをあげてましたよね!\nこれは いったい\nどういうことなんですかっ!![FIN][E2:093C]や···[PAU:1E]あの···[PAU:1E]その···\n[NXT]ぞこれは········[FIN]······[NXT]ぎふんっ\n[NXT]がばれたとあっちゃあ 仕方ない\nいかにも おれさまは\nにせの町長さ[FIN]その正体は [PAL:03][KATAKANA]ハッカー副司令官[HIRAGANA]\n[KATAKANA]ローズ樣[HIRAGANA]の しんえい隊[PAL:00]さ!\n正体を知られたからにゃあ\nだまって帰すわけには いかないな[FIN]\n我らの心のささえ [KATAKANA]ローズ樣[HIRAGANA]のため\nお命ちょうだいするぜ!
-C0-05E419	0x05E419	0x003F	early-town	P2		pending	[DFT][E2:093F]となしく このまま帰れば\n命は 助けてやったものを···[FIN]ならば おのぞみどおり\nその 息の根をとめてやる!
-C0-05E4A7	0x05E4A7	0x0057	early-town	P2		pending	[DLY:02]だ[CB]技Sに[CMD:FF]幽ぐぽゃ[CMD:E5]博[DFT][PAL:02]町長の 本日の[KATAKANA]スケジュール[HIRAGANA]\n あさ:[KATAKANA]ローズ[HIRAGANA]くんと朝食\n ひる:接待[KATAKANA]ゴルフ[HIRAGANA]\n よる:[KATAKANA]クラブ[HIRAGANA]で接待[PAL:00]
-C0-05E4FF	0x05E4FF	0x0057	early-town	P2		pending	[DFT][PAL:02]町長の 本日の[KATAKANA]スケジュール[HIRAGANA]\n あさ:[KATAKANA]ロココ町親[HIRAGANA]ぼく会出席\n ひる:[KATAKANA]ロココ町発展会誄出席[HIRAGANA]\n よる:[KATAKANA]ムフフクラブ出席[HIRAGANA][PAL:00]
+C0-05E419	0x05E419	0x003F	early-town	P2		translated	[DFT][E2:093F]となしく このまま帰れば\n命は 助けてやったものを···[FIN]ならば おのぞみどおり\nその 息の根をとめてやる!
+C0-05E4A7	0x05E4A7	0x0057	early-town	P2		translated	[DLY:02]だ[CB]技Sに[CMD:FF]幽ぐぽゃ[CMD:E5]博[DFT][PAL:02]町長の 本日の[KATAKANA]スケジュール[HIRAGANA]\n あさ:[KATAKANA]ローズ[HIRAGANA]くんと朝食\n ひる:接待[KATAKANA]ゴルフ[HIRAGANA]\n よる:[KATAKANA]クラブ[HIRAGANA]で接待[PAL:00]
+C0-05E4FF	0x05E4FF	0x0057	early-town	P2		translated	[DFT][PAL:02]町長の 本日の[KATAKANA]スケジュール[HIRAGANA]\n あさ:[KATAKANA]ロココ町親[HIRAGANA]ぼく会出席\n ひる:[KATAKANA]ロココ町発展会誄出席[HIRAGANA]\n よる:[KATAKANA]ムフフクラブ出席[HIRAGANA][PAL:00]
 C0-05E557	0x05E557	0x003F	early-story	P1		translated	[DFT] [NAM:00]は\n[PAL:02] [KATAKANA]カギ[HIRAGANA][PAL:00]を 見つけた![TER][DFT] [NAM:00]は\n[PAL:02] [KATAKANA]カギ[HIRAGANA][PAL:00]を 見つけた!\n だが もちものがいっぱいだ˳
 C0-05E5CE	0x05E5CE	0x00AF	early-story	P1		translated	[DFT][E2:0549]う [PAU:1E]この私こそが\n今世紀が生んだ 天才発明家\n[PAL:02][KATAKANA]ペッパー博士[HIRAGANA][PAL:00]だ[FIN]お前も 発明家だと?\nかっかっ お前と私では\n格も 品位も ちがうのだよ\n話にならんな[FIN]私に 教えをこいたいのか?\n[PAU:14]かっかっかっ 無理だ無理だ\nお前のような 子供に\n教えることなど 何もないっ˳
-C0-05E67E	0x05E67E	0x0033	early-town	P2		pending	[DFT][E2:053F]前の発明など\n資源の[KATAKANA]ムダ使[HIRAGANA]いがせきの山だ\nしょせんは 才能のちがいだよ˳
-C0-05E72F	0x05E72F	0x0052	early-town	P2		pending	[DFT][E2:04C2]が いい?\n犬をつれて 町長に\n話しかけるのよ[FIN]いつもの 町長なら\n犬が ちかづいただけで\n大さわぎするはずよ\nしっかり たのんだわねっ!!
+C0-05E67E	0x05E67E	0x0033	early-town	P2		translated	[DFT][E2:053F]前の発明など\n資源の[KATAKANA]ムダ使[HIRAGANA]いがせきの山だ\nしょせんは 才能のちがいだよ˳
+C0-05E72F	0x05E72F	0x0052	early-town	P2		translated	[DFT][E2:04C2]が いい?\n犬をつれて 町長に\n話しかけるのよ[FIN]いつもの 町長なら\n犬が ちかづいただけで\n大さわぎするはずよ\nしっかり たのんだわねっ!!
 C0-05E782	0x05E782	0x0025	early-story	P1		translated	[DFT][E2:045D]うっ どうしたのよ?!\n男の子でしょ?!\nがんばってよ [NAM:00]!
-C0-05E7A8	0x05E7A8	0x0030	early-town	P2		pending	[DFT][E2:044B]·ちょっとぉ···\n犬はどうしたの!?犬よっ!\n犬がいないと話にならないでしょ!
-C0-05E810	0x05E810	0x003B	early-town	P2		pending	[DFT]な·なんでこんな所に\n[KATAKANA]ネズミ[HIRAGANA]がいるのよぉっ!!\n今 大事な所なんだから\nあ·あっちに行ってよぉっ!!
+C0-05E7A8	0x05E7A8	0x0030	early-town	P2		translated	[DFT][E2:044B]·ちょっとぉ···\n犬はどうしたの!?犬よっ!\n犬がいないと話にならないでしょ!
+C0-05E810	0x05E810	0x003B	early-town	P2		translated	[DFT]な·なんでこんな所に\n[KATAKANA]ネズミ[HIRAGANA]がいるのよぉっ!!\n今 大事な所なんだから\nあ·あっちに行ってよぉっ!!
 C0-05E896	0x05E896	0x0028	early-story	P1		translated	[DFT] [NAM:00]は\n ひきだしの中から\n[PAL:02] 古びた[KATAKANA]アルバム[HIRAGANA][PAL:00]を 見つけた˳
-C0-05EAB9	0x05EAB9	0x006A	early-town	P2		pending	[DFT][E2:074F]んだ お前か\n[PAU:1E]あれから かあちゃんに\n外に遊びに行っちゃいけないって\n言われてさ···[FIN]ちえっ 家の中ばかりいたら\nくさっちゃうよな\n[PAU:14]そのうち こっそり\nぬけだそうと思ってるんだ˳
-C0-05EB24	0x05EB24	0x006E	early-town	P2		pending	[DFT][E2:074F]んだ お前か\nお前と遊んでいる ひまはないぞ\nおれは今 お勉強中なんだよ[FIN]おやじが もう少ししたら\n帰ってくるんだろう?それまでに\n[KATAKANA]テスト[HIRAGANA]で100点とって\nおやじを おどろかせてやるんだ!
-C0-05EB93	0x05EB93	0x0064	early-town	P2		pending	[DFT][E2:074F]んだ おまえか\n[NXT]ぞ···[NXT]がなに?おやじに会ったって?\nじょうだんなら やめてくれよな[FIN]おやじは おれとかあちゃんを\nおいて とつぜん\nいなくなっちまったんだぞ\nそれを今さら なんだい!
+C0-05EAB9	0x05EAB9	0x006A	early-town	P2		translated	[DFT][E2:074F]んだ お前か\n[PAU:1E]あれから かあちゃんに\n外に遊びに行っちゃいけないって\n言われてさ···[FIN]ちえっ 家の中ばかりいたら\nくさっちゃうよな\n[PAU:14]そのうち こっそり\nぬけだそうと思ってるんだ˳
+C0-05EB24	0x05EB24	0x006E	early-town	P2		translated	[DFT][E2:074F]んだ お前か\nお前と遊んでいる ひまはないぞ\nおれは今 お勉強中なんだよ[FIN]おやじが もう少ししたら\n帰ってくるんだろう?それまでに\n[KATAKANA]テスト[HIRAGANA]で100点とって\nおやじを おどろかせてやるんだ!
+C0-05EB93	0x05EB93	0x0064	early-town	P2		translated	[DFT][E2:074F]んだ おまえか\n[NXT]ぞ···[NXT]がなに?おやじに会ったって?\nじょうだんなら やめてくれよな[FIN]おやじは おれとかあちゃんを\nおいて とつぜん\nいなくなっちまったんだぞ\nそれを今さら なんだい!
 C0-05EBF8	0x05EBF8	0x0087	early-story	P1		translated	[DFT][E2:077E]··なに?\nおやじが おれに手紙を?\n[NXT]ぞ···み·[NXT]が見てやろうじゃねえか[FIN]\n [KATAKANA]カール[HIRAGANA]に [PAL:02]てがみ[PAL:00]を わたした![FIN][NXT]ぞ·········[NXT]がふんっ\nさらわれたかなんだか知らないけど\nいきなり いなくなっておいて\n調子いいこと言ってるよ!
-C0-05EC80	0x05EC80	0x003F	early-town	P2		pending	[DFT][E2:073F]まえ わざわざてがみを\nとどけるため もどってきたのか?[FIN]おまえのようなやつを\n[PAL:03]おひとよし [PAL:00]って言うんだぜ˳
-C0-05ECC0	0x05ECC0	0x0025	early-town	P2		pending	[DFT][E2:074F]んだよ お前\n勝手に 人の家の中に\n入ってくるなよ˳
-C0-05ECE6	0x05ECE6	0x0030	early-town	P2		pending	[DFT][E2:073D]ちの かあちゃんなら\n町長會の 受付にいるよ\n用があるならむこうに行けよ˳
-C0-05ED17	0x05ED17	0x000F	early-town	P2		pending	[DFT][E2:073F]いっ!ちょっとまてよ!
+C0-05EC80	0x05EC80	0x003F	early-town	P2		translated	[DFT][E2:073F]まえ わざわざてがみを\nとどけるため もどってきたのか?[FIN]おまえのようなやつを\n[PAL:03]おひとよし [PAL:00]って言うんだぜ˳
+C0-05ECC0	0x05ECC0	0x0025	early-town	P2		translated	[DFT][E2:074F]んだよ お前\n勝手に 人の家の中に\n入ってくるなよ˳
+C0-05ECE6	0x05ECE6	0x0030	early-town	P2		translated	[DFT][E2:073D]ちの かあちゃんなら\n町長會の 受付にいるよ\n用があるならむこうに行けよ˳
+C0-05ED17	0x05ED17	0x000F	early-town	P2		translated	[DFT][E2:073F]いっ!ちょっとまてよ!
 C0-05ED27	0x05ED27	0x0078	early-story	P1		translated	[DFT][E2:074D]きとうな 紙がなかったから\nこれに 書いた!\nこれをおやじに わたしてくれ![FIN] [NAM:00]は\n[PAL:02] 石版[PAL:00]を 受け取った![TER][DFT][E2:0766]たしたいものが あるんだけど\nおまえ 持ち物がいっぱいだな\nちょっと 片づけてくれよ˳
-C0-05EEC3	0x05EEC3	0x0072	early-town	P2		pending	[DFT]おお [KATAKANA]アキハバラ[HIRAGANA]の息子か\nひとりだち したんだって?\nお前のおやじも ずいぶん\n思いきったこと するもんだ[FIN]まあ 欲しいものがあれば\n勉強させてもらうよ\nお前の おやじには\nいつも 世話になってるしな˳
+C0-05EEC3	0x05EEC3	0x0072	early-town	P2		translated	[DFT]おお [KATAKANA]アキハバラ[HIRAGANA]の息子か\nひとりだち したんだって?\nお前のおやじも ずいぶん\n思いきったこと するもんだ[FIN]まあ 欲しいものがあれば\n勉強させてもらうよ\nお前の おやじには\nいつも 世話になってるしな˳
 C0-05EF36	0x05EF36	0x0115	early-story	P1		translated	[DFT][KATAKANA]アキハバラ[HIRAGANA]の息子じゃねえか\nなに?[PAU:1E]発明がしたいだと?\n[PAU:1E]そりゃあお前 かんたんには\nできねえぞ[FIN]お前の おやじだって\n本を読んだり 考えこんだりして\n発明品を作っていたもんさ[FIN]そういやあ [PAL:02]合成[PAL:00]とか言って\nうちの [KATAKANA]ガラクタ[HIRAGANA]を持っていって\n何か 作っていたこともあったなあ[FIN][KATAKANA]ガラクタ[HIRAGANA]なら 與にころがってるよ\n持って行くかい?\n うん!持っていく!\n 今日の所は やめておく[TER][CLR]それじゃあ 店の與に入りな\n與に 2つ[KATAKANA]カプセル[HIRAGANA]があるから\n両方 持っていっていいぞ˳
-C0-05F04C	0x05F04C	0x0022	early-town	P2		pending	[CLR]そうかい そうかい\nまあ 気がむいたら\nいつでも 言ってくれ˳
+C0-05F04C	0x05F04C	0x0022	early-town	P2		translated	[CLR]そうかい そうかい\nまあ 気がむいたら\nいつでも 言ってくれ˳
 C0-05F06F	0x05F06F	0x0036	early-story	P1		translated	[DFT][KATAKANA]アキハバラ[HIRAGANA]の息子じゃねえか\n何か用か?\n 品物を買いに来た\n 寄っただけ[TER][CLR][STR:FFF085]
-C0-05F0A6	0x05F0A6	0x001E	early-town	P2		pending	[DFT]おいおい 勝手に\n店の與まで 入らないでくれよ˳
-C0-05F0CB	0x05F0CB	0x002D	early-town	P2		pending	[DFT]今日は あついからさあ\n店を 休みにしたんだよ\nせっかく来たのに すまないね˳
-C0-05F195	0x05F195	0x0031	early-town	P2		pending	[DFT][PAL:02] この先 下水路\n あぶないから 入っちゃだめ!\n[PAL:00][PAU:1E] ···と 書いてある
-C0-05F2A8	0x05F2A8	0x0067	early-town	P2		pending	[DFT][E2:074B]えっ [KATAKANA]ドア[HIRAGANA]がしめられてるよ\n前に来た時は あいてたのになあ[FIN]でもこの[KATAKANA]ドア[HIRAGANA] [KATAKANA]ボロ[HIRAGANA]いから\n力入れておしたら あくかもな\nいっしょに おしてみようぜ\n[PAU:1E]いいか?[PAU:2A] せ[KATAKANA]ー[HIRAGANA]のっ!
-C0-05F310	0x05F310	0x002F	early-town	P2		pending	[DFT][E2:073F]いっ!ちゃんとおしてるのかよぉ\nお前のために やってるんだから\nまじめに おせよな!
-C0-05F340	0x05F340	0x0026	early-town	P2		pending	[DFT][E2:073F]れは ここで\n見張りをしていてやるよ\nがんばって行ってこいよ!
-C0-05F367	0x05F367	0x0013	early-town	P2		pending	[DFT][E2:07CD]う[KATAKANA]ーーーーーーーーー[HIRAGANA]んっ!
-C0-05F3F5	0x05F3F5	0x0012	early-town	P2		pending	[DLY:02]ぽう[CMD:F6]ぐきHぐ[CLR]えがぐぽわ[CMD:F6]ぐだ
+C0-05F0A6	0x05F0A6	0x001E	early-town	P2		translated	[DFT]おいおい 勝手に\n店の與まで 入らないでくれよ˳
+C0-05F0CB	0x05F0CB	0x002D	early-town	P2		translated	[DFT]今日は あついからさあ\n店を 休みにしたんだよ\nせっかく来たのに すまないね˳
+C0-05F195	0x05F195	0x0031	early-town	P2		translated	[DFT][PAL:02] この先 下水路\n あぶないから 入っちゃだめ!\n[PAL:00][PAU:1E] ···と 書いてある
+C0-05F2A8	0x05F2A8	0x0067	early-town	P2		translated	[DFT][E2:074B]えっ [KATAKANA]ドア[HIRAGANA]がしめられてるよ\n前に来た時は あいてたのになあ[FIN]でもこの[KATAKANA]ドア[HIRAGANA] [KATAKANA]ボロ[HIRAGANA]いから\n力入れておしたら あくかもな\nいっしょに おしてみようぜ\n[PAU:1E]いいか?[PAU:2A] せ[KATAKANA]ー[HIRAGANA]のっ!
+C0-05F310	0x05F310	0x002F	early-town	P2		translated	[DFT][E2:073F]いっ!ちゃんとおしてるのかよぉ\nお前のために やってるんだから\nまじめに おせよな!
+C0-05F340	0x05F340	0x0026	early-town	P2		translated	[DFT][E2:073F]れは ここで\n見張りをしていてやるよ\nがんばって行ってこいよ!
+C0-05F367	0x05F367	0x0013	early-town	P2		translated	[DFT][E2:07CD]う[KATAKANA]ーーーーーーーーー[HIRAGANA]んっ!
+C0-05F3F5	0x05F3F5	0x0012	early-town	P2		translated	[DLY:02]ぽう[CMD:F6]ぐきHぐ[CLR]えがぐぽわ[CMD:F6]ぐだ
 C0-05F445	0x05F445	0x00E6	early-story	P1		translated	[DFT][E2:0144]れはね [PAL:02]発明[KATAKANA]マシン[HIRAGANA][PAL:00]と言って\n発明家が いろんな発明をする時に\n使う[KATAKANA]マシン[HIRAGANA]なのよ[FIN]本を読んだり 人の話をきいて\n[PAL:02]ひらめいたものを作ったり\n持ち物を[PAL:02]合成[PAL:00]したりできるのよ[FIN]それと [PAL:02]自分の[E2:1A67]作ったり\n[KATAKANA]メンテナンス[HIRAGANA]や[KATAKANA]パワーアップ[HIRAGANA][PAL:00]も\nすることが できるのよ[FIN][JMP][CMD:F8][CMD:F4][DFT][E2:0159]ず [E2:1A67]作ってみたら?\n発明家一年生の [NAM:00]の\nたのもしい仲間になってくれるわ˳
-C0-05F52C	0x05F52C	0x001B	early-town	P2		pending	[DFT][E2:017E]··あら\nどうして 持ち物がいっぱいなの?
+C0-05F52C	0x05F52C	0x001B	early-town	P2		translated	[DFT][E2:017E]··あら\nどうして 持ち物がいっぱいなの?
 C0-05F548	0x05F548	0x0110	early-story	P1		translated	[DFT][E2:0147]てきな [E2:1A00]できたわね\nこれからも [KATAKANA]メンテナンス[HIRAGANA]や\n[KATAKANA]パワーアップ[HIRAGANA]をしてあげてね[FIN]発明[KATAKANA]マシン[HIRAGANA]で[PAL:02][E2:1A53]強さを\n[KATAKANA]プログラム[HIRAGANA]しなおすことも\nできるのよ\n[PAL:00]あとで ためしてごらんなさい[FIN]それと 私からの[KATAKANA]プレゼント[HIRAGANA]\n小型[KATAKANA]トランシーバー[HIRAGANA]よ\nこれがあれば どこにいても\n私と れんらくが取れるわ[FIN]なにか用があったら 使ってね\n使う時は [PAL:02]裝備して\n[CMD:E2]がか[KATAKANA]ボタン[HIRAGANA]を おすのよ[FIN][PAL:00] [NAM:00]は\n[PAL:02] [KATAKANA]トランシーバー[HIRAGANA][PAL:00]を もらった![TER][DFT]私も あなたに用がある時は\nこれを使って [BYTE:81]
 C0-05F666	0x05F666	0x0063	early-town	P2		translated	[DFT]この音で 知らせるわ\nおぼえていてね[FIN]これで ひと仕事おしまいね\nさあ もどりましょう[FIN]そうそう\n[PAL:02]せっかくできた [E2:1A67]\nおとうさんに 見せに行ったら?\n[PAL:00]きっと よろこぶわよ˳
 C0-0680C0	0x0680C0	0x003C	npc-dialogue	P3		translated	[DFT][PAL:02] あぶないよ どうくつの中は\n きけんが いっぱい!\n (字あまり)\n [KATAKANA]ロココ町保安委員会[HIRAGANA][PAL:00]
@@ -268,8 +268,8 @@ C0-069408	0x069408	0x0119	event-dialogue	P2		translated	[DFT]お[KATAKANA]ー[HI
 C0-069522	0x069522	0x0147	event-dialogue	P2		translated	[DFT]ようぼうず\nお前も つかまったの?\nひとりで こんな所まで\nくるなんて いさましいねえ[FIN]まさか思ってもみないよな\nどうくつの中に\nこんな うさんくさい奴らが\nいるなんてよお[FIN]おれなんかさ\nちょっと ごあいさつしたら\nこの[KATAKANA]ザマ[HIRAGANA]だぜ?たまんねえよな[TPL:D7]ところでよお ぼうず\nたのみが あるんだけどさ\n なんでしょ?\n やなこったい[TER][CLR]あのな···\nこのいまいましい 鉄球の\n[PAL:02][KATAKANA]カギ[HIRAGANA][PAL:00]を さがしてほしいんだ[FIN][KATAKANA]カニ[HIRAGANA]の頭をした奴が\n持ってるはずなんだ[FIN]どうだ\nさがしてきてくれるか?\n はいはい\n やなこったい[TER][CLR]そ[KATAKANA]ー[HIRAGANA]かい そ[KATAKANA]ー[HIRAGANA]かい\nお前も ここから出られる\n[KATAKANA]チャンス[HIRAGANA]なのにな[KATAKANA]ー[HIRAGANA]\nかわいそ[KATAKANA]ー[HIRAGANA]にな[KATAKANA]ー[HIRAGANA]˳
 C0-06966A	0x06966A	0x0049	event-dialogue	P2		translated	[DFT]なんだよ\n気がかわったのか?\n まかせてちょ[KATAKANA]ー[HIRAGANA]だい\n よんでみただけ[TER][CLR][NXT]ぞ········\n[NXT]がお前 [KATAKANA]オレ[HIRAGANA]を\nおちょくってんのか?
 C0-0696B4	0x0696B4	0x0091	event-dialogue	P2		translated	[CLR]へっへっ ありがとよ\nものわかりのいい奴だな\n出世するよ お前は[FIN]いいか?見張りの注意を\n[KATAKANA]オレ[HIRAGANA]が ひいとくからさ\n與にある [PAL:02][KATAKANA]トロッコ[HIRAGANA][PAL:00]で\nここから にげな[FIN]いち·にの·さんで\n行動開始だぞ\n[NXT]ぞ···[NXT]ぎいいか?\n[PAU:3C]いち·[PAU:3C]にの·[PAU:3C]さん![NXT]が
-C0-069746	0x069746	0x0022	npc-dialogue	P3		pending	[DFT]何やってんの!\n早く 行けってば!\n[NXT]ぎほれっ ほれっ![NXT]が
-C0-0698ED	0x0698ED	0x002A	npc-dialogue	P3		pending	[DFT]にげだそうなんて考えてると\n與の おにいさんみたいに\n鉄球をつけちゃうよ!
+C0-069746	0x069746	0x0022	npc-dialogue	P3		translated	[DFT]何やってんの!\n早く 行けってば!\n[NXT]ぎほれっ ほれっ![NXT]が
+C0-0698ED	0x0698ED	0x002A	npc-dialogue	P3		translated	[DFT]にげだそうなんて考えてると\n與の おにいさんみたいに\n鉄球をつけちゃうよ!
 C0-069918	0x069918	0x00CB	event-dialogue	P2		translated	[DFT]なんだ お前?\n新しいはたらき手か?\n そうで[KATAKANA]ー[HIRAGANA]す\n ちがいま[KATAKANA]ー[HIRAGANA]す[TER][DFT][CLR]そうか よかったよかった\n與に 先客がいるから\nそいつと 穴をほってよ[FIN][JMP][BYTE:AB][BYTE:99][DFT][CLR]そうなの?こまっちゃうなあ\nとりあえず はたらいててよ\n後で [KATAKANA]メタクラブ[HIRAGANA]さまに\nどうするか聞いておくからさ[FIN]え?なんで穴をほるかって?\n[KATAKANA]テ[HIRAGANA]···さがしもんなのっ!\n子供は よけいな心配を\nしなくていいのっ!
 C0-069A59	0x069A59	0x003A	npc-dialogue	P3		translated	[DFT]まあ あきらめて働いてよ\nまじめに 働いたら\n君も [KATAKANA]ボク[HIRAGANA]たちのような\n戦闘員にしてもらえるかもよ˳
 C0-069A94	0x069A94	0x0029	npc-dialogue	P3		translated	[DFT][KATAKANA]コラーッ[HIRAGANA]!\n[KATAKANA]チョロチョロ[HIRAGANA]してると\nお前にも 鉄球を\nつけちゃうぞ!
@@ -281,522 +281,522 @@ C0-069E18	0x069E18	0x001F	npc-dialogue	P3		translated	[DFT]お···おい\nち�
 C0-069E3A	0x069E3A	0x0027	npc-dialogue	P3		translated	[DFT]う[KATAKANA]ーーーーーーーー[HIRAGANA]っ\nそれ以上あげるのは\nやめろ[KATAKANA]ーーーーーー[HIRAGANA]っ!
 C0-069F0C	0x069F0C	0x0047	npc-dialogue	P3		translated	[CLR]ˎがぐだP星ぐぽ[BYTE:A7][BYTE:9F]ぐ[CLR]ˎがぐだP星[DFT][KATAKANA]メタクラブ[HIRAGANA]!なにをしてやがる?\n定時報告の時間だぞ\n[KATAKANA]グズグズ[HIRAGANA]するんじゃねえぞ!
 C0-069F54	0x069F54	0x016E	event-dialogue	P2		translated	[DFT][NXT]じ······ん?\n[NXT]が[KATAKANA]スクリーン[HIRAGANA]を\nまだなおしてねえのか?\nふんっ···まあいい[FIN]ところで [E2:0054]\nもう みつかったのか?\n はい\n なんのことでしょう?[TER][CLR]だったら何故 報告しねえんだ?\n[PAU:1E]ふんっ\n[PAU:1E]お前のことだ\nいつものでまかせだろう?[FIN]いいか?そのどうくつの中に\n[E2:0020]があるのは\nあきらかなんだ\n草の根わけても さがしだせ[FIN]ぐずぐずやってると\n[KATAKANA]カニ[HIRAGANA]なべに しちまうぞ!\n[JMP][BYTE:9E][BYTE:A0][CLR]なにを ねぼけてやがる?\nそれでも お前は\n[KATAKANA]ハッカー[HIRAGANA]の幹部の一員かあ?[FIN]いいか?そのどうくつの中に\n[E2:0000] あるのは\nあきらかなんだ!\n草の根わけても さがしだすんだよ[FIN]ぐずぐずやってると\n[KATAKANA]カニ[HIRAGANA]すきに しちまうぞ!\n[PAU:1E]わかったら さっさと行け\n次の報告は わすれるんじゃねえぞ!
-C0-06A0C3	0x06A0C3	0x0038	npc-dialogue	P3		pending	[DFT]おいっ どこへ行くんだ?\nこの [KATAKANA]ブラックモア樣[HIRAGANA]を\n無視するとは\nお前も えらくなったじゃねえか˳
-C0-06A171	0x06A171	0x001B	npc-dialogue	P3		pending	[DFT] 返事がない···\n のぼせているようだ···˳
-C0-06A1A5	0x06A1A5	0x0028	npc-dialogue	P3		pending	[DFT] 泉質は 単純[KATAKANA]アルカリ泉[HIRAGANA]\n [KATAKANA]リウマチ[HIRAGANA]や かた[KATAKANA]コリ[HIRAGANA]にきく˳
-C0-06A28F	0x06A28F	0x0033	event-dialogue	P2		pending	[DF4][E2:0744]いつめ!こいつめ!\nお前らなんかに\n負けないからなっ![FIN][PAU:1E]·····あっ·····˳[NXT]が
+C0-06A0C3	0x06A0C3	0x0038	npc-dialogue	P3		translated	[DFT]おいっ どこへ行くんだ?\nこの [KATAKANA]ブラックモア樣[HIRAGANA]を\n無視するとは\nお前も えらくなったじゃねえか˳
+C0-06A171	0x06A171	0x001B	npc-dialogue	P3		translated	[DFT] 返事がない···\n のぼせているようだ···˳
+C0-06A1A5	0x06A1A5	0x0028	npc-dialogue	P3		translated	[DFT] 泉質は 単純[KATAKANA]アルカリ泉[HIRAGANA]\n [KATAKANA]リウマチ[HIRAGANA]や かた[KATAKANA]コリ[HIRAGANA]にきく˳
+C0-06A28F	0x06A28F	0x0033	event-dialogue	P2		translated	[DF4][E2:0744]いつめ!こいつめ!\nお前らなんかに\n負けないからなっ![FIN][PAU:1E]·····あっ·····˳[NXT]が
 C0-06A2C3	0x06A2C3	0x0063	event-dialogue	P2		translated	[DFT][E2:073F]前 なかなかやるなあ\nまあ おれには\nかなわないかも しれないけどな![FIN]よし こっちにこいよ\n[PAU:1E]おれ [KATAKANA]ハッカー[HIRAGANA]のやつらの宝を\n見つけたんだ!\n特別に お前にもわけてやるよ˳
 C0-06A327	0x06A327	0x0100	event-dialogue	P2		translated	[DFT][PAL:02][KATAKANA]メタクラブ[HIRAGANA]:\n[PAL:00]すみません すみません\nおみそれいたしやした[FIN]いやあ だんなぁ\nおつよいですねえ このぉ!\nいえね あっしは ほんの\n通りすがりのさわ[KATAKANA]ガニ[HIRAGANA]でして[FIN][KATAKANA]ハッカー[HIRAGANA]··とかいう奴らに\n改造されて\nあんな姿になってたんですよ[FIN]そいつらね あっしに\nこのどうくつの中にある\n[E2:006E]て名の宝石を\nさがせって言うんですよ[FIN]でも これが見つからなくて\n困っていた所なんですよ[FIN]だんなのおかげで\n助かっちゃいましたよ\n···これ お礼と言っちゃあ\nなんですけど···
 C0-06A528	0x06A528	0x0095	event-dialogue	P2		translated	[DFT][PAL:02][KATAKANA]メタクラブ[HIRAGANA]:\n[PAL:00]なんだ お前は?\nこの こぞうの仲間かっ![FIN]お前たちが ここに入りこんで\nひっかきまわしてくれたせいで\nこっちは いろいろと\nさんざんな目にあったんだぞ![FIN]大切な仕事の\nじゃまをしてくれた[KATAKANA]バツ[HIRAGANA]だ!\nこの [KATAKANA]メタクラブ[HIRAGANA]さまが\nおしおきしてくれる!
 C0-06A5BE	0x06A5BE	0x0039	npc-dialogue	P3		translated	[DFT][PAL:02][KATAKANA]メタクラブ[HIRAGANA]:\n[PAL:00]おとなしく帰れば いいものを\nまだこりないらしいな\nならば 今いちど おしおきだ!
 C0-06A5F8	0x06A5F8	0x0039	event-dialogue	P2		translated	[DFT] [NAM:00]は\n[PAL:02] 1000[KATAKANA]トロン[HIRAGANA][PAL:00]を 手にいれた![TER][DFT]じゃ あっしはこれで···\nだんなも おきをつけて!
-C0-06A632	0x06A632	0x0013	npc-dialogue	P3		pending	[DFT]おっと\nちょっくら ごめんなさいよ˳
-C0-06A7A2	0x06A7A2	0x0047	npc-dialogue	P3		pending	[DFT] [KATAKANA]カール[HIRAGANA]は\n[PAL:02] 光る石版[PAL:00]を 手に入れた![TPL:D7][CLR][E2:077E]··なんだろ [KATAKANA]コレ[HIRAGANA]?\n[PAU:1E]でも [KATAKANA]スクラップ[HIRAGANA]より\nましだよな[TPL:]
-C0-06A7EB	0x06A7EB	0x0036	npc-dialogue	P3		pending	[CLR]宝がないのは くやしいけど\nおもしろかったから いいか\nぼちぼち 帰るとするか\n[PAU:1E]じゃあ またなっ!
-C0-06A822	0x06A822	0x004B	event-dialogue	P2		pending	[DFT][E2:07DC]じ············\n[NXT]がほとんど 中身が\nあけられてる···[FIN]あんなに 苦労したのに!\n[NXT]ぎちえっ\n[PAU:0A]ちえっ\n[PAU:0A]ちえっ[NXT]が
-C0-06A86E	0x06A86E	0x003A	event-dialogue	P2		pending	[DFT][E2:073F]前には世話になったからな\n残っているのを\n山わけしようぜ[FIN]お前 先に\n好きな方をあけろよ˳
-C0-06A8A9	0x06A8A9	0x0015	npc-dialogue	P3		pending	[DFT][E2:0754]やく あけろよ\nとろい奴だなあ˳
-C0-06A92D	0x06A92D	0x003E	npc-dialogue	P3		pending	[DFT]今 [KATAKANA]メタクラブ樣[HIRAGANA]が\nしんにゅう者を ここに\n追いつめた所なんだ\n關係ない人は 立入り禁止だよ!
-C0-06A9AB	0x06A9AB	0x0047	npc-dialogue	P3		pending	[DFT]ここは [KATAKANA]ハッカー幹部[HIRAGANA]の\n[PAL:02][KATAKANA]メタクラブ[HIRAGANA]さま[PAL:00]用の おふろだよ\n關係ない人を入れると\n[KATAKANA]ボク[HIRAGANA]が おこられちゃうんだ˳
-C0-06A9F3	0x06A9F3	0x0028	npc-dialogue	P3		pending	[DFT]聞きわけのない子だなあ\n言っても わからない子は\nおしおきしちゃうぞ!
-C0-06AA31	0x06AA31	0x0012	npc-dialogue	P3		pending	[DFT] とびらは かたくとざされている˳
+C0-06A632	0x06A632	0x0013	npc-dialogue	P3		translated	[DFT]おっと\nちょっくら ごめんなさいよ˳
+C0-06A7A2	0x06A7A2	0x0047	npc-dialogue	P3		translated	[DFT] [KATAKANA]カール[HIRAGANA]は\n[PAL:02] 光る石版[PAL:00]を 手に入れた![TPL:D7][CLR][E2:077E]··なんだろ [KATAKANA]コレ[HIRAGANA]?\n[PAU:1E]でも [KATAKANA]スクラップ[HIRAGANA]より\nましだよな[TPL:]
+C0-06A7EB	0x06A7EB	0x0036	npc-dialogue	P3		translated	[CLR]宝がないのは くやしいけど\nおもしろかったから いいか\nぼちぼち 帰るとするか\n[PAU:1E]じゃあ またなっ!
+C0-06A822	0x06A822	0x004B	event-dialogue	P2		translated	[DFT][E2:07DC]じ············\n[NXT]がほとんど 中身が\nあけられてる···[FIN]あんなに 苦労したのに!\n[NXT]ぎちえっ\n[PAU:0A]ちえっ\n[PAU:0A]ちえっ[NXT]が
+C0-06A86E	0x06A86E	0x003A	event-dialogue	P2		translated	[DFT][E2:073F]前には世話になったからな\n残っているのを\n山わけしようぜ[FIN]お前 先に\n好きな方をあけろよ˳
+C0-06A8A9	0x06A8A9	0x0015	npc-dialogue	P3		translated	[DFT][E2:0754]やく あけろよ\nとろい奴だなあ˳
+C0-06A92D	0x06A92D	0x003E	npc-dialogue	P3		translated	[DFT]今 [KATAKANA]メタクラブ樣[HIRAGANA]が\nしんにゅう者を ここに\n追いつめた所なんだ\n關係ない人は 立入り禁止だよ!
+C0-06A9AB	0x06A9AB	0x0047	npc-dialogue	P3		translated	[DFT]ここは [KATAKANA]ハッカー幹部[HIRAGANA]の\n[PAL:02][KATAKANA]メタクラブ[HIRAGANA]さま[PAL:00]用の おふろだよ\n關係ない人を入れると\n[KATAKANA]ボク[HIRAGANA]が おこられちゃうんだ˳
+C0-06A9F3	0x06A9F3	0x0028	npc-dialogue	P3		translated	[DFT]聞きわけのない子だなあ\n言っても わからない子は\nおしおきしちゃうぞ!
+C0-06AA31	0x06AA31	0x0012	npc-dialogue	P3		translated	[DFT] とびらは かたくとざされている˳
 C0-06AB30	0x06AB30	0x0154	event-dialogue	P2		translated	[DFT]どうしたの?君\nあぶないわよ\n最近 こわいお兄さんたちが\nうろうろしてるんだからね[FIN]え?あたし?あたしは\n大人だから 平気なの\n[PAU:1E]ほら [KATAKANA]バカ[HIRAGANA]なこと言ってないで\n早く帰りなさいよ[FIN]なあに?[PAU:1E]まだ何か用なの?\n[PAU:1E]···ははぁん\n[PAU:1E]さては ひとりで帰るのが\nこわくなったんでしょ?[FIN]なんなら いっしょに\n行ってあげてもいいわよ?\n わあい おねがいしま[KATAKANA]ー[HIRAGANA]す\n ひとりで帰るから いいよ[TER][CLR]まったく しょうがないわね\nあたしは [PAL:03][KATAKANA]ミント[HIRAGANA]\n[PAL:02][KATAKANA]ロココ町[HIRAGANA]の 事件記者[PAL:00]よ\n[PAU:1E]とりあえず よろしくね![FIN]じゃあ あたしは後ろから\nついていってあげるから\n君が 先に步きなさい\n[PAU:1E]···なによ[PAU:1E] 文句あるの?
-C0-06AC85	0x06AC85	0x0034	npc-dialogue	P3		pending	[CLR]むっ!かわいくないのっ!\n人の好意を無にすると\nろくな大人にならないわよっ\n[PAU:3C]ぷんだっ!
+C0-06AC85	0x06AC85	0x0034	npc-dialogue	P3		translated	[CLR]むっ!かわいくないのっ!\n人の好意を無にすると\nろくな大人にならないわよっ\n[PAU:3C]ぷんだっ!
 C0-06AD9E	0x06AD9E	0x0037	event-dialogue	P2		translated	[DFT][E2:0445]っきから\nおなじ景色の所ばかり\n步いてない?[FIN]君って···ひょっとして\n[PAU:1E]方向おんち?
 C0-06ADD6	0x06ADD6	0x0050	event-dialogue	P2		translated	[DFT][E2:0452]え···\nむこうに 何か見えない?\nあれ···家かしら?[FIN]··········\n[PAU:3C]悪いわね 君っ!\nここから先は\nひとりで 帰ってねっ!
-C0-06AF3B	0x06AF3B	0x001D	npc-dialogue	P3		pending	[DFT][E2:0466]あん!ちょっとぉ\nこの[KATAKANA]ネズミ[HIRAGANA] どうにかしてよ!
-C0-06AF59	0x06AF59	0x001F	npc-dialogue	P3		pending	[DFT][E2:047E]··え?\nあたしのかばんに\nねずみが いるですって!?
+C0-06AF3B	0x06AF3B	0x001D	npc-dialogue	P3		translated	[DFT][E2:0466]あん!ちょっとぉ\nこの[KATAKANA]ネズミ[HIRAGANA] どうにかしてよ!
+C0-06AF59	0x06AF59	0x001F	npc-dialogue	P3		translated	[DFT][E2:047E]··え?\nあたしのかばんに\nねずみが いるですって!?
 C0-06AF79	0x06AF79	0x0084	event-dialogue	P2		translated	[DFT][E2:047E]··かばんの中に\nねずみがいたなんて···[TPL:D7]···それより\n君 変な人形を見なかった?\n人形の後を あやしい男が\n追いかけて行ったのよ[FIN]ねずみに 足止めされていた間に\nどこかに行っちゃったかしら?\nこうしちゃいられないわ!
 C0-06B05C	0x06B05C	0x006D	event-dialogue	P2		translated	[DFT][NXT]ぎあ·あなた [KATAKANA]ネズミ[HIRAGANA]のことばが\nわかるんで[KATAKANA]チュウ[HIRAGANA]か?\n[PAU:1E]だったら この女の人に\n話してほしい[KATAKANA]チュウ[HIRAGANA][FIN]うちの子が この人のかばんに\n入りこんで 出られなくなって\n困ってるんで[KATAKANA]チュウ[HIRAGANA]!
-C0-06B14E	0x06B14E	0x000A	npc-dialogue	P3		pending	[DFT][KATAKANA]チュウチュウッ[HIRAGANA]
+C0-06B14E	0x06B14E	0x000A	npc-dialogue	P3		translated	[DFT][KATAKANA]チュウチュウッ[HIRAGANA]
 C0-06B159	0x06B159	0x0047	event-dialogue	P2		translated	[DFT]さっきは どうもありが[KATAKANA]チュウ[HIRAGANA]\nお礼に いいことを\n教えてあげま[KATAKANA]チュウ[HIRAGANA][FIN]そこの 左がわのかべを\n調べてみるといいで[KATAKANA]チュウ[HIRAGANA]˳
 C0-06B1A1	0x06B1A1	0x0098	event-dialogue	P2		translated	[DFT]ここの人形たちは\n[PAL:02][KATAKANA]ネズミ[HIRAGANA]が苦手[PAL:00]なんで[KATAKANA]チュウ[HIRAGANA]\nでも ここの人形はみんな人間が\n姿を 変えられたもので[KATAKANA]チュウ[HIRAGANA][FIN]この [PAL:02]時計塔の地下[PAL:00]には\n人形たちの 親玉がいてそいつが\n人間を 人形に変えるんだって\n[KATAKANA]ママ[HIRAGANA]が 言ってた[KATAKANA]チュウ[HIRAGANA]˳
-C0-06B277	0x06B277	0x0019	npc-dialogue	P3		pending	[DFT] [NAM:00]は\n[PAL:02] かくし通路[PAL:00]を みつけた!
-C0-06B400	0x06B400	0x0030	npc-dialogue	P3		pending	[DFT][PAL:03]あら まだこりてないの?\nそんなに 仲間になりたいなら\nおのぞみどおりにしてあげるわ˳
-C0-06B431	0x06B431	0x003F	npc-dialogue	P3		pending	[DFT][PAL:03]え?[PAU:1E]え?[PAU:1E]え?[PAU:1E][KATAKANA]ネズミ[HIRAGANA]!?\nいや[KATAKANA]ー[HIRAGANA]ん [KATAKANA]ネズミ[HIRAGANA]は苦手よぉっ!\n[PAU:1E][KATAKANA]マームラナ[HIRAGANA]さまぁっ!!![PAL:00]
+C0-06B277	0x06B277	0x0019	npc-dialogue	P3		translated	[DFT] [NAM:00]は\n[PAL:02] かくし通路[PAL:00]を みつけた!
+C0-06B400	0x06B400	0x0030	npc-dialogue	P3		translated	[DFT][PAL:03]あら まだこりてないの?\nそんなに 仲間になりたいなら\nおのぞみどおりにしてあげるわ˳
+C0-06B431	0x06B431	0x003F	npc-dialogue	P3		translated	[DFT][PAL:03]え?[PAU:1E]え?[PAU:1E]え?[PAU:1E][KATAKANA]ネズミ[HIRAGANA]!?\nいや[KATAKANA]ー[HIRAGANA]ん [KATAKANA]ネズミ[HIRAGANA]は苦手よぉっ!\n[PAU:1E][KATAKANA]マームラナ[HIRAGANA]さまぁっ!!![PAL:00]
 C0-06B4A1	0x06B4A1	0x0063	event-dialogue	P2		translated	[DFT][PAL:03]くすくす\n[PAU:1E]ようこそ ぼうや\n[KATAKANA]アナタ[HIRAGANA]も [KATAKANA]マームラナ[HIRAGANA]さまに\n人形にされにきたの?[FIN]でもね [KATAKANA]マームラナ[HIRAGANA]さまは\n今 と[KATAKANA]ー[HIRAGANA]ってもおいそがしいの\nおとなしくお帰り [PAU:28]ぼうや˳
-C0-06B505	0x06B505	0x0048	npc-dialogue	P3		pending	[DFT][PAL:03]またきたの?聞きわけのない子ね\n[PAU:1E]でも あきらめた方がいいわよ\n[KATAKANA]アナタ[HIRAGANA]なんか [KATAKANA]マームラナ[HIRAGANA]さまには\nかなわないんだから˳[PAL:00]
-C0-06B5A6	0x06B5A6	0x000A	npc-dialogue	P3		pending	[DFT]\n[KATAKANA]チュウチュウ[HIRAGANA]
+C0-06B505	0x06B505	0x0048	npc-dialogue	P3		translated	[DFT][PAL:03]またきたの?聞きわけのない子ね\n[PAU:1E]でも あきらめた方がいいわよ\n[KATAKANA]アナタ[HIRAGANA]なんか [KATAKANA]マームラナ[HIRAGANA]さまには\nかなわないんだから˳[PAL:00]
+C0-06B5A6	0x06B5A6	0x000A	npc-dialogue	P3		translated	[DFT]\n[KATAKANA]チュウチュウ[HIRAGANA]
 C0-06B5B1	0x06B5B1	0x0074	event-dialogue	P2		translated	[DFT]間にあってよかった[KATAKANA]チュウ[HIRAGANA]\nうちの子を助けてくれた\nお礼で[KATAKANA]チュウ[HIRAGANA][FIN]この先から 時計塔の地下に\nおりることができる[KATAKANA]チュウ[HIRAGANA]\n人形の姿をした 化物いる[KATAKANA]チュウ[HIRAGANA]\n気をつけた方がいい[KATAKANA]チュウ[HIRAGANA]˳
-C0-06B72E	0x06B72E	0x0019	npc-dialogue	P3		pending	[DFT]え[KATAKANA]ー[HIRAGANA]ん\nか·[PAU:1E]からだが 動かないよぉっ!
+C0-06B72E	0x06B72E	0x0019	npc-dialogue	P3		translated	[DFT]え[KATAKANA]ー[HIRAGANA]ん\nか·[PAU:1E]からだが 動かないよぉっ!
 C0-06B935	0x06B935	0x0084	event-dialogue	P2		translated	[DLY:02][STR:D9B886]ぅぐぽぱ[BYTE:BA]Ⅰ[DFT][PAL:03]きっと くると思ってたわ\n[PAU:1E]あなたも この石を\nさがしているんでしょ?[FIN]でもね [PAU:1E][KATAKANA]アタシ[HIRAGANA]のことを\n人形だからって [KATAKANA]バカ[HIRAGANA]にしちゃ[KATAKANA]ダメ[HIRAGANA]よ\n[KATAKANA]アタシ[HIRAGANA]は この石のおかげで\nこ[KATAKANA]ー[HIRAGANA]んなものに 変身できるのよ˳
-C0-06B9BA	0x06B9BA	0x0043	npc-dialogue	P3		pending	[DFT][PAL:03]せっかくにげたのに お[KATAKANA]バカ[HIRAGANA]さんね\n[PAU:1E]でも あなたの石ももらえれば\nきっと もっと すごい力を\n使えるようになるわね˳
+C0-06B9BA	0x06B9BA	0x0043	npc-dialogue	P3		translated	[DFT][PAL:03]せっかくにげたのに お[KATAKANA]バカ[HIRAGANA]さんね\n[PAU:1E]でも あなたの石ももらえれば\nきっと もっと すごい力を\n使えるようになるわね˳
 C0-06B9FE	0x06B9FE	0x0043	event-dialogue	P2		translated	[DFT] [NAM:00]は\n[PAL:02] 石2[PAL:00]を 手に入れた![NXT]が[TER][DFT] [NAM:00]は\n[PAL:02] 石2[PAL:00]を みつけた!\n だが 持ち物がいっぱいだった˳
-C0-06BA42	0x06BA42	0x0031	npc-dialogue	P3		pending	[DFT][PAL:03]いや[KATAKANA]ー[HIRAGANA]んっ\n[PAU:3C]せっかく たいくつな人形から\n変身できたのにぃ·······[PAL:00]
-C0-06BA74	0x06BA74	0x0031	npc-dialogue	P3		pending	[DF4][E2:083B]った あった\n[PAU:1E]きっと これだな\n[E2:0000] かくされている\n人形って言うのは···˳
+C0-06BA42	0x06BA42	0x0031	npc-dialogue	P3		translated	[DFT][PAL:03]いや[KATAKANA]ー[HIRAGANA]んっ\n[PAU:3C]せっかく たいくつな人形から\n変身できたのにぃ·······[PAL:00]
+C0-06BA74	0x06BA74	0x0031	npc-dialogue	P3		translated	[DF4][E2:083B]った あった\n[PAU:1E]きっと これだな\n[E2:0000] かくされている\n人形って言うのは···˳
 C0-06BAA6	0x06BAA6	0x0097	event-dialogue	P2		translated	[DF4][PAL:03]うふふふ\nかわいい お[KATAKANA]バカ[HIRAGANA]さんね\nそんなに かんたんにはいかないわよ[FIN][KATAKANA]アタシ[HIRAGANA]の体にかくされた 石はね\n人形の[KATAKANA]アタシ[HIRAGANA]に\n不思誄な 力をくれたのよ\n[KATAKANA]アナタ[HIRAGANA]になんか あげられないわ[FIN]しばらく そうしてなさい\n後で [KATAKANA]アタシ[HIRAGANA]たちの\n仲間に 加えてあげるわね˳[PAL:00]
 C0-06BC21	0x06BC21	0x00B9	engine-data	P3		translated	[CLR]いがぐだじがぐ[CLR]いがぐすが)ぐSに[CMD:FF]ぐだ:子[BYTE:B2]ぅ[DF5]どうであった [KATAKANA]イゴール[HIRAGANA]\n[PAU:1E]まことに たのもしい少年ではないか[FIN][PAL:02]だんなさま [PAU:1E]おどろきましたな\n[PAU:1E]あの人形には ほとほと\n手をやいておりましたのに···[FIN][PAL:00]これでこの館も 正しい時を\nきざむことが できるだろう\n[PAU:1E][KATAKANA]ラスク君[HIRAGANA]との やくそくも守れ\nようやく 安らかにねむれるな˳
 C0-06BD1C	0x06BD1C	0x006F	event-dialogue	P2		translated	[DFT][E2:0481]きいたわっ!聞いたわっ!\n特[KATAKANA]ダネ[HIRAGANA]よっ![FIN][KATAKANA]ハッカー[HIRAGANA]の 目的は\n[E2:004E]かいう名の\n石っていうわけね!?\nいいわいいわ 記事になるわっ![FIN]さっそく町に帰って\n記事の用意をしなくちゃ!!
 C0-06BDCC	0x06BDCC	0x0096	event-dialogue	P2		translated	[DF4][E2:0FC2]がくん!さがしたよ\nいや おかげでこしもずいぶん\nよくなってね[FIN]え?[KATAKANA]ティアトロン[HIRAGANA]を見つけた?\n[PAU:1E]···やれやれ まったく出番が\nなかったというわけか\n年よりはでしゃばるものではないな[FIN]一度 [KATAKANA]ロココ町[HIRAGANA]にもどらんかね?\n君には 話しておかねば\nならないこともあるしな˳
 C0-06C086	0x06C086	0x0016	engine-data	P3		pending	[CLR]┌がぐく┌ぐS[CMD:F0][CMD:FF]ぐぎががんががぐぢろ司
-C0-06C17D	0x06C17D	0x001C	npc-dialogue	P3		pending	[DFT]暗くて よく見えないけど\nなんか あやしい···˳
-C0-06C19A	0x06C19A	0x0038	npc-dialogue	P3		pending	[DFT] [NAM:00]は[PAL:02][KATAKANA]カベ[HIRAGANA][PAL:00]を 調べた\n[PAU:14] よく見ると [KATAKANA]カベ[HIRAGANA]のむこうは\n かくし通路に なっていた!
+C0-06C17D	0x06C17D	0x001C	npc-dialogue	P3		translated	[DFT]暗くて よく見えないけど\nなんか あやしい···˳
+C0-06C19A	0x06C19A	0x0038	npc-dialogue	P3		translated	[DFT] [NAM:00]は[PAL:02][KATAKANA]カベ[HIRAGANA][PAL:00]を 調べた\n[PAU:14] よく見ると [KATAKANA]カベ[HIRAGANA]のむこうは\n かくし通路に なっていた!
 C0-06C3BE	0x06C3BE	0x003C	npc-dialogue	P3		translated	[DFT][E2:043B]たしは この人を見てるから\n[PAL:02]この人の 犬をさがしてきて!\n[PAL:00]犬が 藥を持っているんですって˳
 C0-06C3FB	0x06C3FB	0x002B	npc-dialogue	P3		translated	[DFT][E2:043E]らいじゃないの 君!\nよかったわ これでこの人も\n動けるようになるわね!
 C0-06C427	0x06C427	0x006D	event-dialogue	P2		translated	[DF4][E2:0481]し!!まだいたの!?\n[PAU:28]···と 言いたい所だけど\nちょうどいい所に 来たわ[FIN]この人 [KATAKANA]ケガ[HIRAGANA]をしてるのよ\n[PAL:02]この人の 犬を\nさがしてきてくれない?\n[PAL:00]犬が 藥を持っているんですって˳
 C0-06C495	0x06C495	0x0033	npc-dialogue	P3		translated	[DFT][E2:044B]ょっと きみぃ!?\n[KATAKANA]ケガ人[HIRAGANA]を 見捨てていくの?\n話ぐらい 聞いて行きなさいよ!
 C0-06C4C9	0x06C4C9	0x007C	event-dialogue	P2		translated	[DFT][E2:0445]て [PAU:1E]取材再開だわ!\n[KATAKANA]ハッカー[HIRAGANA]が このやしきで\n何かしていることも わかったし[FIN]あいつらの 目的は何なのか\nつきとめて 記事にしなくちゃ!\n[PAU:1E]じゃあ[KATAKANA]フラボノ[HIRAGANA]さん おだいじに\n[PAU:1E][NAM:00]くんは 早く帰るのよ!
-C0-06C631	0x06C631	0x0023	npc-dialogue	P3		pending	[DLY:02]ぽぃ[PAU:02]Sに[CMD:FF]ぐ[STR:72C586]ぅぐぽぃ[PAU:6B]ぐぽQ[PAU:6B][DFT]わん!わん!わん!
+C0-06C631	0x06C631	0x0023	npc-dialogue	P3		translated	[DLY:02]ぽぃ[PAU:02]Sに[CMD:FF]ぐ[STR:72C586]ぅぐぽぃ[PAU:6B]ぐぽQ[PAU:6B][DFT]わん!わん!わん!
 C0-06C655	0x06C655	0x0149	event-dialogue	P2		translated	[DFT]はて?どこかで会ったような···\n[PAU:1E]え?君が [NAM:00]くんか?\n[PAU:1E]なるほど おとうさんによく似てる[FIN]わしは [PAL:02][KATAKANA]フラボノ[HIRAGANA]\n[PAU:1E][PAL:00]君のとうさんの 知人でな\nとちゅうまで 君のとうさんと\nいっしょだったのだが···[FIN][KATAKANA]アタタ[HIRAGANA]···\n[PAU:1E][KATAKANA]ハッカー[HIRAGANA]とかいうやつらに\nおいかけられて この中へ\nにげこんだ時に こしをうってな[FIN][PAL:02]すまんが わしのかばんを\nさがしてきてくれんか?\n[PAL:00]わしの犬が 持っているはずだ\n白い犬で [KATAKANA]パセリ[HIRAGANA]というんだ[FIN][JMP]そ[BOX:D7E00F][KATAKANA]パセリ[HIRAGANA]は 白い小さな犬だよ\n背中に ふろしきをしょっている[FIN]あと [PAL:02]光るものが好き[PAL:00]でな\n光るものを 見せると\n喜んで 近寄ってくるんだ˳
 C0-06C79F	0x06C79F	0x0021	npc-dialogue	P3		translated	[DFT][E2:0F3F]お\n[KATAKANA]パセリ[HIRAGANA]を連れてきてくれたか!\nこれで助かった!
 C0-06C7C1	0x06C7C1	0x00F1	event-dialogue	P2		translated	[DFT][E2:0FDC]ぞ···[NXT]が[PAU:1E]あの娘さんは 行ったかね?\n[PAU:1E]やれやれ これでようやく\nおちついて話すことができる[FIN][NAM:00]くんは おとうさんに\n[E2:004E]いう 石のことを\n聞いたことがあるかね?[FIN]以前から 君のとうさんは\nそれを さがしていたらしいのだが\nどうも[KATAKANA]ハッカー[HIRAGANA]の奴らも それを\nさがしているいう話を 聞いてな[FIN]君のとうさんの話は また後だ\n今は [E2:0067]さがさねば\n[KATAKANA]ハッカー[HIRAGANA]に 先をこされてしまう\nさあ 早く···[TPL:D7]\nあ···いたたた···˳
 C0-06C8B3	0x06C8B3	0x00B6	event-dialogue	P2		translated	[DFT][E2:0F0E]·どうもまだ こしが···\n[PAU:28][NAM:00]くん\nわしにかまわず 先に行ってくれ[TPL:D7]そうだ これをわたしておこう\n[PAL:02][KATAKANA]ライト[HIRAGANA][PAL:00]だ\nこれがあれば 暗い所を步くのも\n楽になるだろう˳[TPL:D7] [NAM:00]は\n[PAL:02] [KATAKANA]ライト[HIRAGANA][PAL:00]を 手に入れた![TER][DFT]君に わたしたいものが\nあるのだが···\nどうも 荷物がいっぱいのようだな\nはて どうしたものか···˳
 C0-06C96A	0x06C96A	0x0057	event-dialogue	P2		translated	[DFT][E2:0F5D]うしわけないが わしは\n[PAL:02]西館の空き部屋[PAL:00]あたりで\n少し 休ませてもらうよ[FIN]用がある時は さがしてくれ\n[PAU:1E]\nやれやれ まったく\nめんぼくない˳
-C0-06CA38	0x06CA38	0x0026	npc-dialogue	P3		pending	[DFT][PAL:03][NXT]ぎ\nふふふふ·····\n[PAU:3C][NXT]がこんにちは [PAU:1E]かわいいぼうや˳[PAL:00]
+C0-06CA38	0x06CA38	0x0026	npc-dialogue	P3		translated	[DFT][PAL:03][NXT]ぎ\nふふふふ·····\n[PAU:3C][NXT]がこんにちは [PAU:1E]かわいいぼうや˳[PAL:00]
 C0-06CA5F	0x06CA5F	0x006D	event-dialogue	P2		translated	[DFT][PAL:03]あら···\n[PAU:28]あなた いいものを持ってるわね\n[KATAKANA]キラキラ光[HIRAGANA]る すてきな石\n[PAU:1E]わたしの 持ってるのと同じ···[FIN]わたし それもほしいわ\n[PAU:1E]だってそれには とっても\nすてきな力が あるんですもの˳
 C0-06CB27	0x06CB27	0x004E	event-dialogue	P2		translated	[DFT][PAL:03][NXT]ぎあららぁ···\n[PAU:1E][NXT]が全部 やっつけちゃったの?\n[PAU:3C]しょうがないわね\n今回は 見のがしてあげるわ[FIN]\nでも [PAU:32]あきらめないわよ˳[PAL:00]
-C0-06CC7D	0x06CC7D	0x0012	npc-dialogue	P3	C0-06AA31	pending	[DFT] とびらは かたくとざされている˳
-C0-06CD14	0x06CD14	0x0036	npc-dialogue	P3		pending	[DFT] 本には こう書かれていた\n[PAU:28][PAL:02]┌彼は 君の求めるものへと\n 君を みちびくだろう˳┘[PAL:00]
-C0-06CDE5	0x06CDE5	0x0010	npc-dialogue	P3		pending	[DFT] [NAM:00]は 本を読んでみた˳
+C0-06CC7D	0x06CC7D	0x0012	npc-dialogue	P3	C0-06AA31	translated	[DFT] とびらは かたくとざされている˳
+C0-06CD14	0x06CD14	0x0036	npc-dialogue	P3		translated	[DFT] 本には こう書かれていた\n[PAU:28][PAL:02]┌彼は 君の求めるものへと\n 君を みちびくだろう˳┘[PAL:00]
+C0-06CDE5	0x06CDE5	0x0010	npc-dialogue	P3		translated	[DFT] [NAM:00]は 本を読んでみた˳
 C0-06CED6	0x06CED6	0x00C8	event-dialogue	P2		translated	[DF4]ようこそ 我が館へ\n[PAU:1E]私は この館のあるじ\n[PAL:02][KATAKANA]ジャン[HIRAGANA]·[KATAKANA]ポール[HIRAGANA]·[KATAKANA]ベルモント[HIRAGANA]\n[KATAKANA]ポリンキー[HIRAGANA]はくしゃく[PAL:00]と言う者[FIN]この館をおとずれた 客人のため\n我が館を 案内しようと思い\nこの書物を 残すことにした[FIN]我が館は 今より[PAL:02]百年前[PAL:00]に\n忠実なるしもべ [KATAKANA]イゴール[HIRAGANA]が\n設計·建造したもので\n本館と西館に わかれている˳
-C0-06CF9F	0x06CF9F	0x004B	npc-dialogue	P3		pending	[DF4]この井戸の中には 水はない\n中には 地下通路があり\n館のいたる所と つながっている\n[PAU:1E]まあ [PAU:1E]これは [PAU:1E]私のしゅみだ˳
+C0-06CF9F	0x06CF9F	0x004B	npc-dialogue	P3		translated	[DF4]この井戸の中には 水はない\n中には 地下通路があり\n館のいたる所と つながっている\n[PAU:1E]まあ [PAU:1E]これは [PAU:1E]私のしゅみだ˳
 C0-06CFEB	0x06CFEB	0x0083	event-dialogue	P2		translated	[DF4]本館と 西館には\n館の中からも 行くことができるが\nこの入口から わたりろうかを通り\n行くこともできるのだ[FIN]西館には [PAL:02]書庫[PAL:00]がある\n実は 私も自伝のようなものを\nしたためており\nその一部が そこにもおさめてある˳
 C0-06D06F	0x06D06F	0x0088	event-dialogue	P2		translated	[DF4]そしてここが[PAL:02] 時計塔\n[PAU:3C][KATAKANA]ラスク[HIRAGANA][PAL:00]という青年が\n設計·建造してくれたものだ[FIN]客人よ [PAU:28]君が なにごとも恐れずに\nこの館を たんさくすると言うなら\n私は 君のために道を開こう\n[PAU:3C]さあ [PAU:1E]書物から顔をあげるがいい˳
 C0-06D134	0x06D134	0x00F7	event-dialogue	P2		translated	[DFT][PAL:02] すばらしき我が日常\n     第一卷\n\n [KATAKANA]ポリンキー[HIRAGANA]はくしゃく·著[FIN]┌ついに 我が館が完成した\n この記念にこれから 我が日常を\n 書物に したためることにした[FIN] さて この館は 他の土地に\n 建てる予定であったのだが\n 何もないはずの その土地には\n 何かがあり 人をこばむのだ[FIN] しかし 私があった少年は\n こともなげに そこへと入ったのだ\n 実に この世には\n 不可解なことが 多いものだ˳┘[PAL:00]
 C0-06D22C	0x06D22C	0x00C5	event-dialogue	P2		translated	[DFT][PAL:02] すばらしき我が日常\n     第二卷\n\n [KATAKANA]ポリンキー[HIRAGANA]はくしゃく·著[FIN]┌今日 客人がおとずれてきた\n いつぞや 森で出会った\n あの ふしぎな少年によく似た\n 金色のかみの 青年である[FIN] からくり造りが得意というので\n これから建てる [PAL:03]時計塔[PAL:02]の\n 設計を 彼にたのむことにした\n 完成が 楽しみである˳┘[PAL:00]
 C0-06D2F2	0x06D2F2	0x013F	event-dialogue	P2		translated	[DFT][PAL:02] すばらしき我が日常\n     第三卷\n\n [KATAKANA]ポリンキー[HIRAGANA]はくしゃく·著[FIN]┌[KATAKANA]ラスク君[HIRAGANA]の作った 時計塔が\n ついに 完成した\n おおいに 満足できるできだ[FIN] 時計塔の 最上階には\n 時計が回ると 動き出す\n しかけ人形を 置いてくれた\n 金色のかみをしたかわいい人形だ[FIN] 私は この人形に\n[PAL:03] [KATAKANA]マームラナ[HIRAGANA][PAL:02]と 名をつけた\n[PAU:14] [KATAKANA]イゴール[HIRAGANA]は 変な顔をしていた\n[PAU:14] しっけいな![FIN] ところで[KATAKANA]ラスク君[HIRAGANA]は 美しい石を\n 我がやしきに かくしたいという\n そこで 私は···[PAU:3C]おっと\n[PAU:1E] ここで書いては 意味がない˳┘[PAL:00]
 C0-06D432	0x06D432	0x0107	event-dialogue	P2		translated	[DFT][PAL:02] すばらしき我が日常\n     第四卷\n\n [KATAKANA]ポリンキー[HIRAGANA]はくしゃく·著[FIN]┌実に この世には\n 不可解なことが 多いものだ\n 肉体がはてた 今も\n 私は こうして書を記している[FIN] 私は [KATAKANA]ラスク君[HIRAGANA]の石を\n あの中に かくすべきではなかった\n 化け物と化したあれのことを思うと\n 安らかに ねむることもできぬ[FIN] たしか[KATAKANA]ラスク君[HIRAGANA]は あの石を\n 少年が 取りにくると言っていた\n その少年とやらは あの化け物を\n 退治できるのであろうか˳┘
-C0-06D582	0x06D582	0x0012	npc-dialogue	P3		pending	[DFT]\n 時を忘れた 時計塔\n
-C0-06D595	0x06D595	0x0022	npc-dialogue	P3		pending	[DFT]\n 未来とは 決められたものでなく\n 作り出すものである
-C0-06D5B8	0x06D5B8	0x0015	npc-dialogue	P3		pending	[DFT]\n 時をきざむ 人形たちの部屋
-C0-06D5CE	0x06D5CE	0x001C	npc-dialogue	P3		pending	[DFT]\n 時をえる者は さかえ\n 失うものは ほろびる
-C0-06D5EB	0x06D5EB	0x0013	npc-dialogue	P3		pending	[DFT]\n 時は えがたくして失いやすし
-C0-06D5FF	0x06D5FF	0x0010	npc-dialogue	P3		pending	[DFT]\n [KATAKANA]ブレーカー室入口[HIRAGANA]
+C0-06D582	0x06D582	0x0012	npc-dialogue	P3		translated	[DFT]\n 時を忘れた 時計塔\n
+C0-06D595	0x06D595	0x0022	npc-dialogue	P3		translated	[DFT]\n 未来とは 決められたものでなく\n 作り出すものである
+C0-06D5B8	0x06D5B8	0x0015	npc-dialogue	P3		translated	[DFT]\n 時をきざむ 人形たちの部屋
+C0-06D5CE	0x06D5CE	0x001C	npc-dialogue	P3		translated	[DFT]\n 時をえる者は さかえ\n 失うものは ほろびる
+C0-06D5EB	0x06D5EB	0x0013	npc-dialogue	P3		translated	[DFT]\n 時は えがたくして失いやすし
+C0-06D5FF	0x06D5FF	0x0010	npc-dialogue	P3		translated	[DFT]\n [KATAKANA]ブレーカー室入口[HIRAGANA]
 C0-06D6D0	0x06D6D0	0x00C0	event-dialogue	P2		translated	[DF4]ようこそ おいでくださいました\nいえ [PAU:1E]あなた樣がおいでになるのは\nよおっく 知っておりましたですよ[FIN]もうしおくれました\nわたくしの名は [PAL:02][KATAKANA]イゴール[HIRAGANA]\n[PAL:00][PAU:14]この館の 主であらせられる\n[PAL:02][KATAKANA]ポリンキー[HIRAGANA][PAL:00]樣に 仕えております[FIN]ささ おつかれになったでしょう\nお部屋を 用意いたしましたので\nまずは お休みくださいませ\nご案内 いたしましょう˳
-C0-06D8EE	0x06D8EE	0x0038	npc-dialogue	P3		pending	[DF4]ぅ[DFT]どうぞ こちらのお部屋で\nおやすみになってください\n[PAU:1E]まずは ゆっくりと\nおやすみになることですよ˳
-C0-06D927	0x06D927	0x001E	npc-dialogue	P3		pending	[DFT]ほっほっほっほっ\n[PAU:1E]お客樣\nこちらで ございますよ˳
-C0-06DAFA	0x06DAFA	0x002C	npc-dialogue	P3		pending	[DFT]おや···これは···\n[PAU:1E]もうしわけございませんが\nお部屋に おもどりください˳
+C0-06D8EE	0x06D8EE	0x0038	npc-dialogue	P3		translated	[DF4]ぅ[DFT]どうぞ こちらのお部屋で\nおやすみになってください\n[PAU:1E]まずは ゆっくりと\nおやすみになることですよ˳
+C0-06D927	0x06D927	0x001E	npc-dialogue	P3		translated	[DFT]ほっほっほっほっ\n[PAU:1E]お客樣\nこちらで ございますよ˳
+C0-06DAFA	0x06DAFA	0x002C	npc-dialogue	P3		translated	[DFT]おや···これは···\n[PAU:1E]もうしわけございませんが\nお部屋に おもどりください˳
 C0-06DB27	0x06DB27	0x006C	event-dialogue	P2		translated	[DFT]だんな樣\n[PAU:1E][PAL:02][KATAKANA]ラスク樣[HIRAGANA][PAL:00]がおっしゃっていたのは\nあの方のことでしょうか?[FIN][PAL:02][NXT]ぞ···[NXT]がどうであろうな?\n[PAU:1E]いずれにせよ 我々は\nお手なみ拝見を きめこむことと\nいたそうではないか˳
-C0-06DB94	0x06DB94	0x0013	npc-dialogue	P3		pending	[DFT][PAL:03]きゃ[KATAKANA]ーーーーーーーー[HIRAGANA]っ![PAL:00]
+C0-06DB94	0x06DB94	0x0013	npc-dialogue	P3		translated	[DFT][PAL:03]きゃ[KATAKANA]ーーーーーーーー[HIRAGANA]っ![PAL:00]
 C0-06DC7D	0x06DC7D	0x0059	event-dialogue	P2		translated	[DFT][NXT]ぅ[DFT][E2:043E]?[PAU:1E]この部屋から\n人の声が 聞こえたですって?[FIN]なに 言ってるの\nだれも いないじゃない\nほら 変なこと言ってないで\n早く おうちに帰るのよ˳
 C0-06DCD7	0x06DCD7	0x006B	event-dialogue	P2		translated	[DFT][E2:043B]たしは ここで取材をするの\nどうもこのやしきは あやしいわ\n[PAU:1E]まあ [PAU:1E]事件記者の[KATAKANA]カン[HIRAGANA]ってやつね[FIN]さあさあ\n[PAU:1E]いいから君は 早く帰りなさい\n[KATAKANA]ハッカー[HIRAGANA]に 気をつけて帰るのよ˳
-C0-06DD84	0x06DD84	0x0023	npc-dialogue	P3		pending	[DFT][E2:0458]らほら\nあたしの 仕事のじゃまよっ\nはやく 帰りなさい˳
-C0-06DDA8	0x06DDA8	0x0017	npc-dialogue	P3		pending	[DFT][E2:0460]り道しないで\nちゃんと 帰るのよ!
-C0-06DDD4	0x06DDD4	0x002C	npc-dialogue	P3		pending	[DFT][DEC:6B023450][CMD:FF]ぐきEぐ[WAI]ぐぐかぎぐ[CLR]にがぐぽ[CMD:F2][DEC:023350FF]教[DFT]\n···········?
+C0-06DD84	0x06DD84	0x0023	npc-dialogue	P3		translated	[DFT][E2:0458]らほら\nあたしの 仕事のじゃまよっ\nはやく 帰りなさい˳
+C0-06DDA8	0x06DDA8	0x0017	npc-dialogue	P3		translated	[DFT][E2:0460]り道しないで\nちゃんと 帰るのよ!
+C0-06DDD4	0x06DDD4	0x002C	npc-dialogue	P3		translated	[DFT][DEC:6B023450][CMD:FF]ぐきEぐ[WAI]ぐぐかぎぐ[CLR]にがぐぽ[CMD:F2][DEC:023350FF]教[DFT]\n···········?
 C0-06DE67	0x06DE67	0x00C1	event-dialogue	P2		translated	[CLR][BYTE:B4]がぐ名ぐ[BYTE:97]ぐぽI[ESC]ぐ[CLR]れがぐだや技ぼそがじがべげぐ[CB]ぅ[DFT]···では この石を\n我が やしきのいずこかに\nかくしてほしいと言うわけか?\n[PAL:02][KATAKANA]ラスク君[HIRAGANA]?[FIN]お手数かけます はくしゃく\nこのやしきの中でなら\n安全だと思いまして···[FIN][PAL:00]なに 気にやむことはない\nそなたには 世話にもなっておる\nそれに 今 ちょうどいい\nかくし場所を 思いついた˳
-C0-06DF29	0x06DF29	0x0021	npc-dialogue	P3		pending	[DFT][PAL:02][NXT]ず······[NXT]がおや···\n[PAU:1E]···きみは···?[PAL:00]
-C0-06E077	0x06E077	0x000B	npc-dialogue	P3		pending	[DFT]\nわん!わん!わん!
-C0-06E0BE	0x06E0BE	0x0018	npc-dialogue	P3		pending	[DFT][E2:020A]っ星ぐぽつ[E3:6B]ぐぽに[E3:6B][DFT]きゃんきゃん
+C0-06DF29	0x06DF29	0x0021	npc-dialogue	P3		translated	[DFT][PAL:02][NXT]ず······[NXT]がおや···\n[PAU:1E]···きみは···?[PAL:00]
+C0-06E077	0x06E077	0x000B	npc-dialogue	P3		translated	[DFT]\nわん!わん!わん!
+C0-06E0BE	0x06E0BE	0x0018	npc-dialogue	P3		translated	[DFT][E2:020A]っ星ぐぽつ[E3:6B]ぐぽに[E3:6B][DFT]きゃんきゃん
 C0-06E0D7	0x06E0D7	0x0074	event-dialogue	P2		translated	[DFT]むむむむ???\nお前\n[KATAKANA]オレ[HIRAGANA]のことばがわかるの[KATAKANA]キャン[HIRAGANA]?[FIN]え?[KATAKANA]カギ[HIRAGANA]?\n···お前は ご主人樣を\n助けてくれたから\n特別に おしえてやる[KATAKANA]ワン[HIRAGANA][FIN]この 井戸のまわりを\nよおっく 調べてみるんだ[KATAKANA]ワン[HIRAGANA]!
 C0-06E150	0x06E150	0x008C	event-dialogue	P2		translated	[DFT]あの [KATAKANA]カギ[HIRAGANA]を持っていたやつらが\nご主人樣を 井戸に落とした[KATAKANA]ワン[HIRAGANA]\nしかえしに 困らせて\nやったんだ[KATAKANA]ワンワン[HIRAGANA]![FIN]あいつらは [PAL:02]時計塔[PAL:00]に\nさがしものがあると 言ってた[KATAKANA]ワン[HIRAGANA]\nこの[KATAKANA]カギ[HIRAGANA]は きっと\n時計塔のものに ちがいない[KATAKANA]ワン[HIRAGANA]˳
 C0-06E223	0x06E223	0x0060	event-dialogue	P2		translated	[DLY:A9]がぎばじぐだゃ技Sに[CMD:FF]ぐ[STR:E2E186]ぅぐぽへ[CMD:E2]師[DFT] [NAM:00]は\n[PAL:02] [KATAKANA]カギ[HIRAGANA][PAL:00]を 手に入れた![TER][DFT] [NAM:00]は \n[PAL:02] [KATAKANA]カギ[HIRAGANA][PAL:00]を みつけた!\n[PAU:3C] だが 持ち物がいっぱいだった˳
 C0-06E339	0x06E339	0x00FB	event-dialogue	P2		translated	[DFT][E2:1481]へ人よ さきほどの\nそなたのかつやくには\nまことに 感謝いたす[TPL:D7]時に 井戸の中はよく調べたか?\n[PAL:02]光のもとで よく見れば\n[PAL:00]新たな道が 開けることもあろう[FIN]その先で そなたの知りあいの\n娘が 助けをまっておるぞ[TPL:D7]必要とあらば\nこの おくの部屋へ入られよ\nそなたならば [KATAKANA]ラスク[HIRAGANA]の遺產を\n使うことができよう[FIN]そして 客人よ\n[PAU:1E][PAL:02]人形[PAL:00]には 気をつけられよ\nあれは 不思誄な力をもって\nわざわいを もたらすものだ˳
 C0-06E468	0x06E468	0x00F4	event-dialogue	P2		translated	[DFT][E2:1459]たお会いしたな 客人\nさて 先の件は\nお考え いただけたか?[FIN][JMP][CMD:F7][CMD:E4][DFT]ようこそ 客人\n[PAU:1E]わたしは この館の主で\n[PAU:1E][PAL:02][KATAKANA]ポリンキー[HIRAGANA]はくしゃく[PAL:00]と もうす者[FIN]ところで 客人\n[PAU:1E]この部屋に [PAL:02]白きまもの[PAL:00]が入りこみ\n困っておるのだ[FIN]この部屋の中の [PAL:02]白きまもの[PAL:00]を\n連れさっては くれぬだろうか?\n おやすいご用です\n やなこったい[TER][CLR][E2:143F]お!それは大いに\n感謝せねばなるまい\n[PAU:1E]ささ [PAU:1E]中に入られよ˳
-C0-06E55D	0x06E55D	0x0021	npc-dialogue	P3		pending	[CLR][E2:147E]··さようか\nいささか いかんではあるが\nしかたあるまい˳
-C0-06E662	0x06E662	0x003F	npc-dialogue	P3		pending	[DFT][PAL:02]戦闘員A:\n[PAL:00]···でさあ\n[PAU:1E]おれ [PAU:1E]見ちゃったんだよね···\n[PAL:02]人形[PAL:00]が步いているのを···˳
-C0-06E6A2	0x06E6A2	0x0035	npc-dialogue	P3		pending	[DFT][PAL:02]戦闘員B:\n[PAL:00][KATAKANA]オレ[HIRAGANA]なんか\n[PAU:1E]だ[KATAKANA]ー[HIRAGANA]れもいないのに\n声がするのを 聞いたよ···˳
-C0-06E6D8	0x06E6D8	0x0039	npc-dialogue	P3		pending	[DFT][PAL:02]戦闘員C:\n[PAL:00]ぼくはね[KATAKANA]ー[HIRAGANA]っ\n[PAU:1E]黒い[KATAKANA]マント[HIRAGANA]の男が\nふっ[PAU:3C]と 消えたのを見た···˳
+C0-06E55D	0x06E55D	0x0021	npc-dialogue	P3		translated	[CLR][E2:147E]··さようか\nいささか いかんではあるが\nしかたあるまい˳
+C0-06E662	0x06E662	0x003F	npc-dialogue	P3		translated	[DFT][PAL:02]戦闘員A:\n[PAL:00]···でさあ\n[PAU:1E]おれ [PAU:1E]見ちゃったんだよね···\n[PAL:02]人形[PAL:00]が步いているのを···˳
+C0-06E6A2	0x06E6A2	0x0035	npc-dialogue	P3		translated	[DFT][PAL:02]戦闘員B:\n[PAL:00][KATAKANA]オレ[HIRAGANA]なんか\n[PAU:1E]だ[KATAKANA]ー[HIRAGANA]れもいないのに\n声がするのを 聞いたよ···˳
+C0-06E6D8	0x06E6D8	0x0039	npc-dialogue	P3		translated	[DFT][PAL:02]戦闘員C:\n[PAL:00]ぼくはね[KATAKANA]ー[HIRAGANA]っ\n[PAU:1E]黒い[KATAKANA]マント[HIRAGANA]の男が\nふっ[PAU:3C]と 消えたのを見た···˳
 C0-06E712	0x06E712	0x0066	event-dialogue	P2		translated	[DFT][PAL:02]戦闘員A:\n[PAL:00]この上で 見張りをしているやつも\nすっかり こわがっちゃってさあ[FIN]さっきなんか いたずらして\n[PAL:02][KATAKANA]ブレーカー[HIRAGANA]の[KATAKANA]スイッチ[HIRAGANA][PAL:00]を\n消したら 泣きそうになってたよ˳
-C0-06E78E	0x06E78E	0x002D	npc-dialogue	P3		pending	[DFT][E2:083D]るさいなあ [PAU:1E]今 こわい話で\nもりあがってるんだから\nじゃま しないでよっ!
+C0-06E78E	0x06E78E	0x002D	npc-dialogue	P3		translated	[DFT][E2:083D]るさいなあ [PAU:1E]今 こわい話で\nもりあがってるんだから\nじゃま しないでよっ!
 C0-06E8BB	0x06E8BB	0x00B6	event-dialogue	P2		translated	[DFT][E2:043B]らっ?まだいたの?\nえ?[KATAKANA]ブレーカー[HIRAGANA]を操作したのは\n君だったの?[FIN]あっ![PAU:1E]こうしちゃいられないわ\n今の奴ら [KATAKANA]パセリ[HIRAGANA]をさがしてるのよ\n[KATAKANA]パセリ[HIRAGANA]に あいつらの\n[KATAKANA]カギ[HIRAGANA]を 持っていかれたんだって[FIN][KATAKANA]パセリ[HIRAGANA]を 見つければ\nあいつらの目的が わかるかも\n[PAU:1E][KATAKANA]フラボノ[HIRAGANA]さんを さがさなきゃ!\n[PAU:1E][KATAKANA]フラボノ[HIRAGANA]さ[KATAKANA]ーーーーーー[HIRAGANA]んっ!
 C0-06EA2C	0x06EA2C	0x0105	event-dialogue	P2		translated	[DF4][E2:044B]ょっとぉ!\nこんな所にとじこめて どうする気?\nあんたたち 何が目的なの?[TPL:D8]うるさい おねえちゃんだねえ!\nさがしものが見つかったら\n帰してあげるから\nおとなしくしてなさい[FIN]君みたいのが うろうろしてたら\n仕事が やりづらいのっ!\nただでさえ このやしきは\n樣子が変なのに···[TPL:D8][E2:047E]··ふうん\nおばけが こわいの?\nいがいと 弱虫なのね[TPL:D8]···そ·それはぁ···\n[PAU:3C]いいから おとなしくしてなさい!\nああ[PAU:1E] いやな[KATAKANA]タイプ[HIRAGANA]の娘の\n見張りを させられちゃったなあ˳
 C0-06EBCE	0x06EBCE	0x00BA	event-dialogue	P2		translated	[DFT][E2:0F5E]れやれ 助かったよ\nくわしい話は後だ\n[KATAKANA]パセリ[HIRAGANA]をさがしてくれ[FIN]あいつはどうやら\nさっきの奴らから\n[PAL:02]時計塔の[KATAKANA]カギ[HIRAGANA][PAL:00]を うばったらしい[FIN]あいつらが あわてている所を見るとひょっとすると\n[E2:004E]\n關係しているかもしれん[FIN][JMP]は[CMD:EC][DFT][E2:0FD4]ぱせり[HIRAGANA]はひろったものをかくすのが\n好きでな あいつと話でもできれば\n場所がわかるのに···˳
 C0-06EC89	0x06EC89	0x0072	event-dialogue	P2		translated	[DFT][E2:0F4F]に?[KATAKANA]カギ[HIRAGANA]が見つかった?\nそれは よかった!\nそういえば さっき[FIN]記者の おじょうさんが来てな\nみょうな人形が 時計塔の中に\n消えたのを見たと言っていたが\n[PAU:14]···一体 なんのことだか˳
 C0-06EDC4	0x06EDC4	0x00B0	event-dialogue	P2		translated	[DFT][E2:085E]いやい じいさん\nあの[PAL:02]犬[PAL:00]は どこに行った?\n[PAU:1E]すなおに 教えないと\n痛い目見ちゃうぞ![FIN][E2:0F58]お···[PAU:32]痛い目と言うのは\nうおの目の しんせきかな?[FIN][E2:083C]·痛い目って言うのは···\n[PAU:3C][NXT]ず················\n[PAU:1E]···ば·[PAU:1E][NXT]がばかにしてるだろうっ![TPL:D7]\nんっ?[PAU:1E]なんだ お前はっ!
-C0-06EE75	0x06EE75	0x0035	npc-dialogue	P3		pending	[DFT][E2:083B]やしい奴めっ!\n[PAU:1E]お前から 先に痛い目見せてやる\nほんとにほんとに 痛いからなっ!
+C0-06EE75	0x06EE75	0x0035	npc-dialogue	P3		translated	[DFT][E2:083B]やしい奴めっ!\n[PAU:1E]お前から 先に痛い目見せてやる\nほんとにほんとに 痛いからなっ!
 C0-06EEAB	0x06EEAB	0x00D2	event-dialogue	P2		translated	[DFT][E2:0855][KATAKANA]ー[HIRAGANA]っ おみそれしましたっ!\nたしかに 痛い目見ましたあっ!\n命ばかりは お助けを[KATAKANA]ー[HIRAGANA]っ[FIN]なんでも お話ししますから\nゆるしてくださいっ!\n 君たちの 目的はなんだ!?\n 男は だまって見のがすのさ[TER][CLR]わ[KATAKANA]ー[HIRAGANA]んっ おいらは\n[KATAKANA]ハッカー[HIRAGANA]の司令官の\n[PAL:02][KATAKANA]ブラックモア[HIRAGANA][PAL:00]さまに命令されて[FIN][E2:006E]て石を\nさがしにきただけなんですぅ\n後のことは 何も知りませ[KATAKANA]ー[HIRAGANA]ん!
-C0-06EF7E	0x06EF7E	0x0025	npc-dialogue	P3		pending	[CLR][E2:0858]·ほんとうですか!?\nじ···じゃあ\nそこを どいてくれませんか?
+C0-06EF7E	0x06EF7E	0x0025	npc-dialogue	P3		translated	[CLR][E2:0858]·ほんとうですか!?\nじ···じゃあ\nそこを どいてくれませんか?
 C0-06F084	0x06F084	0x007D	event-dialogue	P2		translated	[DFT]この お[KATAKANA]ヤシキ[HIRAGANA]は\n[KATAKANA]マチガッタ[HIRAGANA] 時を[KATAKANA]キザンデ[HIRAGANA]ます\nご主人[KATAKANA]サマ[HIRAGANA]は [KATAKANA]ソレ[HIRAGANA]を悲しんで\n[KATAKANA]ユックリ[HIRAGANA]お休みに[KATAKANA]ナレナイ[HIRAGANA]のです[FIN][KATAKANA]ソレ[HIRAGANA]も 人形に[KATAKANA]カクサレタ[HIRAGANA]\n[KATAKANA]フシギ[HIRAGANA]な 石の[KATAKANA]チカラ[HIRAGANA]の[KATAKANA]セイ[HIRAGANA]\n[KATAKANA]ナノダ[HIRAGANA]そうです˳
-C0-06F102	0x06F102	0x0043	npc-dialogue	P3		pending	[DFT][KATAKANA]ユウレイ[HIRAGANA]には [KATAKANA]ワザ[HIRAGANA]や[KATAKANA]ケン[HIRAGANA]が\n[KATAKANA]キカナイモノ[HIRAGANA]が [KATAKANA]オオイ[HIRAGANA]そうです\nちかづいて [KATAKANA]コウゲキ[HIRAGANA]するのも\n[KATAKANA]キケン[HIRAGANA]ですよ˳
+C0-06F102	0x06F102	0x0043	npc-dialogue	P3		translated	[DFT][KATAKANA]ユウレイ[HIRAGANA]には [KATAKANA]ワザ[HIRAGANA]や[KATAKANA]ケン[HIRAGANA]が\n[KATAKANA]キカナイモノ[HIRAGANA]が [KATAKANA]オオイ[HIRAGANA]そうです\nちかづいて [KATAKANA]コウゲキ[HIRAGANA]するのも\n[KATAKANA]キケン[HIRAGANA]ですよ˳
 C0-06F146	0x06F146	0x0096	event-dialogue	P2		translated	[DFT][KATAKANA]アナタ[HIRAGANA]は [KATAKANA]ワタシ[HIRAGANA]を作った方に\nとても[KATAKANA]ニテイマス[HIRAGANA]\n[KATAKANA]ワタシ[HIRAGANA]は その[KATAKANA]ムカシ[HIRAGANA]\nご主人[KATAKANA]サマ[HIRAGANA]に [KATAKANA]モラワレ[HIRAGANA]ました[FIN]ご主人[KATAKANA]サマ[HIRAGANA]は [KATAKANA]ワタシ[HIRAGANA]に\n[KATAKANA]コトバ[HIRAGANA]を [KATAKANA]オシエテクレ[HIRAGANA]ました\n[KATAKANA]ダカラ[HIRAGANA] [KATAKANA]ワタシ[HIRAGANA]は ご主人[KATAKANA]サマ[HIRAGANA]を\n[KATAKANA]ココ[HIRAGANA]で [KATAKANA]オマモリシテイルノ[HIRAGANA]です˳
 C0-06FB83	0x06FB83	0x0230	event-dialogue	P2		translated	[CLR]裝置[TER]南の島のなんでも屋[TER]   下水路[TER]  町長會受付[TER]   町長室[TER]   町長會[TER]   雪山港[TER]    雪山[TER][KATAKANA]ハッカー航空幽地入口[HIRAGANA][TER] [KATAKANA]ハッカー航空幽地[HIRAGANA][TER]   設計室[TER] [KATAKANA]ハッカー要塞入口[HIRAGANA][TER]  [KATAKANA]ハッカー要塞[HIRAGANA][TER]   作戦室[TER] [KATAKANA]ドクター[HIRAGANA]G実驗室[TER]  水路操作室[TER]   会誄室[TER]  かんきん部屋[TER]   司令室[TER]  [KATAKANA]レーザー室[HIRAGANA][TER][KATAKANA]マザーコンピューター[HIRAGANA][TER]  [KATAKANA]ポロン[HIRAGANA]の家[TER] はくしゃくの館[TER]   宇宙船[TER] 楽しい日本語教室 [TER]   [KATAKANA]キララ星[HIRAGANA][TER]  [KATAKANA]ショコラ星[HIRAGANA][TER][KATAKANA]ショコラ星[HIRAGANA]ひなん所[TER] [KATAKANA]ショコラ星研究室[HIRAGANA][TER] [KATAKANA]ショコラ星司令室[HIRAGANA][TER] [KATAKANA]ショコラ星居住区[HIRAGANA][TER]  [KATAKANA]メタルアイアン号[HIRAGANA][TER]  [KATAKANA]ショコラ星宇宙船[HIRAGANA][TER] [KATAKANA]ハッカー宇宙要塞[HIRAGANA][TER]   貨物室[TER]  兵士休息所[TER][KATAKANA]エレベーター動力室[HIRAGANA][TER]   ろうや[TER]    倉庫[TER]  [KATAKANA]ガトー[HIRAGANA]の部屋[TER]  [KATAKANA]ゴミ処理場[HIRAGANA][TER] [KATAKANA]エンジンルーム[HIRAGANA][TER] 宇宙要塞中心部[TER][DFT]···あっ!ねずみだっ!\nこいつぅ まて[KATAKANA]ー[HIRAGANA]っ!
-C0-06FDB4	0x06FDB4	0x0010	npc-dialogue	P3		pending	[DFT][KATAKANA]ネズミ[HIRAGANA]かぁ かわいいなあ˳
-C0-07808E	0x07808E	0x0032	npc-dialogue	P3		pending	[DFT][E2:0F81]Wった時は 相談してくれ\nだてに 年はとっておらん\n力になれることも あるだろう˳
+C0-06FDB4	0x06FDB4	0x0010	npc-dialogue	P3		translated	[DFT][KATAKANA]ネズミ[HIRAGANA]かぁ かわいいなあ˳
+C0-07808E	0x07808E	0x0032	npc-dialogue	P3		translated	[DFT][E2:0F81]Wった時は 相談してくれ\nだてに 年はとっておらん\n力になれることも あるだろう˳
 C0-0780C1	0x0780C1	0x00A2	event-dialogue	P2		translated	[DFT][E2:0FC2]がくん\nうわさは 聞いたよ\n[KATAKANA]ティアトロン[HIRAGANA]のこともな[FIN]しかし 町長が[KATAKANA]ティアトロン[HIRAGANA]を\nねらうなんて どうもおかしい\nわしは 今の町長は\nにせものではないかと思うのだ[FIN]君は [PAL:02]町長の苦手なもの[PAL:00]を\n知らんか?\nそれを利用すれば 町長の正体を\nうまく あばけるかもしれんぞ˳
 C0-078164	0x078164	0x008E	event-dialogue	P2		translated	[DFT][E2:0F60]うやく おちついて\n話をすることが できるな[FIN]まずは 君のとうさんのことを\n話しておかないと いかんな···\n[PAU:1E]いいか [NAM:00]くん\nおちついて よくきいておくれ[FIN]あれは 数日前のこと···\nわしと 君のとうさんは\n[E2:0045]がしの\n旅に 出たばかりだった···˳
 C0-0781F3	0x0781F3	0x00EE	event-dialogue	P2		translated	[DFT][E2:0F49]の後 ずいぶんさがしたが\nきみの とうさんの姿を\n見つけることは できなかった···[FIN]わしは 君のとうさんがさがしてた\n[E2:004E]いうものが\n君のとうさんの 行方を知る\n[KATAKANA]カギ[HIRAGANA]のような気がしてな···[FIN]そういえば わしは昔\n[PAL:02]南の島[PAL:00]に行ったことがあってな\nそこの 神樣の像には\n不思誄な石がはまっているという[FIN]残念ながら 結局見ることは\nできなかったが···\n[PAU:28]ひょっとしたら それが\n[E2:0053]ひとつかもしれんな˳
-C0-0782E2	0x0782E2	0x001F	npc-dialogue	P3		pending	[DFT]おや [KATAKANA]ネズミ[HIRAGANA]か\nずいぶん 人なつっこい[KATAKANA]ネズミ[HIRAGANA]だな˳
-C0-078345	0x078345	0x002F	npc-dialogue	P3		pending	[DFT]ずいぶん長い間\nご主人樣と旅してた[KATAKANA]ワン[HIRAGANA]\n久しぶりに 落ちつける[KATAKANA]ワン[HIRAGANA]˳
-C0-078386	0x078386	0x0026	npc-dialogue	P3		pending	[DFT] [NAM:00]は\n [KATAKANA]ポスト[HIRAGANA]の中を のぞいた\n だが何も入っていなかった˳
-C0-07869A	0x07869A	0x0017	npc-dialogue	P3		pending	[DFT][E2:083B]·そこの ぼうや\nちょっと まってよ!
+C0-0782E2	0x0782E2	0x001F	npc-dialogue	P3		translated	[DFT]おや [KATAKANA]ネズミ[HIRAGANA]か\nずいぶん 人なつっこい[KATAKANA]ネズミ[HIRAGANA]だな˳
+C0-078345	0x078345	0x002F	npc-dialogue	P3		translated	[DFT]ずいぶん長い間\nご主人樣と旅してた[KATAKANA]ワン[HIRAGANA]\n久しぶりに 落ちつける[KATAKANA]ワン[HIRAGANA]˳
+C0-078386	0x078386	0x0026	npc-dialogue	P3		translated	[DFT] [NAM:00]は\n [KATAKANA]ポスト[HIRAGANA]の中を のぞいた\n だが何も入っていなかった˳
+C0-07869A	0x07869A	0x0017	npc-dialogue	P3		translated	[DFT][E2:083B]·そこの ぼうや\nちょっと まってよ!
 C0-0786B2	0x0786B2	0x0079	event-dialogue	P2		translated	[DFT][E2:0852]ねね ぼうやさあ\n[KATAKANA]アキハバラ博士[HIRAGANA]の子でしょ?\nいっしょに きてくれないかなあ?[FIN]博士が 協力してくれないなら\n君を 人質にしろって\n[KATAKANA]ハッカー[HIRAGANA]の えらい人に言われてさ\n悪く思わないでね [PAU:3C]せえのっ!
-C0-07872C	0x07872C	0x0026	npc-dialogue	P3		pending	[DFT][E2:0805]んねんだけど\nにがすわけには いかないよ\nおこられるの いやだもん!
-C0-078753	0x078753	0x0036	npc-dialogue	P3		pending	[DFT][E2:0855]·[PAU:1E]ひ[KATAKANA]ー[HIRAGANA]っ!子供だと思って\nあまく見てましたあっ!\nでなおしてきま[KATAKANA]ーーーーー[HIRAGANA]すっ!
+C0-07872C	0x07872C	0x0026	npc-dialogue	P3		translated	[DFT][E2:0805]んねんだけど\nにがすわけには いかないよ\nおこられるの いやだもん!
+C0-078753	0x078753	0x0036	npc-dialogue	P3		translated	[DFT][E2:0855]·[PAU:1E]ひ[KATAKANA]ー[HIRAGANA]っ!子供だと思って\nあまく見てましたあっ!\nでなおしてきま[KATAKANA]ーーーーー[HIRAGANA]すっ!
 C0-0788A8	0x0788A8	0x0169	event-dialogue	P2		translated	[DFT]ようこそ ぼくの子孫たち\n[PAU:14]ぼくの名前は [KATAKANA]ラスク[HIRAGANA]\n[PAU:14]君たちに 伝えたいことがあって\nこの[KATAKANA]メッセージ[HIRAGANA]を残している[FIN]この極楽星のどこかに\n[E2:004E]いう名の石が\n3つにくだけちってねむっている\n不思誄な力をひめた 石だ[FIN]いつの時代か その石をもとめて\n悪の手がのびるだろう\nどうか そいつらの手にわたる前に\n[E2:0067] 集めてほしいんだ[FIN]ぼくの手では ひとつだけしか\n見つけることができなかった···\nそれは [PAL:02][KATAKANA]ポリンキー[HIRAGANA]はくしゃく\n[PAL:00]という人にあずけてある[FIN]君の代に はくしゃくの館が\n残っているかどうかはわからない\nでも まずは館をたずねてみてほしい[FIN]はくしゃくの館は\nここよりさらに [KATAKANA]→[HIRAGANA]へと進んだ\n[PAL:02]迷いの森[PAL:00]の中にある˳
 C0-078BDA	0x078BDA	0x01AF	event-dialogue	P2		translated	[DF4][E2:080E]うですか?[KATAKANA]アキハバラ博士[HIRAGANA]\nうちでしたら お給料もばっちり!\nさらに 完全週休二日制ですよ[FIN][E2:0280][CMD:EA]度きても 同じことだ!\n[PAL:02][KATAKANA]ハッカー[HIRAGANA][PAL:00]の うわさは聞いている\n悪の軍団ではないか?![FIN][E2:0849]うは おっしゃいますがぁ\n悪は いいですよぉ\n悪いことが お仕事ですからね[FIN]そこで [KATAKANA]ハッカー[HIRAGANA]の今後のために\n博士のような\nすぐれた 発明家の力が\n必要なんですよ![TPL:D8][E2:023D]む···[PAU:1E]私に目をつけたことは\nほめてやるが 私は自分の発明を\n悪のために 利用する気はない[FIN]まあ せっかく来たんだから\n私の新しい 発明品を見せてやろう\nこれが なんだかわかるか?[FIN][E2:087E]··ほお [PAU:1E][KATAKANA]ラッパ[HIRAGANA]ですか?\nなつかしいなあ [PAU:1E]私 高校のころ\n[KATAKANA]トランペット部[HIRAGANA]に入ってたんですよ[FIN][E2:024A]だの[KATAKANA]ラッパ[HIRAGANA]とは わけがちがう\nこれは こうやって使うのだ˳
 C0-078D8A	0x078D8A	0x00A7	event-dialogue	P2		translated	[DF4][E2:0866][KATAKANA]ーーーーーーーーーーーー[HIRAGANA]っ!![PAU:1E][DES][TER][DFT][E2:023F]お[NAM:00]か\nん?変わったものを\n持ってるじゃないか[FIN]その [PAL:02][KATAKANA]スクラップ[HIRAGANA][PAL:00]だよ\nそういうものを拾ったら\nまずは 発明[KATAKANA]マシン[HIRAGANA]で\nいろいろ合成してみなさい[FIN]いがいに 面白いものが\nできあがったりするもんだ\nなんでも 失敗をおそれず\nためしてみなさい˳
 C0-078E32	0x078E32	0x0187	event-dialogue	P2		translated	[DFT][E2:023F]お [NAM:00]か\nお?[E2:1A00]作れたのか!\nでも 作りっぱなしじゃだめだぞ[FIN]発明[KATAKANA]マシン[HIRAGANA]で [E2:1A53]\n[PAL:02][KATAKANA]ステータス[HIRAGANA]や連続攻擊の\n[KATAKANA]プログラム[HIRAGANA][PAL:00]をしてやれば\n[E2:1A67]さらによく使えるぞ[FIN]なに?さっきの人か?\n最近 この近辺をあらし回っている\n[PAL:02][KATAKANA]ハッカー[HIRAGANA][PAL:00]の 戦闘員さ\n[KATAKANA]スカウト[HIRAGANA]にきたんだとさ[FIN]だが 発明は人の役に立ってこそ\n意味のあるものなんだぞ\n悪用なぞ もっての他だ\nおまえもよく おぼえておきなさい[FIN]そうそう これはおまえにやろう\n[PAL:02]びっくり[KATAKANA]ホーン[HIRAGANA][PAL:00]と言って\n大きな音を出す [KATAKANA]ラッパ[HIRAGANA]だ\n何か 役にたつこともあるだろう[TPL:20][NAM:00]は\n[PAL:02] びっくり[KATAKANA]ホーン[HIRAGANA][PAL:00]を もらった![TER][DFT]···と思ったけど\n持ち物がいっぱいじゃないか!\n待っててやるから\n少し 片づけたらどうだ?
 C0-078FBA	0x078FBA	0x0071	event-dialogue	P2		translated	[DFT][E2:0268]?どうした [NAM:00]\n···[PAU:3C]え?[PAU:1E][KATAKANA]ハッカー[HIRAGANA]の戦闘員が?\n···そうだったのか[FIN]とにかく 無事でよかった\n[JMP]が[BYTE:90][DFT][E2:0245]あ あまりおそいと\n[KATAKANA]ナギサ[HIRAGANA]くんが心配するからな\n[KATAKANA]ロココ町[HIRAGANA]に お帰り˳
-C0-07902C	0x07902C	0x0019	npc-dialogue	P3		pending	[DFT][E2:0248]っかく来たんだから\nご先祖樣のお[BYTE:80]
+C0-07902C	0x07902C	0x0019	npc-dialogue	P3		translated	[DFT][E2:0248]っかく来たんだから\nご先祖樣のお[BYTE:80]
 C0-079056	0x079056	0x00B1	event-dialogue	P2		translated	[DFT][E2:0248]っかくきたんだから\nこの [KATAKANA]アキハバラ博士[HIRAGANA]が[FIN]発明に 關する知識を\n教えてやろうじゃないか\n おしえておしえて!\n え[KATAKANA]ー[HIRAGANA]っ いいよお[TER][CLR]何について 知りたい?\n[PAU:28] 発明のこと\n 合成のこと\n [KATAKANA]ロボット[HIRAGANA]のこと\n やっぱり いいや[TER][CLR]\n·············そうか\n[PAU:3C]ま·まあ 別にいいけどな···˳\n
-C0-07950C	0x07950C	0x000D	npc-dialogue	P3		pending	[DFT][E2:0650]ゃん [KATAKANA]ゴロゴロ[HIRAGANA]
-C0-07951A	0x07951A	0x000E	npc-dialogue	P3		pending	[DFT][E2:0656][KATAKANA]ーーーーーーー[HIRAGANA]っ
-C0-079529	0x079529	0x0010	npc-dialogue	P3		pending	[DFT][E2:063D][KATAKANA]ー[HIRAGANA] [KATAKANA]ニャアーンッ[HIRAGANA]
-C0-07953A	0x07953A	0x003A	npc-dialogue	P3	C0-05A768	pending	[DFT][E2:063F]いらの ご主人樣は\n[KATAKANA]アキハバラ博士[HIRAGANA]だけだ[KATAKANA]ニャ[HIRAGANA]\nお前は別に ご主人じゃない[KATAKANA]ニャ[HIRAGANA]˳
+C0-07950C	0x07950C	0x000D	npc-dialogue	P3		translated	[DFT][E2:0650]ゃん [KATAKANA]ゴロゴロ[HIRAGANA]
+C0-07951A	0x07951A	0x000E	npc-dialogue	P3		translated	[DFT][E2:0656][KATAKANA]ーーーーーーー[HIRAGANA]っ
+C0-079529	0x079529	0x0010	npc-dialogue	P3		translated	[DFT][E2:063D][KATAKANA]ー[HIRAGANA] [KATAKANA]ニャアーンッ[HIRAGANA]
+C0-07953A	0x07953A	0x003A	npc-dialogue	P3	C0-05A768	translated	[DFT][E2:063F]いらの ご主人樣は\n[KATAKANA]アキハバラ博士[HIRAGANA]だけだ[KATAKANA]ニャ[HIRAGANA]\nお前は別に ご主人じゃない[KATAKANA]ニャ[HIRAGANA]˳
 C0-079595	0x079595	0x00E7	event-dialogue	P2		translated	[DFT] [NAM:00]は [KATAKANA]タンス[HIRAGANA]の中から\n[PAL:02] おとうさんの手紙[PAL:00]を みつけた!\n[PAU:1E] [NAM:00]は 手紙を読んでみた˳[FIN][PAL:02] [NAM:00]\n とうさんは これから\n 大切な 旅に出ることにした\n 安全な旅には ならないだろう[FIN] とうさんにもしものことがあったら\n[PAL:03] いつも お前がこの家を\n 出る時に 言っていたことを\n[PAL:02] よく 思い出してほしい[FIN] では とうさんのいない間も\n かぜなどひかずに がんばるように\n\n[PAU:1E][SKP:24]父より[PAL:00]
-C0-0796B9	0x0796B9	0x001B	npc-dialogue	P3		pending	[DFT]\n す箱の中に\n 小さな 卵が入っている˳
-C0-0796D5	0x0796D5	0x001B	npc-dialogue	P3		pending	[DFT]\n すの中に かわいい[KATAKANA]ヒナ[HIRAGANA]が\n かえっている˳
-C0-0796F1	0x0796F1	0x0026	npc-dialogue	P3		pending	[DFT]\n ずいぶん大きくなった[KATAKANA]ヒナ[HIRAGANA]が\n つばさを [KATAKANA]パタパタ[HIRAGANA]させている˳
-C0-079718	0x079718	0x0019	npc-dialogue	P3		pending	[DFT]\n [KATAKANA]ヒナ[HIRAGANA]は もう\n すだってしまったらしい˳
+C0-0796B9	0x0796B9	0x001B	npc-dialogue	P3		translated	[DFT]\n す箱の中に\n 小さな 卵が入っている˳
+C0-0796D5	0x0796D5	0x001B	npc-dialogue	P3		translated	[DFT]\n すの中に かわいい[KATAKANA]ヒナ[HIRAGANA]が\n かえっている˳
+C0-0796F1	0x0796F1	0x0026	npc-dialogue	P3		translated	[DFT]\n ずいぶん大きくなった[KATAKANA]ヒナ[HIRAGANA]が\n つばさを [KATAKANA]パタパタ[HIRAGANA]させている˳
+C0-079718	0x079718	0x0019	npc-dialogue	P3		translated	[DFT]\n [KATAKANA]ヒナ[HIRAGANA]は もう\n すだってしまったらしい˳
 C0-07974A	0x07974A	0x0112	event-dialogue	P2		translated	[DFT] [NAM:00]は [KATAKANA]ベッド[HIRAGANA]の中から\n[PAL:02] 日記帳[PAL:00]を みつけた!\n[PAU:1E] 日記は 昔のものらしい[FIN][PAL:02] [KATAKANA]*月*日[HIRAGANA]\n [KATAKANA]アンドロイド[HIRAGANA]の┌[KATAKANA]ナギサ[HIRAGANA]┘が\n ついに 完成した\n 人間と ほとんど区別はつかない[FIN] ┌[KATAKANA]ナギサ[HIRAGANA]┘は 亡くなった妻の\n 若いころに 似せて作った\n 妻が 帰ってきたようで\n 少し てれくさい[FIN] まだ幼い [NAM:00]が\n [KATAKANA]ナギサ[HIRAGANA]を 母のように思い\n したってくれれば\n この発明は 成功だと思う˳[FIN][PAL:00] [NAM:00]は 日記をそっと\n 元の場所に 返した···˳
-C0-0798CE	0x0798CE	0x004E	npc-dialogue	P3		pending	[DFT]┌この先には [KATAKANA]ハッカー[HIRAGANA]の\n かい人たちが うろついています\n 用のない方は立ち入らないように\n してください   [KATAKANA]ロココ町警察[HIRAGANA]┘
-C0-07991D	0x07991D	0x0013	npc-dialogue	P3		pending	[DFT]\n[PAL:02]    だれも いないよ![PAL:00]
-C0-079931	0x079931	0x001A	npc-dialogue	P3		pending	[DFT]\n この道きわめて 30年\n 海の男の家
-C0-07994C	0x07994C	0x0020	npc-dialogue	P3		pending	[DFT]\n ここ南の島 とてもいい所!\n よくきた かんげい!!
-C0-07996D	0x07996D	0x001F	npc-dialogue	P3		pending	[DFT]\n この道きわめて 25年\n 南の島の 道具屋
-C0-07998D	0x07998D	0x0012	npc-dialogue	P3		pending	[DFT]\n きけん!立入り禁止!!
-C0-0799A0	0x0799A0	0x0035	npc-dialogue	P3		pending	[DFT] おいでませ [KATAKANA]ハッカー島[HIRAGANA]へ\n[PAL:02] [KATAKANA]ハッカー航空幽地[HIRAGANA][PAL:00]は\n 雪山をこえた 先です
-C0-079A26	0x079A26	0x0040	npc-dialogue	P3		pending	[DFT]おらも おめえぐらい若かった時は\n船で りょうに出て\n[KATAKANA]ブイブイ[HIRAGANA]いわせてたもんだべ\n今となっちゃ 昔の話だべ˳
-C0-079A67	0x079A67	0x0030	npc-dialogue	P3		pending	[DFT]おめえなあ 人と人が話す時は\n目と目をあわせて\nこんにちはから はじめるもんだべ˳
+C0-0798CE	0x0798CE	0x004E	npc-dialogue	P3		translated	[DFT]┌この先には [KATAKANA]ハッカー[HIRAGANA]の\n かい人たちが うろついています\n 用のない方は立ち入らないように\n してください   [KATAKANA]ロココ町警察[HIRAGANA]┘
+C0-07991D	0x07991D	0x0013	npc-dialogue	P3		translated	[DFT]\n[PAL:02]    だれも いないよ![PAL:00]
+C0-079931	0x079931	0x001A	npc-dialogue	P3		translated	[DFT]\n この道きわめて 30年\n 海の男の家
+C0-07994C	0x07994C	0x0020	npc-dialogue	P3		translated	[DFT]\n ここ南の島 とてもいい所!\n よくきた かんげい!!
+C0-07996D	0x07996D	0x001F	npc-dialogue	P3		translated	[DFT]\n この道きわめて 25年\n 南の島の 道具屋
+C0-07998D	0x07998D	0x0012	npc-dialogue	P3		translated	[DFT]\n きけん!立入り禁止!!
+C0-0799A0	0x0799A0	0x0035	npc-dialogue	P3		translated	[DFT] おいでませ [KATAKANA]ハッカー島[HIRAGANA]へ\n[PAL:02] [KATAKANA]ハッカー航空幽地[HIRAGANA][PAL:00]は\n 雪山をこえた 先です
+C0-079A26	0x079A26	0x0040	npc-dialogue	P3		translated	[DFT]おらも おめえぐらい若かった時は\n船で りょうに出て\n[KATAKANA]ブイブイ[HIRAGANA]いわせてたもんだべ\n今となっちゃ 昔の話だべ˳
+C0-079A67	0x079A67	0x0030	npc-dialogue	P3		translated	[DFT]おめえなあ 人と人が話す時は\n目と目をあわせて\nこんにちはから はじめるもんだべ˳
 C0-079A98	0x079A98	0x00C3	event-dialogue	P2		translated	[DFT]おう お前か しゃべる[KATAKANA]カニ[HIRAGANA]から\n話は 聞いてるべ\n[PAU:14]他人を 船には乘せたくねえが\n[KATAKANA]カニ[HIRAGANA]の たのみじゃことわれねえべ[FIN]おらは昔 [KATAKANA]カニ[HIRAGANA]の漁をしててなあ\n[KATAKANA]カニ[HIRAGANA]で おまんま食ってたのよ\nたのみぐらい聞いてやらんと\n[KATAKANA]バチ[HIRAGANA]が あたるべよ[TPL:D7]船だったら\n[PAL:02]さんばしの右[PAL:00]にとまっている船を\n使いな 雪山までおめえを\nつれてってくれるはずだべ˳
-C0-079B5C	0x079B5C	0x003E	npc-dialogue	P3		pending	[DFT]おうっ [KATAKANA]ネズ公[HIRAGANA]かいっ\nおらも 若かった時は\nかわいいあの子に [PAL:03][KATAKANA]チュウチュウ[HIRAGANA]\n[PAL:00]言わせてたもんだべ˳
-C0-079C15	0x079C15	0x0065	npc-dialogue	P3		pending	[DFT]おれ 南の島の[KATAKANA]ガイド[HIRAGANA]!\nお前 とっても運がいい!\n南の島 とてもいい所!\nおれ 案内する![TPL:D7]この船 お前を乘せる!\nこの船 南の島へ行く!\nさあ 乘る乘る!!
+C0-079B5C	0x079B5C	0x003E	npc-dialogue	P3		translated	[DFT]おうっ [KATAKANA]ネズ公[HIRAGANA]かいっ\nおらも 若かった時は\nかわいいあの子に [PAL:03][KATAKANA]チュウチュウ[HIRAGANA]\n[PAL:00]言わせてたもんだべ˳
+C0-079C15	0x079C15	0x0065	npc-dialogue	P3		translated	[DFT]おれ 南の島の[KATAKANA]ガイド[HIRAGANA]!\nお前 とっても運がいい!\n南の島 とてもいい所!\nおれ 案内する![TPL:D7]この船 お前を乘せる!\nこの船 南の島へ行く!\nさあ 乘る乘る!!
 C0-079CDD	0x079CDD	0x0076	event-dialogue	P2		translated	[DFT]だ·だんなじゃないですかっ!\nあっしですよ!\nむかし [KATAKANA]ハッカー[HIRAGANA]の幹部をしていた\nさわ[KATAKANA]ガニ[HIRAGANA]ですよ![FIN]だんなにお教えしたいことがあって\nはるばる やってきたんですが\nこの 子供たちに\nつかまっちまいましてね [KATAKANA]トホホ[HIRAGANA]˳
-C0-079D54	0x079D54	0x002A	npc-dialogue	P3		pending	[DFT]だんなぁ\nなんとかしてくださいよ\nこれじゃだんなと\n話もでき···[KATAKANA]イテテテ[HIRAGANA]˳
+C0-079D54	0x079D54	0x002A	npc-dialogue	P3		translated	[DFT]だんなぁ\nなんとかしてくださいよ\nこれじゃだんなと\n話もでき···[KATAKANA]イテテテ[HIRAGANA]˳
 C0-079D7F	0x079D7F	0x01A5	event-dialogue	P2		translated	[DFT]あ·ありがとうございやした!\nだんなは やっぱり\nいい方ですねえ [PAU:1E][KATAKANA]グスン[HIRAGANA][FIN]そうそう 話ってのはですね\n[PAL:02]だんなの 父上[PAL:00]のことなんですよ\nあっしの [KATAKANA]ハッカー時代[HIRAGANA]の\n仲間から 聞いたんですけどね[FIN]なんでも だんなの父上は\n今 [PAL:02][KATAKANA]ハッカー本部[HIRAGANA][PAL:00]で\nはたらかされてるって話ですよ[FIN]あいつらのことです お父上が\nどんな目にあってるか···\n[PAU:28]だんなっ!すぐにでも\n助けにいくべきじゃないですかい?[FIN][PAL:02][KATAKANA]ハッカー本部[HIRAGANA][PAL:00]なら あっしも\n研修旅行で 行ったことがありやす\nだんなに 場所をお教えします\nすぐにでも 行ってくださいっ![FIN]上の家の 漁師のおやじに\n[KATAKANA]ハッカー本部[HIRAGANA]のある島まで行ける\n[PAL:02]船[PAL:00]を出してくれるよう\n話をつけてありやす[FIN]ささっ[PAU:14]だんなっ!急いで!\nとりあえずは 漁師のおやじに\n声をかけてやってくだせえ˳
-C0-079F25	0x079F25	0x0046	npc-dialogue	P3		pending	[DFT]まずは 漁師のおやじに\n声をかけてやってくだせえ\n[KATAKANA]ハッカー本部[HIRAGANA]のある所は 雪山で\n寒いですから気をつけてくだせえ˳
-C0-079F6C	0x079F6C	0x0028	npc-dialogue	P3		pending	[DFT][KATAKANA]ネズミ[HIRAGANA]なんかにゃあ\n[KATAKANA]カニ[HIRAGANA]の気持ちは わかるまいよ\n[PAU:1E]ふっ···˳
-C0-07A03E	0x07A03E	0x0030	npc-dialogue	P3		pending	[DFT]なんだよぉ\nぼくたちが 見つけた[KATAKANA]カニ[HIRAGANA]だぞ!\nいじめて遊ぶんだから\nじゃまするなよなあ˳
+C0-079F25	0x079F25	0x0046	npc-dialogue	P3		translated	[DFT]まずは 漁師のおやじに\n声をかけてやってくだせえ\n[KATAKANA]ハッカー本部[HIRAGANA]のある所は 雪山で\n寒いですから気をつけてくだせえ˳
+C0-079F6C	0x079F6C	0x0028	npc-dialogue	P3		translated	[DFT][KATAKANA]ネズミ[HIRAGANA]なんかにゃあ\n[KATAKANA]カニ[HIRAGANA]の気持ちは わかるまいよ\n[PAU:1E]ふっ···˳
+C0-07A03E	0x07A03E	0x0030	npc-dialogue	P3		translated	[DFT]なんだよぉ\nぼくたちが 見つけた[KATAKANA]カニ[HIRAGANA]だぞ!\nいじめて遊ぶんだから\nじゃまするなよなあ˳
 C0-07A06F	0x07A06F	0x008E	event-dialogue	P2		translated	[DFT]え?[KATAKANA]カニ[HIRAGANA]いじめをやめろ?\nなんでだよ 面白いのに!\n[PAU:1E][NXT]ぞ···[NXT]がそうだな やめてもいいよ\nでも [KATAKANA]タダ[HIRAGANA]ってわけにはいかないぜ[FIN]にいちゃん 発明家だろ?\n[PAL:02]面白い発明品[PAL:00]を\n何か ぼくたちにちょうだいよ\nいいのを [PAL:02]裝備して[PAL:00]見せてね˳
-C0-07A0FE	0x07A0FE	0x0039	npc-dialogue	P3		pending	[DFT]なんだよ それ\nそんな つまんないものじゃやだよ\nそうだなあ 人にいたずらして\n遊べるものなんて いいなあ˳
-C0-07A138	0x07A138	0x0029	npc-dialogue	P3		pending	[DFT]面白そうなものがあったら\nちゃんと 裝備して\nぼくたちに 見せてよね˳
+C0-07A0FE	0x07A0FE	0x0039	npc-dialogue	P3		translated	[DFT]なんだよ それ\nそんな つまんないものじゃやだよ\nそうだなあ 人にいたずらして\n遊べるものなんて いいなあ˳
+C0-07A138	0x07A138	0x0029	npc-dialogue	P3		translated	[DFT]面白そうなものがあったら\nちゃんと 裝備して\nぼくたちに 見せてよね˳
 C0-07A162	0x07A162	0x0078	event-dialogue	P2		translated	[DFT][NXT]ぎわあっ それなに!?\n[PAU:1E][NXT]がえ?大きな音をだして\n人をおどかせるもの?\n[PAU:1E]いいないいな それちょうだい![FIN] [NAM:00]は\n[PAL:02] びっくり[KATAKANA]ホーン[HIRAGANA][PAL:00]を うばわれた![FIN]\nわ[KATAKANA]ー[HIRAGANA]い わ[KATAKANA]ー[HIRAGANA]い\nこれを使って 遊ぼうぜ[KATAKANA]ー[HIRAGANA]っ!
-C0-07A1DB	0x07A1DB	0x001B	npc-dialogue	P3		pending	[DFT]なんだよ この[KATAKANA]ネズミ[HIRAGANA]\nおまえも いじめちゃうぞ!
-C0-07A318	0x07A318	0x0050	npc-dialogue	P3		pending	[DFT][KATAKANA]オレ[HIRAGANA]はなあ 今悲しいんだ!\n[KATAKANA]オレ[HIRAGANA]のかわいい [KATAKANA]カトリーヌ[HIRAGANA]···\n···あ [PAU:3C]にわとりの名前だけどね\n[PAU:1E]が [PAU:1E]いなくなっちまったんだよ!
+C0-07A1DB	0x07A1DB	0x001B	npc-dialogue	P3		translated	[DFT]なんだよ この[KATAKANA]ネズミ[HIRAGANA]\nおまえも いじめちゃうぞ!
+C0-07A318	0x07A318	0x0050	npc-dialogue	P3		translated	[DFT][KATAKANA]オレ[HIRAGANA]はなあ 今悲しいんだ!\n[KATAKANA]オレ[HIRAGANA]のかわいい [KATAKANA]カトリーヌ[HIRAGANA]···\n···あ [PAU:3C]にわとりの名前だけどね\n[PAU:1E]が [PAU:1E]いなくなっちまったんだよ!
 C0-07A369	0x07A369	0x0086	event-dialogue	P2		translated	[DFT][KATAKANA]カ[HIRAGANA]·[PAU:1E][KATAKANA]カトリーヌ[HIRAGANA]ぅっ!!!\nどこに行ってたんだあっ!\nとても 心配したんだぞぉっ!![FIN]君が 見つけてくれたのか?\nありがとう!\nそうだ!何か礼をさせてくれ![TPL:D7]持ち物が いっぱいのようだね\nにもつの少ない時に\nまた ぜひ 来てくれ!
 C0-07A3F0	0x07A3F0	0x0076	event-dialogue	P2		translated	[DFT]これは このあいだ\n[KATAKANA]カトリーヌ[HIRAGANA]が どこからか\nひろってきたんだ\nこれを君に お礼としてあげよう![FIN] [NAM:00]は\n[PAL:02] [KATAKANA]プラズマブレイド[HIRAGANA][PAL:00]を いただいた![TER][DFT]にわとりはねぇ かわいいよ\nもう 見ているだけで\nほっとするねえ˳
-C0-07A467	0x07A467	0x001F	npc-dialogue	P3		pending	[DFT][KATAKANA]ネズミ[HIRAGANA]より にわとりの方が\n数十倍かわいいねえ˳
-C0-07A4FC	0x07A4FC	0x000C	npc-dialogue	P3		pending	[DFT][NXT]ぎ\n[KATAKANA]コケッ[HIRAGANA]![NXT]が
-C0-07A509	0x07A509	0x000D	npc-dialogue	P3		pending	[DFT][NXT]ぎ\n[KATAKANA]コケーッ[HIRAGANA]![NXT]が
-C0-07A517	0x07A517	0x0015	npc-dialogue	P3		pending	[DFT][KATAKANA]コケケッ[HIRAGANA] [KATAKANA]エサ[HIRAGANA]くれ [KATAKANA]エサッ[HIRAGANA]!
-C0-07A52D	0x07A52D	0x0037	npc-dialogue	P3		pending	[DFT]きゃ[KATAKANA]ー[HIRAGANA]っ あんたって\n[KATAKANA]コケティッシュ[HIRAGANA]な顔してるわね\nあたし [KATAKANA]ファン[HIRAGANA]になりそうよ\n[KATAKANA]コケケッ[HIRAGANA]!
-C0-07A565	0x07A565	0x0020	npc-dialogue	P3		pending	[DFT][KATAKANA]カトリーヌ[HIRAGANA]なら [PAL:02]家のかげ[PAL:00]に\nかくれてる[KATAKANA]コケ[HIRAGANA]˳
-C0-07A60D	0x07A60D	0x003E	npc-dialogue	P3		pending	[DFT]え?また ご主人樣が\n大さわぎしてる[KATAKANA]コケ[HIRAGANA]?\nいつも こうなんだ[KATAKANA]コケ[HIRAGANA]\nちょっと さんぽしてただけだ[KATAKANA]コケ[HIRAGANA]˳
-C0-07A64C	0x07A64C	0x0021	npc-dialogue	P3		pending	[DFT]心配してくれるのは\nうれしいけど\nかほごは こまる[KATAKANA]コケ[HIRAGANA]˳
-C0-07AED5	0x07AED5	0x000C	npc-dialogue	P3		pending	[DF4][BYTE:AE]ぅぐぽひ[BYTE:B1]れPぐで 
+C0-07A467	0x07A467	0x001F	npc-dialogue	P3		translated	[DFT][KATAKANA]ネズミ[HIRAGANA]より にわとりの方が\n数十倍かわいいねえ˳
+C0-07A4FC	0x07A4FC	0x000C	npc-dialogue	P3		translated	[DFT][NXT]ぎ\n[KATAKANA]コケッ[HIRAGANA]![NXT]が
+C0-07A509	0x07A509	0x000D	npc-dialogue	P3		translated	[DFT][NXT]ぎ\n[KATAKANA]コケーッ[HIRAGANA]![NXT]が
+C0-07A517	0x07A517	0x0015	npc-dialogue	P3		translated	[DFT][KATAKANA]コケケッ[HIRAGANA] [KATAKANA]エサ[HIRAGANA]くれ [KATAKANA]エサッ[HIRAGANA]!
+C0-07A52D	0x07A52D	0x0037	npc-dialogue	P3		translated	[DFT]きゃ[KATAKANA]ー[HIRAGANA]っ あんたって\n[KATAKANA]コケティッシュ[HIRAGANA]な顔してるわね\nあたし [KATAKANA]ファン[HIRAGANA]になりそうよ\n[KATAKANA]コケケッ[HIRAGANA]!
+C0-07A565	0x07A565	0x0020	npc-dialogue	P3		translated	[DFT][KATAKANA]カトリーヌ[HIRAGANA]なら [PAL:02]家のかげ[PAL:00]に\nかくれてる[KATAKANA]コケ[HIRAGANA]˳
+C0-07A60D	0x07A60D	0x003E	npc-dialogue	P3		translated	[DFT]え?また ご主人樣が\n大さわぎしてる[KATAKANA]コケ[HIRAGANA]?\nいつも こうなんだ[KATAKANA]コケ[HIRAGANA]\nちょっと さんぽしてただけだ[KATAKANA]コケ[HIRAGANA]˳
+C0-07A64C	0x07A64C	0x0021	npc-dialogue	P3		translated	[DFT]心配してくれるのは\nうれしいけど\nかほごは こまる[KATAKANA]コケ[HIRAGANA]˳
+C0-07AED5	0x07AED5	0x000C	npc-dialogue	P3		translated	[DF4][BYTE:AE]ぅぐぽひ[BYTE:B1]れPぐで
 C0-07B111	0x07B111	0x0043	event-dialogue	P2		translated	[DFT] [NAM:00]は\n[PAL:02] ┌発明の友 [KATAKANA]レベル[HIRAGANA][NUM:02F005]┘[PAL:00]の\n 本を 読んでみた[FIN] だが むずかしくて\n よく わからなかった˳
-C0-07B155	0x07B155	0x002B	npc-dialogue	P3		pending	[DFT] [NAM:00]は\n[PAL:02] ┌発明の友 [KATAKANA]レベル[HIRAGANA][NUM:02F005]┘[PAL:00]の\n 本を 読んでみた
+C0-07B155	0x07B155	0x002B	npc-dialogue	P3		translated	[DFT] [NAM:00]は\n[PAL:02] ┌発明の友 [KATAKANA]レベル[HIRAGANA][NUM:02F005]┘[PAL:00]の\n 本を 読んでみた
 C0-07B181	0x07B181	0x0031	event-dialogue	P2		translated	[DFT] [NAM:00]は\n[PAL:02] ┌発明の友 [KATAKANA]レベル[HIRAGANA][NUM:02F005]┘[PAL:00]の\n 本を 読みかえした[FIN][STR:DADA81]
-C0-07B1C9	0x07B1C9	0x0016	npc-dialogue	P3		pending	[DFT]雨ふった!雨ふった!\nやった やった!
-C0-07B23D	0x07B23D	0x0044	npc-dialogue	P3		pending	[DFT]ここ おれの村!\nあした おまえを火山に案内する\n火山すごい おまえ気に入る!\n今日は 村の中見るといい˳
-C0-07B282	0x07B282	0x0047	npc-dialogue	P3		pending	[DFT]今日は 火山見るのにいい日!\nおまえ 俺の後ついてくる!\nおれ 火山に案内する!\n神樣よろこぶ!みんなよろこぶ!
-C0-07B367	0x07B367	0x0035	npc-dialogue	P3		pending	[DFT]ぅぐぽ[BYTE:B4][BYTE:B3]ぅ[DFT]火山 神樣が住んでる\nでも 神樣おこってる\n神樣おこると とてもこわい!
-C0-07B39D	0x07B39D	0x0016	npc-dialogue	P3		pending	[DFT]こわい こわい\nまた 神樣おこってる!
-C0-07B3B4	0x07B3B4	0x003F	npc-dialogue	P3		pending	[DFT]たいへん たいへん\nきとう師が 神樣のたたりと言って\n村の人 みんな[KATAKANA]ネズミ[HIRAGANA]にした!\nどうしよう どうしよう˳
-C0-07B3F4	0x07B3F4	0x0037	npc-dialogue	P3		pending	[DFT]おまえ 村の人助けた!\n神樣も おこらなくなった!\nおれたち うれしい!\nみんな おまえのおかげ!
-C0-07B42C	0x07B42C	0x0013	npc-dialogue	P3		pending	[DFT][KATAKANA]ネズミ[HIRAGANA]いらない!\nあっち行く!
-C0-07B4E8	0x07B4E8	0x0029	npc-dialogue	P3		pending	[DFT]ぅぐぽよ[BYTE:B5]ぅ[DFT]よくきた よくきた\nかんげい!かんげい!\nこれ かんげいのおどり!
-C0-07B512	0x07B512	0x002B	npc-dialogue	P3		pending	[DFT]たくさん 話しかけるのだめ!\nおどり みんなといっしょに\nうまく おどれなくなる!
-C0-07B53E	0x07B53E	0x0021	npc-dialogue	P3		pending	[DFT]こ·これ まよけのおどりっ!\n死んだ人 帰ってきちゃだめ!
-C0-07B560	0x07B560	0x0031	npc-dialogue	P3		pending	[DFT]たいへん たいへん!\nみんな ねずみになった!\nねずみ おどることできない\nこまった こまった˳
-C0-07B592	0x07B592	0x0023	npc-dialogue	P3		pending	[DFT]おまえ やっぱり神樣の使い!\nこれ 神樣をたたえるおどり!
-C0-07B5B6	0x07B5B6	0x001D	npc-dialogue	P3		pending	[DFT]これ 雨ごいのおどり!\nあつくて おどるのもたいへん!
-C0-07B5D4	0x07B5D4	0x001A	npc-dialogue	P3		pending	[DFT]雨ふった 雨ふった!\nこれ かんげきのおどり!
-C0-07B6C0	0x07B6C0	0x0032	npc-dialogue	P3		pending	[DFT]ねずみになると 料理できない!\n料理できないと おれ 仕事ない!\nこまった こまった˳
-C0-07B6F3	0x07B6F3	0x0025	npc-dialogue	P3		pending	[DFT]ねずみっ!\nねずみ すごいごちそう!\nおまえ 料理の材料になる!
+C0-07B1C9	0x07B1C9	0x0016	npc-dialogue	P3		translated	[DFT]雨ふった!雨ふった!\nやった やった!
+C0-07B23D	0x07B23D	0x0044	npc-dialogue	P3		translated	[DFT]ここ おれの村!\nあした おまえを火山に案内する\n火山すごい おまえ気に入る!\n今日は 村の中見るといい˳
+C0-07B282	0x07B282	0x0047	npc-dialogue	P3		translated	[DFT]今日は 火山見るのにいい日!\nおまえ 俺の後ついてくる!\nおれ 火山に案内する!\n神樣よろこぶ!みんなよろこぶ!
+C0-07B367	0x07B367	0x0035	npc-dialogue	P3		translated	[DFT]ぅぐぽ[BYTE:B4][BYTE:B3]ぅ[DFT]火山 神樣が住んでる\nでも 神樣おこってる\n神樣おこると とてもこわい!
+C0-07B39D	0x07B39D	0x0016	npc-dialogue	P3		translated	[DFT]こわい こわい\nまた 神樣おこってる!
+C0-07B3B4	0x07B3B4	0x003F	npc-dialogue	P3		translated	[DFT]たいへん たいへん\nきとう師が 神樣のたたりと言って\n村の人 みんな[KATAKANA]ネズミ[HIRAGANA]にした!\nどうしよう どうしよう˳
+C0-07B3F4	0x07B3F4	0x0037	npc-dialogue	P3		translated	[DFT]おまえ 村の人助けた!\n神樣も おこらなくなった!\nおれたち うれしい!\nみんな おまえのおかげ!
+C0-07B42C	0x07B42C	0x0013	npc-dialogue	P3		translated	[DFT][KATAKANA]ネズミ[HIRAGANA]いらない!\nあっち行く!
+C0-07B4E8	0x07B4E8	0x0029	npc-dialogue	P3		translated	[DFT]ぅぐぽよ[BYTE:B5]ぅ[DFT]よくきた よくきた\nかんげい!かんげい!\nこれ かんげいのおどり!
+C0-07B512	0x07B512	0x002B	npc-dialogue	P3		translated	[DFT]たくさん 話しかけるのだめ!\nおどり みんなといっしょに\nうまく おどれなくなる!
+C0-07B53E	0x07B53E	0x0021	npc-dialogue	P3		translated	[DFT]こ·これ まよけのおどりっ!\n死んだ人 帰ってきちゃだめ!
+C0-07B560	0x07B560	0x0031	npc-dialogue	P3		translated	[DFT]たいへん たいへん!\nみんな ねずみになった!\nねずみ おどることできない\nこまった こまった˳
+C0-07B592	0x07B592	0x0023	npc-dialogue	P3		translated	[DFT]おまえ やっぱり神樣の使い!\nこれ 神樣をたたえるおどり!
+C0-07B5B6	0x07B5B6	0x001D	npc-dialogue	P3		translated	[DFT]これ 雨ごいのおどり!\nあつくて おどるのもたいへん!
+C0-07B5D4	0x07B5D4	0x001A	npc-dialogue	P3		translated	[DFT]雨ふった 雨ふった!\nこれ かんげきのおどり!
+C0-07B6C0	0x07B6C0	0x0032	npc-dialogue	P3		translated	[DFT]ねずみになると 料理できない!\n料理できないと おれ 仕事ない!\nこまった こまった˳
+C0-07B6F3	0x07B6F3	0x0025	npc-dialogue	P3		translated	[DFT]ねずみっ!\nねずみ すごいごちそう!\nおまえ 料理の材料になる!
 C0-07B719	0x07B719	0x006F	event-dialogue	P2		translated	[DFT][KATAKANA]オレ[HIRAGANA] この村の料理人!\n[KATAKANA]オレ[HIRAGANA] おいしい料理作る!\n料理の材料 このつぼで\nぐつぐつ にこむ!![FIN]今日の 料理の材料は···\n[PAL:02][PAU:1E]あ[PAU:0A]ん[PAU:0A]た[PAU:0A]の [PAU:0A]肉[PAU:0A]だ[PAU:0A]よ[PAL:00]
-C0-07B789	0x07B789	0x002E	npc-dialogue	P3		pending	[DFT]おどろいたか?\n[PAU:1E]これ おれたちの村につたわる\n古いじょうだん!\nみんな おどろく˳
-C0-07B7B8	0x07B7B8	0x0033	npc-dialogue	P3		pending	[DFT]このごろ 火山に\nばけもの あらわれる\nばけもの にてもやいても食えない\nおれ うれしくない!
-C0-07B7EC	0x07B7EC	0x0032	npc-dialogue	P3		pending	[DFT]お·おれ ただの料理作る人!\nおれ ちっとも悪くない!\nだから おれ うらむのよくない!
-C0-07B81F	0x07B81F	0x0045	npc-dialogue	P3		pending	[DFT]おまえ 村のえいゆう!\nおれ おまえのため 料理つくる\n今日は [KATAKANA]アリゲーター[HIRAGANA]のからあげ!\nおぎくぼでは ちょっと有名!
-C0-07B865	0x07B865	0x001C	npc-dialogue	P3		pending	[DFT]あつくて 料理もたいへん!\nおれ あせ だくだく!
-C0-07B91E	0x07B91E	0x0040	npc-dialogue	P3		pending	[DFT]ぅぐぽぎ[BYTE:BA]ぅ[DFT]ここ おまえのねるとこ\nでも 今ねるのはなまけもの\n村の中 ぐるぐるまわる\nつかれてねむる これ最高!
+C0-07B789	0x07B789	0x002E	npc-dialogue	P3		translated	[DFT]おどろいたか?\n[PAU:1E]これ おれたちの村につたわる\n古いじょうだん!\nみんな おどろく˳
+C0-07B7B8	0x07B7B8	0x0033	npc-dialogue	P3		translated	[DFT]このごろ 火山に\nばけもの あらわれる\nばけもの にてもやいても食えない\nおれ うれしくない!
+C0-07B7EC	0x07B7EC	0x0032	npc-dialogue	P3		translated	[DFT]お·おれ ただの料理作る人!\nおれ ちっとも悪くない!\nだから おれ うらむのよくない!
+C0-07B81F	0x07B81F	0x0045	npc-dialogue	P3		translated	[DFT]おまえ 村のえいゆう!\nおれ おまえのため 料理つくる\n今日は [KATAKANA]アリゲーター[HIRAGANA]のからあげ!\nおぎくぼでは ちょっと有名!
+C0-07B865	0x07B865	0x001C	npc-dialogue	P3		translated	[DFT]あつくて 料理もたいへん!\nおれ あせ だくだく!
+C0-07B91E	0x07B91E	0x0040	npc-dialogue	P3		translated	[DFT]ぅぐぽぎ[BYTE:BA]ぅ[DFT]ここ おまえのねるとこ\nでも 今ねるのはなまけもの\n村の中 ぐるぐるまわる\nつかれてねむる これ最高!
 C0-07B95F	0x07B95F	0x005B	event-dialogue	P2		translated	[DFT]いっぱい 村まわったか?\nおまえ 明日は火山に行く\n今日ねると 明日元気いっぱい![FIN]おまえの[KATAKANA]ベッド[HIRAGANA] [KATAKANA]←[HIRAGANA]の方!\nさあ ねるねる\nおやすみ おやすみ˳
-C0-07B9BB	0x07B9BB	0x0045	npc-dialogue	P3		pending	[DFT]今日も とてもいい天気!\nおまえ 今日火山に行く\n案内する奴 村の出口にいる\n行ってこい 行ってこい!
-C0-07BA01	0x07BA01	0x0039	npc-dialogue	P3		pending	[DFT]おれもねずみ みんなもねずみ\n村中 ねずみだらけ\nみんな きとう師のしわざ!\nおれの商売 あがったり!
-C0-07BA3B	0x07BA3B	0x002D	npc-dialogue	P3		pending	[DFT]お·おまえを 火山に送ったの\nきとう師の め·命令!\nお·おれ 悪くない!
-C0-07BA69	0x07BA69	0x002D	npc-dialogue	P3		pending	[DFT]おまえ 村の恩人!\n村の恩人は あつくもてなす!\n好きなだけ ねるといい!
+C0-07B9BB	0x07B9BB	0x0045	npc-dialogue	P3		translated	[DFT]今日も とてもいい天気!\nおまえ 今日火山に行く\n案内する奴 村の出口にいる\n行ってこい 行ってこい!
+C0-07BA01	0x07BA01	0x0039	npc-dialogue	P3		translated	[DFT]おれもねずみ みんなもねずみ\n村中 ねずみだらけ\nみんな きとう師のしわざ!\nおれの商売 あがったり!
+C0-07BA3B	0x07BA3B	0x002D	npc-dialogue	P3		translated	[DFT]お·おまえを 火山に送ったの\nきとう師の め·命令!\nお·おれ 悪くない!
+C0-07BA69	0x07BA69	0x002D	npc-dialogue	P3		translated	[DFT]おまえ 村の恩人!\n村の恩人は あつくもてなす!\n好きなだけ ねるといい!
 C0-07BB93	0x07BB93	0x007F	event-dialogue	P2		translated	[DFT]おや [NAM:00]くん\n君も 招待をうけたのかね?\nわたしかね?わたしはこれも\n仕事のうちでな はっはっはっ[FIN]ところできみ [PAL:03][KATAKANA]ローズ[HIRAGANA][PAL:00]君を\n見かけなかったかね?\nこれからいっしょに海[PAU:14]···いや\n視察に出ようと思ったんだがな˳
-C0-07BC13	0x07BC13	0x0038	npc-dialogue	P3		pending	[DFT][KATAKANA]ローズ君[HIRAGANA]を見かけたら\nすぐもどるように伝えてくれ\nせっかく 視察にいい天気なのに\nまったく!
-C0-07BD3D	0x07BD3D	0x004A	npc-dialogue	P3		pending	[DFT]ぅぐぽ[NUM:BD6BD7]ここ 村のきとう師樣の家!\nきとう師 神樣のいかりおさめる\nだから きとう師樣えらい\nだから みつぎものいっぱい!
-C0-07BD88	0x07BD88	0x003D	npc-dialogue	P3		pending	[DFT]きとう師樣 今 おでかけ!\nきとう師樣 るすの間\n家の中には だれも入れない\nだから おまえも帰る!
-C0-07BDC6	0x07BDC6	0x002B	npc-dialogue	P3		pending	[DFT]おれ とてもまちがってた\nきとう師 本当は悪い奴\nおれ とてもはずかしい˳
-C0-07BDF2	0x07BDF2	0x003C	npc-dialogue	P3		pending	[DFT]きとう師樣 今村長の家にいる\n村長 きとう師樣の言うこと聞けば\nちゃんと みんな元にもどる!
-C0-07BE2F	0x07BE2F	0x0036	npc-dialogue	P3		pending	[DFT]お·おれ ちっともこわくない!\nおれ きとう師樣 信じてる!\nきとう師樣には 神樣ついてる!
+C0-07BC13	0x07BC13	0x0038	npc-dialogue	P3		translated	[DFT][KATAKANA]ローズ君[HIRAGANA]を見かけたら\nすぐもどるように伝えてくれ\nせっかく 視察にいい天気なのに\nまったく!
+C0-07BD3D	0x07BD3D	0x004A	npc-dialogue	P3		translated	[DFT]ぅぐぽ[NUM:BD6BD7]ここ 村のきとう師樣の家!\nきとう師 神樣のいかりおさめる\nだから きとう師樣えらい\nだから みつぎものいっぱい!
+C0-07BD88	0x07BD88	0x003D	npc-dialogue	P3		translated	[DFT]きとう師樣 今 おでかけ!\nきとう師樣 るすの間\n家の中には だれも入れない\nだから おまえも帰る!
+C0-07BDC6	0x07BDC6	0x002B	npc-dialogue	P3		translated	[DFT]おれ とてもまちがってた\nきとう師 本当は悪い奴\nおれ とてもはずかしい˳
+C0-07BDF2	0x07BDF2	0x003C	npc-dialogue	P3		translated	[DFT]きとう師樣 今村長の家にいる\n村長 きとう師樣の言うこと聞けば\nちゃんと みんな元にもどる!
+C0-07BE2F	0x07BE2F	0x0036	npc-dialogue	P3		translated	[DFT]お·おれ ちっともこわくない!\nおれ きとう師樣 信じてる!\nきとう師樣には 神樣ついてる!
 C0-07BE66	0x07BE66	0x0042	event-dialogue	P2		translated	[DFT]\nやややややややややっ!\n[NXT]ぞお·お·おまえっ!?[FIN][NXT]ぎたいへん たいへん!\n死んだ人 生き返った!\nたたり!たたり![NXT]が
-C0-07BEA9	0x07BEA9	0x0027	npc-dialogue	P3		pending	[DFT]おまえ よく帰ってきた!\n村長が おまえを待ってる!\nはやく行く!
+C0-07BEA9	0x07BEA9	0x0027	npc-dialogue	P3		translated	[DFT]おまえ よく帰ってきた!\n村長が おまえを待ってる!\nはやく行く!
 C0-07BF69	0x07BF69	0x00FD	event-dialogue	P2		translated	[DFT]おれ 島のむかし話知ってる\n聞きたいか?\n 聞かせて 聞かせて\n 別に いいよ[TER][CLR]むかしむかし この島に\n神樣 空からふってきた\n神樣 火も熱くない\n神樣 [KATAKANA]ヤリ[HIRAGANA]も痛くない[FIN]むかしの村の人 火山に困ってた\nじしんいっぱい 火の粉いっぱい\nでも神樣 火山に行って\n火山を おとなしくさせた![FIN]ある時 神樣いなくなった\n神樣のいる場所 村長だけ知ってる\nでも神樣 村の人困った時\nきっと また 助けてくれる˳
-C0-07C067	0x07C067	0x002A	npc-dialogue	P3		pending	[CLR]聞くは 一時のはじ!\n聞かぬは 一生のはじ!\nいつでも 聞きにこい!
+C0-07C067	0x07C067	0x002A	npc-dialogue	P3		translated	[CLR]聞くは 一時のはじ!\n聞かぬは 一生のはじ!\nいつでも 聞きにこい!
 C0-07C092	0x07C092	0x0080	event-dialogue	P2		translated	[DFT]きとう師 変な光で\nみんなを [KATAKANA]ネズミ[HIRAGANA]にした!\nきとう師 神樣のいる場所聞きに\n村長の家に 行った![FIN]あいつ 本当は悪い奴!\n神樣の場所 知られたら大変!\nおまえ 神樣の使い!\n村長 助ける!
-C0-07C113	0x07C113	0x004A	npc-dialogue	P3		pending	[DFT]村の言い伝え こう言ってる\nいつか 神樣の使いやってきて\n村を救い 村の宝受け取る\nおまえきっと 宝 手に入れる!
+C0-07C113	0x07C113	0x004A	npc-dialogue	P3		translated	[DFT]村の言い伝え こう言ってる\nいつか 神樣の使いやってきて\n村を救い 村の宝受け取る\nおまえきっと 宝 手に入れる!
 C0-07C15E	0x07C15E	0x0045	event-dialogue	P2		translated	[DFT]おれ 見た!\n火山の裹の 秘密のいりえに\n変な男 にげてった[FIN]変な男 変な船に乘って\nいりえから 出てった!
 C0-07C1D9	0x07C1D9	0x00BF	event-dialogue	P2		translated	[DFT][E2:04C2]がじゃないの!\n···ひょっとして君も招待状を\nもらって ここに来たの?[FIN]ああもうっ だまされやすい子ね!\nあの招待状をもらった人たちが\n行方不明になってるの 知らないの?[FIN]あたしはね この一件に\nあの [KATAKANA]ハッカー[HIRAGANA]とかいう奴らが\n關係してると にらんでるのよ[FIN]いい?何か変わったことがあったら\nあたしに知らせるのよ わかった?
-C0-07C299	0x07C299	0x0038	npc-dialogue	P3		pending	[DFT][E2:040E]う?何かわかったの?\nえ?[PAU:0A]あたしと 話がしたかっただけ?\n[PAU:1E]か·かわいいこと言うじゃないの˳
-C0-07C2E3	0x07C2E3	0x000E	npc-dialogue	P3		pending	[DFT]\n えらい 村長の家
-C0-07C325	0x07C325	0x0009	npc-dialogue	P3		pending	[DFT]ぐりぐが[BYTE:B1][PAL:02]づ
-C0-07C3B6	0x07C3B6	0x002D	npc-dialogue	P3		pending	[DFT]旅の人 よく来た!\n私 この村の村長!\n旅の人 とても かんげいする!
-C0-07C3E4	0x07C3E4	0x0033	npc-dialogue	P3		pending	[DFT]旅の人 すまない\nとても はずかしい所見せた\nでも あれ なんでもない\n忘れる 忘れる!
+C0-07C299	0x07C299	0x0038	npc-dialogue	P3		translated	[DFT][E2:040E]う?何かわかったの?\nえ?[PAU:0A]あたしと 話がしたかっただけ?\n[PAU:1E]か·かわいいこと言うじゃないの˳
+C0-07C2E3	0x07C2E3	0x000E	npc-dialogue	P3		translated	[DFT]\n えらい 村長の家
+C0-07C325	0x07C325	0x0009	npc-dialogue	P3		translated	[DFT]ぐりぐが[BYTE:B1][PAL:02]づ
+C0-07C3B6	0x07C3B6	0x002D	npc-dialogue	P3		translated	[DFT]旅の人 よく来た!\n私 この村の村長!\n旅の人 とても かんげいする!
+C0-07C3E4	0x07C3E4	0x0033	npc-dialogue	P3		translated	[DFT]旅の人 すまない\nとても はずかしい所見せた\nでも あれ なんでもない\n忘れる 忘れる!
 C0-07C418	0x07C418	0x00DF	event-dialogue	P2		translated	[DFT]神のいけにえ 帰ってきた!\nきっとおまえ 本当の神の使い!\n神の使い 村を救う!\n神の使い 村長の話聞く![FIN]村の神樣 本当はやさしい神樣\nでもきとう師 こう言った\nいけにえないと 神樣おこる!\n神樣おこると 火山がおこる![FIN]島にきた人たち いけにえになった\n神樣 今度は[PAL:03]美しい娘[PAL:00]ほしがってる\nでも 村に美しい娘いない\n村長 とてもこまった こまった
 C0-07C4F8	0x07C4F8	0x00DD	event-dialogue	P2		translated	[DFT]おまえ 村を救った!\nおまえ 神樣の使い!\n村長の家には むかしから\nこんな 言い伝えがある[FIN]村を救う 神樣の使いくる\n神樣の使いを しんでんに連れてく\nしんでんに 神樣の宝ある\n神樣の宝 そいつのもの![FIN]このふたり 村長に使える者\nしんでんの中への\n道を開けることできる[FIN]こいつらに しんでんの案内させる\nこのふたりと しんでんに行って\n神の宝 うけとってほしい˳
-C0-07C5D6	0x07C5D6	0x0043	npc-dialogue	P3		pending	[DFT]おまえと あの娘 男気がある!\nでも おまえ 平気!\nおまえ 神の使い!\nきっと 本当の神樣 守ってくれる!
+C0-07C5D6	0x07C5D6	0x0043	npc-dialogue	P3		translated	[DFT]おまえと あの娘 男気がある!\nでも おまえ 平気!\nおまえ 神の使い!\nきっと 本当の神樣 守ってくれる!
 C0-07C61A	0x07C61A	0x00C1	event-dialogue	P2		translated	[DFT]おまえ 神の宝手に入れたか!\nこれからおまえを 村一番の\nえいゆうにあたえる 名前でよぶ!\nその名前[PAL:02] [KATAKANA]ホンジャラヘノヘ[HIRAGANA]![FIN][PAL:00]神樣の名前かたる 悪者\n海の方へ にげたらしい\n[PAL:02]宿屋の前にいる 村の男\n[PAL:00]変な男 海に行くのを見たらしい[FIN]でも これで 村は安心!\nこれ みんな\n[KATAKANA]ホンジャラヘノヘ[HIRAGANA]の おかげ!!
-C0-07C6DC	0x07C6DC	0x0026	npc-dialogue	P3		pending	[DFT][JMP]ぁ[NUM:D7E01B]\nおまえのことは これからずっと\nこの島で かたりつがれる!
+C0-07C6DC	0x07C6DC	0x0026	npc-dialogue	P3		translated	[DFT][JMP]ぁ[NUM:D7E01B]\nおまえのことは これからずっと\nこの島で かたりつがれる!
 C0-07C703	0x07C703	0x0081	event-dialogue	P2		translated	[DFT][E2:1BCD]よくきた よくきた!\n今 この村とても困っている![FIN]ここ数日 雨がぜんぜんふらない\n村の中 からから\n村の人も からから[FIN][KATAKANA]ホンジャラヘノヘ[HIRAGANA]の力で\n雨 ふらすことできないか?\nおまえ 神樣の使い\nきっと 雨ふらせる!
 C0-07C785	0x07C785	0x005E	event-dialogue	P2		translated	[DFT][E2:1BCD]おまえ いのったら 雨ふった!\n村人 とてもよろこんでる![FIN]お前 やっぱり村のえいゆう!\n村長の 感謝のしるし!\nすみにある ふたつの箱\nしらべてみるといい!!
-C0-07C7E4	0x07C7E4	0x0015	npc-dialogue	P3		pending	[DFT]ねずみもよくきた!\nかんげい かんげい!
-C0-07C8BF	0x07C8BF	0x0049	npc-dialogue	P3		pending	[DFT]この人 村長!\n村長 本当は 村で一番えらい!\nでも最近 きとう師の方がえらい!\nだけど とてもやさしい いい人!
-C0-07C909	0x07C909	0x002F	npc-dialogue	P3		pending	[DFT]いけにえ 帰ってきた!\nきっとおまえ 神樣の使い!\nえらい村長 そう言ってる!
-C0-07C939	0x07C939	0x002E	npc-dialogue	P3		pending	[DFT]おまえ 村を救った!\nおまえ やっぱり神の使い!\nえらい村長 そう言ってる!
-C0-07C968	0x07C968	0x0042	npc-dialogue	P3		pending	[DFT]おれたち 秘密のおどり知ってる\nおどりおどると しんでんの道開く\nおまえのために おどりおどる\nおれたちに ついてくる!
-C0-07C9AB	0x07C9AB	0x003F	npc-dialogue	P3		pending	[DFT]宝 見つかったか?\n神樣 人をためす\nでも 本当に神樣の使いなら\nきっと 神樣の宝手に入れる!
-C0-07C9EB	0x07C9EB	0x0033	npc-dialogue	P3		pending	[DFT]おまえ 村の恩人!村の恩人!\nおまえのこと これからずっと\n村で 言い伝えられる!
-C0-07CA1F	0x07CA1F	0x0042	npc-dialogue	P3		pending	[DFT]宿屋の前にいる男 [PAL:02]いりえで\n変な男 にげたの見たらしい\n変な男きっと 神樣の名前かたる\n悪いやつ!
-C0-07CA62	0x07CA62	0x0021	npc-dialogue	P3		pending	[DFT]村ずっと 雨ふらない\n村 からから\nおれたちも からから˳
-C0-07CAFB	0x07CAFB	0x0014	npc-dialogue	P3		pending	[DFT]\nその話 聞かせてもらったわよっ!
-C0-07CB10	0x07CB10	0x0034	npc-dialogue	P3		pending	[DFT][E2:043F]もしろい話じゃない!\n[PAL:03]美しい娘[PAL:00]のいけにえって言うんなら\nここに いるじゃないの!
+C0-07C7E4	0x07C7E4	0x0015	npc-dialogue	P3		translated	[DFT]ねずみもよくきた!\nかんげい かんげい!
+C0-07C8BF	0x07C8BF	0x0049	npc-dialogue	P3		translated	[DFT]この人 村長!\n村長 本当は 村で一番えらい!\nでも最近 きとう師の方がえらい!\nだけど とてもやさしい いい人!
+C0-07C909	0x07C909	0x002F	npc-dialogue	P3		translated	[DFT]いけにえ 帰ってきた!\nきっとおまえ 神樣の使い!\nえらい村長 そう言ってる!
+C0-07C939	0x07C939	0x002E	npc-dialogue	P3		translated	[DFT]おまえ 村を救った!\nおまえ やっぱり神の使い!\nえらい村長 そう言ってる!
+C0-07C968	0x07C968	0x0042	npc-dialogue	P3		translated	[DFT]おれたち 秘密のおどり知ってる\nおどりおどると しんでんの道開く\nおまえのために おどりおどる\nおれたちに ついてくる!
+C0-07C9AB	0x07C9AB	0x003F	npc-dialogue	P3		translated	[DFT]宝 見つかったか?\n神樣 人をためす\nでも 本当に神樣の使いなら\nきっと 神樣の宝手に入れる!
+C0-07C9EB	0x07C9EB	0x0033	npc-dialogue	P3		translated	[DFT]おまえ 村の恩人!村の恩人!\nおまえのこと これからずっと\n村で 言い伝えられる!
+C0-07CA1F	0x07CA1F	0x0042	npc-dialogue	P3		translated	[DFT]宿屋の前にいる男 [PAL:02]いりえで\n変な男 にげたの見たらしい\n変な男きっと 神樣の名前かたる\n悪いやつ!
+C0-07CA62	0x07CA62	0x0021	npc-dialogue	P3		translated	[DFT]村ずっと 雨ふらない\n村 からから\nおれたちも からから˳
+C0-07CAFB	0x07CAFB	0x0014	npc-dialogue	P3		translated	[DFT]\nその話 聞かせてもらったわよっ!
+C0-07CB10	0x07CB10	0x0034	npc-dialogue	P3		translated	[DFT][E2:043F]もしろい話じゃない!\n[PAL:03]美しい娘[PAL:00]のいけにえって言うんなら\nここに いるじゃないの!
 C0-07CB45	0x07CB45	0x0088	event-dialogue	P2		translated	[DFT]ちょっと![PAU:14]人の話を 聞いてるの?\n[PAU:14]この[KATAKANA]ミント[HIRAGANA]さんが いけにえに\nなってあげるって言ってるのよ!\n神樣とかの正体をつきとめてやるわ[FIN][NAM:00]\n[PAU:14]君もいっしょにくるのよ\n何を いやそうな顔してるのよ?\nかよわい女性ひとりで行かせる気?
 C0-07CCD2	0x07CCD2	0x00CC	event-dialogue	P2		translated	[DFT]ぅぐぽち[STR:6BD8C3]ぐきとうし:\n[PAL:00]村長!神樣 宝返すように言ってる\nこのままだと 火山どっか[KATAKANA]ー[HIRAGANA]ん!\nだから 早く神樣の宝返す![TPL:D8][PAL:02]村長:\n[PAL:00]神樣 いい神樣 そんなことしない\n村長 神樣の宝守るのが仕事\n神樣の宝 わたせない˳[TPL:D8][PAL:02]きとうし:\n[PAL:00]村長 ごうじょう!\nきっと よくないことおきる!\n早く考え変える!またくる!
 C0-07CDC5	0x07CDC5	0x006A	event-dialogue	P2		translated	[DF4][PAL:02]きとうし:\n[PAL:00]村長 神樣の言うこときかない!\nだから神樣 きとう師に言った[FIN]これで 村の人[KATAKANA]ネズミ[HIRAGANA]にする!\n言うこときかないと[KATAKANA]ダメ[HIRAGANA]!\n神樣の宝のある場所 教える!
 C0-07CE30	0x07CE30	0x0099	event-dialogue	P2		translated	[DF4][PAL:02]村長:\n[PAL:00]神樣 そんなことしない\n村長 神樣の宝守るのが仕事\n神樣の宝 わたせない˳[FIN][PAL:02]きとうし:\n[PAL:00]村長 あいかわらず ごうじょう!\nこれ 神樣がくれたまほう![FIN]神樣 言うこときかない奴\n[KATAKANA]ネズミ[HIRAGANA]に変えてしまえと言った\nこれを 見るいい!
-C0-07CECA	0x07CECA	0x002E	npc-dialogue	P3		pending	[DF4]これで 村の人\nみんな [KATAKANA]ネズミ[HIRAGANA]になった\nあとは 村長だけ!\n······むっ?
-C0-07CF4B	0x07CF4B	0x0034	npc-dialogue	P3		pending	[DFT]なんで えらいきとう師\nねずみになる!?\n元にもどせ!もどさないと\n神のたたり きっと落ちる!
+C0-07CECA	0x07CECA	0x002E	npc-dialogue	P3		translated	[DF4]これで 村の人\nみんな [KATAKANA]ネズミ[HIRAGANA]になった\nあとは 村長だけ!\n······むっ?
+C0-07CF4B	0x07CF4B	0x0034	npc-dialogue	P3		translated	[DFT]なんで えらいきとう師\nねずみになる!?\n元にもどせ!もどさないと\n神のたたり きっと落ちる!
 C0-07CF9F	0x07CF9F	0x0064	event-dialogue	P2		translated	[DFT]おまえ なに!?\nえらいきとう師 神樣に\nおいのりささげてる!\nたいせつな お仕事![FIN]えらいきとう師 いのると\n神樣の声 きこえる\nじゃますると 天ばつくだる!\n帰る!帰る!
-C0-07D06B	0x07D06B	0x0029	npc-dialogue	P3		pending	[CLR]々ぐあがぜら[CLR]ぐぽ7[CLR]小[DFT]\nこらっ!\n神樣の場所に 近づくだめっ!
-C0-07D188	0x07D188	0x003C	npc-dialogue	P3		pending	[CLR]いがぐだぐ技[BYTE:B2]ぅ[DF4]おまえ ここで待つ!\nすぐに 神樣のおむかえくる\nおれたち 神樣こわい\nだから 帰る!
-C0-07D210	0x07D210	0x004E	npc-dialogue	P3		pending	[DFT][NXT]ぎおやっ[PAU:1E] おちびちゃん!\n[PAU:1E]面白い [KATAKANA]ツアー[HIRAGANA]だったねえ!\n最後に 工場が爆発する所なんて\n年がいもなく どきどきしたよ![NXT]が
+C0-07D06B	0x07D06B	0x0029	npc-dialogue	P3		translated	[CLR]々ぐあがぜら[CLR]ぐぽ7[CLR]小[DFT]\nこらっ!\n神樣の場所に 近づくだめっ!
+C0-07D188	0x07D188	0x003C	npc-dialogue	P3		translated	[CLR]いがぐだぐ技[BYTE:B2]ぅ[DF4]おまえ ここで待つ!\nすぐに 神樣のおむかえくる\nおれたち 神樣こわい\nだから 帰る!
+C0-07D210	0x07D210	0x004E	npc-dialogue	P3		translated	[DFT][NXT]ぎおやっ[PAU:1E] おちびちゃん!\n[PAU:1E]面白い [KATAKANA]ツアー[HIRAGANA]だったねえ!\n最後に 工場が爆発する所なんて\n年がいもなく どきどきしたよ![NXT]が
 C0-07D280	0x07D280	0x0068	event-dialogue	P2		translated	[DFT]やれやれ ようやく\n町に 帰ることができる\nこんな[KATAKANA]ツアー[HIRAGANA]\nもう こりごりだ![FIN]え?我々を助け出してくれた\n娘はどうしたかって?\nなんでも 人をさがすとかで\nどこかに 行ってしまったぞ˳
 C0-07D310	0x07D310	0x006B	event-dialogue	P2		translated	[DFT]こちら 神樣こと\n天才発明家 [KATAKANA]ペッパー[HIRAGANA]です\nただいま留守にしております[FIN]ご用の方は 発信音の後\n[KATAKANA]メッセージ[HIRAGANA]を入れてください˳\n[PAU:3C]\n[PAL:03]ぴ[KATAKANA]ーーーーーーーーーーーー[HIRAGANA]っ[PAL:00]
 C0-07D37C	0x07D37C	0x0060	event-dialogue	P2		translated	[DFT]はいはい こちら\n村一番えらい きとう師!\n神樣の言うこと 何でもきく![FIN]···あれ?\n[PAU:14]神樣 今日とても声若い!\nきっと いけにえのせい!\nとても いいこと!
-C0-07D3DD	0x07D3DD	0x001C	npc-dialogue	P3		pending	[DFT] ···········\n ·····応答がない˳
+C0-07D3DD	0x07D3DD	0x001C	npc-dialogue	P3		translated	[DFT] ···········\n ·····応答がない˳
 C0-07D477	0x07D477	0x0079	event-dialogue	P2		translated	[DFT]やい やい やい\n[KATAKANA]アキハバラ[HIRAGANA]と[KATAKANA]フラボノ[HIRAGANA]だな!\n我々[KATAKANA]ハッカー[HIRAGANA]の研究のためには\nおふたりの力が必要だ![FIN]···と えらい人が言ってるので\n痛い思いを したくなかったら\nおとなしく いっしょに\n来てちょうだい˳
 C0-07D53A	0x07D53A	0x00A8	event-dialogue	P2		translated	[CLR]いがぐだご島[CA][DFT][E2:02D4]ふらぼの君[HIRAGANA]\n君は このままにげたまえ\nこいつは 私がなんとかしよう[FIN][E2:0F46]·しかし···[FIN][E2:0266]はは わたしは発明家だぞ?\nこんな時のために役立つものを\nひとつふたつ用意してあるんだ[FIN]さあ\n[PAU:1E]危ないから 後ろに下がるんだ\nなに こんな奴ら\nあっという間に ふきとばしてやる˳
 C0-07D65D	0x07D65D	0x0020	engine-data	P3		pending	[CLR]れがぐぼっがごがぜぢぐ[CB]ぅげがそががぐTに[CMD:FF]れPぐぃぎ┌ [E2:20]
-C0-07D767	0x07D767	0x003C	npc-dialogue	P3		pending	[CLR]いがぐぽ![DFT]ぐ[CLR]5がぐぼぴがじぎべべぐ[CB]ぅ[DFT][E2:0FDC]じ············\n[PAU:1E]···[NXT]が[KATAKANA]アキハバラ君[HIRAGANA]···˳
-C0-07D7A4	0x07D7A4	0x000D	npc-dialogue	P3	C0-06B5A6	pending	[DFT]\n[KATAKANA]チュウ[HIRAGANA] [KATAKANA]チュウ[HIRAGANA]
-C0-07D7FB	0x07D7FB	0x0045	npc-dialogue	P3		pending	[DF4]ぅぐぽぢ[DF4]ぐT[CMD:F0][CMD:FF]ぐ[STR:DBD787]ぅ[DFT]この下 火山\n火山の中 [KATAKANA]スリル[HIRAGANA]まんてん!\nここから おまえひとり!\nおれ ここで待つ!
+C0-07D767	0x07D767	0x003C	npc-dialogue	P3		translated	[CLR]いがぐぽ![DFT]ぐ[CLR]5がぐぼぴがじぎべべぐ[CB]ぅ[DFT][E2:0FDC]じ············\n[PAU:1E]···[NXT]が[KATAKANA]アキハバラ君[HIRAGANA]···˳
+C0-07D7A4	0x07D7A4	0x000D	npc-dialogue	P3	C0-06B5A6	translated	[DFT]\n[KATAKANA]チュウ[HIRAGANA] [KATAKANA]チュウ[HIRAGANA]
+C0-07D7FB	0x07D7FB	0x0045	npc-dialogue	P3		translated	[DF4]ぅぐぽぢ[DF4]ぐT[CMD:F0][CMD:FF]ぐ[STR:DBD787]ぅ[DFT]この下 火山\n火山の中 [KATAKANA]スリル[HIRAGANA]まんてん!\nここから おまえひとり!\nおれ ここで待つ!
 C0-07D858	0x07D858	0x008A	event-dialogue	P2		translated	[DF4]報ぐぽゅ[DF4]ぐだ[BYTE:85]土PぐにPがが べがぐ[BYTE:B2]ぅ[DFT][PAL:02][KATAKANA]ガイド[HIRAGANA]:\n[PAL:00]観光なんて 本当はうそ!\nうそつき よくないが\n神樣 いけにえほしがってる[FIN]きっと 神樣のお使い\nお前を むかえてくれる\nお前 神樣のいけにえになる\nうらむのよくない ばいばい˳
 C0-07D9EF	0x07D9EF	0x0066	event-dialogue	P2		translated	[CLR]いがぐぽふ[DLY:02]だぎ技[BYTE:B2]ぅ[DFT][E2:04C2]がじゃないっ!\nまだ こんな所にいたのっ!?[FIN]他の [KATAKANA]ロココ町[HIRAGANA]の人たちは\nもう にげだしたわよっ!\nここにいたら あぶないわよ!\nほらっ!早くにげるのよっ!
 C0-07DA56	0x07DA56	0x006A	event-dialogue	P2		translated	[DFT][E2:047E]··ふうっ かんいっぱつ!\nもう少し おそかったら\nまきこまれていた所じゃないの![FIN]あたしは ちょっと\n気になることがあるから\n先に 村に行ってるわよ\nいい?[PAU:1E]寄り道しないでもどるのよ!
-C0-07DB38	0x07DB38	0x002D	npc-dialogue	P3		pending	[DFT]これから 神樣にささげる\nおどりおどる!\nゆいしょ正しき\n伝統ある おどり!!
-C0-07DB66	0x07DB66	0x0045	npc-dialogue	P3		pending	[DFT]神樣のいる場所への 道開いた\n神樣の使い この先に行く\nおれたち仕事おしまい 帰る\n神樣に よろしく!!
-C0-07DC75	0x07DC75	0x0023	npc-dialogue	P3		pending	[DFT]はっはっはっはっ\nこれで ようやく\n先へ 進めるというわけだな!
+C0-07DB38	0x07DB38	0x002D	npc-dialogue	P3		translated	[DFT]これから 神樣にささげる\nおどりおどる!\nゆいしょ正しき\n伝統ある おどり!!
+C0-07DB66	0x07DB66	0x0045	npc-dialogue	P3		translated	[DFT]神樣のいる場所への 道開いた\n神樣の使い この先に行く\nおれたち仕事おしまい 帰る\n神樣に よろしく!!
+C0-07DC75	0x07DC75	0x0023	npc-dialogue	P3		translated	[DFT]はっはっはっはっ\nこれで ようやく\n先へ 進めるというわけだな!
 C0-07DC99	0x07DC99	0x00F9	event-dialogue	P2		translated	[DFT][E2:0504]くろうだったな ぼうず\n[PAU:14]そうだ 思い出したぞ\nたしか 発明家の卵とか言ってたな[FIN]さてはお前も 大むかしの\nすんばらしい発明品を\nさがすのが目的なのか?[FIN]だがな お前のような若造が\nそれを調べて 何になる?\n[KATAKANA]ムダ[HIRAGANA]だ[KATAKANA]ムダ[HIRAGANA]だ やめておけ![FIN]あの科学力を調べぬいて\nこの[KATAKANA]ペッパー樣[HIRAGANA]は 天才的発明に\nさらに みがきをかけるのだ!\nだれにも じゃまはさせんぞ![FIN]わかったら さっさと\nそこをどけ!\nえ[KATAKANA]ー[HIRAGANA]い じゃまだじゃまだ!
 C0-07E06D	0x07E06D	0x0073	event-dialogue	P2		translated	[DFT]むむ[PAU:14] またお前かっ?!\n私の じゃまばかりしおって\n今度という今度は がまんならん[FIN]この天才発明家[KATAKANA]ペッパー[HIRAGANA]の\n[KATAKANA]ス-パ-ウルトラメカ[HIRAGANA]\n[PAL:02][KATAKANA]ビッグアイ[HIRAGANA][PAL:00]で\nおしおきしてくれる![PAU:14]かくごせい!
-C0-07E0E1	0x07E0E1	0x0040	npc-dialogue	P3		pending	[DFT]なんだ?!まだ この私に\nたてつくというのかっ?!\nはっはっはっ 何度戦っても\n[KATAKANA]ムダ[HIRAGANA]だということを 教えてやる!
+C0-07E0E1	0x07E0E1	0x0040	npc-dialogue	P3		translated	[DFT]なんだ?!まだ この私に\nたてつくというのかっ?!\nはっはっはっ 何度戦っても\n[KATAKANA]ムダ[HIRAGANA]だということを 教えてやる!
 C0-07E122	0x07E122	0x0074	event-dialogue	P2		translated	[DFT][NXT]ぞ····な·[NXT]が[PAU:14]なんということだ!\nこの 天才発明家の[E2:1A00]\nこんな青二才めの[E2:1A50]\n負けるとは···[FIN]だがっ!\n[PAU:14]これで終ったわけではないぞ\nこの借りは 倍にして返してやる!\nおぼえておけっ!
 C0-07E1C4	0x07E1C4	0x0087	event-dialogue	P2		translated	[CLR]5がぐぽ[WAI][E3:02]だ[BYTE:9F]技[BYTE:B2]ぅ[DFT]これは すごいぞ!\n見たこともない 金属だ!\nおまけに この胸の石!\nこれが[KATAKANA]エネルギー源[HIRAGANA]にちがいない![FIN]ああ···[PAU:0A]だが···[PAU:0A]しかし\nこの[E2:1A54] どうやったら\n動くというのだ!?\nうぉおおお 動く所が見たいぞ!
 C0-07E357	0x07E357	0x00C5	event-dialogue	P2		translated	[DFT][NXT]ぞ···[NXT]が[PAU:1E][NAM:00]?[PAU:0A] [KATAKANA]オマエ[HIRAGANA]か?\n[KATAKANA]ワタシ[HIRAGANA]だ [PAL:02][KATAKANA]ナポレオン[HIRAGANA][PAL:00]だ\n[PAU:1E][NXT]ぞ···そうか[PAU:14][NXT]が [KATAKANA]オマエ[HIRAGANA]はまだ\n[PAU:0A][KATAKANA]ワタシ[HIRAGANA]を 知らないのか···[FIN]···[KATAKANA]オマエ[HIRAGANA][PAU:14] その石は?!\n[PAU:14][E2:0067] 集めていたのか\nそうか···[PAU:14]よかった···[TPL:D7][KATAKANA]オマエ[HIRAGANA]に たくしたいものが\nあるのだが···\nもちものが いっぱいのようだな\nすまないが かたづけてくれないか?
 C0-07E41D	0x07E41D	0x008F	event-dialogue	P2		translated	[DFT]この地で[E2:0067]見つけ\n長い間 これを守ってきた\nいつか [KATAKANA]オマエ[HIRAGANA]にわたせると信じてな\n[PAU:1E][NAM:00][PAU:0A] うけとってくれ[FIN] [NAM:00]は\n[PAL:02] 石3[PAL:00]を 手に入れた![TER][DFT]いかん![PAU:14]こうはしてられん\nもうすぐここは くずれるぞ\nここから 出なければ!\n[NAM:00][PAU:0A] こっちだ!
-C0-07E501	0x07E501	0x0021	npc-dialogue	P3		pending	[DFT]だめだ!\nここからは 行けない!\n別の[KATAKANA]ルート[HIRAGANA]を探そう˳
-C0-07E5A8	0x07E5A8	0x0023	npc-dialogue	P3		pending	[DFT]このかべを こわすしかないな\n[KATAKANA]キミ[HIRAGANA]は ちょっと後ろにさがって˳
-C0-07E5CC	0x07E5CC	0x001C	npc-dialogue	P3		pending	[DFT]···あ·あいたようだ···\nさ·さあ い·行こう˳
-C0-07E786	0x07E786	0x0042	npc-dialogue	P3		pending	[DLY:02]だぁげぐだぃ[BYTE:83]ぐ[STR:1EE787]ぅぐぽ[CB][CMD:E8]ぅ[DFT]こ···このかべも\nこわ···さ·ないと\n[PAU:0A][KATAKANA]キ[HIRAGANA]·[KATAKANA]ミ[HIRAGANA]は···後ろ···さがって˳
-C0-07E7C9	0x07E7C9	0x002C	npc-dialogue	P3		pending	[DFT]こ···の···かべも\nこ···わさな···い···と\n··う·し·ろ·さが··って˳
-C0-07E7F6	0x07E7F6	0x0018	npc-dialogue	P3		pending	[DFT]···あいた···ようだ\nさ·さあ 行こう˳
+C0-07E501	0x07E501	0x0021	npc-dialogue	P3		translated	[DFT]だめだ!\nここからは 行けない!\n別の[KATAKANA]ルート[HIRAGANA]を探そう˳
+C0-07E5A8	0x07E5A8	0x0023	npc-dialogue	P3		translated	[DFT]このかべを こわすしかないな\n[KATAKANA]キミ[HIRAGANA]は ちょっと後ろにさがって˳
+C0-07E5CC	0x07E5CC	0x001C	npc-dialogue	P3		translated	[DFT]···あ·あいたようだ···\nさ·さあ い·行こう˳
+C0-07E786	0x07E786	0x0042	npc-dialogue	P3		translated	[DLY:02]だぁげぐだぃ[BYTE:83]ぐ[STR:1EE787]ぅぐぽ[CB][CMD:E8]ぅ[DFT]こ···このかべも\nこわ···さ·ないと\n[PAU:0A][KATAKANA]キ[HIRAGANA]·[KATAKANA]ミ[HIRAGANA]は···後ろ···さがって˳
+C0-07E7C9	0x07E7C9	0x002C	npc-dialogue	P3		translated	[DFT]こ···の···かべも\nこ···わさな···い···と\n··う·し·ろ·さが··って˳
+C0-07E7F6	0x07E7F6	0x0018	npc-dialogue	P3		translated	[DFT]···あいた···ようだ\nさ·さあ 行こう˳
 C0-07E80F	0x07E80F	0x009D	event-dialogue	P2		translated	[DFT][NXT]ご···もう[KATAKANA]ダメ[HIRAGANA]···だ\n[KATAKANA]エネルギー[HIRAGANA]が···なくなった\nだが···まにあってよかった[FIN]···できることなら···\n[KATAKANA]スクラップ[HIRAGANA]となる [KATAKANA]ワタシ[HIRAGANA]の···\nかけらでも···ひろってくれ\n[KATAKANA]キミ[HIRAGANA]を 見守れる[FIN]あとのことは···たのむ\n[PAL:02][KATAKANA]ラスク[HIRAGANA][PAL:00]さまの···意志を\n···ついでくれ˳[NXT]が
 C0-07E8AD	0x07E8AD	0x004E	event-dialogue	P2		translated	[DFT] [NAM:00]は\n[PAL:02] [KATAKANA]スクラップ[HIRAGANA]A[PAL:00]を 手に入れた![TER][DFT] [NAM:00]は\n[PAL:02] [KATAKANA]スクラップ[HIRAGANA]A[PAL:00]を 見つけた!\n[PAU:1E] だが 持ち物がいっぱいだった˳
-C0-07E935	0x07E935	0x0044	npc-dialogue	P3		pending	[DFT][PAL:02] ここに来るべき 人のため\n [KATAKANA]メッセージ[HIRAGANA]を 残す\n 道は 遠いほど近くに通じる\n 信じる道を しらべよ˳[PAL:00]
+C0-07E935	0x07E935	0x0044	npc-dialogue	P3		translated	[DFT][PAL:02] ここに来るべき 人のため\n [KATAKANA]メッセージ[HIRAGANA]を 残す\n 道は 遠いほど近くに通じる\n 信じる道を しらべよ˳[PAL:00]
 C0-07E98B	0x07E98B	0x0084	event-dialogue	P2		translated	[DFT][PAL:02] しかけは かんたんだったろう?\n 君が来るのを 待っていたが\n [KATAKANA]ワタシ[HIRAGANA]の残り[KATAKANA]エネルギー[HIRAGANA]は\n あと わずかしかない···[FIN] 君が ここに現れる時まで\n 待つことが できるだろうか\n だが[KATAKANA]ワタシ[HIRAGANA]には残されたことがある\n 君の [BYTE:81]
 C0-07EAA6	0x07EAA6	0x005B	event-dialogue	P2		translated	[DFT][E2:04DC]ぎもうっ![PAU:28][NXT]が[KATAKANA]ペッパー[HIRAGANA]が\n船で にげちゃったのよ!\nここまで おいつめたのに![FIN]そういえば あいつ\nあわてて 何か落としていったわ\nそこにある [KATAKANA]カプセル[HIRAGANA]よ˳
 C0-07EB02	0x07EB02	0x005C	event-dialogue	P2		translated	[DFT][E2:043E]?なんで[KATAKANA]カプセル[HIRAGANA]を\n開けないのかですって?\nふふん あまいわね[FIN]相手は 悪の発明家よ?!\n[KATAKANA]カプセル[HIRAGANA]に なにか変なしかけを\nしているかもしれないでしょっ!
 C0-07EB5F	0x07EB5F	0x0070	event-dialogue	P2		translated	[DFT][E2:04DC]ぎちょっと[PAU:1E] 今の話きいたわよ!\n[KATAKANA]ロココ町[HIRAGANA]で 何かあったのね!?[FIN][NXT]がふふん [PAU:1E]事件のにおいがするわ\n[KATAKANA]ペッパー[HIRAGANA]のことも気になるけど\nこっちの方が 先ね\n[NXT]ぎこうしちゃいられないわっ![NXT]が
 C0-07EC02	0x07EC02	0x0053	event-dialogue	P2		translated	[DFT][PAL:03][KATAKANA]ナギサ[HIRAGANA]:\n[PAL:00][NAM:00]ね 聞こえてる?\nちょっと 大変なことがおきたの[FIN]とにかく すぐに\n[KATAKANA]ロココ町[HIRAGANA]に帰ってきてちょうだい\nいそいでね おねがいよ˳
-C0-088055	0x088055	0x0040	npc-dialogue	P3		pending	[DFT]この町長會は\n[KATAKANA]ハッカー[HIRAGANA]がせんりょうしちゃったよ\nこわい目にあいたくなかったら\n帰った方が いいと思うけどな˳
-C0-088096	0x088096	0x003F	npc-dialogue	P3		pending	[DFT]え?[PAU:1E]おくの見張りを\nやっつけちゃったの?\n[PAU:1E]そんな悪い子は ほっておけないな\nおじさんが おしおきしてやるぞ!
-C0-088149	0x088149	0x003B	npc-dialogue	P3		pending	[DFT][KATAKANA]ハッカー[HIRAGANA]とかいう\n変な奴らが やってきて\n町長會が のっとられたんだ\n町長は どうなったんだろう˳
+C0-088055	0x088055	0x0040	npc-dialogue	P3		translated	[DFT]この町長會は\n[KATAKANA]ハッカー[HIRAGANA]がせんりょうしちゃったよ\nこわい目にあいたくなかったら\n帰った方が いいと思うけどな˳
+C0-088096	0x088096	0x003F	npc-dialogue	P3		translated	[DFT]え?[PAU:1E]おくの見張りを\nやっつけちゃったの?\n[PAU:1E]そんな悪い子は ほっておけないな\nおじさんが おしおきしてやるぞ!
+C0-088149	0x088149	0x003B	npc-dialogue	P3		translated	[DFT][KATAKANA]ハッカー[HIRAGANA]とかいう\n変な奴らが やってきて\n町長會が のっとられたんだ\n町長は どうなったんだろう˳
 C0-088185	0x088185	0x0040	event-dialogue	P2		translated	[DFT]町長も あんなことがあって\n前より少しは\nまじめに仕事をしてくれるように\nなったんだよ[FIN]···[PAU:1E]少しだけどね˳
-C0-0881C6	0x0881C6	0x002A	npc-dialogue	P3		pending	[DFT]こらこら ぼうや\nその先には 見張りがいるよ\n出て行ったら あぶないよ˳
-C0-088256	0x088256	0x002F	npc-dialogue	P3		pending	[DFT][KATAKANA]ハッカー[HIRAGANA]の 見張りがいて\n外に出ることもできんのだ\nああ これからどうなるんだ˳
+C0-0881C6	0x0881C6	0x002A	npc-dialogue	P3		translated	[DFT]こらこら ぼうや\nその先には 見張りがいるよ\n出て行ったら あぶないよ˳
+C0-088256	0x088256	0x002F	npc-dialogue	P3		translated	[DFT][KATAKANA]ハッカー[HIRAGANA]の 見張りがいて\n外に出ることもできんのだ\nああ これからどうなるんだ˳
 C0-08828C	0x08828C	0x0086	event-dialogue	P2		translated	[DFT][STR:138388][FIN]お礼にいいことを教えてあげよう\nこの與の方に\nだんろのある部屋を知ってるかね?\nそこに [PAL:02][KATAKANA]タンス[HIRAGANA][PAL:00]があるんだがね[FIN]そこに町長が [PAL:02]へそくり[PAL:00]を\nかくしているんだ\nなに どうせ[KATAKANA]ワイロ[HIRAGANA]の金さ\n君が 有効に使ってくれ˳
-C0-0883CC	0x0883CC	0x0037	npc-dialogue	P3		pending	[DFT]おとなしくしててよって\n言ったでしょ!?\n[KATAKANA]ボク[HIRAGANA]たち やさしそうに見えるけど\nおこると こわいんだぞ˳
-C0-088404	0x088404	0x003A	npc-dialogue	P3		pending	[DFT]むっ···[PAU:1E]もう おこったぞ!\n言ってもわからない子は\nおしおきしちゃうからな!\n泣いても知らないぞ!!
+C0-0883CC	0x0883CC	0x0037	npc-dialogue	P3		translated	[DFT]おとなしくしててよって\n言ったでしょ!?\n[KATAKANA]ボク[HIRAGANA]たち やさしそうに見えるけど\nおこると こわいんだぞ˳
+C0-088404	0x088404	0x003A	npc-dialogue	P3		translated	[DFT]むっ···[PAU:1E]もう おこったぞ!\n言ってもわからない子は\nおしおきしちゃうからな!\n泣いても知らないぞ!!
 C0-088532	0x088532	0x00FC	event-dialogue	P2		translated	[DFT][E2:09C2]がくんじゃないかっ!\nすぐに ここから出してくれっ!\n今いる 町長はにせものだっ![FIN][KATAKANA]ローズ[HIRAGANA]···あの女は\nとんだくわせものだった!\n私から あの三つの石をうばった後\n私を ここにとじこめおった![FIN]だが 安心したまえ あの石は\n[PAL:02]ふたつはうばわれたが ひとつだけ\nあの女に 見つからない場所に\nこっそりかくしてある[PAL:00]のだ[FIN]私をここから出してくれたら\n君に あの石はかならず返す!\nたのむ!あのにせ町長の正体を\nみんなにあばいてやってくれ!
 C0-08862F	0x08862F	0x0084	event-dialogue	P2		translated	[DFT][E2:0981]しには ひどいことをしたが\nあの女の 言い出したことなんだ\n私も あの女はあやしいと\n思っていたんだが···[FIN]私をここから出してくれたら\n君に あの石はかならず返す!\nたのむ!あのにせ町長の正体を\nみんなにあばいてやってくれ!
 C0-0886B4	0x0886B4	0x009F	event-dialogue	P2		translated	[DFT][E2:093F]お [NAM:00]くん!助かったよ!\n君は 命の恩人だ![FIN]そうそう 石だったな\nこの先の部屋に [PAL:02]だんろ[PAL:00]があってな\nそこから かくし部屋に\n行くことができる[FIN]君の石は そこにしまってある\nあんな いまいましい石など\nはやく 片づけてしまってくれ\n[PAU:1E]やれやれ ひどい目にあったよ˳
-C0-088754	0x088754	0x0037	npc-dialogue	P3		pending	[DFT][E2:09C2]がくんじゃないか!\n一体 どこから入ってきたんだ?\n早くこの部屋の[KATAKANA]カギ[HIRAGANA]を開けてくれ!
-C0-08878C	0x08878C	0x0034	npc-dialogue	P3		pending	[DFT][E2:097E]··なんだ [KATAKANA]ネズミ[HIRAGANA]か\n[KATAKANA]ネズミ[HIRAGANA]でも だれでもいい\n私を ここから出してくれ[KATAKANA]ー[HIRAGANA]っ!!
-C0-088804	0x088804	0x002A	npc-dialogue	P3		pending	[DFT] [NAM:00]は [PAL:02]だんろ[PAL:00]を しらべた\n なんと さくがとれるように\n なっている˳
+C0-088754	0x088754	0x0037	npc-dialogue	P3		translated	[DFT][E2:09C2]がくんじゃないか!\n一体 どこから入ってきたんだ?\n早くこの部屋の[KATAKANA]カギ[HIRAGANA]を開けてくれ!
+C0-08878C	0x08878C	0x0034	npc-dialogue	P3		translated	[DFT][E2:097E]··なんだ [KATAKANA]ネズミ[HIRAGANA]か\n[KATAKANA]ネズミ[HIRAGANA]でも だれでもいい\n私を ここから出してくれ[KATAKANA]ー[HIRAGANA]っ!!
+C0-088804	0x088804	0x002A	npc-dialogue	P3		translated	[DFT] [NAM:00]は [PAL:02]だんろ[PAL:00]を しらべた\n なんと さくがとれるように\n なっている˳
 C0-08889B	0x08889B	0x0095	event-dialogue	P2		translated	[DLY:02]Tに[CMD:FF]ぐ[STR:3F8888]ぅ[DFT] [NAM:00]は\n[PAL:02] 石1[PAL:00]を 手に入れた![TER][DFT][PAL:03]ほほほほっ\nごくろうだったわね ぼうや\n最後のひとつが 見つからなくって\n困ってたところだったのよ[FIN]この [E2:00C3]げは\n我々 [KATAKANA]ハッカー[HIRAGANA]が\n大切に 使わせていただくわ\n[PAU:1E]ありがとうね [PAU:1E]ぼうや˳[PAL:00]
-C0-088931	0x088931	0x001B	npc-dialogue	P3		pending	[DFT]\n [NAM:00]は\n[PAL:02] 石1[PAL:00]を うばわれてしまった!
-C0-088997	0x088997	0x0038	npc-dialogue	P3		pending	[DFT][E2:0480][BYTE:A4]上[PAL:00]なら この部屋を出て\n[PAL:02][KATAKANA]←[HIRAGANA][PAL:00]の方だけど···\n[PAU:1E]いったい 何があったのよ?
-C0-0889D0	0x0889D0	0x001C	npc-dialogue	P3		pending	[DFT][E2:0459]た [KATAKANA]ネズミ[HIRAGANA]なのっ!?\nああ もう いやあっ!
-C0-088B60	0x088B60	0x0047	npc-dialogue	P3		pending	[DFT]ここは [KATAKANA]ハッカー[HIRAGANA]の航空幽地\nだけど 飛行機は今\n作戦で すべてではらっていて\n残ってるやつらは [KATAKANA]ヒマ[HIRAGANA]なもんさ˳
-C0-088BA8	0x088BA8	0x001D	npc-dialogue	P3		pending	[DFT]あまりにも [KATAKANA]ヒマ[HIRAGANA]だったから\nまた 作っちゃったよ˳
+C0-088931	0x088931	0x001B	npc-dialogue	P3		translated	[DFT]\n [NAM:00]は\n[PAL:02] 石1[PAL:00]を うばわれてしまった!
+C0-088997	0x088997	0x0038	npc-dialogue	P3		translated	[DFT][E2:0480][BYTE:A4]上[PAL:00]なら この部屋を出て\n[PAL:02][KATAKANA]←[HIRAGANA][PAL:00]の方だけど···\n[PAU:1E]いったい 何があったのよ?
+C0-0889D0	0x0889D0	0x001C	npc-dialogue	P3		translated	[DFT][E2:0459]た [KATAKANA]ネズミ[HIRAGANA]なのっ!?\nああ もう いやあっ!
+C0-088B60	0x088B60	0x0047	npc-dialogue	P3		translated	[DFT]ここは [KATAKANA]ハッカー[HIRAGANA]の航空幽地\nだけど 飛行機は今\n作戦で すべてではらっていて\n残ってるやつらは [KATAKANA]ヒマ[HIRAGANA]なもんさ˳
+C0-088BA8	0x088BA8	0x001D	npc-dialogue	P3		translated	[DFT]あまりにも [KATAKANA]ヒマ[HIRAGANA]だったから\nまた 作っちゃったよ˳
 C0-088BF8	0x088BF8	0x0079	event-dialogue	P2		translated	[DFT]わたしは 飛行船の整備士\nだったのですが\n[KATAKANA]ハッカー[HIRAGANA]とかいうやつらに\nさらわれて ここにきたのです[FIN][PAL:02]やつらにさからうと\nきおくを消されてしまう[PAL:00]という\n話を聞いたもので おとなしく\n仕事をしてるんですよ はい˳
-C0-088C72	0x088C72	0x0049	npc-dialogue	P3		pending	[DFT][PAL:02]きおくを消される[PAL:00]のなんか\nいやでしょう?私には\n忘れたくない人が いるんですから\n[PAU:1E][NXT]ぞ···[NXT]がと 言ってみたいもんです˳
+C0-088C72	0x088C72	0x0049	npc-dialogue	P3		translated	[DFT][PAL:02]きおくを消される[PAL:00]のなんか\nいやでしょう?私には\n忘れたくない人が いるんですから\n[PAU:1E][NXT]ぞ···[NXT]がと 言ってみたいもんです˳
 C0-088CEE	0x088CEE	0x004C	event-dialogue	P2		translated	[DFT]この飛行場にも\n飛行船が たくさんあったのだが[FIN]なにやら作戦があるとかで\nすべて [PAL:02]司令塔[PAL:00]へと\n飛び立ってしまったよ˳
-C0-088D3B	0x088D3B	0x0043	npc-dialogue	P3		pending	[DFT][PAL:02]司令塔[PAL:00]というのは ここから\nさらに はなれた島にあって\nだんがいぜっぺきのため\n船では 上陸できないらしいぞ˳
-C0-088DB1	0x088DB1	0x0054	npc-dialogue	P3		pending	[DFT][KATAKANA]アキハバラ博士[HIRAGANA]を知ってるかって?\nその人かどうか わからないけど\n[PAL:02]飛行船の設計をやっている人[PAL:00]が\n他の場所に いるらしいが···˳
-C0-088E06	0x088E06	0x0030	npc-dialogue	P3		pending	[DFT]その人のいる場所?\nう[KATAKANA]ー[HIRAGANA]ん この工場の與の方って\nことしか 知らないなあ˳
+C0-088D3B	0x088D3B	0x0043	npc-dialogue	P3		translated	[DFT][PAL:02]司令塔[PAL:00]というのは ここから\nさらに はなれた島にあって\nだんがいぜっぺきのため\n船では 上陸できないらしいぞ˳
+C0-088DB1	0x088DB1	0x0054	npc-dialogue	P3		translated	[DFT][KATAKANA]アキハバラ博士[HIRAGANA]を知ってるかって?\nその人かどうか わからないけど\n[PAL:02]飛行船の設計をやっている人[PAL:00]が\n他の場所に いるらしいが···˳
+C0-088E06	0x088E06	0x0030	npc-dialogue	P3		translated	[DFT]その人のいる場所?\nう[KATAKANA]ー[HIRAGANA]ん この工場の與の方って\nことしか 知らないなあ˳
 C0-088F7F	0x088F7F	0x00EA	event-dialogue	P2		translated	[DLY:80]ぅぐぽぺ[BYTE:91]ぅ[DFT]なに?[KATAKANA]アキハバラ博士[HIRAGANA]?\nえ?君は博士の息子さんなのか\n博士は しばらくここにいたけど\n[PAL:02]司令塔[PAL:00]へ連れていかれてしまったよ[FIN]君が博士の 息子さんか\n博士から 君のことは聞いてるよ\nしかし[PAL:02]司令塔[PAL:00]には 空からしか\n行くことができないというしなあ[FIN]おじさんにも 子供がいてね\n[PAL:02][KATAKANA]カール[HIRAGANA][PAL:00]って名前なんだけどね\nだから きみの気持ちはわかるよ\nなんとかしてあげたいなあ˳
 C0-08906A	0x08906A	0x00B1	event-dialogue	P2		translated	[DFT]え?[PAL:02][KATAKANA]カール[HIRAGANA][PAL:00]を知ってるって?\nそうか きみも[KATAKANA]ロココ町[HIRAGANA]の人なのか\n[KATAKANA]カール[HIRAGANA]は 元気にしてたかい?\nかあさんを こまらせてないかい?[FIN]そうだ [KATAKANA]カール[HIRAGANA]に[PAL:02]てがみ[PAL:00]を書くから\nわたしてもらえないだろうか?\n おやすいご用です\n おことわりします[TER][CLR]そうか!よかった!\nすぐに書くから ちょっとだけ\nそこで 待っててくれ
-C0-08911C	0x08911C	0x003D	npc-dialogue	P3		pending	[DFT]···しかし 君は\nもちものが いっぱいのようだね\nすまないが 手紙をわたせるよう\nにもつを へらしてくれないか?
-C0-08915A	0x08915A	0x0026	npc-dialogue	P3		pending	[CLR]···そうか\nやっと [KATAKANA]カール[HIRAGANA]とれんらくが\nとれると思ったのに···˳
+C0-08911C	0x08911C	0x003D	npc-dialogue	P3		translated	[DFT]···しかし 君は\nもちものが いっぱいのようだね\nすまないが 手紙をわたせるよう\nにもつを へらしてくれないか?
+C0-08915A	0x08915A	0x0026	npc-dialogue	P3		translated	[CLR]···そうか\nやっと [KATAKANA]カール[HIRAGANA]とれんらくが\nとれると思ったのに···˳
 C0-089181	0x089181	0x00A0	event-dialogue	P2		translated	[DFT]さっきはあきらめたが\n[KATAKANA]カール[HIRAGANA]と どうにかれんらくを\nとりたいんだ···[FIN][KATAKANA]カール[HIRAGANA]に[PAL:02]てがみ[PAL:00]を書くから\nわたしてもらえないだろうか?\n おやすいご用です\n おことわりします[TER][DFT]え?この飛行船かい?\nこれは まだ設計中でね\nこの [KATAKANA]ボディ[HIRAGANA]にみあうような\n[PAL:02][KATAKANA]エンジン[HIRAGANA][PAL:00]が作れなくてね˳
-C0-089222	0x089222	0x0034	npc-dialogue	P3		pending	[DFT]おや 君か\n飛行船の調子はどうだい?\nとにかく今は おとうさんを\n早く さがしなさい˳
-C0-089257	0x089257	0x0025	npc-dialogue	P3		pending	[DFT]早く 平和な世の中になって\n家に 帰れるといいんだけどね˳
+C0-089222	0x089222	0x0034	npc-dialogue	P3		translated	[DFT]おや 君か\n飛行船の調子はどうだい?\nとにかく今は おとうさんを\n早く さがしなさい˳
+C0-089257	0x089257	0x0025	npc-dialogue	P3		translated	[DFT]早く 平和な世の中になって\n家に 帰れるといいんだけどね˳
 C0-08927D	0x08927D	0x00B7	event-dialogue	P2		translated	[DFT]えっと···\n[PAU:3C][PAL:02][KATAKANA]カール[HIRAGANA] へ\n元気にしていますか?\n急にいなくなって ごめんなさい[FIN]とうさんは 悪い人たちに\nさらわれて 仕事をさせられてます\nお前や かあさんのことが\n気がかりで しかたありません[FIN]いつ帰れるか わかりませんが\nお前は 男の子なのだから\n家やかあさんのことをたのみます˳\n             父より[PAL:00]
 C0-089335	0x089335	0x0119	event-dialogue	P2		translated	[DFT]じゃあ この手紙を\nたのみます\n君も 大変な時だろうに\nわがまま言って すまないね˳[FIN]\n [NAM:00]は\n[PAL:02] てがみ[PAL:00]を うけとった![TER][DFT]え?[KATAKANA]カール[HIRAGANA]が 私にこれを?\n[NXT]ぞ···············\n[NXT]がこんなものに 書いてくるなんて\nあの子らしいな ははは[FIN][NXT]ぞ············ん?\n[PAU:1E][NXT]がこの 石版はどこで?\n[PAU:1E]これは 何かの設計図···いや\n[KATAKANA]エンジン[HIRAGANA]の設計図にちがいない![FIN]これは ひょっとしたら\n使えるかもしれないぞ!\n[PAU:1E]ぜひ きみに恩がえしをさせてくれ\nよし!さっそく作業にかかるぞ!
 C0-0894C6	0x0894C6	0x005F	event-dialogue	P2		translated	[DFT]ようやく 飛行船がしあがったよ!\nこれは 君にあげよう\nこれで早く おとうさんを\nさがしに行きなさい[TPL:D7] [NAM:00]は\n[PAL:02] 飛行船[PAL:00]を 手に入れた![TER][DFT]飛行船を[BYTE:81]
-C0-089557	0x089557	0x002D	npc-dialogue	P3		pending	[DFT]しかし···\n[PAU:1E]どうも 荷物がいっぱいのようだね\n少し 片づけてもらえないか?
-C0-0895C0	0x0895C0	0x0021	npc-dialogue	P3		pending	[DFT]おしっこしてるんだから\n見にこないでよ···\nいやらしいなあ!
-C0-089652	0x089652	0x000B	npc-dialogue	P3		pending	[DFT]君も しょけいに[BYTE:81]
-C0-08968A	0x08968A	0x003A	npc-dialogue	P3		pending	[DFT]今日のしょけいは\n元幹部の [KATAKANA]カニ[HIRAGANA]なんだってさ\nみんな [KATAKANA]カニ[HIRAGANA]が食べられるって\nおおよろこびだよ˳
-C0-0896C5	0x0896C5	0x0013	npc-dialogue	P3		pending	[DFT]おまえの分なんかないよ\nしっしっ!
-C0-089731	0x089731	0x0026	npc-dialogue	P3		pending	[DFT]ああ うれしいなあ\n[KATAKANA]カニ[HIRAGANA]を食べるのなんか\n久しぶりだよ うるうる˳
-C0-089758	0x089758	0x001D	npc-dialogue	P3		pending	[DFT]やっぱり 雪には\n[KATAKANA]カニ[HIRAGANA]と 日本酒があうよね˳
-C0-08981D	0x08981D	0x0026	npc-dialogue	P3		pending	[DFT]早く食べたいのはわかるが\nまだ おとなしく\n席にすわっててくれよな˳
+C0-089557	0x089557	0x002D	npc-dialogue	P3		translated	[DFT]しかし···\n[PAU:1E]どうも 荷物がいっぱいのようだね\n少し 片づけてもらえないか?
+C0-0895C0	0x0895C0	0x0021	npc-dialogue	P3		translated	[DFT]おしっこしてるんだから\n見にこないでよ···\nいやらしいなあ!
+C0-089652	0x089652	0x000B	npc-dialogue	P3		translated	[DFT]君も しょけいに[BYTE:81]
+C0-08968A	0x08968A	0x003A	npc-dialogue	P3		translated	[DFT]今日のしょけいは\n元幹部の [KATAKANA]カニ[HIRAGANA]なんだってさ\nみんな [KATAKANA]カニ[HIRAGANA]が食べられるって\nおおよろこびだよ˳
+C0-0896C5	0x0896C5	0x0013	npc-dialogue	P3		translated	[DFT]おまえの分なんかないよ\nしっしっ!
+C0-089731	0x089731	0x0026	npc-dialogue	P3		translated	[DFT]ああ うれしいなあ\n[KATAKANA]カニ[HIRAGANA]を食べるのなんか\n久しぶりだよ うるうる˳
+C0-089758	0x089758	0x001D	npc-dialogue	P3		translated	[DFT]やっぱり 雪には\n[KATAKANA]カニ[HIRAGANA]と 日本酒があうよね˳
+C0-08981D	0x08981D	0x0026	npc-dialogue	P3		translated	[DFT]早く食べたいのはわかるが\nまだ おとなしく\n席にすわっててくれよな˳
 C0-089844	0x089844	0x01A4	event-dialogue	P2		translated	[DFT][E2:08D4]はっか0[HIRAGANA]の ゆうしゅうなる\n戦闘員のしょくん!\n集まってもらったのは 他でもない[FIN][KATAKANA]ハッカー[HIRAGANA]の 元幹部でありながら\n内部の情報を 外にもらしていた\nうらぎりものの [KATAKANA]カニ[HIRAGANA]を\nしょけいするためである[TPL:D7]ついては この[KATAKANA]カニ[HIRAGANA]をかまゆでにし\nしょけい後は 我々が\nおいしくいただくことに\nしようと思う˳[FIN][PAL:02]さわ[KATAKANA]ガニ[HIRAGANA]:\n[PAL:00]ひ[KATAKANA]ー[HIRAGANA]っ かんべんしてくださいよ\nさわ[KATAKANA]ガニ[HIRAGANA]なんかくったって\nうまくないですよおっ![FIN][NXT]ぞあっ············\n[NXT]がそ·そこに いらっしゃるのは\nだんなじゃないですかいっ!\nだんな[KATAKANA]ー[HIRAGANA]!助けてくださいよっ![TPL:D7][E2:085B]むむっ なんだおまえは\n···さては お前が\nおたずねものの 発明家か!?[FIN]こりゃあ とんで火にいる\n夏の虫だ!戦闘員のみなさ[KATAKANA]ー[HIRAGANA]ん!\n食前の準備運動ですよ[KATAKANA]ー[HIRAGANA]っ!\nこいつを つかまえちゃいましょう!
-C0-0899E9	0x0899E9	0x0035	npc-dialogue	P3		pending	[DFT][E2:0849]うかんたんには にがさないよ\n戦闘員のみなさ[KATAKANA]ー[HIRAGANA]ん!\nもう一回出番ですよ[KATAKANA]ー[HIRAGANA]っ!
-C0-089A1F	0x089A1F	0x002E	npc-dialogue	P3		pending	[DFT]こらこら 罪人に\nかってに 話しかけちゃいかん!\nおとなしく 席についていなさい˳
-C0-089AB5	0x089AB5	0x002E	npc-dialogue	P3		pending	[DFT]あ·こらっ 今ここは\n戦闘員以外 立入り禁止だよ\n帰った 帰った!
+C0-0899E9	0x0899E9	0x0035	npc-dialogue	P3		translated	[DFT][E2:0849]うかんたんには にがさないよ\n戦闘員のみなさ[KATAKANA]ー[HIRAGANA]ん!\nもう一回出番ですよ[KATAKANA]ー[HIRAGANA]っ!
+C0-089A1F	0x089A1F	0x002E	npc-dialogue	P3		translated	[DFT]こらこら 罪人に\nかってに 話しかけちゃいかん!\nおとなしく 席についていなさい˳
+C0-089AB5	0x089AB5	0x002E	npc-dialogue	P3		translated	[DFT]あ·こらっ 今ここは\n戦闘員以外 立入り禁止だよ\n帰った 帰った!
 C0-089BA4	0x089BA4	0x00B0	event-dialogue	P2		translated	[DFT]すみません だんな\nあっしは だんなのことが\n心配で心配で···でも かえって\n足手まといになっちまいましたね[FIN]そうそう これを\nさしあげようと思いまして···\nあっしが 幹部時代に\n使っていたもんなんですけどね[TPL:D7]···と 思ったら\nにもつが いっぱいのようですね\nにもつは つねひごろから\n片づけないと いけませんぜ˳
 C0-089C55	0x089C55	0x009F	event-dialogue	P2		translated	[DFT] [NAM:00]は\n[PAL:02] かんぶ[KATAKANA]バッチ[HIRAGANA][PAL:00]を 手に入れた![TER][DFT]これがあれば\n[PAL:02]幹部しか入れない部屋[PAL:00]に\n入ることもできるはずです\nお役にたつと思いましてね[FIN]できればごいっしょしたいんですが\nまた足手まといになりそうですし\nこれで あっしは失礼いたします\n[PAU:1E]だんなっ!がんばってくださいよ!
-C0-089D80	0x089D80	0x0052	npc-dialogue	P3		pending	[DFT]この先では[PAL:02]最新えいの飛行船[PAL:00]の\n開発を行なっているんだ\nこの先には[PAL:02]幹部[PAL:00][KATAKANA]クラス[HIRAGANA]の人間しか\n入ることは できないのさ˳
-C0-089DD3	0x089DD3	0x0034	npc-dialogue	P3		pending	[DFT]ややっ!\n[PAU:14]こ·これは 幹部の方でしたか!\nどうも 失礼しました\nさあ お通りください˳
-C0-089E08	0x089E08	0x002A	npc-dialogue	P3		pending	[DFT]ずいぶん お若いのに\nもう幹部なんて すごいですねえ\nあこがれちゃいますよ˳
+C0-089D80	0x089D80	0x0052	npc-dialogue	P3		translated	[DFT]この先では[PAL:02]最新えいの飛行船[PAL:00]の\n開発を行なっているんだ\nこの先には[PAL:02]幹部[PAL:00][KATAKANA]クラス[HIRAGANA]の人間しか\n入ることは できないのさ˳
+C0-089DD3	0x089DD3	0x0034	npc-dialogue	P3		translated	[DFT]ややっ!\n[PAU:14]こ·これは 幹部の方でしたか!\nどうも 失礼しました\nさあ お通りください˳
+C0-089E08	0x089E08	0x002A	npc-dialogue	P3		translated	[DFT]ずいぶん お若いのに\nもう幹部なんて すごいですねえ\nあこがれちゃいますよ˳
 C0-08A00D	0x08A00D	0x0010	static-short	P3		pending	[CLR]ぐだ[BYTE:97]ぎれPぐにPご┌かざず[BYTE:80]
 C0-08A10C	0x08A10C	0x0049	event-dialogue	P2		translated	[DFT][STR:83A188][FIN]え?それなら 出入口を\n見張らないと 意味がないって?\n[PAU:28][NXT]ぜ···[NXT]がそれも そうだね\n教えてくれて ありがとう!
-C0-08A243	0x08A243	0x0042	npc-dialogue	P3		pending	[DFT]なんだお前 見かけない顔だな\n今は[PAL:02]朝礼中[PAL:00]だからな\nお前みたいな あやしい奴を\n通すわけにはいかないな˳
-C0-08A286	0x08A286	0x003E	npc-dialogue	P3		pending	[DFT]もうすぐ 朝礼が始まります\n[KATAKANA]ブラックモア樣[HIRAGANA]から\n重大な発表があるそうです\nお早く お入りください˳
-C0-08A2C5	0x08A2C5	0x0032	npc-dialogue	P3		pending	[DFT]こ·[PAU:1E]これは\n幹部[KATAKANA]クラス[HIRAGANA]の方でしたか!\n失礼しました!\nどうぞ お通りください!
-C0-08A359	0x08A359	0x004D	npc-dialogue	P3		pending	[DFT]今から\n[PAL:02][KATAKANA]ハッカ-極楽星支部司令官[HIRAGANA]\n[KATAKANA]ブラックモア[HIRAGANA][PAL:00]樣から\n今後の作戦の 説明があるそうだ\nわく わく わく˳
-C0-08A3EB	0x08A3EB	0x002B	npc-dialogue	P3		pending	[DFT]こら もうすぐ\n[KATAKANA]ブラックモア樣[HIRAGANA]から お話がある\nおとなしく 整列してろ!
-C0-08A4A7	0x08A4A7	0x0041	npc-dialogue	P3		pending	[DFT][NXT]ぞ···[NXT]ぎなに?[PAU:1E]おとうさんだと!?\n[NXT]が失礼な!私は 花の独身だぞ!\nそれに お前のような奴は知らん!
+C0-08A243	0x08A243	0x0042	npc-dialogue	P3		translated	[DFT]なんだお前 見かけない顔だな\n今は[PAL:02]朝礼中[PAL:00]だからな\nお前みたいな あやしい奴を\n通すわけにはいかないな˳
+C0-08A286	0x08A286	0x003E	npc-dialogue	P3		translated	[DFT]もうすぐ 朝礼が始まります\n[KATAKANA]ブラックモア樣[HIRAGANA]から\n重大な発表があるそうです\nお早く お入りください˳
+C0-08A2C5	0x08A2C5	0x0032	npc-dialogue	P3		translated	[DFT]こ·[PAU:1E]これは\n幹部[KATAKANA]クラス[HIRAGANA]の方でしたか!\n失礼しました!\nどうぞ お通りください!
+C0-08A359	0x08A359	0x004D	npc-dialogue	P3		translated	[DFT]今から\n[PAL:02][KATAKANA]ハッカ-極楽星支部司令官[HIRAGANA]\n[KATAKANA]ブラックモア[HIRAGANA][PAL:00]樣から\n今後の作戦の 説明があるそうだ\nわく わく わく˳
+C0-08A3EB	0x08A3EB	0x002B	npc-dialogue	P3		translated	[DFT]こら もうすぐ\n[KATAKANA]ブラックモア樣[HIRAGANA]から お話がある\nおとなしく 整列してろ!
+C0-08A4A7	0x08A4A7	0x0041	npc-dialogue	P3		translated	[DFT][NXT]ぞ···[NXT]ぎなに?[PAU:1E]おとうさんだと!?\n[NXT]が失礼な!私は 花の独身だぞ!\nそれに お前のような奴は知らん!
 C0-08A4E9	0x08A4E9	0x0049	event-dialogue	P2		translated	[DFT]しつこい奴だな\n私は [KATAKANA]ハッカー[HIRAGANA]の科学者のひとり\n[PAL:02][KATAKANA]アキハバラ[HIRAGANA][PAL:00]だっ![FIN]お前のような奴は\n知らんと言ったら知らん!
 C0-08A580	0x08A580	0x00BD	event-dialogue	P2		translated	[DF4][E2:0A5E]ろうども よく聞きやがれ!\nおめえらの おかげで\n3つの[E2:0000] そろったぜ[TPL:D8]だがよ これからが本番だぜ\nこの極楽星を せいふくして\n[KATAKANA]オレ[HIRAGANA]たちの力を 見せつけてやれ!\n新しい [PAL:02]秘密兵器[PAL:00]もあることだしな[FIN]さあっ!やろうども\n気あい入れて おっぱじめろよ\n本星の奴らにも [KATAKANA]オレ[HIRAGANA]たちの力を\n見せつける [KATAKANA]チャンス[HIRAGANA]だぜ!
-C0-08A66F	0x08A66F	0x0015	npc-dialogue	P3		pending	[DFT]\n 中から[KATAKANA]カギ[HIRAGANA]が かけられている˳
+C0-08A66F	0x08A66F	0x0015	npc-dialogue	P3		translated	[DFT]\n 中から[KATAKANA]カギ[HIRAGANA]が かけられている˳
 C0-08A6E0	0x08A6E0	0x012F	event-dialogue	P2		translated	[DFT][E2:0A7E]··おいっ[PAU:1E] [KATAKANA]アキハバラ[HIRAGANA]!\n[PAU:1E][E2:0000] 発動しないとは\nどういったわけだ!?[FIN][E2:0245]あな これがただの石では\nないことは あきらかだ[FIN]ただ これはまだ\n不完全な状態に あるらしい\n[PAU:1E]一部が たりないのか\n発動させるのに条件があるのか···[FIN][E2:0ADC]ぞ···こ·[PAU:1E][NXT]がこの やくたたずめ!\nそれが わからねえから\nおめえに 調べさせたんだろうが![FIN]この力が わからないことにゃあ\n本星のやつらを 出しぬいて\nこいつの力を 使おうっていう\n[KATAKANA]オレ[HIRAGANA]の計画は 水のあわだぜ![FIN]もういいっ!\nおめえなんざにゃ たのまねえ!\nおいっ!!だれかいるか!!
 C0-08A867	0x08A867	0x0076	event-dialogue	P2		translated	[DFT][E2:0B7E]··いいの?\n[PAU:1E]これでは [E2:0053]ことは\nわからずじまいじゃない?[FIN][E2:0A56]んっ あんなやろうに\n大切な [E2:0067]\nまかせておけるか![FIN][E2:0B80][BYTE:89]の短い男ね[PAU:1E] まあいいわ\n[E2:0054] 私たちで\nもう少し 調べてみましょう˳
 C0-08A8DE	0x08A8DE	0x0093	event-dialogue	P2		translated	[DFT][E2:0B3B]ら めずらしい[PAU:1E] [KATAKANA]ネズミ[HIRAGANA]だわ\n[PAU:1E]あのまぬけ面 なんとなく\nあの ぼうやを思い出すわ˳[FIN][E2:0A4F]んだ そのぼうやってのは?\n聞きずてならねえ [KATAKANA]セリフ[HIRAGANA]だな˳[FIN][E2:0B7E]··ふふふ ひみつよ\n[PAU:3C]さあ 行きましょう\n本星に 知られる前に\nことを すませたいんでしょう?
-C0-08A9FA	0x08A9FA	0x003B	npc-dialogue	P3		pending	[DFT]こいつを どこかにぶちこんでおけ\n[KATAKANA]レーザー[HIRAGANA]も完成したし 用なしだ!\n生[KATAKANA]ゴミ[HIRAGANA]の日にでも すててやる!
+C0-08A9FA	0x08A9FA	0x003B	npc-dialogue	P3		translated	[DFT]こいつを どこかにぶちこんでおけ\n[KATAKANA]レーザー[HIRAGANA]も完成したし 用なしだ!\n生[KATAKANA]ゴミ[HIRAGANA]の日にでも すててやる!
 C0-08ACB7	0x08ACB7	0x0136	event-dialogue	P2		translated	[DFT]私の名前は[PAL:02][KATAKANA]ドクター[HIRAGANA]G\n[PAL:00]天才電算科学者であ[KATAKANA]ー[HIRAGANA]る\nこの[KATAKANA]ハッカー[HIRAGANA]の[KATAKANA]コンピューター[HIRAGANA]も\nすべて私が設計したものであ[KATAKANA]ー[HIRAGANA]る[FIN]私の 新しい発明の話を\n聞きたいだろう?\n 聞かせてください\n 別に 聞きたくないや[TER][CLR]そうかそうか 特別に教えてやろう\n[JMP]ぅ[BYTE:AD][CLR]まあ そう言わずに聞きなさ[KATAKANA]ー[HIRAGANA]い\n実は[PAL:02]人間が [KATAKANA]コンピューター内部[HIRAGANA]に\n入ることができる[PAL:00]裝置を\n開発中なのだ[FIN]とりあえず[PAL:02][KATAKANA]ネズミ[HIRAGANA][PAL:00]で\n実驗しようと思っているのだが\nこの雪山では [KATAKANA]ネズミ[HIRAGANA]もいなくてな\n何なら [KATAKANA]キミ[HIRAGANA]が実驗台になるかね?
-C0-08ADEE	0x08ADEE	0x0030	npc-dialogue	P3		pending	[DFT]なにが [PAL:03][KATAKANA]チュウ[HIRAGANA][PAL:00]だ\n助手A!変な音をたてるな!\n気持ち悪いではないか!
+C0-08ADEE	0x08ADEE	0x0030	npc-dialogue	P3		translated	[DFT]なにが [PAL:03][KATAKANA]チュウ[HIRAGANA][PAL:00]だ\n助手A!変な音をたてるな!\n気持ち悪いではないか!
 C0-08AE1F	0x08AE1F	0x0074	event-dialogue	P2		translated	[DFT][E2:1680][BYTE:9A]手A!手順はわかってるな?\nたのんだぞ[TPL:D7][E2:173B]いあいさ[KATAKANA]ー[HIRAGANA] [KATAKANA]ドクター[HIRAGANA]G!\nこいつに あの裝置を\nつけるんですね!\n[KATAKANA]パンツ[HIRAGANA]のせんたくより楽なもんだ[FIN][PAL:02]\n[NAM:00][PAL:00] の耳に\n何かが とりつけられた!
 C0-08AE94	0x08AE94	0x00AF	event-dialogue	P2		translated	[DFT][E2:163F]おっ!助手A 見たまえ!\n[KATAKANA]ネズミ[HIRAGANA]が もどってきたぞ![FIN][E2:176E]てことは 実驗成功ですね!\n[KATAKANA]ドクター[HIRAGANA]G!\nおめでとうございます![FIN][E2:1660]し!早速[KATAKANA]ネズミ[HIRAGANA]から\n例のものをはずせ!我々も\n[KATAKANA]コンピューター[HIRAGANA]の中に 入るぞ![FIN][E2:1766]かりました[KATAKANA]ー[HIRAGANA]っ [KATAKANA]ドクター[HIRAGANA]G!\n[KATAKANA]パンツ[HIRAGANA]のせんたくより\nおやすいもんです!
 C0-08AF44	0x08AF44	0x020C	event-dialogue	P2		translated	[DFT][E2:1656]うっ なんとか出ることが\nできたか···[TPL:D7]や·やくそくは 守るぞ\n私も 男だからなっ!\nおいっ 助手A!\n金を 持ってるか!?[TPL:D7][E2:173E]?[PAU:14]え?[PAU:14]え?\n[PAU:3C]わ·わたしの お金ですかっ!?[FIN][E2:1680][BYTE:9A]手のものは 博士のもの!\nこの少年に 君のあり金全部を\nわたしたまえ![FIN][E2:1766]·わかりましたよぉ\n[PAU:3C]あの···私 お給料が少なくて\nこれしかないんですけど···[FIN] [NAM:00]は\n[PAL:02] 500[KATAKANA]トロン[HIRAGANA][PAL:00]を 手に入れた![TER][DFT]わかってる わかってる\nあの 白衣の男のことだったな[FIN]あの男の きおくは\n[PAL:02][KATAKANA]メインコンピューター[HIRAGANA][PAL:00]に\n[KATAKANA]インプット[HIRAGANA]されておる[FIN]しかし 私の作った\n[PAL:02][KATAKANA]プロテクト[HIRAGANA][PAL:00]が 守っているからな\nそう かんたんには\nてだしは できんぞ[FIN]まあ やれるだけやってみるがいい\n私の作った [KATAKANA]プロテクト[HIRAGANA]を\nためす いい[KATAKANA]チャンス[HIRAGANA]だ!\nこれを 君にくれてやろう[TPL:D7]そうそう [KATAKANA]カギ[HIRAGANA]だったな\nほら くれてやる![TPL:D7] [NAM:00]は\n[PAL:02] [KATAKANA]カギ[HIRAGANA][PAL:00]を 手に入れた![TER][DFT]にもつが いっぱいじゃないか!\nそれでは [KATAKANA]カギ[HIRAGANA]をわたすことも\nできんな ぷんぷん˳
-C0-08B151	0x08B151	0x002F	npc-dialogue	P3		pending	[DFT]用がすんだら 帰りたまえ\n私は 次の研究の準備で\nいそがしいのであ[KATAKANA]ー[HIRAGANA]る!
+C0-08B151	0x08B151	0x002F	npc-dialogue	P3		translated	[DFT]用がすんだら 帰りたまえ\n私は 次の研究の準備で\nいそがしいのであ[KATAKANA]ー[HIRAGANA]る!
 C0-08B313	0x08B313	0x00A2	event-dialogue	P2		translated	[DFT]わたしは こちらの\n[PAL:02][KATAKANA]ドクター[HIRAGANA]G[PAL:00]の 助手をしています\n[KATAKANA]ドクター[HIRAGANA]とは言っても\n專門は[KATAKANA]コンピューター[HIRAGANA]ですけどね[FIN][KATAKANA]ドクター[HIRAGANA]Gは この間\n[PAL:02]人間のきおくを [KATAKANA]コンピューター[HIRAGANA]に\n保存する[PAL:00]実驗に成功したんです[FIN]もっとも 実驗者は\n[PAL:02]きおくそうしつ[PAL:00]になりましたけど˳
-C0-08B3B6	0x08B3B6	0x0047	npc-dialogue	P3		pending	[DFT]助手ってのは 聞こえはいいですが\n大変な 仕事ですよ\n時には[KATAKANA]ドクター[HIRAGANA]Gの [KATAKANA]パンツ[HIRAGANA]の\nせんたくまで させられるんです˳
-C0-08B3FE	0x08B3FE	0x001D	npc-dialogue	P3		pending	[DFT]なんだ [KATAKANA]ネズミ[HIRAGANA]か···\n···え?[PAU:1E][KATAKANA]ネズミ[HIRAGANA]!?
+C0-08B3B6	0x08B3B6	0x0047	npc-dialogue	P3		translated	[DFT]助手ってのは 聞こえはいいですが\n大変な 仕事ですよ\n時には[KATAKANA]ドクター[HIRAGANA]Gの [KATAKANA]パンツ[HIRAGANA]の\nせんたくまで させられるんです˳
+C0-08B3FE	0x08B3FE	0x001D	npc-dialogue	P3		translated	[DFT]なんだ [KATAKANA]ネズミ[HIRAGANA]か···\n···え?[PAU:1E][KATAKANA]ネズミ[HIRAGANA]!?
 C0-08B41C	0x08B41C	0x00AB	event-dialogue	P2		translated	[DFT][E2:177E]··[KATAKANA]ドクター[HIRAGANA]G!\nね·[KATAKANA]ネズミ[HIRAGANA]です![KATAKANA]ネズミ[HIRAGANA]˳[FIN][E2:164F]にを ねぼけたことを\nこんな雪山に [KATAKANA]ネズ[HIRAGANA]···\n[PAU:1E][NXT]ぎなにっ?[TPL:D7][NXT]ぞ·········[NXT]ぎなんと!\n[PAU:1E]これは天からの おくりものかっ!\n[PAU:1E][NXT]が助手A!実驗だ!!\nこの[KATAKANA]ネズミ[HIRAGANA]で 実驗をするぞ![FIN][E2:1766]かりました!博士!\n実驗ですね!
-C0-08B4C8	0x08B4C8	0x004C	npc-dialogue	P3		pending	[DFT][KATAKANA]コンピューター[HIRAGANA]の仕事をしてる人って\nかわった人が 多いと聞きますけど\n本当に そう思いますよ\nあなたも 気をつけてくださいね˳
+C0-08B4C8	0x08B4C8	0x004C	npc-dialogue	P3		translated	[DFT][KATAKANA]コンピューター[HIRAGANA]の仕事をしてる人って\nかわった人が 多いと聞きますけど\n本当に そう思いますよ\nあなたも 気をつけてくださいね˳
 C0-08B515	0x08B515	0x00A6	event-dialogue	P2		translated	[DFT]あ·あのぉ···\n[PAU:1E]ど·[KATAKANA]ドクター[HIRAGANA]Gは\nああ 言ってますけど\nさっきさしあげた [PAL:03]私の[PAL:00]お金を[FIN]返してくれたら あの男のことを\n私が 教えてもいいんですよ\n お返ししましょう\n もらった金は 返さないよ[TER][CLR]わ·わかりました\n気が かわりましたら\nいつでも 言ってくださいね\n[PAU:1E]···[KATAKANA]シクシク[HIRAGANA]˳
-C0-08B5BC	0x08B5BC	0x003D	npc-dialogue	P3		pending	[CLR]あ·ありがとうございます!\nでも お礼にわたしたいものが\nあるんです ちょっとおにもつを\n片づけていただけませんか?
+C0-08B5BC	0x08B5BC	0x003D	npc-dialogue	P3		translated	[CLR]あ·ありがとうございます!\nでも お礼にわたしたいものが\nあるんです ちょっとおにもつを\n片づけていただけませんか?
 C0-08B5FA	0x08B5FA	0x0126	event-dialogue	P2		translated	[CLR]\n [NAM:00]は\n[PAL:02] 500[KATAKANA]トロン[HIRAGANA][PAL:00]を わたした![FIN]ううう ありがとうございます\nこれで 今月も\nくらしていけます[FIN]あの男の きおくは\n[PAL:02][KATAKANA]メインコンピューター[HIRAGANA][PAL:00]の中に\n入れられているはずです[FIN]だけど 重要機密ですからね\n何かに 守られているはずです[FIN]それと これをさしあげます\nこれで[PAL:02][KATAKANA]メインコンピューター室[HIRAGANA][PAL:00]に\n入ることが できるでしょう\n[KATAKANA]ドクター[HIRAGANA]Gには [KATAKANA]ナイショ[HIRAGANA]ですよ˳[FIN] [NAM:00]は\n[PAL:02] [KATAKANA]カギ[HIRAGANA][PAL:00]を 手に入れた![TER][CLR]あ·あなた\nお金を持ってないじゃないですか!\nもう 使っちゃうなんて\nあんまりだっ!うえ[KATAKANA]ーー[HIRAGANA]ん!
 C0-08B75F	0x08B75F	0x0070	event-dialogue	P2		translated	[DFT]この要塞の [KATAKANA]コンピューター[HIRAGANA]は\nすべて [KATAKANA]ネットワーク[HIRAGANA]で\nつながっているんですよ[FIN]その中心部が\n[PAL:02][KATAKANA]メインコンピューター[HIRAGANA][PAL:00]ですが\n[KATAKANA]メインコンピューター室[HIRAGANA]には\n[KATAKANA]ドクター[HIRAGANA]Gしか 入れないんです˳
-C0-08B7D0	0x08B7D0	0x003F	npc-dialogue	P3		pending	[DFT][KATAKANA]ドクター[HIRAGANA]Gが\n[KATAKANA]コンピューター[HIRAGANA]の中に入ったまま\n帰ってこないんです···\n[PAU:1E]中で 何かあったんでしょうか?
-C0-08B810	0x08B810	0x001E	npc-dialogue	P3		pending	[DFT]また 実驗が失敗したのかと\n思っちゃいましたよ˳
-C0-08B89E	0x08B89E	0x0038	npc-dialogue	P3		pending	[DFT][BYTE:B8]ぐだぐがぅ[DFT] [NAM:00]は 本をみつけた\n 本には [PAL:02][KATAKANA]サイバージャック[HIRAGANA][PAL:00]の\n ことが 書かれていた˳
-C0-08B8D7	0x08B8D7	0x002B	npc-dialogue	P3		pending	[DFT]あ·こら\nそれは 重要な研究資料だ\n勝手にさわっちゃ [KATAKANA]イカーン[HIRAGANA]!
-C0-08BA02	0x08BA02	0x0035	npc-dialogue	P3		pending	[DFT]なに 君は?\nここには 生[KATAKANA]ゴミ[HIRAGANA]···じゃなくて\n罪人がいるんだから\n入れてあげられないよ˳
-C0-08BA38	0x08BA38	0x003C	npc-dialogue	P3		pending	[DFT]なに?ここにいるのは\n実は 君のおとうさんで\n生き別れに なっていたって?\n[PAU:1E]おまけに きおくをなくしてる?
+C0-08B7D0	0x08B7D0	0x003F	npc-dialogue	P3		translated	[DFT][KATAKANA]ドクター[HIRAGANA]Gが\n[KATAKANA]コンピューター[HIRAGANA]の中に入ったまま\n帰ってこないんです···\n[PAU:1E]中で 何かあったんでしょうか?
+C0-08B810	0x08B810	0x001E	npc-dialogue	P3		translated	[DFT]また 実驗が失敗したのかと\n思っちゃいましたよ˳
+C0-08B89E	0x08B89E	0x0038	npc-dialogue	P3		translated	[DFT][BYTE:B8]ぐだぐがぅ[DFT] [NAM:00]は 本をみつけた\n 本には [PAL:02][KATAKANA]サイバージャック[HIRAGANA][PAL:00]の\n ことが 書かれていた˳
+C0-08B8D7	0x08B8D7	0x002B	npc-dialogue	P3		translated	[DFT]あ·こら\nそれは 重要な研究資料だ\n勝手にさわっちゃ [KATAKANA]イカーン[HIRAGANA]!
+C0-08BA02	0x08BA02	0x0035	npc-dialogue	P3		translated	[DFT]なに 君は?\nここには 生[KATAKANA]ゴミ[HIRAGANA]···じゃなくて\n罪人がいるんだから\n入れてあげられないよ˳
+C0-08BA38	0x08BA38	0x003C	npc-dialogue	P3		translated	[DFT]なに?ここにいるのは\n実は 君のおとうさんで\n生き別れに なっていたって?\n[PAU:1E]おまけに きおくをなくしてる?
 C0-08BA75	0x08BA75	0x005E	event-dialogue	P2		translated	[DFT]ううう···かわいそうにぃ\n[PAU:1E]おれ そういう安っぽい話に\n弱いんだよなあ···[FIN]よし おいらも人の子だ!\n[KATAKANA]ブラックモア[HIRAGANA]さまにないしょで\nおとうさんに 会わせてあげよう!
-C0-08BAD4	0x08BAD4	0x002E	npc-dialogue	P3		pending	[DFT]がんばれよ 強く生きろよ!\nまけるなよっ!泣くなよ!\n明日を 信じぬくんだぞ!
-C0-08BB9B	0x08BB9B	0x0039	npc-dialogue	P3		pending	[DFT][E2:023F]まえに 私の気持ちがわかるか?\n[PAU:1E]私なりに [KATAKANA]ハッカー[HIRAGANA]のために\nつくしてきたというのに···˳
+C0-08BAD4	0x08BAD4	0x002E	npc-dialogue	P3		translated	[DFT]がんばれよ 強く生きろよ!\nまけるなよっ!泣くなよ!\n明日を 信じぬくんだぞ!
+C0-08BB9B	0x08BB9B	0x0039	npc-dialogue	P3		translated	[DFT][E2:023F]まえに 私の気持ちがわかるか?\n[PAU:1E]私なりに [KATAKANA]ハッカー[HIRAGANA]のために\nつくしてきたというのに···˳
 C0-08BBEA	0x08BBEA	0x011F	event-dialogue	P2		translated	[DFT][E2:02DC]ぞ······わ·[NXT]がわたしは\nいったい なにをしてたのだ!?[FIN]···············\n[NAM:00]じゃないか···\n[PAU:3C]いや···すべて 思い出したぞ\n[PAU:1E]私は とんでもないことを···[FIN][NAM:00] よく聞いてくれ\n[PAU:1E]きおくを うしなっていたとは言え\nとうさんは とんでもないものを\n作ってしまったのだよ[FIN]町ひとつ はかいしてしまえる\n強力な [PAL:02][KATAKANA]レーザー[HIRAGANA][PAL:00]だ\nやつらは [KATAKANA]ロココ町[HIRAGANA]をその\n[KATAKANA]ターゲット[HIRAGANA]にしようと 考えている[FIN]あれを そのままにしておいては\n[KATAKANA]ロココ町[HIRAGANA]が あぶない!\n[PAU:1E]とにかく とうさんの後を\nついてきてくれ˳
-C0-08BDDB	0x08BDDB	0x001D	npc-dialogue	P3		pending	[DFT][PAL:02]おとうさん:\n[PAL:00][NAM:00] こっちだ\n[PAU:1E]いそいでくれ!
+C0-08BDDB	0x08BDDB	0x001D	npc-dialogue	P3		translated	[DFT][PAL:02]おとうさん:\n[PAL:00][NAM:00] こっちだ\n[PAU:1E]いそいでくれ!
 C0-08BDF9	0x08BDF9	0x008F	event-dialogue	P2		translated	[DFT][PAL:02]おとうさん:\n[PAL:00][NAM:00] いいか\n[PAU:1E]とうさんは この部屋にある\n[KATAKANA]レーザー[HIRAGANA]を はかいする[FIN]おまえは この[KATAKANA]↓[HIRAGANA]の部屋にある\n[PAL:02]水路の水をぬく[KATAKANA]スイッチ[HIRAGANA][PAL:00]を\nおすんだ[FIN][KATAKANA]ブラックモア[HIRAGANA]たちがいる\n[PAL:02]司令塔[PAL:00]への道は\nその 水路の下にあるんだ˳
-C0-08BE89	0x08BE89	0x001C	npc-dialogue	P3		pending	[DFT][PAL:02]おとうさん:\n[PAL:00][NAM:00]\n[PAU:3C]しっかり たのんだぞ˳
+C0-08BE89	0x08BE89	0x001C	npc-dialogue	P3		translated	[DFT][PAL:02]おとうさん:\n[PAL:00][NAM:00]\n[PAU:3C]しっかり たのんだぞ˳
 C0-08BECA	0x08BECA	0x004B	event-dialogue	P2		translated	[DFT][PAL:02]おとうさん:\n[PAL:00]これが [KATAKANA]レーザー[HIRAGANA]の[KATAKANA]システム部[HIRAGANA]だよ\nこれに細工をするんだが[FIN]まだ 時間がかかりそうだ\nお前は[E2:0067]たのむよ˳
 C0-08BFEC	0x08BFEC	0x0014	static-short	P3		pending	[CLR] がぐSに[CMD:FF]つつ[BYTE:BF][DFT][E2:0A68]?だれだ?!
-C0-08C001	0x08C001	0x0026	npc-dialogue	P3		pending	[DFT][E2:0A4F]んで こんな所に\n[KATAKANA]ネズミ[HIRAGANA]がいやがるんだ?!\nじゃまくせえやっ!
+C0-08C001	0x08C001	0x0026	npc-dialogue	P3		translated	[DFT][E2:0A4F]んで こんな所に\n[KATAKANA]ネズミ[HIRAGANA]がいやがるんだ?!\nじゃまくせえやっ!
 C0-08C028	0x08C028	0x0120	event-dialogue	P2		translated	[DFT][E2:0A7E]··なんだ この子供は\nえ?なに?[E2:0067]\n返せだと?[FIN]はっはっはっはっはっ\nちゃんちゃら おかしくて\n[KATAKANA]ヘソ[HIRAGANA]で茶を わかしちまうぜ˳[TPL:D7][E2:0BD4]ぶらっくもあ[HIRAGANA] でもその子よ\n[E2:0067] 3つ\n自力で集めたのは···˳[FIN][E2:0A7E]··なにぃ?\nするってえと おめえが\n[KATAKANA]オレ[HIRAGANA]のかわいい 子分どもを\nいためつけてくれたのか!?[FIN]そう聞いちゃ だまってられねえな\nおい [KATAKANA]ローズ[HIRAGANA]ちょっと下がってな\nはでに おっぱじめるからよ[TPL:D7][E2:0A3C]いかい ぼうや\nこの [KATAKANA]ブラックモア樣[HIRAGANA]じきじきに\n今までの 礼をしてやるぜ\n[PAU:1E]ゆっくり ねんぶつでもとなえな!
-C0-08C149	0x08C149	0x001C	npc-dialogue	P3		pending	[DFT][E2:0A59]だこりないらしいな\n今度こそ おだぶつだぜ!
+C0-08C149	0x08C149	0x001C	npc-dialogue	P3		translated	[DFT][E2:0A59]だこりないらしいな\n今度こそ おだぶつだぜ!
 C0-08C227	0x08C227	0x00D4	event-dialogue	P2		translated	[DF4][E2:0A7E]··わっからねえなあ\nなんだって [KATAKANA]ハッカー本星[HIRAGANA]のやつら\nこんな石に こだわるんだ?[FIN][KATAKANA]アキハバラ[HIRAGANA]は 時にかかわりのある\n石だとか ぬかしていたが···\nどう調べても ただの石にしか\n思えんなあ···˳[TPL:D8][E2:0B3B]ら もう弱音?\nもう一度 [KATAKANA]アキハバラ博士[HIRAGANA]に\nぶんせきを たのんだら?[TPL:D8][E2:0A7E]··そうだなあ\n[PAU:1E]あ·いやいや [PAU:1E]そんなことは\n[KATAKANA]オレ樣[HIRAGANA]の 美学に反するぜ!
 C0-08C398	0x08C398	0x016F	event-dialogue	P2		translated	[DFT][E2:0AD4]ろ0ずっ[HIRAGANA]!よくも 今の今まで\nこの[KATAKANA]オレ樣[HIRAGANA]を だましてくれたな![FIN][E2:0B3B]ら だましたおぼえはなくてよ\nあなたが 勝手に\n私の思う通りに 動いたまでよ[FIN]今さらあがいても おそいわ\nもうすぐ 本星から\n[E2:0067] うけとりに\nやってくるわ おあいにく樣˳[FIN][E2:0A7E]··ちくしょうっ!\nこうなったら···[FIN][E2:0A3F]めえら これが何かわかるか?\n[KATAKANA]レーザー[HIRAGANA]の [KATAKANA]リモコン[HIRAGANA]だ\n今 [KATAKANA]ターゲット[HIRAGANA]を\nこの 極楽星全体に[KATAKANA]セット[HIRAGANA]した![FIN]これをおせば [KATAKANA]ゲームオーバー[HIRAGANA]さ\n本星に 知られたからにゃあ\nどのみち [KATAKANA]タダ[HIRAGANA]じゃすまねえんだ\nはでに やってやるぜ˳[TPL:D7][E2:0B4F]っ·なにを [KATAKANA]バカ[HIRAGANA]なことを!\nやめなさいっ [KATAKANA]ブラックモア[HIRAGANA]![FIN][E2:0A82]ざ句は じごくで言いな!\nわはははは あばよ!!
 C0-08C541	0x08C541	0x00C9	engine-data	P3		pending	[CLR]┌がぐざ がぐ[FIN]がぎごぐ[FIN]ぐぐごぐ[FIN]ぎがごぐ[FIN]げげごぐじぐ[CB]ぅぐりぐが6[TBL:021D7EC5][BYTE:A9]がぎばじぐだぎ技Tに[CMD:FF]ぅぐぽぢ[NUM:6BD7E0]ぢぼうやの 勝ちだったみたいね\n[PAU:14]さすが 私の見こんだ子だわ\n[KATAKANA]ブラックモア[HIRAGANA]も 口先だけの男ね[FIN]ぼうやが 集めてくれた石は\n[PAL:02][KATAKANA]ハッカー宇宙要塞[HIRAGANA][PAL:00]へ 持っていくわ\n[PAU:14]あの男もいなくなったし これで\n司令官に なることもできるわ˳
-C0-08C60B	0x08C60B	0x001E	npc-dialogue	P3		pending	[DFT]なんなの この[KATAKANA]ネズミ[HIRAGANA]は!\nしっしっ!あっちへお行き!
+C0-08C60B	0x08C60B	0x001E	npc-dialogue	P3		translated	[DFT]なんなの この[KATAKANA]ネズミ[HIRAGANA]は!\nしっしっ!あっちへお行き!
 C0-08C6DD	0x08C6DD	0x00C6	event-dialogue	P2		translated	[DFT]き·きみは どうやって\nここにきたんだ!?\nまあそれは どうでもいい!\nわたしの名前は [PAL:02][KATAKANA]ドクター[HIRAGANA]G[FIN][PAL:00]実驗で この[KATAKANA]コンピューター[HIRAGANA]の\n中に入りこんだのだが\n助手が むのうで\n出口を 見失ってしまったのだ[FIN]すまないが 私の研究室まで\nゆうどうしてもらえないか?\n[STR:86C888][TER][DFT][E2:163C]ったい どこに行っていたんだ!\nしっかり ゆうどう\nしてくれたまえよ˳
 C0-08C7A4	0x08C7A4	0x007F	event-dialogue	P2		translated	[CLR]な·なにが ほしいんだ?\n無事に出たら 考えるぞ!\n きおくを失った男のこと\n お金がほしい[TER][CLR]そう言わず!\nそこを なんとか···\n[STR:86C888][TER][CLR]あの [PAL:02][KATAKANA]アキハバラ[HIRAGANA][PAL:00]のことか?\nわかった!教えてやる!\nでは 早速たのむぞ!
-C0-08C824	0x08C824	0x0031	npc-dialogue	P3		pending	[CLR]な·なにっ!?[PAU:1E]金かっ!?\n[PAU:1E]わ·わかった!金ならくれてやる!\nでは 早速たのむぞ!
-C0-08C856	0x08C856	0x002F	npc-dialogue	P3		pending	[DFT]あっ!そこの 道行く少年よ!\nこの[KATAKANA]ドクター[HIRAGANA]Gを\n無視して行くというのか!?
-C0-08C8AB	0x08C8AB	0x0008	npc-dialogue	P3		pending	[DFT][DES]ぐこぐぢぎ[BYTE:80]
-C0-08C8D1	0x08C8D1	0x0058	npc-dialogue	P3		pending	[DFT][DES]ぐこ会ぐぽ[NXT][DES]ぅ[DFT]ううう···[PAU:1E]聞いてくださいよぉ\n[KATAKANA]ドクター[HIRAGANA]Gは まいごになったのを\n私のせいに するんですよぉっ!\n[PAU:1E][KATAKANA]シクシク[HIRAGANA] [PAU:1E]かわいそうな私っ!
+C0-08C824	0x08C824	0x0031	npc-dialogue	P3		translated	[CLR]な·なにっ!?[PAU:1E]金かっ!?\n[PAU:1E]わ·わかった!金ならくれてやる!\nでは 早速たのむぞ!
+C0-08C856	0x08C856	0x002F	npc-dialogue	P3		translated	[DFT]あっ!そこの 道行く少年よ!\nこの[KATAKANA]ドクター[HIRAGANA]Gを\n無視して行くというのか!?
+C0-08C8AB	0x08C8AB	0x0008	npc-dialogue	P3		translated	[DFT][DES]ぐこぐぢぎ[BYTE:80]
+C0-08C8D1	0x08C8D1	0x0058	npc-dialogue	P3		translated	[DFT][DES]ぐこ会ぐぽ[NXT][DES]ぅ[DFT]ううう···[PAU:1E]聞いてくださいよぉ\n[KATAKANA]ドクター[HIRAGANA]Gは まいごになったのを\n私のせいに するんですよぉっ!\n[PAU:1E][KATAKANA]シクシク[HIRAGANA] [PAU:1E]かわいそうな私っ!
 C0-08CA0B	0x08CA0B	0x00A0	event-dialogue	P2		translated	[DFT]おまえは だれだあ?\nおらぁ この電子空間を守る\n電子かい人 [KATAKANA]バグバグ[HIRAGANA]だあ[FIN]なにぃ?おらが食った\n人間のきおくを 返せえ?\nそれは できねえ相談だなあ\n人間の きおくはうめえんだもん[FIN]そういやあ ずいぶん腹減ったなあ\nどれどれ おめえのきおくも\nいっちょ くわせてもらうかなあ˳
-C0-08CAAC	0x08CAAC	0x0047	npc-dialogue	P3		pending	[DFT][NXT]じも·もっと 高速の\n処理[KATAKANA]ルーチン[HIRAGANA]を くんでもらったら\n勝てたかも しれねえのにぃ···\n[PAU:3C]ばぐばぐばぐぅ·····˳[NXT]が
+C0-08CAAC	0x08CAAC	0x0047	npc-dialogue	P3		translated	[DFT][NXT]じも·もっと 高速の\n処理[KATAKANA]ルーチン[HIRAGANA]を くんでもらったら\n勝てたかも しれねえのにぃ···\n[PAU:3C]ばぐばぐばぐぅ·····˳[NXT]が
 C0-08CF35	0x08CF35	0x00F8	event-dialogue	P2		translated	[CLR]ぅ[DFT][E2:154F]んと![PAU:1E][NAM:00]樣が\n赤い[KATAKANA]クジ[HIRAGANA]を 引いてしまわれたとは![FIN]しかし これもきっと\n[KATAKANA]ミルフィ樣[HIRAGANA]の おみちびき···\n[PAU:1E]なにとぞ 姫のことをたのみます[FIN]不自由なさいますと いけません\nこれで おしたくをととのえください\n道具屋でしたら\n居住区の 與の方にございます[FIN]\n [NAM:00]は\n[PAL:02] 5000[KATAKANA]トロン[HIRAGANA][PAL:00]を もらった![FIN]それと [PAL:02]研究所の倉庫[PAL:00]を\n開けさせましょう\n必要なものが ございましたら\nご自由に お使いください˳
-C0-08D02E	0x08D02E	0x002B	npc-dialogue	P3		pending	[DFT][E2:150E]うか [KATAKANA]ティラミス樣[HIRAGANA]のことを\nおたのみいたします\nたよりにしておりますぞ˳
+C0-08D02E	0x08D02E	0x002B	npc-dialogue	P3		translated	[DFT][E2:150E]うか [KATAKANA]ティラミス樣[HIRAGANA]のことを\nおたのみいたします\nたよりにしておりますぞ˳
 C0-08D05A	0x08D05A	0x0070	event-dialogue	P2		translated	[DFT][E2:155A]なの者も すでに承知の通り\n[KATAKANA]ティラミス樣[HIRAGANA]と[KATAKANA]ティアトロン[HIRAGANA]が\n[KATAKANA]ハッカー[HIRAGANA]の手に 落ちてしまった[FIN]だれか あの宇宙要塞にのりこみ\n[KATAKANA]ティラミス樣[HIRAGANA]を\nお助けしようという者は いないか?
 C0-08D0CB	0x08D0CB	0x0077	event-dialogue	P2		translated	[DFT]なんという 情けないことだ!\nならば やむをえない\nこれより 各人の席にまわり\n[PAL:02][KATAKANA]クジ[HIRAGANA][PAL:00]をわたす[FIN][PAL:02]赤い[KATAKANA]クジ[HIRAGANA][PAL:00]を ひいた者は\n[KATAKANA]ティラミス樣[HIRAGANA] 救出隊として\n参加してもらうこととする\nよろしいか?
 C0-08D143	0x08D143	0x0068	late-story	P1		translated	[DFT][E2:15C2]が樣も\nひとつ お引きください[FIN]ふたつしか残っておりませんが···\n右と左 どちらがよろしいですか?\n 右をひく\n 左をひく[TER][CLR]\n [NAM:00]は\n[PAL:02] 赤い[KATAKANA]クジ[HIRAGANA][PAL:00]を 引いてしまった!
 C0-08D1AC	0x08D1AC	0x0072	event-dialogue	P2		translated	[DFT][E2:150D]は 赤い[KATAKANA]クジ[HIRAGANA]を引いたものは\n用意ができしだい\n[PAL:02][KATAKANA]ドッグ[HIRAGANA][PAL:00]に 集合してほしい[FIN][KATAKANA]ショコラ星[HIRAGANA]が [KATAKANA]ハッカー[HIRAGANA]に\nのっとられてしまうかどうかは\n君たちに かかっているのだ\n[PAU:1E]よろしく たのむぞ˳
-C0-08D242	0x08D242	0x0034	npc-dialogue	P3		pending	[DFT]あなたは 男気のある方ですね\n自分の星の こととはいえ\n私など 足がすくんでしまって˳
-C0-08D363	0x08D363	0x004E	npc-dialogue	P3		pending	[CLR]だがぐぽ[ESC][JMP]ぐだつ子ぼっぎごぎぜJぐ[CB]ぅ[DF4][E2:153C]·今の話は 本当か?\n[KATAKANA]ガトー[HIRAGANA]め どういうつもりなのだ!\n姫に もしものことがあったら···
-C0-08D3B2	0x08D3B2	0x002C	npc-dialogue	P3		pending	[DF4][E2:15C2]が樣も\n会誄に ご参加くださらぬか\nどうかお力を お貸しください˳
+C0-08D242	0x08D242	0x0034	npc-dialogue	P3		translated	[DFT]あなたは 男気のある方ですね\n自分の星の こととはいえ\n私など 足がすくんでしまって˳
+C0-08D363	0x08D363	0x004E	npc-dialogue	P3		translated	[CLR]だがぐぽ[ESC][JMP]ぐだつ子ぼっぎごぎぜJぐ[CB]ぅ[DF4][E2:153C]·今の話は 本当か?\n[KATAKANA]ガトー[HIRAGANA]め どういうつもりなのだ!\n姫に もしものことがあったら···
+C0-08D3B2	0x08D3B2	0x002C	npc-dialogue	P3		translated	[DF4][E2:15C2]が樣も\n会誄に ご参加くださらぬか\nどうかお力を お貸しください˳
 C0-08D3DF	0x08D3DF	0x00D4	late-story	P1		translated	[DFT][E2:1581]1樣![NAM:00]樣!\nご無事でなによりです!\nじいは うれしゅうございます[FIN]本当にありがとうございます\n[NAM:00]さま!\nあなたは この[KATAKANA]ショコラ星[HIRAGANA]の\n恩人でございます![FIN][KATAKANA]ティラミス樣[HIRAGANA]のことだけでは\nございません\nあなた樣が持っていた[PAL:02][KATAKANA]スクラップ[HIRAGANA][PAL:00]から\n大変なことがわかったのです[FIN]おつかれとは 思いますが\n研究所長から 話があるそうです\nぜひ お立ち会いくださいませ˳
 C0-08D4FF	0x08D4FF	0x0157	late-story	P1		translated	[DF4][PAL:02]兵士:\n[PAL:00]大変です!\n[KATAKANA]ガトー[HIRAGANA]から 通信が入りました\nそれが···[PAU:1E]あの······˳[TPL:D8][E2:154F]んだ?もうしてみろ!\n言いわけなぞ 聞いてやらんぞ![FIN][PAL:02]兵士:\n[PAL:00]で·では 読みあげます[FIN][PAL:02][KATAKANA]ティラミス[HIRAGANA]と [KATAKANA]ティアトロン[HIRAGANA]は\n私の 手中にある\nもはや [KATAKANA]ショコラ星[HIRAGANA]に勝ち目はない\nていこうはやめ こうふくせよ[FIN]さもなくば [KATAKANA]ティラミス[HIRAGANA]の\n命は ないと思え\n\n[PAU:3C][NXT]ず[KATAKANA]ハッカー総統[HIRAGANA] [PAU:14][KATAKANA]ガトー[HIRAGANA][FIN][PAL:00][E2:157E]·····[NXT]がなんと!あの男が\n[KATAKANA]ハッカー[HIRAGANA]の総統であったと?\n[PAU:1E]うかつであった···[FIN]こうしては おられん!\n[PAU:1E]会誄室に 人を集めよ!\n早急に 今後のことを\n相談せねばならん!
 C0-08D6BE	0x08D6BE	0x0031	late-story	P1		translated	[DFT]ぐすがぐぐSに[CMD:FF]ぐこぐB[DF4][DF2]ぐる\n[DF2]ぐ名ぐ[BYTE:97]報ぐぽ[PGE][DFT]ぅ[DFT]\n[NAM:00]樣\n[PAU:14]お待ちください˳
 C0-08D6F0	0x08D6F0	0x00FD	late-story	P1		translated	[DFT][E2:0E3B]の···私\n[PAU:0A]とらえられていた部屋で\n[PAU:0A]きいたことが ありまして···[FIN][PAL:02]私が とらえられていた部屋[PAL:00]の\n[PAU:0A][KATAKANA]コンピューター[HIRAGANA]に入るには\n[PAU:0A][PAL:02]特別な[KATAKANA]パスワード[HIRAGANA][PAU:0A][PAL:00]が\n必要なのだそうです[FIN]私 [KATAKANA]ガトー[HIRAGANA]が使っておりましたのを\nおぼえておりますわ\n[PAU:0A][NAM:00]樣のお役にたつよう\nお教えしておきます˳[FIN] [NAM:00]は\n[PAL:02] [KATAKANA]コンピューターパスワード[HIRAGANA][PAL:00]を\n 教わった![TPL:D7][E2:0E42]れぐれも[PAU:0A] お気をつけて\n[PAU:0A]ご無事で[PAU:0A]おもどりくださいませね˳
-C0-08D873	0x08D873	0x0026	npc-dialogue	P3		pending	[DF4]ぐEぐご[BYTE:8C][DF4]妻ぐぽ[BYTE:A2][DD]ぅぐぢT救[DF4]ぐぽぉ[DD]ぅぐぽぺ[DD]ぅぐぢT救[DF4]ぐぽ
-C0-08D908	0x08D908	0x003C	late-story	P1		pending	[DF4][BYTE:88]ぅぐぢは残[DF5]ぐぽ1[DLY:6B]ぐぽ[BYTE:A4][DLY:6B]ぐぽの[DLY:02][STR:3BD888]ぅぐぽね[DLY:6B][DFT][NAM:00]樣ですね?\nごじょうだんは おやめください˳
-C0-08D945	0x08D945	0x0010	npc-dialogue	P3		pending	[DFT]ようこそ [KATAKANA]ショコラ星[HIRAGANA]へ˳
-C0-08D956	0x08D956	0x0048	npc-dialogue	P3		pending	[DFT][KATAKANA]ティラミス樣[HIRAGANA]ですか?\n[PAU:1E]先ほど[KATAKANA]ガトー[HIRAGANA]さんと さんぽに行くと\n宇宙船で 出て行かれましたが···\n[PAU:1E]それが なにか?
+C0-08D873	0x08D873	0x0026	npc-dialogue	P3		translated	[DF4]ぐEぐご[BYTE:8C][DF4]妻ぐぽ[BYTE:A2][DD]ぅぐぢT救[DF4]ぐぽぉ[DD]ぅぐぽぺ[DD]ぅぐぢT救[DF4]ぐぽ
+C0-08D908	0x08D908	0x003C	late-story	P1		translated	[DF4][BYTE:88]ぅぐぢは残[DF5]ぐぽ1[DLY:6B]ぐぽ[BYTE:A4][DLY:6B]ぐぽの[DLY:02][STR:3BD888]ぅぐぽね[DLY:6B][DFT][NAM:00]樣ですね?\nごじょうだんは おやめください˳
+C0-08D945	0x08D945	0x0010	npc-dialogue	P3		translated	[DFT]ようこそ [KATAKANA]ショコラ星[HIRAGANA]へ˳
+C0-08D956	0x08D956	0x0048	npc-dialogue	P3		translated	[DFT][KATAKANA]ティラミス樣[HIRAGANA]ですか?\n[PAU:1E]先ほど[KATAKANA]ガトー[HIRAGANA]さんと さんぽに行くと\n宇宙船で 出て行かれましたが···\n[PAU:1E]それが なにか?
 C0-08D99F	0x08D99F	0x0071	event-dialogue	P2		translated	[DFT]用意は ととのいましたか?\nよろしければ ご案内しますが··· ばっちりさ\n まだまだ[TER][DFT]お話は うかがいましたよ\n宇宙要塞に もう一度行かれるそうで\nしたくがととのいましたら\nおもうしつけ下さい˳
-C0-08DA11	0x08DA11	0x0028	npc-dialogue	P3		pending	[DFT]よく ご無事で···\nしばしの間でも ゆっくりと\nおやすみくださいませ˳
-C0-08DA3A	0x08DA3A	0x0017	static-short	P3		pending	[CLR]\nでは 宇宙船にご案内いたします˳
-C0-08DA53	0x08DA53	0x0020	npc-dialogue	P3		pending	[CLR]では いってらっしゃいませ\nご武運を おいのりいたします˳
-C0-08DA74	0x08DA74	0x002F	npc-dialogue	P3		pending	[CLR]わかりました\n用意ができましたら おいでください\n宇宙船に ご案内いたします˳
-C0-08DAA4	0x08DAA4	0x001B	static-short	P3		pending	[CLR]わかりました\n用意ができましたらおいでください˳
-C0-08DAC0	0x08DAC0	0x002C	npc-dialogue	P3		pending	[DFT][KATAKANA]ティラミス樣[HIRAGANA]が お待ちです\nこの與の[PAL:02]司令室[PAL:00]に\nおいでください˳
-C0-08DAED	0x08DAED	0x002E	npc-dialogue	P3		pending	[DFT]こちらの司令室では\n対[KATAKANA]ハッカー[HIRAGANA]のための作戦を\n日夜考えているのです˳
-C0-08DB1C	0x08DB1C	0x0050	npc-dialogue	P3		pending	[DFT]こちらは 研究室です\n[KATAKANA]ショコラ星[HIRAGANA]の 科学者たちが\n対[KATAKANA]ハッカー宇宙要塞用[HIRAGANA]の武器の\n研究開発を おこなってるのです˳
-C0-08DB6D	0x08DB6D	0x0034	npc-dialogue	P3		pending	[DFT]ここは 会誄室です\n[KATAKANA]ティラミス樣[HIRAGANA]でしたら この與の\n[PAL:02]司令室[PAL:00]に おいでです˳
-C0-08DBA2	0x08DBA2	0x003D	npc-dialogue	P3		pending	[DFT]こちらは 居住[KATAKANA]スペース[HIRAGANA]です\n要塞の攻擊を のがれてきた\n民間人たちが ここで\n生活しています˳
+C0-08DA11	0x08DA11	0x0028	npc-dialogue	P3		translated	[DFT]よく ご無事で···\nしばしの間でも ゆっくりと\nおやすみくださいませ˳
+C0-08DA3A	0x08DA3A	0x0017	static-short	P3		translated	[CLR]\nでは 宇宙船にご案内いたします˳
+C0-08DA53	0x08DA53	0x0020	npc-dialogue	P3		translated	[CLR]では いってらっしゃいませ\nご武運を おいのりいたします˳
+C0-08DA74	0x08DA74	0x002F	npc-dialogue	P3		translated	[CLR]わかりました\n用意ができましたら おいでください\n宇宙船に ご案内いたします˳
+C0-08DAA4	0x08DAA4	0x001B	static-short	P3		translated	[CLR]わかりました\n用意ができましたらおいでください˳
+C0-08DAC0	0x08DAC0	0x002C	npc-dialogue	P3		translated	[DFT][KATAKANA]ティラミス樣[HIRAGANA]が お待ちです\nこの與の[PAL:02]司令室[PAL:00]に\nおいでください˳
+C0-08DAED	0x08DAED	0x002E	npc-dialogue	P3		translated	[DFT]こちらの司令室では\n対[KATAKANA]ハッカー[HIRAGANA]のための作戦を\n日夜考えているのです˳
+C0-08DB1C	0x08DB1C	0x0050	npc-dialogue	P3		translated	[DFT]こちらは 研究室です\n[KATAKANA]ショコラ星[HIRAGANA]の 科学者たちが\n対[KATAKANA]ハッカー宇宙要塞用[HIRAGANA]の武器の\n研究開発を おこなってるのです˳
+C0-08DB6D	0x08DB6D	0x0034	npc-dialogue	P3		translated	[DFT]ここは 会誄室です\n[KATAKANA]ティラミス樣[HIRAGANA]でしたら この與の\n[PAL:02]司令室[PAL:00]に おいでです˳
+C0-08DBA2	0x08DBA2	0x003D	npc-dialogue	P3		translated	[DFT]こちらは 居住[KATAKANA]スペース[HIRAGANA]です\n要塞の攻擊を のがれてきた\n民間人たちが ここで\n生活しています˳
 C0-08DC24	0x08DC24	0x0031	late-story	P1		translated	[DF4]ぐぽJ[NXT]ぅ[DFT][NAM:00]樣ですね\n[KATAKANA]ティラミス樣[HIRAGANA]が お待ちです\nどうぞ 中にお入りください˳
 C0-08DCC4	0x08DCC4	0x006C	event-dialogue	P2		translated	[DFT]やあ 話は聞いてるよ\nどうだいこの星は···とは言っても\nここは ひなん所だけどね[FIN]もっと ちゃんとした研究所があれば\n[KATAKANA]ハッカー[HIRAGANA]のやつらを あっと言わせる\n兵器で 仕返しできるのにな˳
-C0-08DD31	0x08DD31	0x003F	npc-dialogue	P3		pending	[DFT][KATAKANA]ティラミス樣[HIRAGANA]には 会ったのかい?\n[KATAKANA]ティラミス樣[HIRAGANA]なら 会誄室の與の\n[PAL:02]司令室[PAL:00]にいるはずだよ˳
+C0-08DD31	0x08DD31	0x003F	npc-dialogue	P3		translated	[DFT][KATAKANA]ティラミス樣[HIRAGANA]には 会ったのかい?\n[KATAKANA]ティラミス樣[HIRAGANA]なら 会誄室の與の\n[PAL:02]司令室[PAL:00]にいるはずだよ˳
 C0-08DD75	0x08DD75	0x0078	event-dialogue	P2		translated	[DFT]あんたが [E2:004E]かいう\n石を 持ってきたの?\n[KATAKANA]オレ[HIRAGANA]はね 反対だったんだよ\nしょせん 過去の発明品だろ?[FIN]まずは [KATAKANA]ティラミス樣[HIRAGANA]に会ったら?\n話は それからだ\n後でゆっくり その石は\n調べさせてもらうよ˳
-C0-08DDEE	0x08DDEE	0x002E	npc-dialogue	P3		pending	[DFT][KATAKANA]ティアトロン[HIRAGANA]がなんだよ!\n過去の発明品に たよるなんて\n[KATAKANA]ナンセンス[HIRAGANA]だよ!
+C0-08DDEE	0x08DDEE	0x002E	npc-dialogue	P3		translated	[DFT][KATAKANA]ティアトロン[HIRAGANA]がなんだよ!\n過去の発明品に たよるなんて\n[KATAKANA]ナンセンス[HIRAGANA]だよ!
 C0-08DE59	0x08DE59	0x0083	late-story	P1		translated	[DFT]こちらの方はね\n[PAL:02][KATAKANA]ガトー[HIRAGANA][PAL:00]さんって言って\nかわいそうに 名前以外\nすべて 記おくをうしなっているんだ[FIN]でも 大変すぐれた\n技術者なので 我々の仕事を\n手伝ってもらっているんだ\n彼には みんな一目おいてるんだよ˳
-C0-08DEDD	0x08DEDD	0x0024	npc-dialogue	P3		pending	[DFT][KATAKANA]ガトー[HIRAGANA]さん?\nさっき [KATAKANA]ティラミス樣[HIRAGANA]と\nどこかに行ったけど?
-C0-08DF02	0x08DF02	0x002C	npc-dialogue	P3		pending	[DFT]あの [KATAKANA]スクラップ[HIRAGANA]から\nこんな情報がひきだされるとは\n思っていませんでしたよ˳
-C0-08DF2F	0x08DF2F	0x001E	npc-dialogue	P3		pending	[DFT]あの [KATAKANA]ガトー[HIRAGANA]さんがねえ\nまじめで いい人だったのに˳
+C0-08DEDD	0x08DEDD	0x0024	npc-dialogue	P3		translated	[DFT][KATAKANA]ガトー[HIRAGANA]さん?\nさっき [KATAKANA]ティラミス樣[HIRAGANA]と\nどこかに行ったけど?
+C0-08DF02	0x08DF02	0x002C	npc-dialogue	P3		translated	[DFT]あの [KATAKANA]スクラップ[HIRAGANA]から\nこんな情報がひきだされるとは\n思っていませんでしたよ˳
+C0-08DF2F	0x08DF2F	0x001E	npc-dialogue	P3		translated	[DFT]あの [KATAKANA]ガトー[HIRAGANA]さんがねえ\nまじめで いい人だったのに˳
 C0-08E029	0x08E029	0x0064	event-dialogue	P2		translated	[DFT]やあ さっきはどうも\nあの [E2:1A53][KATAKANA]スクラップ[HIRAGANA]ね\nかなり 面白い[KATAKANA]データー[HIRAGANA]が\nひきだせそうですよ[FIN]でも 今は[E2:0053]\n研究が 先でして···\nもう少しの間\n貸しておいてください˳
-C0-08E08E	0x08E08E	0x0034	npc-dialogue	P3		pending	[DFT][KATAKANA]ガトー[HIRAGANA]さんが[E2:0067]\n調べるというので\n貸してしまったんです···\nああ···なんということを!
+C0-08E08E	0x08E08E	0x0034	npc-dialogue	P3		translated	[DFT][KATAKANA]ガトー[HIRAGANA]さんが[E2:0067]\n調べるというので\n貸してしまったんです···\nああ···なんということを!
 C0-08E0C3	0x08E0C3	0x0242	late-story	P1		translated	[DFT]いい所に いらっしゃいました\nたった今 秘密兵器が\n完成した ところですよ[FIN]これは 宇宙要塞の[KATAKANA]エネルギー[HIRAGANA]ろを\n停止させてしまうものです\n仮に[PAL:02][KATAKANA]ポット[HIRAGANA][PAL:00]と よんでおきましょう[FIN]あの 映像にありました\n[KATAKANA]エンジンルーム[HIRAGANA]の中にある\n[PAL:02]3つの[KATAKANA]エネルギー[HIRAGANA]ろに それぞれ\n1つずつ[KATAKANA]ポット[HIRAGANA]をしかける[PAL:00]のです[FIN]これを [PAL:02]赤·黄·青の順で\n[PAL:00][KATAKANA]セット[HIRAGANA]すれば 要塞の[KATAKANA]エンジン[HIRAGANA]の\n動きを止められるはずです[FIN]···そこで [NAM:00]樣に\nおねがいがあるのです\n[PAU:1E]実は [KATAKANA]ショコラ星[HIRAGANA]には もう\n宇宙船を作る 資材がないのです[FIN][NAM:00]樣は 宇宙船を\nお持ちだと 聞いております\nそれに 一度要塞の内部にも\n入っていらっしゃる[FIN]この[KATAKANA]ポット[HIRAGANA]をしかけるため もう一度\n要塞へ 行っていただけないですか?\n おやすいご用です\n もう やだ![TER][CLR]ほ·ほんとうですか!では3つの\n[KATAKANA]ポット[HIRAGANA]を おわたしします[TPL:D7] [NAM:00]は\n[PAL:02] [KATAKANA]レッドポット[HIRAGANA][PAL:00]を 受け取った![FIN] [NAM:00]は\n[PAL:02] [KATAKANA]ブルーポット[HIRAGANA][PAL:00]を 受け取った![FIN] [NAM:00]は\n[PAL:02] [KATAKANA]イエローポット[HIRAGANA][PAL:00]を 受け取った![TER][DFT]おい みんな![PAU:1E]聞いてたか?\n行ってくださるそうだぞ!
-C0-08E306	0x08E306	0x0033	npc-dialogue	P3		pending	[CLR]ほ·ほんとうですか?!\n···でも おにもつが\nいっぱいで おわたしできませんね\n···とほほほほ˳
-C0-08E33A	0x08E33A	0x003C	npc-dialogue	P3		pending	[CLR]···そうですか [PAU:1E]そうですよね\n他の星の方に たのむなんて\n虫がよすぎますね\n[PAU:1E]···失礼しました˳
+C0-08E306	0x08E306	0x0033	npc-dialogue	P3		translated	[CLR]ほ·ほんとうですか?!\n···でも おにもつが\nいっぱいで おわたしできませんね\n···とほほほほ˳
+C0-08E33A	0x08E33A	0x003C	npc-dialogue	P3		translated	[CLR]···そうですか [PAU:1E]そうですよね\n他の星の方に たのむなんて\n虫がよすぎますね\n[PAU:1E]···失礼しました˳
 C0-08E377	0x08E377	0x006E	late-story	P1		translated	[DFT]これは[NAM:00]樣\n[PAU:14]何か ご用ですか?\n やっぱり 協力してあげる\n なんでもないよ よんだだけ[TER][CLR]そうですか···\n[PAU:1E]あの···[PAU:1E]さっきの話\nもし 考えなおしていただけたら\n声を かけてくださいね˳
 C0-08E3E6	0x08E3E6	0x00C7	late-story	P1		translated	[DFT][PAL:02]赤[KATAKANA]ポット[HIRAGANA]は 赤の[KATAKANA]エネルギー[HIRAGANA]ろに\n黄[KATAKANA]ポット[HIRAGANA]は 黄の[KATAKANA]エネルギー[HIRAGANA]ろに\n青[KATAKANA]ポット[HIRAGANA]は 青の[KATAKANA]エネルギー[HIRAGANA]ろに\n[PAL:00]それぞれ しかけるようになってます[FIN][PAL:02]赤·黄·青の順番で\n[PAL:00][KATAKANA]セット[HIRAGANA]すれば 要塞の[KATAKANA]エンジン[HIRAGANA]の\n動きを止められるはずです[FIN]まちがえて[KATAKANA]セット[HIRAGANA]してしまった時は\n[KATAKANA]セット[HIRAGANA]した場所を調べれば\nとりはずすことができますからね˳
 C0-08E502	0x08E502	0x0035	late-story	P1		translated	[DFT]ほ·本当ですかっ!?\nじゃあおれたちは 行かなくて\nすむんですねっ!\n[NAM:00]樣 ばんざ[KATAKANA]ー[HIRAGANA]いっ!
-C0-08E538	0x08E538	0x0025	npc-dialogue	P3		pending	[DFT]うちには 妻と子供がいるんです\nほんとにほんとに 助かりました!
+C0-08E538	0x08E538	0x0025	npc-dialogue	P3		translated	[DFT]うちには 妻と子供がいるんです\nほんとにほんとに 助かりました!
 C0-08E55E	0x08E55E	0x0031	late-story	P1		translated	[DFT][NAM:00]樣が ことわったら\nおれたちが 行くはずだったんです\nほんとにほんとに 助かりました!
-C0-08E590	0x08E590	0x0018	npc-dialogue	P3		pending	[DFT]ありがとうございます!\nありがとうございます!
-C0-08E5C8	0x08E5C8	0x0040	npc-dialogue	P3		pending	[DFT]私に 会ったことがあるですと?\n[PAU:3C]もうしわけない\n私は 記おくを失っていて\n何も 思い出せないんです···˳
-C0-08E62E	0x08E62E	0x002E	npc-dialogue	P3		pending	[DFT][E2:0E76]つの石を 1つにつなげる\n作業を なさってるんですって\nおもしろそうですわね˳
+C0-08E590	0x08E590	0x0018	npc-dialogue	P3		translated	[DFT]ありがとうございます!\nありがとうございます!
+C0-08E5C8	0x08E5C8	0x0040	npc-dialogue	P3		translated	[DFT]私に 会ったことがあるですと?\n[PAU:3C]もうしわけない\n私は 記おくを失っていて\n何も 思い出せないんです···˳
+C0-08E62E	0x08E62E	0x002E	npc-dialogue	P3		translated	[DFT][E2:0E76]つの石を 1つにつなげる\n作業を なさってるんですって\nおもしろそうですわね˳
 C0-08E6B0	0x08E6B0	0x0054	event-dialogue	P2		translated	[DFT][E2:0EC2]が樣\nようこそ おいでくださいました\nきっと 来てくださると\nおもっていましたわ[FIN]くわしい話は\nじいが してくれます\nどうぞ じいに聞いてくださいませ˳
 C0-08E705	0x08E705	0x0034	late-story	P1		translated	[DFT][E2:0E80][DF5]当に [NAM:00]樣は\nふしぎな方で いらっしゃるのですね\nなぜ あんなものをお持ちでしたの?
-C0-08E73A	0x08E73A	0x0028	npc-dialogue	P3		pending	[DFT][E2:0E06]い [PAU:1E]わたしも\n研究室を 見てまいります\nすぐに もどります˳
-C0-08E763	0x08E763	0x001B	npc-dialogue	P3		pending	[DFT][E2:1581]1樣!あまりおじゃまを\nいたしなさいますな!
+C0-08E73A	0x08E73A	0x0028	npc-dialogue	P3		translated	[DFT][E2:0E06]い [PAU:1E]わたしも\n研究室を 見てまいります\nすぐに もどります˳
+C0-08E763	0x08E763	0x001B	npc-dialogue	P3		translated	[DFT][E2:1581]1樣!あまりおじゃまを\nいたしなさいますな!
 C0-08E814	0x08E814	0x0060	event-dialogue	P2		translated	[DFT][E2:1560]うこそ おいでくださいました\nさっそくですが となりの者が\n[KATAKANA]ショコラ星[HIRAGANA]の 研究所長です[FIN]彼に [KATAKANA]ティアトロン[HIRAGANA]を\nおあずけください\nなにとぞ よろしくおねがいします˳
 C0-08E875	0x08E875	0x0045	late-story	P1		translated	[DFT][E2:1581] らは [E2:0067]ひとつにし\nかつての力を\nみちびき出してくれるでしょう[FIN][NAM:00]樣も\nその樣を ごらんになっては\nいかがですか?
 C0-08E8BB	0x08E8BB	0x00F9	late-story	P1		translated	[DFT][E2:153B]·いや·おはずかしい所を···\n[PAU:1E]年をとると 立っているのが\nつらくなりまして···[FIN]研究所は ごらんになりましたかな?\nこれで [KATAKANA]ティアトロン[HIRAGANA]から\nよき知らせが 得られれば···[FIN]研究員の [KATAKANA]ガトー[HIRAGANA]ですか?\n[PAU:1E]あれは まじめなよい青年ですよ\n[KATAKANA]ティラミス樣[HIRAGANA]も あれのことを\nたいへん 気に入っておりましてな[FIN]たしかに昔 [KATAKANA]ティアトロン[HIRAGANA]を\nうばおうとしていた者が\n同じ名だったとはきいておりますが\n[PAU:1E]単なる ぐうぜんでございましょう˳
-C0-08E9B5	0x08E9B5	0x0026	npc-dialogue	P3		pending	[DFT][E2:1544]れで 希望の光が\n見えてまいりました\nありがとうございます˳
+C0-08E9B5	0x08E9B5	0x0026	npc-dialogue	P3		translated	[DFT][E2:1544]れで 希望の光が\n見えてまいりました\nありがとうございます˳
 C0-08EB2F	0x08EB2F	0x01CB	late-story	P1		translated	[DFT][NAM:00]樣 [PAU:1E]早速ですが\n[E2:0067]おあずかりして\nよろしいですか?[FIN]この[E2:0054]\n時の流れをうつしだすことのできる\n発明品だと 聞いています[FIN]この[E2:0040]ら あの要塞の\n弱点を うつしだし\nあれに 対こうできるものを\n発明することができるはずです[FIN]\n [NAM:00]は\n[PAL:02] 石1[PAL:00]を わたした[FIN]\n [NAM:00]は\n[PAL:02] 石2[PAL:00]を わたした[FIN]\n [NAM:00]は\n[PAL:02] 石3[PAL:00]を わたした[FIN]···おや?\n[PAU:1E]かわったものを おもちですね\nその[PAL:02][KATAKANA]スクラップ[HIRAGANA]A[PAL:00]ですよ\n[E2:1A53] [KATAKANA]スクラップ[HIRAGANA]ですね[FIN]私は [KATAKANA]ロボット[HIRAGANA]の研究もしてましてね\n参考に 見せていただけませんか?\n ちょっとだけだよ\n ······やだ[TER][CLR]本当ですか?[PAU:1E]ありがとうございます\nいろんなものを 調べることが\n発明の [KATAKANA]ヒント[HIRAGANA]になりますからね[FIN] [NAM:00]は\n[PAL:02] [KATAKANA]スクラップ[HIRAGANA]A[PAL:00]を お貸しした[FIN]では 少しの間お借りします\n私は 研究所の方にいますので\nぜひ 見学にいらしてください˳
 C0-08ECFB	0x08ECFB	0x00D8	late-story	P1		translated	[CLR]そういわれると ますます\n見たくなるなあ おねがいしますよ!\n ちょっとだけだよ\n ······やだ[TER][DF5][E2:194A]·大変です!\n[KATAKANA]ティアトロン[HIRAGANA]と[PAU:1E] [KATAKANA]ティラミス樣[HIRAGANA]と\n[PAU:1E][KATAKANA]ガトー[HIRAGANA]が [PAU:1E]き·消えました![TPL:D9][E2:154F]·なんと!?\nどういうことだ?説明してみろ˳[FIN][E2:1949]·それが···\n私が 少し席をはずした間に\n研究所の外に 出たらしいのです˳[FIN][E2:154F]んということだ!\nさがせ!いそいでさがすのだ!
 C0-08EE55	0x08EE55	0x00E4	late-story	P1		translated	[DFT][E2:1944]の 画面には 宇宙要塞の\n心臓部とも言える[PAL:02][KATAKANA]エンジンルーム[HIRAGANA][PAL:00]が\nうつされていました[FIN]我々は これを元に\n[KATAKANA]エンジンルーム[HIRAGANA]を はかいする\n秘密兵器を 開発しはじめました[FIN]完成すれば 宇宙要塞を\n止めることが できるはずです\nこれも [NAM:00]樣のおかげ\n心から お礼もうしあげます[FIN]さて 私は研究室にもどり\n秘密兵器の 開発を進めます\nそれでは またのちほど···˳
-C0-08EF83	0x08EF83	0x0044	npc-dialogue	P3		pending	[DFT]うわさは 聞いたよ\n君 未開の星から来たんだって?\n未開の星では 刀をさした\nおさむらいが步いてるって ほんと?
-C0-08EFC8	0x08EFC8	0x004F	npc-dialogue	P3		pending	[DFT][KATAKANA]ショコラ星[HIRAGANA]は 機械と縁が\n調和した 美しい都市を持ってたの\nそれが こんなことになって···\n[PAU:1E]いったい いつまで続くのかしら˳
-C0-08F018	0x08F018	0x0030	npc-dialogue	P3		pending	[DFT]わたくし いなかものとは\n話したくないの\nだって いなかものがうつったら\n困るじゃないの˳
-C0-08F049	0x08F049	0x004B	npc-dialogue	P3		pending	[DFT]みんなは 平然としてるけど\nあたしは こわくて仕方ないの···\n[PAU:1E]またあの 大きな要塞がせめてきたら\nどうなっちゃうのかしら···˳
-C0-08F095	0x08F095	0x004C	npc-dialogue	P3		pending	[DFT]ここへ来て よかったことと言えば\n[KATAKANA]ティラミス樣[HIRAGANA]を 近くで見ることが\nできるようになったことだよ\n上品でかわいくて···最高だね!
-C0-08F0E2	0x08F0E2	0x0047	npc-dialogue	P3		pending	[DFT][KATAKANA]ハッカー[HIRAGANA]だかなんだか知らないが\n[KATAKANA]ショコラ星[HIRAGANA]の科学者たちが\nなんとかしてくれるさ\n彼らは 宇宙一ゆうしゅうだからな!
+C0-08EF83	0x08EF83	0x0044	npc-dialogue	P3		translated	[DFT]うわさは 聞いたよ\n君 未開の星から来たんだって?\n未開の星では 刀をさした\nおさむらいが步いてるって ほんと?
+C0-08EFC8	0x08EFC8	0x004F	npc-dialogue	P3		translated	[DFT][KATAKANA]ショコラ星[HIRAGANA]は 機械と縁が\n調和した 美しい都市を持ってたの\nそれが こんなことになって···\n[PAU:1E]いったい いつまで続くのかしら˳
+C0-08F018	0x08F018	0x0030	npc-dialogue	P3		translated	[DFT]わたくし いなかものとは\n話したくないの\nだって いなかものがうつったら\n困るじゃないの˳
+C0-08F049	0x08F049	0x004B	npc-dialogue	P3		translated	[DFT]みんなは 平然としてるけど\nあたしは こわくて仕方ないの···\n[PAU:1E]またあの 大きな要塞がせめてきたら\nどうなっちゃうのかしら···˳
+C0-08F095	0x08F095	0x004C	npc-dialogue	P3		translated	[DFT]ここへ来て よかったことと言えば\n[KATAKANA]ティラミス樣[HIRAGANA]を 近くで見ることが\nできるようになったことだよ\n上品でかわいくて···最高だね!
+C0-08F0E2	0x08F0E2	0x0047	npc-dialogue	P3		translated	[DFT][KATAKANA]ハッカー[HIRAGANA]だかなんだか知らないが\n[KATAKANA]ショコラ星[HIRAGANA]の科学者たちが\nなんとかしてくれるさ\n彼らは 宇宙一ゆうしゅうだからな!
 C0-08F167	0x08F167	0x0014	static-short	P3		pending	[CLR] がぐんがが[E2:0102][CLR]PがれPぐぃぎぎP
-C0-08F1E4	0x08F1E4	0x003A	npc-dialogue	P3		pending	[DFT]この宇宙船は [KATAKANA]ショコラ星[HIRAGANA]の\n科学者たち ごじまんの船だからね\nかんたんに やられたりしないさ˳
-C0-08F21F	0x08F21F	0x0037	npc-dialogue	P3		pending	[DFT]まだ [KATAKANA]ショコラ星[HIRAGANA]の者で\n要塞の中に\n入った者はいないんだ···\n[KATAKANA]ドキドキ[HIRAGANA]するな···˳
-C0-08F2AD	0x08F2AD	0x002A	npc-dialogue	P3		pending	[DFT][KATAKANA]クジ[HIRAGANA]ではずれちゃって\n行くことになっちゃったけど···\n[PAU:1E]やだなあ···˳
-C0-08F2D8	0x08F2D8	0x002C	npc-dialogue	P3		pending	[DFT][KATAKANA]ティラミス樣[HIRAGANA]は ご無事だろうか?\nひどい目にあってなければ\nいいんだけど˳
-C0-08F34C	0x08F34C	0x0056	npc-dialogue	P3		pending	[DF4]ぐぽふ[CMD:F3]ぐだぎ星[DFT]本船は まもなく高速[KATAKANA]ワープ[HIRAGANA]で\n要塞の近くへ 移動します\n[KATAKANA]ワープ中[HIRAGANA]は [KATAKANA]トイレ[HIRAGANA]に行けませんから\n気をつけてくださいね˳
+C0-08F1E4	0x08F1E4	0x003A	npc-dialogue	P3		translated	[DFT]この宇宙船は [KATAKANA]ショコラ星[HIRAGANA]の\n科学者たち ごじまんの船だからね\nかんたんに やられたりしないさ˳
+C0-08F21F	0x08F21F	0x0037	npc-dialogue	P3		translated	[DFT]まだ [KATAKANA]ショコラ星[HIRAGANA]の者で\n要塞の中に\n入った者はいないんだ···\n[KATAKANA]ドキドキ[HIRAGANA]するな···˳
+C0-08F2AD	0x08F2AD	0x002A	npc-dialogue	P3		translated	[DFT][KATAKANA]クジ[HIRAGANA]ではずれちゃって\n行くことになっちゃったけど···\n[PAU:1E]やだなあ···˳
+C0-08F2D8	0x08F2D8	0x002C	npc-dialogue	P3		translated	[DFT][KATAKANA]ティラミス樣[HIRAGANA]は ご無事だろうか?\nひどい目にあってなければ\nいいんだけど˳
+C0-08F34C	0x08F34C	0x0056	npc-dialogue	P3		translated	[DF4]ぐぽふ[CMD:F3]ぐだぎ星[DFT]本船は まもなく高速[KATAKANA]ワープ[HIRAGANA]で\n要塞の近くへ 移動します\n[KATAKANA]ワープ中[HIRAGANA]は [KATAKANA]トイレ[HIRAGANA]に行けませんから\n気をつけてくださいね˳
 C0-08F441	0x08F441	0x001E	static-short	P3		pending	[CLR] がぐき)[BYTE:A9] が[BYTE:85]Pぐぉぐ[CLR]ˎがぐぎ[DFT]\nなんだ いったい?
 C0-08F460	0x08F460	0x003C	event-dialogue	P2		translated	[DFT]大変です!\n[KATAKANA]ハッカー[HIRAGANA]の 攻擊です![FIN]なにっ!?\n[PAU:1E]応戦だ!応戦しろ!\nこのままでは やられるぞ!
-C0-08F49D	0x08F49D	0x0029	npc-dialogue	P3		pending	[DFT]船長!\n砲台が 攻擊をうけました!\n応戦することができませんっ!
-C0-08F4C7	0x08F4C7	0x002B	npc-dialogue	P3		pending	[DFT]船長![KATAKANA]エンジンルーム[HIRAGANA]が\n攻擊をうけました!\nこのままでは 危険です!
-C0-09805A	0x09805A	0x002C	npc-dialogue	P3		pending	[DF4]あった あった\nこれだな みつぎものは\n\nよし研究所長の部屋まで運ぶぞ˳
+C0-08F49D	0x08F49D	0x0029	npc-dialogue	P3		translated	[DFT]船長!\n砲台が 攻擊をうけました!\n応戦することができませんっ!
+C0-08F4C7	0x08F4C7	0x002B	npc-dialogue	P3		translated	[DFT]船長![KATAKANA]エンジンルーム[HIRAGANA]が\n攻擊をうけました!\nこのままでは 危険です!
+C0-09805A	0x09805A	0x002C	npc-dialogue	P3		translated	[DF4]あった あった\nこれだな みつぎものは\n\nよし研究所長の部屋まで運ぶぞ˳
 C0-098117	0x098117	0x0010	static-short	P3		pending	[CLR]ぐだ[BYTE:90]ぎれPぐににぐげPご┌[BYTE:80]
-C0-09829B	0x09829B	0x0039	npc-dialogue	P3		pending	[DFT]こらこら\n勝手に 持ち場を動いちゃだめだよ\nどっちにしても この先には\n通してあげられないからね!
-C0-0982D5	0x0982D5	0x0040	npc-dialogue	P3		pending	[DFT]あ·[PAU:1E]君が新しいいけにえの人?\nよかった 人手がたりなくて\n困ってたんだよ\nささ 作業場に案内するよ˳
-C0-098316	0x098316	0x0036	npc-dialogue	P3		pending	[DFT]ここが 君の作業場だよ\n言っておくけど\nにげようなんてしたら\n火山にほうりこんじゃうからね˳
-C0-098382	0x098382	0x0046	npc-dialogue	P3		pending	[DFT]おやっ お[KATAKANA]チビ[HIRAGANA]ちゃんじゃないかい\nあんたも 招待されたのかい?\nでも 変わってるよね\n工場の体驗[KATAKANA]ツアー[HIRAGANA]があるなんて˳
-C0-0983C9	0x0983C9	0x0044	npc-dialogue	P3		pending	[DFT]でも この工場は\n一体 何を作ってるんだろうねえ?\nそれに そろそろあきたから\n次の[KATAKANA]ツアー[HIRAGANA]に行ってくれないかねえ˳
-C0-09840E	0x09840E	0x0012	npc-dialogue	P3		pending	[DFT]おや こんな所に[KATAKANA]ネズミ[HIRAGANA]かい?
-C0-098440	0x098440	0x003A	npc-dialogue	P3		pending	[DFT]これが観光[KATAKANA]ツアー[HIRAGANA]なものか!\n俺たちは だまされたんだ!\nああ これからどうなるんだ\nお先真っ暗だ!
-C0-09849A	0x09849A	0x002C	npc-dialogue	P3		pending	[DFT]やっぱり 世の中には\nおいしい話はないってことだね\n勉強になったよ とほほ˳
-C0-09858D	0x09858D	0x0019	npc-dialogue	P3	C0-08A66F	pending	[DFT][PAL:02]\n 中から [KATAKANA]カギ[HIRAGANA]がかけられている˳[PAL:00]
+C0-09829B	0x09829B	0x0039	npc-dialogue	P3		translated	[DFT]こらこら\n勝手に 持ち場を動いちゃだめだよ\nどっちにしても この先には\n通してあげられないからね!
+C0-0982D5	0x0982D5	0x0040	npc-dialogue	P3		translated	[DFT]あ·[PAU:1E]君が新しいいけにえの人?\nよかった 人手がたりなくて\n困ってたんだよ\nささ 作業場に案内するよ˳
+C0-098316	0x098316	0x0036	npc-dialogue	P3		translated	[DFT]ここが 君の作業場だよ\n言っておくけど\nにげようなんてしたら\n火山にほうりこんじゃうからね˳
+C0-098382	0x098382	0x0046	npc-dialogue	P3		translated	[DFT]おやっ お[KATAKANA]チビ[HIRAGANA]ちゃんじゃないかい\nあんたも 招待されたのかい?\nでも 変わってるよね\n工場の体驗[KATAKANA]ツアー[HIRAGANA]があるなんて˳
+C0-0983C9	0x0983C9	0x0044	npc-dialogue	P3		translated	[DFT]でも この工場は\n一体 何を作ってるんだろうねえ?\nそれに そろそろあきたから\n次の[KATAKANA]ツアー[HIRAGANA]に行ってくれないかねえ˳
+C0-09840E	0x09840E	0x0012	npc-dialogue	P3		translated	[DFT]おや こんな所に[KATAKANA]ネズミ[HIRAGANA]かい?
+C0-098440	0x098440	0x003A	npc-dialogue	P3		translated	[DFT]これが観光[KATAKANA]ツアー[HIRAGANA]なものか!\n俺たちは だまされたんだ!\nああ これからどうなるんだ\nお先真っ暗だ!
+C0-09849A	0x09849A	0x002C	npc-dialogue	P3		translated	[DFT]やっぱり 世の中には\nおいしい話はないってことだね\n勉強になったよ とほほ˳
+C0-09858D	0x09858D	0x0019	npc-dialogue	P3	C0-08A66F	translated	[DFT][PAL:02]\n 中から [KATAKANA]カギ[HIRAGANA]がかけられている˳[PAL:00]
 C0-0985A7	0x0985A7	0x0203	late-story	P1		translated	[DFT] 耳をすますと\n 中の 話し声が聞こえてきた[FIN][PAL:03]まったく おそまつな計画だわ\nまさか [KATAKANA]ロココ町[HIRAGANA]から\n工場の人手をさらってくるなんて˳[FIN][PAL:02]ふんっ!人手が足りないんだ!\n大体 本部からの予算も足りん!\n[KATAKANA]ハッカー[HIRAGANA]とやらは 神聖な発明を\nなんだと思っているんだ!?[FIN][PAL:03]あら 別にあなたに発明を\nたのんだ営えはなくってよ\nあなたは この改造人間の研究所の\n管理さえしていればいいのよ[FIN]それと 例のものはどうなったの?\nたかだか 村の村長をおどすのに\nずいぶん時間がかかるものだわ˳[FIN][PAL:02]···ふんっ!\nこっちには こっちの都合がある\n口出しせんでもらおうか![FIN][PAL:03]そう\n[PAU:1E]じゃあ お手なみ拝見しましょう\nよろしくたのんだわよ\n[PAU:1E][KATAKANA]ペッパー博士[HIRAGANA][FIN]それと 町長だけは連れて帰るわ\nあれは 私の今後の計画の\n大切な[KATAKANA]コマ[HIRAGANA]ですからね[FIN]···ところでさっきから\nそこに 聞き耳たてている\nぶすいなお客さんが\nいるみたいだけど?[FIN][PAL:02]なに!?\n[PAU:3C]むむむっ···\nなんだ おまえはっ!![PAL:00]
-C0-0987AB	0x0987AB	0x003E	npc-dialogue	P3		pending	[DFT]ばっかも[KATAKANA]ー[HIRAGANA]んっ!!\nおまえは むこう100年間\n[PAL:02][KATAKANA]トイレ[HIRAGANA]そうじ[PAL:00]だっ!!\nさっさと行け[KATAKANA]ーーーー[HIRAGANA]っ!!
-C0-09886A	0x09886A	0x000D	npc-dialogue	P3	C0-06B5A6	pending	[DFT]\n[KATAKANA]チュウ[HIRAGANA] [KATAKANA]チュウ[HIRAGANA]
-C0-098878	0x098878	0x0038	npc-dialogue	P3		pending	[DFT][KATAKANA]ネズミ[HIRAGANA]は この後ろにある\n[PAL:02]ねずみ穴[PAL:00]から出入りできて\nいろいろと 便利なんだ[KATAKANA]チュウ[HIRAGANA]˳
-C0-098A79	0x098A79	0x0025	npc-dialogue	P3		pending	[DFT]おいおい\nそこは まだそうじ中なんだよ\n勝手に入らねえでくれよ˳
+C0-0987AB	0x0987AB	0x003E	npc-dialogue	P3		translated	[DFT]ばっかも[KATAKANA]ー[HIRAGANA]んっ!!\nおまえは むこう100年間\n[PAL:02][KATAKANA]トイレ[HIRAGANA]そうじ[PAL:00]だっ!!\nさっさと行け[KATAKANA]ーーーー[HIRAGANA]っ!!
+C0-09886A	0x09886A	0x000D	npc-dialogue	P3	C0-06B5A6	translated	[DFT]\n[KATAKANA]チュウ[HIRAGANA] [KATAKANA]チュウ[HIRAGANA]
+C0-098878	0x098878	0x0038	npc-dialogue	P3		translated	[DFT][KATAKANA]ネズミ[HIRAGANA]は この後ろにある\n[PAL:02]ねずみ穴[PAL:00]から出入りできて\nいろいろと 便利なんだ[KATAKANA]チュウ[HIRAGANA]˳
+C0-098A79	0x098A79	0x0025	npc-dialogue	P3		translated	[DFT]おいおい\nそこは まだそうじ中なんだよ\n勝手に入らねえでくれよ˳
 C0-098B0E	0x098B0E	0x0038	late-story	P1		translated	[DFT]お?[PAU:1E][NAM:00]じゃねえか!\n俺だよ 俺···っと\nこの[KATAKANA]カッコ[HIRAGANA]じゃわからねえか\nちょっと そこで待ってな
-C0-098BB7	0x098BB7	0x0032	npc-dialogue	P3		pending	[DF4]俺だよ [KATAKANA]コテツ[HIRAGANA]だよ\n\nなんだよ お前もにせ招待状に\nだまされたのか?なさけないねえ˳
+C0-098BB7	0x098BB7	0x0032	npc-dialogue	P3		translated	[DF4]俺だよ [KATAKANA]コテツ[HIRAGANA]だよ\n\nなんだよ お前もにせ招待状に\nだまされたのか?なさけないねえ˳
 C0-098BEA	0x098BEA	0x0071	event-dialogue	P2		translated	[DFT]え?ここで何してるかって?\n···うるせえなあ これも\n大切なお仕事のひとつなんだよ[FIN]お前こそ ここから出られなくて\n困ってるんじゃねえのか?\n[PAU:14]まあ お前には借りもあるしな\nちょっと こっちに来な!
-C0-098CCD	0x098CCD	0x0038	npc-dialogue	P3		pending	[DFT][E2:0350]げるんなら ここからにげな\nこいつは [KATAKANA]ゴミ捨[HIRAGANA]て口だけどよ\n火山のどっかに出られるはずだぜ˳
-C0-098D06	0x098D06	0x0036	npc-dialogue	P3		pending	[DFT][E2:034F]にぃ?中がくさいだあっ?\nつべこべ文句ばかり言ってると\n戦闘員の奴らに つきだすぞ˳
-C0-098D3D	0x098D3D	0x002E	npc-dialogue	P3		pending	[DFT][E2:033B][KATAKANA]ーーー[HIRAGANA]ったくもうっ!\nそこは おえらいさんの[KATAKANA]トイレ[HIRAGANA]だよ\n出口は こっち!
+C0-098CCD	0x098CCD	0x0038	npc-dialogue	P3		translated	[DFT][E2:0350]げるんなら ここからにげな\nこいつは [KATAKANA]ゴミ捨[HIRAGANA]て口だけどよ\n火山のどっかに出られるはずだぜ˳
+C0-098D06	0x098D06	0x0036	npc-dialogue	P3		translated	[DFT][E2:034F]にぃ?中がくさいだあっ?\nつべこべ文句ばかり言ってると\n戦闘員の奴らに つきだすぞ˳
+C0-098D3D	0x098D3D	0x002E	npc-dialogue	P3		translated	[DFT][E2:033B][KATAKANA]ーーー[HIRAGANA]ったくもうっ!\nそこは おえらいさんの[KATAKANA]トイレ[HIRAGANA]だよ\n出口は こっち!
 C0-098D6C	0x098D6C	0x0012	late-story	P1		translated	[DFT][E2:033B]ばよ [NAM:00]!\n元気でな˳
 C0-098E50	0x098E50	0x00A7	late-story	P1		translated	[DFT][E2:04C2]がじゃない!\nいい所に来てくれたわ!\nお願いがあるのよ![FIN]あいつ···[KATAKANA]ペッパー[HIRAGANA]が\nこの先に にげこんだのよ\nちょっと さがしてきてくれない?\nこのまま野放しにできないわ![FIN]なんで自分で見にいかないかって?\n[PAU:14]···ここ男子便所でしょっ!\n[PAL:03][KATAKANA]レディ[HIRAGANA][PAL:00]が うろうろできるわけ\nないでしょっ!
-C0-098EF8	0x098EF8	0x0035	npc-dialogue	P3		pending	[DFT][E2:043B]のいかさま発明家のことだもの\nなにをしでかすか わからないわ\nお願い!早くさがしてきて!
+C0-098EF8	0x098EF8	0x0035	npc-dialogue	P3		translated	[DFT][E2:043B]のいかさま発明家のことだもの\nなにをしでかすか わからないわ\nお願い!早くさがしてきて!
 C0-098F2E	0x098F2E	0x007D	event-dialogue	P2		translated	[DFT][E2:040E]うだった?[PAU:1E]え?[PAU:1E]いない?\n[PAU:1E]本当にさがしたの?\nお願い!もっとよく探してきてよ[FIN]あいつは いかさま発明家なのよ!\nあいつが おこした事件は\nいくつも取材してきたんだから!\n今度もきっと 何かしでかす気よ!
 C0-098FAC	0x098FAC	0x006E	late-story	P1		translated	[DFT][E2:040E]う?見つかった?[PAU:14]え?\n行き止まりでだれもいなかった?\n[PAU:1E]···そう[PAU:14] しかたないわね[FIN]わかったわ あたしは他をさがすわ\nここには まだ何かありそうだし\nじゃあね [NAM:00]\n君も 気をつけるのよ!
 C0-09906A	0x09906A	0x007F	event-dialogue	P2		translated	[DFT]え?研究所長を探してるの?\n研究所長なら そこの[PAL:02]專用[KATAKANA]トイレ[HIRAGANA][PAL:00]に\nはいったけど?[FIN]え?[KATAKANA]コテツ[HIRAGANA]は どうしたって?\nここの そうじをしていた奴なら\n今 食事に行っているよ\n[PAL:02]食堂[PAL:00]に 行ってるはずだよ˳
@@ -866,22 +866,22 @@ C0-09B455	0x09B455	0x0036	npc-dialogue	P3		translated	[DFT]ちょっと 食事�
 C0-09B48C	0x09B48C	0x0033	npc-dialogue	P3		translated	[DFT]これで ゆっくり\n食事ができるようになった[KATAKANA]チュウ[HIRAGANA]\nここのごはんは\nなかなかいける[KATAKANA]チュウ[HIRAGANA]˳
 C0-09B523	0x09B523	0x0038	npc-dialogue	P3		translated	[DFT][KATAKANA]オレ[HIRAGANA]も 前は\n戦闘員だった[KATAKANA]チュウ[HIRAGANA]···\nこんな目にあうなんて\n所長を うらむ[KATAKANA]チュウ[HIRAGANA]˳
 C0-09B55C	0x09B55C	0x00BF	late-story	P1		translated	[DFT][KATAKANA]オレ[HIRAGANA]も 前は戦闘員だった[KATAKANA]チュウ[HIRAGANA]\nまちがって 地震発生裝置の\n自爆[KATAKANA]スイッチ[HIRAGANA]を おしそうになって\n所長に [KATAKANA]ネズミ[HIRAGANA]にされた[KATAKANA]チュウ[HIRAGANA][FIN]地震発生裝置は\n[PAL:02]右に3回 左に2回[PAL:00][KATAKANA]スイッチ[HIRAGANA]をおすと\n自爆してしまうらしい[KATAKANA]チュウ[HIRAGANA][FIN]でも 今の[KATAKANA]オレ[HIRAGANA]には關係ない[KATAKANA]チュウ[HIRAGANA]\n[KATAKANA]ネズミ[HIRAGANA]は おきらくでいい[KATAKANA]チュウ[HIRAGANA]˳
-C0-09B6B6	0x09B6B6	0x0049	npc-dialogue	P3		pending	[DFT]こらあっ!何をうろうろしてるんだ!\n[PAU:14][KATAKANA]トイレ[HIRAGANA]にでも行きたいのか?\n[PAL:02][KATAKANA]トイレ[HIRAGANA][PAL:00]なら この下だ\nその辺で もらすんじゃないぞ!
-C0-09B700	0x09B700	0x003D	npc-dialogue	P3		pending	[DFT]こらあっ!何をうろうろしてるんだ!\nん?[PAU:1E][PAL:02][KATAKANA]スタンプ[HIRAGANA][PAL:00]をおしてあるのか\nじゃあ 通してもいいということか˳
-C0-09B73E	0x09B73E	0x002E	npc-dialogue	P3		pending	[DFT]用が終ったら\nさっさと 持ち場にもどれよ!\n人手不足でいそがしいんだから!
-C0-09B76D	0x09B76D	0x004A	npc-dialogue	P3		pending	[DFT]さっき所長が 女の子に\n追いかけられながら[PAL:02][KATAKANA]トイレ[HIRAGANA][PAL:00]に\n入っていったけど[NXT]ぞ···\n[PAU:1E][NXT]が一体 何かんがえてるんだろ˳
-C0-09B7D6	0x09B7D6	0x0016	npc-dialogue	P3		pending	[DFT] 見張りがいて 外に出れない···
-C0-09B81B	0x09B81B	0x0040	npc-dialogue	P3		pending	[DFT]ここにはねえ この研究所の\n[PAL:02]開発費[PAL:00]がおいてあるんだ\nだから 特に見張りもきびしいのさ\n[PAU:1E]えっへん˳
-C0-09B85C	0x09B85C	0x0041	npc-dialogue	P3		pending	[DFT]ここには だれも\n入れちゃだめって言われてるんだ\n悪いけど 絕対に入れられないよ\nあきらめて 帰った方がいいよ˳
-C0-09B8AF	0x09B8AF	0x003C	npc-dialogue	P3		pending	[DFT][PAL:02] 今月は [KATAKANA]ハッカー直営研究所[HIRAGANA]の\n 作業強化月間です\n みなさん がんばりましょう[PAL:00]
-C0-09B9E1	0x09B9E1	0x0036	npc-dialogue	P3		pending	[DFT][PAL:03] 所長專用[KATAKANA]トイレ[HIRAGANA]\n\n[PAL:02] かってに使ったら\n むこう10年間[KATAKANA]トイレ[HIRAGANA]そうじだ![PAL:00]
-C0-09BA18	0x09BA18	0x0046	npc-dialogue	P3		pending	[DFT][PAL:02] [KATAKANA]ハッカー公設トイレ[HIRAGANA]\n\n[PAL:03] 所長專用[KATAKANA]トイレ[HIRAGANA][PAL:02]は使わないこと!\n[PAU:1E] 流し忘れには 注意しましょう[PAL:00]
-C0-09BA5F	0x09BA5F	0x003A	npc-dialogue	P3		pending	[DFT] 左 [PAL:02]研究開発室\n[PAL:00] 部外者の立入り おことわり\n\n ろうかは 静かに步きましょう
-C0-09BA9A	0x09BA9A	0x0034	npc-dialogue	P3		pending	[DFT][PAL:02] [KATAKANA]ハッカー公営食堂[HIRAGANA]\n\n 今週の定食は\n[PAL:03] [KATAKANA]モツ[HIRAGANA]にこみ定食[PAL:02]です[PAL:00]
-C0-09BACF	0x09BACF	0x003C	npc-dialogue	P3		pending	[DFT][PAL:03] 地震発生裝置室\n[PAL:02] かってに入ったら おしおきだ!\n\n[SKP:12]天才発明家[KATAKANA]ペッパー[HIRAGANA][PAL:00]
-C0-09BB0C	0x09BB0C	0x002C	npc-dialogue	P3		pending	[DFT] 上 研究開発室\n 左 食堂\n\n まいごにならないよう 要注意
-C0-09BB5B	0x09BB5B	0x0053	npc-dialogue	P3		pending	[DFT][PAL:02] [KATAKANA]スカッ[HIRAGANA]と さわやか\n [KATAKANA]ブラックモア司令官[HIRAGANA] ご用達\n[PAL:03] [KATAKANA]ハッカードーピングドリンク[HIRAGANA][PAL:02]で\n あなたも今日から 強化人間![PAL:00]
-C0-09BBAF	0x09BBAF	0x005D	npc-dialogue	P3		pending	[DFT][PAL:02] 知的なあなたに みなぎる[KATAKANA]パワー[HIRAGANA]!\n 天才発明家[KATAKANA]ペッパー特製[HIRAGANA]\n[PAL:03] ぎんぎん[KATAKANA]ダイナマイトドリンク[HIRAGANA][PAL:02]で\n あなたも今日から 大発明家![PAL:00]
+C0-09B6B6	0x09B6B6	0x0049	npc-dialogue	P3		translated	[DFT]こらあっ!何をうろうろしてるんだ!\n[PAU:14][KATAKANA]トイレ[HIRAGANA]にでも行きたいのか?\n[PAL:02][KATAKANA]トイレ[HIRAGANA][PAL:00]なら この下だ\nその辺で もらすんじゃないぞ!
+C0-09B700	0x09B700	0x003D	npc-dialogue	P3		translated	[DFT]こらあっ!何をうろうろしてるんだ!\nん?[PAU:1E][PAL:02][KATAKANA]スタンプ[HIRAGANA][PAL:00]をおしてあるのか\nじゃあ 通してもいいということか˳
+C0-09B73E	0x09B73E	0x002E	npc-dialogue	P3		translated	[DFT]用が終ったら\nさっさと 持ち場にもどれよ!\n人手不足でいそがしいんだから!
+C0-09B76D	0x09B76D	0x004A	npc-dialogue	P3		translated	[DFT]さっき所長が 女の子に\n追いかけられながら[PAL:02][KATAKANA]トイレ[HIRAGANA][PAL:00]に\n入っていったけど[NXT]ぞ···\n[PAU:1E][NXT]が一体 何かんがえてるんだろ˳
+C0-09B7D6	0x09B7D6	0x0016	npc-dialogue	P3		translated	[DFT] 見張りがいて 外に出れない···
+C0-09B81B	0x09B81B	0x0040	npc-dialogue	P3		translated	[DFT]ここにはねえ この研究所の\n[PAL:02]開発費[PAL:00]がおいてあるんだ\nだから 特に見張りもきびしいのさ\n[PAU:1E]えっへん˳
+C0-09B85C	0x09B85C	0x0041	npc-dialogue	P3		translated	[DFT]ここには だれも\n入れちゃだめって言われてるんだ\n悪いけど 絕対に入れられないよ\nあきらめて 帰った方がいいよ˳
+C0-09B8AF	0x09B8AF	0x003C	npc-dialogue	P3		translated	[DFT][PAL:02] 今月は [KATAKANA]ハッカー直営研究所[HIRAGANA]の\n 作業強化月間です\n みなさん がんばりましょう[PAL:00]
+C0-09B9E1	0x09B9E1	0x0036	npc-dialogue	P3		translated	[DFT][PAL:03] 所長專用[KATAKANA]トイレ[HIRAGANA]\n\n[PAL:02] かってに使ったら\n むこう10年間[KATAKANA]トイレ[HIRAGANA]そうじだ![PAL:00]
+C0-09BA18	0x09BA18	0x0046	npc-dialogue	P3		translated	[DFT][PAL:02] [KATAKANA]ハッカー公設トイレ[HIRAGANA]\n\n[PAL:03] 所長專用[KATAKANA]トイレ[HIRAGANA][PAL:02]は使わないこと!\n[PAU:1E] 流し忘れには 注意しましょう[PAL:00]
+C0-09BA5F	0x09BA5F	0x003A	npc-dialogue	P3		translated	[DFT] 左 [PAL:02]研究開発室\n[PAL:00] 部外者の立入り おことわり\n\n ろうかは 静かに步きましょう
+C0-09BA9A	0x09BA9A	0x0034	npc-dialogue	P3		translated	[DFT][PAL:02] [KATAKANA]ハッカー公営食堂[HIRAGANA]\n\n 今週の定食は\n[PAL:03] [KATAKANA]モツ[HIRAGANA]にこみ定食[PAL:02]です[PAL:00]
+C0-09BACF	0x09BACF	0x003C	npc-dialogue	P3		translated	[DFT][PAL:03] 地震発生裝置室\n[PAL:02] かってに入ったら おしおきだ!\n\n[SKP:12]天才発明家[KATAKANA]ペッパー[HIRAGANA][PAL:00]
+C0-09BB0C	0x09BB0C	0x002C	npc-dialogue	P3		translated	[DFT] 上 研究開発室\n 左 食堂\n\n まいごにならないよう 要注意
+C0-09BB5B	0x09BB5B	0x0053	npc-dialogue	P3		translated	[DFT][PAL:02] [KATAKANA]スカッ[HIRAGANA]と さわやか\n [KATAKANA]ブラックモア司令官[HIRAGANA] ご用達\n[PAL:03] [KATAKANA]ハッカードーピングドリンク[HIRAGANA][PAL:02]で\n あなたも今日から 強化人間![PAL:00]
+C0-09BBAF	0x09BBAF	0x005D	npc-dialogue	P3		translated	[DFT][PAL:02] 知的なあなたに みなぎる[KATAKANA]パワー[HIRAGANA]!\n 天才発明家[KATAKANA]ペッパー特製[HIRAGANA]\n[PAL:03] ぎんぎん[KATAKANA]ダイナマイトドリンク[HIRAGANA][PAL:02]で\n あなたも今日から 大発明家![PAL:00]
 C0-09BC61	0x09BC61	0x0037	late-story	P1		translated	[DFT]···ここは いったい\nどこなのだ···[FIN]宇宙船は?\n[PAU:1E][KATAKANA]ティアトロン[HIRAGANA]は?\n[PAU:1E]···[PAU:1E][NAM:00]は?
 C0-09BE44	0x09BE44	0x002D	npc-dialogue	P3		translated	[DFT][E2:127E]··あたしには わからないわ\n[PAU:28]じゃあ あなたは···\nいったい なにものなの?
 C0-09BE72	0x09BE72	0x0050	npc-dialogue	P3		translated	[DFT][E2:123B]の[E2:1A54][PAL:02][KATAKANA]ナポレオン[HIRAGANA][PAL:00]と言って\n私たちの 大切な仲間なの\n私たち以外の人には 口が悪いけど\n[PAU:1E]気をわるくしないでね˳

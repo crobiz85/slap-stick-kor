@@ -27,7 +27,7 @@ def load_rows(path: Path) -> list[dict[str, str]]:
         cols = line.split("\t")
         if len(cols) < 5:
             continue
-        rows.append({"id": cols[0], "offset": cols[1], "length": cols[2], "raw": cols[3], "jp": cols[4]})
+        rows.append({"id": cols[0], "offset": cols[1], "length": cols[2], "raw": cols[3], "jp": cols[4].rstrip()})
     return rows
 
 
