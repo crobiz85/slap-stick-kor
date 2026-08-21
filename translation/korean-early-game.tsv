@@ -1,0 +1,3 @@
+# Verified text runs reached during a clean new-game path.
+# id	file offset	slot length	Korean preview	status
+GAME-WAKE-001	0x05A3B4	0011	일어나.	game-screen-slot-preview

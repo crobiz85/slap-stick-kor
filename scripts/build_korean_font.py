@@ -2,7 +2,7 @@
 
 The game's dictionary codes ``80xx``, ``81xx``, and ``82xx`` resolve to 16×16 Japanese
 glyphs at ``0x50000``, ``0x54000``, and ``0x60000`` respectively.  Each glyph is four
-8×8 Game Boy-style 2BPP tiles (64 bytes), and the text engine writes those
+8×8 SNES 2BPP tiles (64 bytes), and the text engine writes those
 glyphs to its VRAM cells at run time.  This script allocates only codes absent
 from the extracted Japanese script, then renders replacement source tiles into
 their actual locations.  It never modifies a ROM itself.
@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DRAFT_PATH = ROOT / "translation" / "korean-draft.tsv"
 MENU_PREVIEW_PATH = ROOT / "translation" / "korean-menu-preview.tsv"
 GAME_MENU_PATH = ROOT / "translation" / "korean-game-menu.tsv"
+EARLY_GAME_PATH = ROOT / "translation" / "korean-early-game.tsv"
 ITEM_PREVIEW_PATH = ROOT / "translation" / "korean-item-preview.tsv"
 DEFAULT_MAP_PATH = ROOT / "translation" / "korean-glyph-map.tsv"
 DEFAULT_PREVIEW_PATH = ROOT / "build" / "korean-font-preview.png"
@@ -42,7 +43,7 @@ CONTROL_MARKER = re.compile(r"\[[^\]]+\]|\\n|˳")
 # pointer/relocation route has been verified.
 PREVIEW_DRAFT_IDS = {
     "0016", "0017", "0018", "0019", "0020",
-    "0058", "0059", "0060", "0061", "0062", "0063", "0067",
+    "0058", "0059", "0060", "0061", "0062", "0063", "0064", "0065", "0066", "0067",
 }
 
 
@@ -61,7 +62,7 @@ def find_default_font() -> Path:
 
 def read_draft_characters() -> list[str]:
     characters = set()
-    for source_path in (DRAFT_PATH, MENU_PREVIEW_PATH, GAME_MENU_PATH, ITEM_PREVIEW_PATH):
+    for source_path in (DRAFT_PATH, MENU_PREVIEW_PATH, GAME_MENU_PATH, EARLY_GAME_PATH, ITEM_PREVIEW_PATH):
         if not source_path.exists():
             continue
         for line in source_path.read_text(encoding="utf-8").splitlines():
@@ -72,7 +73,7 @@ def read_draft_characters() -> list[str]:
                 continue
             if source_path == DRAFT_PATH and columns[0] not in PREVIEW_DRAFT_IDS:
                 continue
-            korean_column = 3 if source_path == GAME_MENU_PATH else 1
+            korean_column = 3 if source_path in (GAME_MENU_PATH, EARLY_GAME_PATH) else 1
             if len(columns) <= korean_column:
                 continue
             korean = CONTROL_MARKER.sub("", columns[korean_column])
@@ -119,7 +120,7 @@ def allocate_codes(characters: list[str]) -> dict[str, tuple[int, int]]:
 
 def render_mask(character: str, font: ImageFont.FreeTypeFont, render_size: int) -> Image.Image:
     # Each source glyph is a native 16×16 bitmap, stored as a 2×2 grid of
-    # 8×8 2BPP tiles.
+    # 8×8 SNES 2BPP tiles.
     canvas = Image.new("L", (GLYPH_WIDTH, GLYPH_HEIGHT), 0)
     draw = ImageDraw.Draw(canvas)
     bbox = draw.textbbox((0, 0), character, font=font)
@@ -137,7 +138,8 @@ def render_mask(character: str, font: ImageFont.FreeTypeFont, render_size: int) 
 
 
 def encode_tile(mask: Image.Image) -> bytes:
-    output = bytearray()
+    low_plane = bytearray()
+    high_plane = bytearray()
     for row in range(8):
         low = 0
         high = 0
@@ -152,8 +154,13 @@ def encode_tile(mask: Image.Image) -> bytes:
             bit = 7 - column
             low |= (value & 1) << bit
             high |= ((value >> 1) & 1) << bit
-        output.extend((low, high))
-    return bytes(output)
+        low_plane.append(low)
+        high_plane.append(high)
+    # The 16x16 pages are SNES 2BPP tiles: all eight low-plane rows are
+    # followed by all eight high-plane rows.  They are not Game Boy tiles
+    # (which would interleave low/high bytes per row).  Interleaving caused
+    # the broken pseudo-Hanja shapes seen on the title menu.
+    return bytes(low_plane + high_plane)
 
 
 def encode_glyph(mask: Image.Image) -> bytes:
