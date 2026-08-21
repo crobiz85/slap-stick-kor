@@ -242,3 +242,314 @@ C0-07DC99	[DFT][E2:0504]수고했구나, 꼬마야.\n[PAU:14]그러고 보니 �
 C0-07E06D	[DFT]흠[PAU:14]또 네놈이냐?!\n내 일을 계속 방해하더니\n이번에는 정말 참을 수 없구나.[FIN]이 천재 발명가 [KATAKANA]페퍼[HIRAGANA]의\n[KATAKANA]슈퍼 울트라 메카[HIRAGANA]\n[PAL:02][KATAKANA]빅 아이[HIRAGANA][PAL:00]로\n혼내 주마![PAU:14]각오해라!	event-dialogue	translated
 C0-07E122	[DFT][NXT]ぞ····나·[NXT]가[PAU:14]이럴 수가!\n이 천재 발명가의 [E2:1A00]가\n이런 풋내기의 [E2:1A50]에게\n지다니···[FIN]하지만!\n[PAU:14]이걸로 끝난 게 아니다.\n이 빚은 두 배로 갚아 주마!\n기억해 둬라!	event-dialogue	translated
 C0-07E1C4	[CLR]5가ぐぽ[WAI][E3:02]だ[BYTE:9F]技[BYTE:B2]ぅ[DFT]이건 대단하구나!\n이런 금속은 본 적도 없어!\n게다가 이 가슴의 돌!\n이게 [KATAKANA]에너지원[HIRAGANA]임이 틀림없다![FIN]아아···[PAU:0A]하지만···[PAU:0A]그러나\n이 [E2:1A54]를 어떻게 해야\n움직일 수 있는 거지!?\n우오오오, 움직이는 모습을 보고 싶구나!	event-dialogue	translated
+C0-07E357	[DFT][NXT]ぞ···[NXT]가[PAU:1E][NAM:00]?\n[PAU:0A]너냐?\n[KATAKANA]나는[HIRAGANA] [PAL:02][KATAKANA]나폴레옹[HIRAGANA][PAL:00]이다.\n[PAU:1E][NXT]ぞ···그렇군.[PAU:14][NXT]가 너는 아직\n[PAU:0A][KATAKANA]나를[HIRAGANA] 모르는 모양이군···[FIN]···[KATAKANA]너[HIRAGANA][PAU:14] 그 돌은?!\n[PAU:14][E2:0067]를 모으고 있었던 건가?\n그렇군···[PAU:14]다행이다···[TPL:D7][KATAKANA]너[HIRAGANA]에게 맡기고 싶은 것이 있는데···\n소지품이 가득 찬 모양이군.\n미안하지만 정리해 주겠나?	event-dialogue	translated
+C0-07E41D	[DFT]나는 이곳에서 [E2:0067]를 찾아\n오랫동안 지켜 왔다.\n언젠가 [KATAKANA]너[HIRAGANA]에게 건넬 수 있으리라 믿었지.\n[PAU:1E][NAM:00][PAU:0A]받아 주거라.[FIN] [NAM:00]은\n[PAL:02]보석 3[PAL:00]을 손에 넣었다![TER][DFT]안 돼![PAU:14]이러고 있을 시간이 없다.\n곧 이곳이 무너질 거야.\n어서 빠져나가야 한다!\n[NAM:00][PAU:0A]이쪽이다!	event-dialogue	translated
+C0-07E80F	[DFT][NXT]고··· 이제 [KATAKANA]안 돼[HIRAGANA]···\n[KATAKANA]에너지[HIRAGANA]가··· 다 떨어졌다.\n하지만··· 늦지 않아 다행이구나.[FIN]···가능하다면···\n[KATAKANA]스크랩[HIRAGANA]이 될 [KATAKANA]내[HIRAGANA] 조각이라도···\n주워 주렴.\n[KATAKANA]너[HIRAGANA]를 지켜볼 수 있도록.[FIN]뒤의 일은··· 부탁한다.\n[PAL:02][KATAKANA]라스크[HIRAGANA][PAL:00] 님의 뜻을\n···이어 가 다오.˳[NXT]가	event-dialogue	translated
+C0-07E8AD	[DFT] [NAM:00]은\n[PAL:02] [KATAKANA]스크랩[HIRAGANA] A[PAL:00]를 손에 넣었다![TER][DFT] [NAM:00]은\n[PAL:02] [KATAKANA]스크랩[HIRAGANA] A[PAL:00]를 찾았다!\n[PAU:1E]하지만 소지품이 가득 찼다.˳	event-dialogue	translated
+C0-07E98B	[DFT][PAL:02]장치는 간단했지?\n네가 오기를 기다렸지만\n[KATAKANA]내[HIRAGANA] 남은 [KATAKANA]에너지[HIRAGANA]는\n이제 얼마 남지 않았다···[FIN]네가 이곳에 나타날 때까지\n기다릴 수 있을까?\n하지만 [KATAKANA]나[HIRAGANA]에게는 아직 할 일이 있다.\n너의 [BYTE:81]	event-dialogue	translated
+C0-07EAA6	[DFT][E2:04DC]ぎ뭐라고!?[PAU:28][NXT]가[KATAKANA]페퍼[HIRAGANA]가\n배를 타고 도망쳤다고!\n여기까지 몰아붙였는데![FIN]그러고 보니 그 녀석이\n허둥대며 무언가를 떨어뜨렸어.\n저기 있는 [KATAKANA]캡슐[HIRAGANA]이야.˳	event-dialogue	translated
+C0-07EB02	[DFT][E2:043E]가왜 [KATAKANA]캡슐[HIRAGANA]을\n열지 않느냐고?\n후훗, 순진하긴.[FIN]상대는 악의 발명가야?!\n[KATAKANA]캡슐[HIRAGANA]에 무슨 이상한 장치를\n해 두었을지도 모르잖아!	event-dialogue	translated
+C0-07EB5F	[DFT][E2:04DC]ぎ잠깐![PAU:1E]방금 이야기 들었어!\n[KATAKANA]로코코 마을[HIRAGANA]에서 무슨 일이 생겼지!?[FIN][NXT]가후훗. [PAU:1E]사건 냄새가 나.\n[KATAKANA]페퍼[HIRAGANA]도 신경 쓰이지만\n이번 일이 먼저야.\n[NXT]ぎ이러고 있을 때가 아니야![NXT]가	event-dialogue	translated
+C0-07EC02	[DFT][PAL:03][KATAKANA]나기사[HIRAGANA]:\n[PAL:00][NAM:00]아, 들리니?\n조금 큰일이 생겼어.[FIN]아무튼 당장\n[KATAKANA]로코코 마을[HIRAGANA]로 돌아와 줘.\n서둘러, 부탁할게.˳	event-dialogue	translated
+C0-088185	[DFT]촌장님도 그런 일을 겪고 나서는\n전보다 조금은\n성실하게 일하게 됐어.[FIN]···[PAU:1E]조금뿐이지만 말이야.˳	event-dialogue	translated
+C0-08828C	[DFT][STR:138388][FIN]답례로 좋은 걸 알려 주지.\n이 뒤쪽에\n벽난로가 있는 방을 알고 있나?\n거기에 [PAL:02][KATAKANA]장롱[HIRAGANA][PAL:00]이 있어.[FIN]그 안에 촌장이 [PAL:02]비상금[PAL:00]을\n숨겨 두었지.\n뭐, 어차피 [KATAKANA]뇌물[HIRAGANA]이니까\n자네가 유용하게 쓰게.˳	event-dialogue	translated
+C0-088532	[DFT][E2:09C2]가군!\n어서 여기서 꺼내 주게!\n지금 촌장은 가짜야![FIN][KATAKANA]로즈[HIRAGANA]···그 여자는\n완전히 사기꾼이었어!\n내게서 그 세 돌을 빼앗은 뒤\n나를 여기에 가뒀지![FIN]하지만 안심하게. 그 돌 중\n[PAL:02]두 개는 빼앗겼지만 하나는\n그 여자에게 들키지 않을 곳에\n몰래 숨겨 두었네.[PAL:00][FIN]나를 여기서 꺼내 주면\n그 돌을 반드시 자네에게 돌려주겠네!\n부탁하네! 저 가짜 촌장의 정체를\n모두에게 밝혀 주게!	event-dialogue	translated
+C0-08862F	[DFT][E2:0981]나에게 몹쓸 짓을 한 건 사실이지만\n그 여자가 시킨 일이었네.\n나도 그 여자가 수상하다고\n생각하고 있었지···[FIN]나를 여기서 꺼내 주면\n그 돌을 반드시 자네에게 돌려주겠네!\n부탁하네! 저 가짜 촌장의 정체를\n모두에게 밝혀 주게!	event-dialogue	translated
+C0-0886B4	[DFT][E2:093F]오, [NAM:00] 군! 살려 줬구나!\n자네는 내 목숨의 은인이야![FIN]아, 그래. 돌 이야기였지.\n이 앞 방에 [PAL:02]벽난로[PAL:00]가 있는데\n그곳에서 비밀방으로\n들어갈 수 있다네.[FIN]자네의 돌은 거기에 보관해 두었네.\n그 지긋지긋한 돌을\n어서 치워 버리게.\n[PAU:1E]휴, 정말 끔찍한 일을 겪었어.˳	event-dialogue	translated
+C0-08889B	[DLY:02]Tに[CMD:FF]ぐ[STR:3F8888]ぅ[DFT] [NAM:00]은\n[PAL:02]보석 1[PAL:00]을 손에 넣었다![TER][DFT][PAL:03]호호호호.\n수고했구나, 꼬마야.\n마지막 하나를 찾지 못해\n곤란해하던 참이었단다.[FIN]이 [E2:00C3]는\n우리 [KATAKANA]해커[HIRAGANA]가\n소중히 사용하도록 하마.\n[PAU:1E]고맙구나, [PAU:1E]꼬마야.˳[PAL:00]	event-dialogue	translated
+C0-088BF8	[DFT]나는 비행선 정비사였는데\n[KATAKANA]해커[HIRAGANA]라는 녀석들에게\n납치되어 이곳에 왔습니다.[FIN][PAL:02]그들에게 거역하면\n기억을 지워 버린다[PAL:00]는\n이야기를 들었기에 얌전히\n일하고 있습니다. 네.˳	event-dialogue	translated
+C0-088CEE	[DFT]이 비행장에도\n비행선이 많이 있었는데[FIN]무슨 작전이 있다며\n모두 [PAL:02]사령탑[PAL:00]으로\n날아가 버렸습니다.˳	event-dialogue	translated
+C0-088F7F	[DLY:80]ぅぐぽぺ[BYTE:91]ぅ[DFT]뭐라고? [KATAKANA]아키하바라 박사[HIRAGANA]?\n네가 박사의 아들이라고?\n박사는 한동안 여기 있었지만\n[PAL:02]사령탑[PAL:00]으로 끌려갔단다.[FIN]네가 박사의 아들이구나.\n박사에게 네 이야기는 들었지.\n하지만 [PAL:02]사령탑[PAL:00]에는 하늘에서만\n갈 수 있다고 하니 말이야.[FIN]나에게도 아이가 있는데\n이름은 [PAL:02][KATAKANA]카를[HIRAGANA][PAL:00]이란다.\n그러니 네 마음을 이해해.\n어떻게든 도와주고 싶구나.˳	event-dialogue	translated
+C0-08906A	[DFT]뭐? [PAL:02][KATAKANA]카를[HIRAGANA][PAL:00]을 안다고?\n그렇구나, 너도 [KATAKANA]로코코 마을[HIRAGANA] 사람이구나.\n[KATAKANA]카를[HIRAGANA]은 건강하던가?\n엄마를 힘들게 하지는 않고?[FIN]그래, [KATAKANA]카를[HIRAGANA]에게 [PAL:02]편지[PAL:00]를 쓸 테니\n전해 주지 않겠니?\n기꺼이 할게요.\n싫어요.[TER][CLR]그래! 잘됐구나!\n금방 쓸 테니 잠시\n그곳에서 기다려 주게.	event-dialogue	translated
+C0-089181	[DFT]아까는 포기했지만\n[KATAKANA]카를[HIRAGANA]과 어떻게든 연락하고 싶구나···[FIN][KATAKANA]카를[HIRAGANA]에게 [PAL:02]편지[PAL:00]를 쓸 테니\n전해 주지 않겠니?\n기꺼이 할게요.\n싫어요.[TER][DFT]뭐? 이 비행선 말이냐?\n아직 설계 중이라네.\n이 [KATAKANA]외장[HIRAGANA]에 맞는\n[PAL:02][KATAKANA]엔진[HIRAGANA][PAL:00]을 만들지 못해서 말이지.˳	event-dialogue	translated
+C0-08927D	[DFT]음···\n[PAU:3C][PAL:02][KATAKANA]카를[HIRAGANA]에게\n잘 지내고 있니?\n갑자기 사라져서 미안하다.[FIN]아버지는 나쁜 사람들에게\n납치되어 일을 하고 있단다.\n너와 엄마 생각이 나서\n견딜 수가 없구나.[FIN]언제 돌아갈 수 있을지는 모르지만\n너는 남자아이니까\n집과 엄마를 잘 부탁한다.˳\n             아버지가[PAL:00]	event-dialogue	translated
+C0-089335	[DFT]그럼 이 편지를\n부탁하마.\n너도 힘든 상황일 텐데\n내 고집을 들어줘서 미안하구나.˳[FIN]\n [NAM:00]은\n[PAL:02]편지[PAL:00]를 받았다![TER][DFT]뭐? [KATAKANA]카를[HIRAGANA]이 내게 이걸?\n[NXT]ぞ···············\n[NXT]가이런 것까지 써 보내다니\n그 아이답구나. 하하하.[FIN][NXT]ぞ············\n[PAU:1E][NXT]가이 석판은 어디서?\n[PAU:1E]이건 무언가의 설계도··· 아니,\n[KATAKANA]엔진[HIRAGANA] 설계도임이 틀림없다![FIN]이건 어쩌면\n쓸 수 있을지도 모르겠구나!\n[PAU:1E]부디 네게 보답하게 해 다오.\n좋아! 당장 작업을 시작하자!	event-dialogue	translated
+C0-0894C6	[DFT]드디어 비행선이 완성됐다!\n이건 네게 주마.\n이걸 타고 어서 네 아버지를\n찾으러 가거라.[TPL:D7] [NAM:00]은\n[PAL:02]비행선[PAL:00]을 손에 넣었다![TER][DFT]비행선을[BYTE:81]	event-dialogue	translated
+C0-089844	[DFT][E2:08D4]의 용감한 [KATAKANA]해커[HIRAGANA] 전투원 여러분!\n여러분을 모은 이유는 다름이 아니다.[FIN][KATAKANA]해커[HIRAGANA]의 전 간부였으면서\n내부 정보를 외부에 누설한\n배신자 [KATAKANA]게[HIRAGANA]를\n처형하기 위해서다.[TPL:D7]그 [KATAKANA]게[HIRAGANA]를 솥에 넣고 삶은 뒤\n처형 후에는 우리가\n맛있게 먹도록 하자.˳[FIN][PAL:02]말하는 [KATAKANA]가재[HIRAGANA]:\n[PAL:00]히[KATAKANA]이[HIRAGANA]익, 살려 주세요!\n말하는 [KATAKANA]가재[HIRAGANA]를 먹어도\n맛없을 거예요![FIN][NXT]ぞ아············\n[NXT]가저기 계신 건\n대장님 아닙니까!\n대장님, 도와주세요![TPL:D7][E2:085B]흠, 너는 누구냐?\n···설마 네가\n수배 중인 발명가인가!?[FIN]이건 완전히\n불에 뛰어든 부나방이군! 전투원 여러분!\n식전 운동이다!\n어서 이 녀석을 잡아라!	event-dialogue	translated
+C0-089BA4	[DFT]죄송합니다, 대장님.\n대장님이 걱정되어서···하지만 오히려\n방해만 된 것 같군요.[FIN]아, 맞다. 이걸\n드리려고 했습니다···\n제가 간부 시절에\n사용하던 물건입니다.[TPL:D7]···그런데 보니\n소지품이 가득 찬 모양이군요.\n짐은 평소에\n정리해 두셔야 합니다.˳	event-dialogue	translated
+C0-089C55	[DFT] [NAM:00]은\n[PAL:02]간부[KATAKANA] 배지[HIRAGANA][PAL:00]를 손에 넣었다![TER][DFT]이것만 있으면\n[PAL:02]간부만 들어갈 수 있는 방[PAL:00]에도\n들어갈 수 있을 겁니다.\n도움이 될 것 같아 가져왔습니다.[FIN]가능하다면 함께 가고 싶지만\n또 방해가 될 것 같으니\n저는 이만 실례하겠습니다.\n[PAU:1E]대장님! 힘내십시오!	event-dialogue	translated
+C0-08A10C	[DFT][STR:83A188][FIN]뭐? 그렇다면 출입구를\n지키지 않으면 의미가 없다고?\n[PAU:28][NXT]ぜ···[NXT]가그것도 그렇군.\n알려 줘서 고맙다!	event-dialogue	translated
+C0-08A4E9	[DFT]끈질긴 녀석이군.\n나는 [KATAKANA]해커[HIRAGANA] 과학자 중 하나인\n[PAL:02][KATAKANA]아키하바라[HIRAGANA][PAL:00]다![FIN]너 같은 녀석은 모른다고 했으면\n정말 모르는 거다!	event-dialogue	translated
+C0-08A580	[DF4][E2:0A5E]녀석들, 잘 들어라!\n너희 덕분에\n세 개의 [E2:0000]가 모두 모였다.[TPL:D8]하지만 이제부터가 진짜 시작이다.\n이 낙원별을 정복해서\n[KATAKANA]우리[HIRAGANA]의 힘을 보여 주자!\n새로운 [PAL:02]비밀 병기[PAL:00]도 있으니까.[FIN]자, 녀석들아!\n기합을 넣고 시작하자!\n본성의 녀석들에게도 [KATAKANA]우리[HIRAGANA]의 힘을\n보여 줄 [KATAKANA]기회[HIRAGANA]다!	event-dialogue	translated
+C0-08A6E0	[DFT][E2:0A7E]··이봐, [PAU:1E] [KATAKANA]아키하바라[HIRAGANA]!\n[PAU:1E][E2:0000]가 발동하지 않는 건\n대체 어떻게 된 거냐!?[FIN][E2:0245]아, 이것이 평범한 돌이\n아니라는 건 분명하다.[FIN]다만 아직\n불완전한 상태인 모양이군.\n[PAU:1E]일부가 모자란 건가,\n발동 조건이 있는 건가···[FIN][E2:0ADC]ぞ···こ·[PAU:1E][NXT]가이 쓸모없는 놈!\n그걸 모르니까\n네게 조사시키는 거잖아![FIN]이 힘을 모른다면\n본성의 놈들을 앞질러\n이 힘을 쓰려던\n[KATAKANA]내[HIRAGANA] 계획은 물거품이다![FIN]됐어!\n너 같은 녀석에게는 더 맡기지 않겠다!\n이봐!! 누구 없느냐!!	event-dialogue	translated
+C0-08A867	[DFT][E2:0B7E]··괜찮아?\n[PAU:1E]이래서는 [E2:0053]에 대해\n끝내 알아내지 못하는 것 아니야?[FIN][E2:0A56]음, 저런 녀석에게\n소중한 [E2:0067]를\n맡길 수는 없지![FIN][E2:0B80][BYTE:89]정말 성급한 남자네.[PAU:1E]뭐, 좋아.\n[E2:0054]는 우리끼리\n조금 더 조사해 보자.˳	event-dialogue	translated
+C0-08A8DE	[DFT][E2:0B3B]라, 희귀한 [PAU:1E] [KATAKANA]쥐[HIRAGANA]네.\n[PAU:1E]저 얼빠진 얼굴을 보니\n왠지 그 꼬마가 생각나는걸.˳[FIN][E2:0A4F]뭐? 그 꼬마라는 건 누구지?\n듣고 보니 기분 나쁜 [KATAKANA]대사[HIRAGANA]군.˳[FIN][E2:0B7E]··후후후, 비밀이야.\n[PAU:3C]자, 가자.\n본성에 알려지기 전에\n일을 끝내고 싶은 거지?	event-dialogue	translated
+C0-08ACB7	[DFT]내 이름은 [PAL:02][KATAKANA]닥터 G[HIRAGANA][PAL:00].\n천재 전산 과학자다.\n이 [KATAKANA]해커[HIRAGANA]의 [KATAKANA]컴퓨터[HIRAGANA]도\n모두 내가 설계했지.[FIN]내 새 발명 이야기가\n듣고 싶겠지?\n듣고 싶어요.\n별로 듣고 싶지 않아요.[TER][CLR]그래, 그래. 특별히 알려 주마.[JMP]ぅ[BYTE:AD][CLR]뭐, 그렇게 말하지 말고 들어라.\n실은[PAL:02]사람이 [KATAKANA]컴퓨터 내부[HIRAGANA]로\n들어갈 수 있는[PAL:00] 장치를\n개발 중이다.[FIN]일단 [PAL:02][KATAKANA]쥐[HIRAGANA][PAL:00]로\n실험하려 했는데\n이 설산에는 [KATAKANA]쥐[HIRAGANA]도 없군.\n어떤가, [KATAKANA]네[HIRAGANA]가 실험대가 되어 주겠나?	event-dialogue	translated
+C0-08AE1F	[DFT][E2:1680][BYTE:9A]손 A! 절차는 알고 있겠지?\n부탁하네.[TPL:D7][E2:173B]알겠습니다, [KATAKANA]닥터 G[HIRAGANA]!\n이 녀석에게 저 장치를\n붙이는 거죠!\n[KATAKANA]팬티[HIRAGANA] 세탁보다 쉬운 일입니다![FIN][PAL:02]\n[NAM:00][PAL:00]의 귀에\n무언가가 부착되었다!	event-dialogue	translated
+C0-08AE94	[DFT][E2:163F]오! 조수 A, 보게!\n[KATAKANA]쥐[HIRAGANA]가 돌아왔다![FIN][E2:176E]그렇다는 건 실험 성공이군요!\n[KATAKANA]닥터 G[HIRAGANA]!\n축하드립니다![FIN][E2:1660]좋아! 어서 [KATAKANA]쥐[HIRAGANA]에게서\n그 장치를 떼어 내라! 우리도\n[KATAKANA]컴퓨터[HIRAGANA] 안으로 들어간다![FIN][E2:1766]알겠습니다[KATAKANA]아[HIRAGANA]! [KATAKANA]닥터 G[HIRAGANA]!\n[KATAKANA]팬티[HIRAGANA] 세탁보다\n쉬운 일입니다!	event-dialogue	translated
+C0-08AF44	[DFT][E2:1656]휴, 어떻게든 빠져나왔군···[TPL:D7]약속은 지키겠다.\n나도 남자니까 말이지!\n이봐, 조수 A!\n돈을 가지고 있나!?[TPL:D7][E2:173E]?[PAU:14]뭐?[PAU:14]뭐라고요?\n[PAU:3C]제· 제 돈 말입니까!?[FIN][E2:1680][BYTE:9A]조수의 것은 박사님의 것!\n이 소년에게 네 돈 전부를\n건네도록 해![FIN][E2:1766]알겠습니다···\n[PAU:3C]저기··· 제 월급이 적어서\n이것밖에 없지만요···[FIN] [NAM:00]은\n[PAL:02]500[KATAKANA]트론[HIRAGANA][PAL:00]을 손에 넣었다![TER][DFT]알고 있어, 알고 있어.\n그 하얀 옷의 남자 말이지.[FIN]그 남자의 기억은\n[PAL:02][KATAKANA]메인 컴퓨터[HIRAGANA][PAL:00]에\n[KATAKANA]입력[HIRAGANA]되어 있다.[FIN]하지만 내가 만든\n[PAL:02][KATAKANA]보호 장치[HIRAGANA][PAL:00]가 지키고 있으니\n그렇게 쉽게 손댈 수는 없을 거다.[FIN]뭐, 할 수 있는 만큼 해 보거라.\n내가 만든 [KATAKANA]보호 장치[HIRAGANA]를\n시험해 볼 좋은 [KATAKANA]기회[HIRAGANA]다!\n이것을 네게 주마.[TPL:D7]아, 그래. [KATAKANA]열쇠[HIRAGANA]였지.\n자, 가져가거라![TPL:D7] [NAM:00]은\n[PAL:02] [KATAKANA]열쇠[HIRAGANA][PAL:00]를 손에 넣었다![TER][DFT]소지품이 가득 찼잖아!\n그러면 [KATAKANA]열쇠[HIRAGANA]를 줄 수도 없겠군. 쳇.˳	event-dialogue	translated
+C0-08B313	[DFT]저는 이곳 [PAL:02][KATAKANA]닥터 G[HIRAGANA][PAL:00]의 조수입니다.\n[KATAKANA]닥터[HIRAGANA]라고 해도\n전문 분야는 [KATAKANA]컴퓨터[HIRAGANA]지만요.[FIN][KATAKANA]닥터 G[HIRAGANA]는 얼마 전\n[PAL:02]사람의 기억을 [KATAKANA]컴퓨터[HIRAGANA]에\n저장하는[PAL:00] 실험에 성공했습니다.[FIN]다만 실험 대상자는\n[PAL:02]기억상실[PAL:00]이 되었지만요.˳	event-dialogue	translated
+C0-08B41C	[DFT][E2:177E]··[KATAKANA]닥터 G[HIRAGANA]!\n저· [KATAKANA]쥐[HIRAGANA]입니다! [KATAKANA]쥐[HIRAGANA]![FIN][E2:164F]뭐야, 잠꼬대 같은 소리를.\n이런 설산에 [KATAKANA]쥐[HIRAGANA]···\n[PAU:1E][NXT]ぎ뭐라고?[TPL:D7][NXT]ぞ·········[NXT]ぎ뭐라고!\n[PAU:1E]이건 하늘이 내려 준 선물인가!\n[PAU:1E][NXT]가조수 A! 실험이다!!\n이 [KATAKANA]쥐[HIRAGANA]로 실험한다![FIN][E2:1766]알겠습니다! 박사님!\n실험이군요!	event-dialogue	translated
+C0-08B515	[DFT]저· 저기···\n[PAU:1E]닥·[KATAKANA]닥터 G[HIRAGANA]는\n저렇게 말씀하시지만\n아까 드린 [PAL:03]제[PAL:00] 돈을[FIN]돌려주시면 저 남자에 대해\n제가 알려 드릴 수도 있어요.\n돌려드릴게요.\n받은 돈은 돌려주지 않을 거예요.[TER][CLR]아· 알겠습니다.\n마음이 바뀌면\n언제든 말씀해 주세요.\n[PAU:1E]···[KATAKANA]훌쩍훌쩍[HIRAGANA]˳	event-dialogue	translated
+C0-08B5FA	[CLR]\n [NAM:00]은\n[PAL:02]500[KATAKANA]트론[HIRAGANA][PAL:00]을 건넸다![FIN]으으, 감사합니다.\n이제 이번 달도\n살아갈 수 있겠어요.[FIN]그 남자의 기억은\n[PAL:02][KATAKANA]메인 컴퓨터[HIRAGANA][PAL:00] 안에\n들어가 있을 겁니다.[FIN]하지만 중요한 기밀이니\n무언가가 지키고 있을 거예요.[FIN]그리고 이것도 드릴게요.\n이것이 있으면 [PAL:02][KATAKANA]메인 컴퓨터실[HIRAGANA][PAL:00]에\n들어갈 수 있을 겁니다.\n[KATAKANA]닥터 G[HIRAGANA]에게는 비밀이에요.˳[FIN] [NAM:00]은\n[PAL:02] [KATAKANA]열쇠[HIRAGANA][PAL:00]를 손에 넣었다![TER][CLR]아· 당신\n돈이 하나도 없잖아요!\n벌써 다 써 버리다니\n너무해! 으[KATAKANA]아아[HIRAGANA]앙!	event-dialogue	translated
+C0-08B75F	[DFT]이 요새의 [KATAKANA]컴퓨터[HIRAGANA]는\n모두 [KATAKANA]네트워크[HIRAGANA]로\n연결되어 있습니다.[FIN]그 중심부가\n[PAL:02][KATAKANA]메인 컴퓨터[HIRAGANA][PAL:00]지만\n[KATAKANA]메인 컴퓨터실[HIRAGANA]에는\n[KATAKANA]닥터 G[HIRAGANA]만 들어갈 수 있습니다.˳	event-dialogue	translated
+C0-08BA75	[DFT]으으··· 불쌍하군.\n[PAU:1E]나는 그런 싸구려 이야기에\n약하단 말이야···[FIN]좋아, 나도 사람의 자식이다!\n[KATAKANA]블랙모어[HIRAGANA] 님에게는 비밀로 하고\n네 아버지를 만나게 해 주마!	event-dialogue	translated
+C0-08BBEA	[DFT][E2:02DC]ぞ······으·[NXT]가나는\n도대체 무슨 일을 하고 있었던 거지!?[FIN]···············\n[NAM:00]가 아니냐···\n[PAU:3C]아니··· 이제 모두 기억났다.\n[PAU:1E]나는 엄청난 일을···[FIN][NAM:00]잘 듣거라.\n[PAU:1E]기억을 잃었다고는 해도\n아버지는 엄청난 것을\n만들고 말았다.[FIN]마을 하나를 파괴할 수 있는\n강력한 [PAL:02][KATAKANA]레이저[HIRAGANA][PAL:00]다.\n녀석들은 [KATAKANA]로코코 마을[HIRAGANA]을\n그 [KATAKANA]표적[HIRAGANA]으로 삼으려 하고 있다.[FIN]저걸 내버려 두면\n[KATAKANA]로코코 마을[HIRAGANA]이 위험해!\n[PAU:1E]어쨌든 아버지를\n따라와 다오.˳	event-dialogue	translated
+C0-08BDF9	[DFT][PAL:02]아버지:\n[PAL:00][NAM:00]야, 잘 들어라.\n[PAU:1E]아버지는 이 방에 있는\n[KATAKANA]레이저[HIRAGANA]를 파괴하마.[FIN]너는 이 [KATAKANA]아래[HIRAGANA] 방에 있는\n[PAL:02]수로의 물을 빼는 [KATAKANA]스위치[HIRAGANA][PAL:00]를\n누르거라.[FIN][KATAKANA]블랙모어[HIRAGANA] 일당이 있는\n[PAL:02]사령탑[PAL:00]으로 가는 길은\n그 수로 아래에 있다.˳	event-dialogue	translated
+C0-08BECA	[DFT][PAL:02]아버지:\n[PAL:00]이게 [KATAKANA]레이저[HIRAGANA]의 [KATAKANA]시스템부[HIRAGANA]다.\n여기에 손을 대야 하는데[FIN]아직 시간이 좀 걸리겠구나.\n너는 [E2:0067]를 부탁한다.˳	event-dialogue	translated
+C0-08D05A	[DFT][E2:155A]여러분도 이미 알고 있듯이\n[KATAKANA]티라미스[HIRAGANA] 님과 [KATAKANA]티아트론[HIRAGANA]이\n[KATAKANA]해커[HIRAGANA]의 손에 떨어지고 말았습니다.[FIN]누구든 저 우주 요새에 들어가\n[KATAKANA]티라미스[HIRAGANA] 님을\n구하러 갈 사람은 없습니까?	event-dialogue	translated
+C0-08D0CB	[DFT]정말 한심하군!\n그렇다면 어쩔 수 없다.\n지금부터 각자의 자리로 가서\n[PAL:02][KATAKANA]제비[HIRAGANA][PAL:00]를 나눠 주겠다.[FIN][PAL:02]빨간 [KATAKANA]제비[HIRAGANA][PAL:00]를 뽑은 사람은\n[KATAKANA]티라미스[HIRAGANA] 구출대에\n참가하도록 하겠다.\n좋겠나?	event-dialogue	translated
+C0-08D143	[DFT][E2:15C2]님도 하나 뽑아 주십시오.[FIN]두 장밖에 남지 않았습니다만···\n오른쪽과 왼쪽 중 어느 쪽이 좋으십니까?\n오른쪽을 뽑는다.\n왼쪽을 뽑는다.[TER][CLR]\n [NAM:00]은\n[PAL:02]빨간 [KATAKANA]제비[HIRAGANA][PAL:00]를 뽑아 버렸다!	late-story	translated
+C0-08D1AC	[DFT][E2:150D]빨간 [KATAKANA]제비[HIRAGANA]를 뽑은 사람은\n준비가 되는 대로\n[PAL:02][KATAKANA]도크[HIRAGANA][PAL:00]에 모여 주십시오.[FIN][KATAKANA]쇼콜라별[HIRAGANA]이 [KATAKANA]해커[HIRAGANA]에게\n점령당할지 말지는\n여러분에게 달려 있습니다.\n[PAU:1E]잘 부탁드립니다.˳	event-dialogue	translated
+C0-08D3DF	[DFT][E2:1581]님! [NAM:00] 님!\n무사하셔서 정말 다행입니다!\n이 늙은이는 기쁘기 그지없습니다.[FIN]정말 감사합니다, [NAM:00] 님!\n당신은 이 [KATAKANA]쇼콜라별[HIRAGANA]의\n은인입니다![FIN][KATAKANA]티라미스[HIRAGANA] 님뿐만이 아닙니다.\n당신이 가지고 계신 [PAL:02][KATAKANA]스크랩[HIRAGANA][PAL:00]에서\n대단한 사실을 알아냈습니다.[FIN]피곤하시겠지만\n연구소장님께서 하실 말씀이 있다고 하니\n꼭 참석해 주십시오.˳	late-story	translated
+C0-08D4FF	[DF4][PAL:02]병사:\n[PAL:00]큰일입니다!\n[KATAKANA]가토[HIRAGANA]에게서 통신이 왔습니다.\n그런데···[PAU:1E]저기······˳[TPL:D8][E2:154F]뭐냐? 어서 말해라!\n변명 따위는 듣지 않겠다![FIN][PAL:02]병사:\n[PAL:00]그· 그럼 읽겠습니다.[FIN][PAL:02][KATAKANA]티라미스[HIRAGANA]와 [KATAKANA]티아트론[HIRAGANA]은\n내 손안에 있다.\n이제 [KATAKANA]쇼콜라별[HIRAGANA]에는 승산이 없다.\n저항을 멈추고 항복하라.[FIN]그러지 않으면 [KATAKANA]티라미스[HIRAGANA]의\n목숨은 없다고 생각해라.\n\n[PAU:3C][NXT]즈[KATAKANA]해커 총통[HIRAGANA] [PAU:14][KATAKANA]가토[HIRAGANA][FIN][PAL:00][E2:157E]·····[NXT]가뭐라고! 저 남자가\n[KATAKANA]해커[HIRAGANA]의 총통이라고?\n[PAU:1E]방심했구나···[FIN]이러고 있을 수 없다!\n[PAU:1E]회의실에 사람을 모아라!\n당장 앞으로의 일을\n상의해야 한다!	late-story	translated
+C0-08D6BE	[DFT]이상 보고가 있습니다.[CMD:FF][DF4][DF2]···\n[NAM:00] 님,\n[PAU:14]잠시만 기다려 주십시오.˳	late-story	translated
+C0-08D6F0	[DFT][E2:0E3B]···제가\n[PAU:0A]붙잡혀 있던 방에서\n[PAU:0A]들은 이야기가 있습니다···[FIN][PAL:02]제가 붙잡혀 있던 방[PAL:00]의\n[PAU:0A][KATAKANA]컴퓨터[HIRAGANA]에 들어가려면\n[PAU:0A][PAL:02]특별한 [KATAKANA]패스워드[HIRAGANA][PAU:0A][PAL:00]가\n필요하다고 합니다.[FIN]제가 사용하던 [KATAKANA]가토[HIRAGANA]의\n비밀번호를 기억하고 있습니다.\n[PAU:0A][NAM:00] 님께 도움이 되도록\n알려 드리겠습니다.˳[FIN] [NAM:00]은\n[PAL:02] [KATAKANA]컴퓨터 패스워드[HIRAGANA][PAL:00]를\n배웠다![TPL:D7][E2:0E42]제발[PAU:0A] 몸조심하시고\n[PAU:0A]무사히[PAU:0A] 돌아오십시오.˳	late-story	translated
+C0-08D99F	[DFT]준비는 모두 끝났습니까?\n괜찮다면 안내해 드리겠습니다···\n완벽해.\n아직이야.[TER][DFT]이야기는 들었습니다.\n우주 요새에 다시 가신다지요.\n준비가 되면\n말씀해 주십시오.˳	event-dialogue	translated
+C0-08DC24	[DF4]ぐぽJ[NXT]우[DFT][NAM:00] 님이시군요.\n[KATAKANA]티라미스[HIRAGANA] 님께서 기다리고 계십니다.\n어서 안으로 들어가십시오.˳	late-story	translated
+C0-08DCC4	[DFT]이야기는 들었어.\n이 별은 어떤가···라고 해도\n여긴 피난소지만 말이야.[FIN]좀 더 제대로 된 연구소가 있다면\n[KATAKANA]해커[HIRAGANA] 녀석들에게 본때를 보여 줄\n무기를 만들어 복수할 텐데.˳	event-dialogue	translated
+C0-08DD75	[DFT]네가 [E2:004E]라는\n돌을 가져온 거야?\n[KATAKANA]나[HIRAGANA]는 반대였어.\n어차피 옛날 발명품이잖아?[FIN]우선 [KATAKANA]티라미스[HIRAGANA] 님을 만나 보렴.\n이야기는 그다음이다.\n나중에 천천히 그 돌을\n조사하게 해 줘.˳	event-dialogue	translated
+C0-08DE59	[DFT]이쪽 분은\n[PAL:02][KATAKANA]가토[HIRAGANA][PAL:00] 씨야.\n안됐지만 이름을 제외한\n모든 기억을 잃었지.[FIN]하지만 대단히 뛰어난\n기술자라서 우리 일을\n도와주고 있어.\n모두가 그를 높이 평가한단다.˳	late-story	translated
+C0-08E029	[DFT]안녕, 아까는 고마웠어.\n그 [E2:1A53][KATAKANA]스크랩[HIRAGANA] 말인데\n상당히 재미있는 [KATAKANA]데이터[HIRAGANA]를\n얻을 수 있을 것 같아.[FIN]하지만 지금은 [E2:0053]\n연구가 먼저라서···\n조금만 더\n빌려 두도록 할게.˳	event-dialogue	translated
+C0-08E0C3	[DFT]좋은 때에 오셨습니다.\n방금 비밀 병기가\n완성된 참입니다.[FIN]이것은 우주 요새의 [KATAKANA]에너지[HIRAGANA]로를\n멈추게 하는 물건입니다.\n우선 [PAL:02][KATAKANA]포트[HIRAGANA][PAL:00]라고 부르지요.[FIN]영상에서 보셨던\n[KATAKANA]엔진실[HIRAGANA] 안의\n[PAL:02]세 [KATAKANA]에너지[HIRAGANA]로[PAL:00]에\n각각 하나씩 [KATAKANA]포트[HIRAGANA]를 설치하는 겁니다.[FIN]이것을 [PAL:02]빨강·노랑·파랑[PAL:00] 순서로\n[KATAKANA]설치[HIRAGANA]하면 요새 [KATAKANA]엔진[HIRAGANA]의\n움직임을 멈출 수 있을 겁니다.[FIN]···그래서 [NAM:00] 님께\n부탁이 있습니다.\n[PAU:1E]사실 [KATAKANA]쇼콜라별[HIRAGANA]에는 더 이상\n우주선을 만들 자재가 없습니다.[FIN][NAM:00] 님은 우주선을\n가지고 계시다고 들었습니다.\n게다가 한 번 요새 안에도\n들어가 보셨고요.[FIN]이 [KATAKANA]포트[HIRAGANA]를 설치하기 위해 다시 한 번\n요새로 가 주시겠습니까?\n기꺼이 하겠습니다.\n이제 싫어요![TER][CLR]정· 정말입니까! 그럼 세 개의\n[KATAKANA]포트[HIRAGANA]를 드리겠습니다.[TPL:D7] [NAM:00]은\n[PAL:02] [KATAKANA]레드 포트[HIRAGANA][PAL:00]를 받았다![FIN] [NAM:00]은\n[PAL:02] [KATAKANA]블루 포트[HIRAGANA][PAL:00]를 받았다![FIN] [NAM:00]은\n[PAL:02] [KATAKANA]옐로 포트[HIRAGANA][PAL:00]를 받았다![TER][DFT]이봐, 모두! [PAU:1E]들었나?\n가 주겠다고 하셨다!	late-story	translated
+C0-08E377	[DFT]이것은 [NAM:00] 님.\n[PAU:14]무슨 용무이십니까?\n역시 협력할게요.\n아무것도 아니에요. 불렀을 뿐이에요.[TER][CLR]그렇습니까···\n[PAU:1E]저기···[PAU:1E]아까 말씀드린 일을\n혹시 다시 생각해 주신다면\n말씀해 주십시오.˳	late-story	translated
+C0-08E3E6	[DFT][PAL:02]빨간 [KATAKANA]포트[HIRAGANA]는 빨간 [KATAKANA]에너지[HIRAGANA]로에,\n노란 [KATAKANA]포트[HIRAGANA]는 노란 [KATAKANA]에너지[HIRAGANA]로에,\n파란 [KATAKANA]포트[HIRAGANA]는 파란 [KATAKANA]에너지[HIRAGANA]로에\n[PAL:00]각각 설치하도록 되어 있습니다.[FIN][PAL:02]빨강·노랑·파랑 순서로\n[PAL:00][KATAKANA]설치[HIRAGANA]하면 요새 [KATAKANA]엔진[HIRAGANA]의\n움직임을 멈출 수 있을 겁니다.[FIN]실수로 잘못 [KATAKANA]설치[HIRAGANA]했을 때는\n[KATAKANA]설치[HIRAGANA]한 장소를 조사하면\n분리할 수 있으니까요.˳	late-story	translated
+C0-08E502	[DFT]저· 정말입니까!?\n그럼 우리는 가지 않아도\n되는 거군요!\n[NAM:00] 님, 만세![KATAKANA]아[HIRAGANA]!	late-story	translated
+C0-08E55E	[DFT][NAM:00] 님이 거절하셨다면\n저희가 가야 했습니다.\n정말, 정말 살았습니다!	late-story	translated
+C0-08E6B0	[DFT][E2:0EC2]가님, 어서 오십시오.\n분명 와 주실 거라\n생각하고 있었습니다.[FIN]자세한 이야기는\n할아버지께서 해 주실 겁니다.\n부디 할아버지께 들어 주세요.˳	event-dialogue	translated
+C0-08E705	[DFT][E2:0E80][DF5]정말 [NAM:00] 님은\n신비한 분이시군요.\n왜 그런 것을 가지고 계셨습니까?	late-story	translated
+C0-08E814	[DFT][E2:1560]어서 오십시오.\n바로 옆에 계신 분이\n[KATAKANA]쇼콜라별[HIRAGANA]의 연구소장님입니다.[FIN]그분에게 [KATAKANA]티아트론[HIRAGANA]을\n맡겨 주십시오.\n부디 잘 부탁드립니다.˳	event-dialogue	translated
+C0-08E875	[DFT][E2:1581]들은 [E2:0067]를 하나로 모아\n옛 힘을\n이끌어 내 줄 것입니다.[FIN][NAM:00] 님도\n그 모습을 보시지 않겠습니까?	late-story	translated
+C0-08E8BB	[DFT][E2:153B]아니, 부끄러운 모습을 보였군요···\n[PAU:1E]나이가 들면 서 있는 것도\n힘들어져서 말이지···[FIN]연구소는 보셨습니까?\n이제 [KATAKANA]티아트론[HIRAGANA]에서\n좋은 소식을 얻을 수 있다면···[FIN]연구원 [KATAKANA]가토[HIRAGANA] 말입니까?\n[PAU:1E]그 아이는 성실하고 좋은 청년입니다.\n[KATAKANA]티라미스[HIRAGANA] 님도 그 아이를\n무척 마음에 들어 하시지요.[FIN]예전에 [KATAKANA]티아트론[HIRAGANA]을\n빼앗으려 했던 자가\n같은 이름이었다고 듣기는 했습니다만\n[PAU:1E]단순한 우연일 것입니다.˳	late-story	translated
+C0-08EB2F	[DFT][NAM:00] 님, [PAU:1E]바로 말씀드리겠습니다.\n[E2:0067]를 맡겨 주시겠습니까?[FIN]이 [E2:0054]는\n시간의 흐름을 비춰 내는\n발명품이라고 들었습니다.[FIN]이 [E2:0040]라면 저 요새의\n약점을 비춰 내고\n그에 대응할 무기를\n발명할 수 있을 겁니다.[FIN]\n [NAM:00]은\n[PAL:02]보석 1[PAL:00]을 건넸다.[FIN]\n [NAM:00]은\n[PAL:02]보석 2[PAL:00]를 건넸다.[FIN]\n [NAM:00]은\n[PAL:02]보석 3[PAL:00]을 건넸다.[FIN]···어라?\n[PAU:1E]별난 것을 가지고 계시군요.\n그 [PAL:02][KATAKANA]스크랩[HIRAGANA] A[PAL:00] 말입니다.\n[E2:1A53] [KATAKANA]스크랩[HIRAGANA]이군요.[FIN]저는 [KATAKANA]로봇[HIRAGANA]도 연구하고 있어서\n참고로 보여 주실 수 있을까요?\n조금만 보여 줄게요.\n······싫어요.[TER][CLR]정말입니까?[PAU:1E]감사합니다.\n여러 가지를 조사하는 것이\n발명의 [KATAKANA]힌트[HIRAGANA]가 되니까요.[FIN] [NAM:00]은\n[PAL:02] [KATAKANA]스크랩[HIRAGANA] A[PAL:00]를 빌려주었다.[FIN]그럼 잠시 빌리겠습니다.\n저는 연구소에 있을 테니\n꼭 구경하러 오십시오.˳	late-story	translated
+C0-08ECFB	[CLR]그렇게 말씀하시니 더욱\n보고 싶어지는군요. 부탁드립니다!\n조금만 보여 줄게요.\n······싫어요.[TER][DF5][E2:194A]큰일입니다!\n[KATAKANA]티아트론[HIRAGANA]과[PAU:1E] [KATAKANA]티라미스[HIRAGANA] 님과\n[PAU:1E][KATAKANA]가토[HIRAGANA]가 [PAU:1E]사· 사라졌습니다![TPL:D9][E2:154F]뭐라고!?\n어떻게 된 일이지? 설명해 보거라.[FIN][E2:1949]그게···\n제가 잠시 자리를 비운 사이\n연구소 밖으로 나간 모양입니다.[FIN][E2:154F]뭐라고!\n찾아라! 당장 찾아!	late-story	translated
+C0-08EE55	[DFT][E2:1944]의 화면에는 우주 요새의\n심장부라고 할 수 있는[PAL:02][KATAKANA]엔진실[HIRAGANA][PAL:00]이\n비치고 있었습니다.[FIN]저희는 이것을 바탕으로\n[KATAKANA]엔진실[HIRAGANA]을 파괴할\n비밀 병기를 개발하기 시작했습니다.[FIN]완성되면 우주 요새를\n멈출 수 있을 겁니다.\n이것도 [NAM:00] 님 덕분입니다.\n진심으로 감사드립니다.[FIN]그럼 저는 연구실로 돌아가\n비밀 병기 개발을 계속하겠습니다.\n그럼 나중에 뵙겠습니다···˳	late-story	translated
+C0-08F460	[DFT]큰일입니다!\n[KATAKANA]해커[HIRAGANA]의 공격입니다![FIN]뭐라고!?\n[PAU:1E]응전이다! 맞서 싸워라!\n이대로라면 당한다!	event-dialogue	translated
+C0-0985A7	[DFT]귀를 기울이니\n안에서 이야기하는 소리가 들려왔다.[FIN][PAL:03]정말 형편없는 계획이군.\n설마 [KATAKANA]로코코 마을[HIRAGANA]에서\n공장 인력을 납치해 오다니.[FIN][PAL:02]흥! 사람이 부족한 거다!\n게다가 본부에서 내려오는 예산도 부족해!\n[KATAKANA]해커[HIRAGANA]라는 자들은 신성한 발명을\n대체 무엇이라고 생각하는 거지!?[FIN][PAL:03]어머, 나는 당신에게 발명을\n부탁한 적이 없는데요.\n당신은 이 개조 인간 연구소의\n관리만 하면 돼요.[FIN]그리고 그건 어떻게 됐죠?\n고작 마을 촌장을 협박하는 데\n이렇게 오래 걸리다니요.[FIN][PAL:02]···흥!\n이쪽에는 이쪽 사정이 있다.\n참견하지 말도록![FIN][PAL:03]그래요.\n[PAU:1E]그럼 실력을 지켜보겠어요.\n잘 부탁해요,\n[PAU:1E][KATAKANA]페퍼 박사[HIRAGANA].[FIN]그리고 촌장만은 데리고 돌아가겠어요.\n그 사람은 내 앞으로의 계획에\n중요한 [KATAKANA]말[HIRAGANA]이니까요.[FIN]···그런데 아까부터\n저기서 엿듣고 있는\n무례한 손님이\n있는 것 같은데요?[FIN][PAL:02]뭐라고!?\n[PAU:3C]으음···\n너는 또 뭐냐!![PAL:00]	late-story	translated
+C0-098B0E	[DFT]오?[PAU:1E][NAM:00] 아니냐!\n나다, 나··· 잠깐.\n이 [KATAKANA]모습[HIRAGANA]으로는 모르겠군.\n잠깐 거기서 기다려.	late-story	translated
+C0-098BEA	[DFT]뭐? 여기서 뭘 하냐고?\n···시끄럽군. 이것도\n중요한 일 중 하나야.[FIN]너야말로 여기서 나가지 못해\n곤란한 것 아니냐?\n[PAU:14]뭐, 너에게 진 빚도 있고.\n잠깐 이리 와!	event-dialogue	translated
+C0-098D6C	[DFT][E2:033B]잘 가라, [NAM:00]!\n건강하게 지내라.˳	late-story	translated
+C0-098E50	[DFT][E2:04C2]가 아니야!\n잘 왔어! 부탁이 하나 있어![FIN]저 녀석···[KATAKANA]페퍼[HIRAGANA]가\n이 앞쪽으로 도망쳤어.\n잠깐 찾아와 줄래?\n이대로 내버려 둘 수는 없어![FIN]왜 내가 직접 안 가냐고?\n[PAU:14]···여긴 남자 화장실이잖아!\n[PAL:03][KATAKANA]숙녀[HIRAGANA][PAL:00]가 돌아다닐 수는 없지!	late-story	translated
+C0-098F2E	[DFT][E2:040E]가그랬어?[PAU:1E]뭐? 없어?\n[PAU:1E]정말 찾아본 거야?\n부탁이야! 좀 더 잘 찾아봐![FIN]그 녀석은 사기꾼 발명가야!\n그 녀석이 일으킨 사건을\n몇 번이나 취재해 왔다고!\n이번에도 분명 무슨 일을 꾸미고 있을 거야!	event-dialogue	translated
+C0-098FAC	[DFT][E2:040E]가뭐? 찾았어?[PAU:14]뭐?\n막다른 길이고 아무도 없었다고?\n[PAU:1E]···그래. [PAU:14]어쩔 수 없네.[FIN]알겠어. 나는 다른 곳을 찾아볼게.\n여기에는 아직 뭔가 있을 것 같아.\n그럼 안녕, [NAM:00].\n너도 조심해!	late-story	translated
+C0-08C028	[DFT][E2:0A7E]··이 꼬마는 뭐냐?\n뭐라고? [E2:0067]를\n돌려 달라고?[FIN]하하하하하!\n정말 우스워서\n[KATAKANA]배꼽[HIRAGANA]으로 차를 끓이겠군.˳[TPL:D7][E2:0BD4]블랙모어, 저 아이가\n[E2:0067] 세 개를\n혼자 모았다고···˳[FIN][E2:0A7E]··뭐라고?\n그렇다면 네가\n[KATAKANA]내[HIRAGANA] 귀여운 부하들을\n괴롭힌 녀석이란 말이냐!?[FIN]그 말을 듣고 가만히 있을 수는 없지.\n이봐, [KATAKANA]로즈[HIRAGANA]. 잠깐 물러나 있어.\n화려하게 시작할 테니까.[TPL:D7][E2:0A3C]자, 꼬마야.\n이 [KATAKANA]블랙모어[HIRAGANA] 님이 직접\n지금까지의 답례를 해 주마.\n[PAU:1E]천천히 염불이라도 외워라!	event-dialogue	translated
+C0-08C227	[DF4][E2:0A7E]··이해할 수가 없군.\n대체 [KATAKANA]해커 본성[HIRAGANA]의 녀석들은\n왜 이런 돌에 집착하는 거지?[FIN][KATAKANA]아키하바라[HIRAGANA]는 시간과 관련된\n돌이라고 지껄였지만···\n아무리 조사해도 평범한 돌로밖에\n보이지 않는군···˳[TPL:D8][E2:0B3B]라, 벌써 약한 소리를?\n한 번 더 [KATAKANA]아키하바라 박사[HIRAGANA]에게\n분석을 부탁하면 되잖아?[TPL:D8][E2:0A7E]··그렇군.\n[PAU:1E]아· 아니, 그럴 수는 없지.\n[KATAKANA]내[HIRAGANA] 미학에 어긋나는 일이야!	event-dialogue	translated
+C0-08C398	[DFT][E2:0AD4]로즈! 이렇게까지\n[KATAKANA]나[HIRAGANA]를 속여 왔단 말이냐![FIN][E2:0B3B]라, 속인 기억은 없는데요.\n당신이 멋대로\n제가 원하는 대로 움직였을 뿐이죠.[FIN]이제 와서 발버둥 쳐도 늦었어요.\n곧 본성에서\n[E2:0067]를 받으러\n올 테니까요. 안됐네요.˳[FIN][E2:0A7E]··젠장!\n이렇게 된 이상···[FIN][E2:0A3F]녀석들, 이게 뭔지 아나?\n[KATAKANA]레이저[HIRAGANA]의 [KATAKANA]리모컨[HIRAGANA]이다.\n지금 [KATAKANA]표적[HIRAGANA]을\n이 낙원별 전체로 [KATAKANA]설정[HIRAGANA]했다![FIN]이걸 누르면 [KATAKANA]게임 오버[HIRAGANA]다.\n본성에 알려진 이상\n어차피 [KATAKANA]공짜[HIRAGANA]로 끝나지는 않겠지.\n화려하게 해 주마.˳[TPL:D7][E2:0B4F]앗· 무슨 [KATAKANA]바보[HIRAGANA] 같은 짓을!\n그만둬, [KATAKANA]블랙모어[HIRAGANA]![FIN][E2:0A82]그 말은 지옥에서나 해라!\n와하하하하, 잘 있어라!!	event-dialogue	translated
+C0-08C6DD	[DFT]너· 너는 어떻게\n여기까지 온 거냐!?\n뭐, 그건 됐어!\n내 이름은 [PAL:02][KATAKANA]닥터 G[HIRAGANA][FIN][PAL:00]실험으로 이 [KATAKANA]컴퓨터[HIRAGANA] 안에\n들어왔는데\n조수가 무능해서\n출구를 잃어버렸지.[FIN]미안하지만 내 연구실까지\n안내해 주지 않겠나?\n[STR:86C888][TER][DFT][E2:163C]대체 어디에 갔던 거냐!\n제대로 안내해\n주도록 하게.˳	event-dialogue	translated
+C0-08C7A4	[CLR]뭐· 뭘 원하는 거냐?\n무사히 나가면 생각해 보마!\n기억을 잃은 남자에 관해\n돈이 필요해.[TER][CLR]그렇게 말하지 말고!\n어떻게든 부탁한다···\n[STR:86C888][TER][CLR]그 [PAL:02][KATAKANA]아키하바라[HIRAGANA][PAL:00] 말이냐?\n알겠다! 알려 주마!\n그럼 당장 부탁하지!	event-dialogue	translated
+C0-08CA0B	[DFT]너는 누구냐?\n나는 이 전자 공간을 지키는\n전자 괴인 [KATAKANA]버그버그[HIRAGANA]다![FIN]뭐라고? 내가 먹은\n인간의 기억을 돌려 달라고?\n그건 곤란한 부탁이군.\n인간의 기억은 맛있거든.[FIN]그러고 보니 배가 꽤 고프군.\n어디, 네 기억도\n한번 먹어 볼까?˳	event-dialogue	translated
+C0-08CF35	[CLR]ぅ[DFT][E2:154F]んと![PAU:1E][NAM:00] 님이\n빨간 [KATAKANA]제비[HIRAGANA]를 뽑으셨다니![FIN]하지만 이것도 분명\n[KATAKANA]밀피[HIRAGANA] 님의 인도일 겁니다···\n[PAU:1E]부디 공주님을 부탁드립니다.[FIN]불편하실 테니\n이것으로 준비를 갖추십시오.\n도구점이라면\n거주구 뒤쪽에 있습니다.[FIN]\n [NAM:00]은\n[PAL:02]5000[KATAKANA]트론[HIRAGANA][PAL:00]을 받았다![FIN]그리고 [PAL:02]연구소 창고[PAL:00]도\n열도록 하겠습니다.\n필요한 것이 있다면\n마음껏 사용하십시오.˳	event-dialogue	translated
+C0-09906A	[DFT]뭐? 연구소장을 찾고 있어?\n연구소장이라면 저쪽 [PAL:02]전용 화장실[PAL:00]로 들어갔는데?\n뭐? 코테츠는 어떻게 됐냐고?\n여기 청소를 하던 녀석이라면 지금 식사하러 갔어.\n[PAL:02]식당[PAL:00]에 갔을 거야˳	event-dialogue	translated
+C0-0990EA	[DFT]요즘 [KATAKANA]쥐[HIRAGANA]가 늘었네···˳	npc-dialogue	translated
+C0-099106	[DFT]이봐, 거긴 쓰레기 버리는 곳이야.\n떨어지면 위험하다고˳	npc-dialogue	translated
+C0-099217	[DFT]이곳 소장은 마음에 안 드는 놈을\n[PAL:02][KATAKANA]쥐[HIRAGANA]로 변신시키는 기계[PAL:00]를 만들었어.\n너도 조심해.\n그리고 [PAU:1E]그 이야기는[PAL:03]비밀[PAL:00]이야˳	npc-dialogue	translated
+C0-09926F	[DFT]하아··· 정말 못 해 먹겠네.\n남쪽 섬에 왔는데도 이런 어두운 연구소에서 매일 일만 하다니![FIN]그래도 본부의 설산보다는 [KATAKANA]낫지[HIRAGANA].\n[PAU:0A]\n그런데 이번에 온 소장 말이야.\n정말 싫은 인간 같지 않아?[FIN]너도 그렇게 생각해?\n그 사람은 [KATAKANA]로코코 마을[HIRAGANA]에 원한이 있어서\n일부러 마을 사람들을 납치해 일을 시키는 거잖아.[PAU:0A]정말 음침하지[FIN]하지만 그 사람에게 거역하면,\n잘 풀려도 한동안 [PAL:02][KATAKANA]화장실[HIRAGANA] 청소를 하게 되고,\n[PAL:00]재수가 없으면 이상한 발명품으로\n[PAL:02][KATAKANA]쥐[HIRAGANA][PAL:00]가 되어 버린대.[FIN]\n휴, 조심해야겠다	late-story	translated
+C0-09939C	[DFT]잠깐![PAU:0A]잠깐![PAU:0A]잠깐!\n방금 이야기 들었지!?\n누군가에게 말할 생각이야?\n그건 비밀이야.\n말하지 않을게.[TER][CLR]으아[KATAKANA]악[HIRAGANA]! 부· 부탁이야!\n소장에게는 [KATAKANA]비밀[HIRAGANA]로 해 줘[KATAKANA]ー[HIRAGANA]!\n[KATAKANA]쥐[HIRAGANA]가 되어 버린다고[KATAKANA]ー[HIRAGANA]!	event-dialogue	translated
+C0-099416	[CLR]그· 그래··· 다행이다!\n[PAU:1E]아· 맞다! 입막음 비용 대신\n[PAL:02][KATAKANA]스탬프[HIRAGANA][PAL:00]를 찍어 줄게![FIN]이게 찍혀 있으면\n이 연구소의 웬만한 곳에는 드나들 수 있어.\n하지만 소장에게는 [PAL:03][KATAKANA]비밀[HIRAGANA][PAL:00]이야˳[FIN] [NAM:00]은 전투원에게\n[PAL:02][KATAKANA]스탬프[HIRAGANA][PAL:00]를 받았다!	late-story	translated
+C0-0994E1	[DFT]부탁이야아.\n빨리 여기서 나가 줘.\n수상하게 보이잖아!	npc-dialogue	translated
+C0-099554	[DFT]뭐야, 얌전히 있으라니까···\n[NXT]가[PAU:3C]뭐야, [NAM:00]잖아.\n[PAU:1E]나야, 코테츠야.[TPL:D7]뭐 하냐고?\n[PAU:1E]밥 먹으러 왔지.\n배가 고프면 싸울 수 없잖아˳	late-story	translated
+C0-0995B2	[DFT]뭐? 소장을 찾다가 놓쳤다고?\n[PAU:3C]이런 바보 같으니. 이 연구소에는 비밀 장치가 있어.\n[FIN]보통은 보이지 않는 [KATAKANA]문[HIRAGANA]이나\n[KATAKANA]함정[HIRAGANA]이 있거든.\n[PAL:02][KATAKANA]카멜레온 안경[HIRAGANA][PAL:00]이 없으면\n그걸 볼 수 없어.[FIN]나? 물론 가지고 있지.\n[PAU:28]뭐?[PAU:14]갖고 싶어?\n[PAU:14]헤헤, 세상일이 그렇게 쉽지는 않지.\n남자라면 직접 구해.[FIN]분명\n[PAL:02]연구개발실[PAL:00]에서 만들고 있을 거야.[FIN][JMP][BYTE:A6][BYTE:96][DFT][E2:03C3]연구개발실은 식당을 나와\n[KATAKANA]→[HIRAGANA]쪽이야. 하지만 그렇게 쉽게\n들여보내 주지는 않을걸?	late-story	translated
+C0-0996E2	[DFT]나는\n[PAL:02][KATAKANA]엄마[HIRAGANA]표 수제 [KATAKANA]햄버그[HIRAGANA][PAL:00]를 줘.\n밥은 곱빼기로.\n[PAU:1E]뭐?[PAU:14]그런 건 없다고?	npc-dialogue	translated
+C0-0997E3	[DFT]매일 같은 [KATAKANA]메뉴[HIRAGANA]뿐이라\n정말 지겨워···\n일할 기운도 안 나네˳	npc-dialogue	translated
+C0-099817	[DFT]\n앗! 또 [KATAKANA]쥐[HIRAGANA]다!\n이 자식, 혼내 주겠어!!	npc-dialogue	translated
+C0-099830	[DFT]뭐야, 이 [KATAKANA]쥐[HIRAGANA]!?\n인간을 전혀 무서워하지 않잖아!\n건방진 녀석, 혼내 줘야겠어!	npc-dialogue	translated
+C0-099866	[DFT]이· 이 쥐 자식!\n괴· 괴물이다아아아!!\n도· 도와줘, 엄마아[KATAKANA]ー[HIRAGANA]!!	npc-dialogue	translated
+C0-0998CB	[DFT]뭐 하는 거야아.\n얌전히 순서를 기다려어˳	npc-dialogue	translated
+C0-0998E3	[DFT]식당 주인이\n[PAL:02]배달할 사람이 없다[PAL:00]며\n나한테 화풀이를 한다고···\n[PAU:14]어디나 사람이 부족하네˳	npc-dialogue	translated
+C0-099925	[DFT]나, A[KATAKANA]런치[HIRAGANA]! 빨리 해 줘.\n이제 [KATAKANA]쥐[HIRAGANA] 퇴치 당번이거든.\n정말이지 요즘은\n[KATAKANA]쥐[HIRAGANA]가 너무 많아서 곤란해˳	npc-dialogue	translated
+C0-09998C	[DFT]여기서는 개조 인간을\n연구하고 있는데,\n요즘은 새 소장의 취미 때문에\n이상한 기계만 만들게 하고 있어.[FIN]\n···이런, 너무 많이 말했나˳	event-dialogue	translated
+C0-099A52	[DFT]빌어먹을!\n소장 녀석이 본부에서 받은 예산을\n전부 연구에 쏟아붓고 있어서\n제대로 된 요리조차 만들 수가 없어!	npc-dialogue	translated
+C0-099A99	[DFT]오오! 마침 잘됐군!\n자네, 지금 [KATAKANA]한가[HIRAGANA]한가?\n네, 한가해요.\n지금은 바빠요.[TER][CLR]그거 잘됐군!\n일손이 부족해서 곤란하던 참이야.\n[PAL:02]연구개발실에 식사를\n배달해 주지 않겠나?[FIN][PAL:00]식당 배달이라고 하면\n문을 열어 줄 테니.\n미안하지만 부탁하네!\n[PAU:14]아아, 바쁘다 바빠!	late-story	translated
+C0-099B55	[CLR]뭐라고!\n요즘 젊은 것들은 조금만 바쁘면\n금방 도망친다니까!\n방해되니까 방해되지 말고 나가!	npc-dialogue	translated
+C0-099B8E	[DFT][PAL:02]연구개발실[PAL:00]은 식당을 나와\n[KATAKANA]→[HIRAGANA]쪽이야.\n알겠지? 길을 잘못 들면 안 돼˳	npc-dialogue	translated
+C0-099BC5	[DFT]요즘 흉포한 [KATAKANA]쥐[HIRAGANA]가\n나타난다며 모두 겁을 먹어서\n아무도 식사하러 오지 않아.[FIN]어쩔 수 없어서 [KATAKANA]쥐[HIRAGANA]들에게\n밥을 먹이고 있지.\n뭐, 불평을 안 하니\n저 녀석들이 더 귀엽기도 해˳	event-dialogue	translated
+C0-099C9D	[DFT]누구야?\n외부인은 들어올 수 없어.\n연구에 방해되니까 돌아가! 돌아가!	npc-dialogue	translated
+C0-099CCF	[DFT]누구? 식당 배달원?\n뭐? 아니라고?\n그럼 돌아가, 돌아가!\n외부인은 출입 금지야˳	npc-dialogue	translated
+C0-099D0D	[DFT]누구? 식당 배달원?\n아, 다행이다. 배가 너무 고팠어.\n자, 들어와! 들어와!	npc-dialogue	translated
+C0-099D3D	[DFT]누구? 식당 배달원?\n뭐? 그릇을 가지러 왔다고?\n그럼 들어와도 좋아˳	npc-dialogue	translated
+C0-099DA7	[DFT]새 소장이 온 뒤로\n이상한 것만 개발하게 됐어.\n얼마 전에는 [PAL:02]인간을 [KATAKANA]쥐[HIRAGANA]로 바꾸는\n기계[PAL:00]도 만들었지.[FIN]지금은 소장이 주워 온\n부품을 조사하고 있어.\n소장은 [PAL:02]아주 오래된 발명품[PAL:00]이라고\n말했는데, 정말일까?	late-story	translated
+C0-099E39	[DFT]고마워[KATAKANA]ー[HIRAGANA]!\n지금 너무 바빠서 손을 뗄 수가 없어.\n그 근처에 놓아 줘[KATAKANA]ー[HIRAGANA]!	npc-dialogue	translated
+C0-099E96	[DFT]지금은 다루기 좋은 [KATAKANA]크기[HIRAGANA]의\n[PAL:02]인간을 [KATAKANA]쥐[HIRAGANA]로 만드는 [KATAKANA]레이저[HIRAGANA][PAL:00]를\n만들게 하고 있어···\n이상한 것만 만들라니 지긋지긋하군.[FIN]\n조금 농땡이를 부려 볼까˳	event-dialogue	translated
+C0-099EEF	[DFT]목욕도 열흘이나 못 했고\n양말도 냄새가 나기 시작했어···\n[PAU:1E]가끔은 집 [KATAKANA]침대[HIRAGANA]에서\n푹 자고 싶다···˳	npc-dialogue	translated
+C0-099FA6	[DFT] [NAM:00]은 책을 발견했다.\n책에는 [PAL:02][KATAKANA]카멜레온 안경[HIRAGANA][PAL:00]에\n관한 내용이 적혀 있었다˳	late-story	translated
+C0-09A08D	[DFT]앗! 이봐!\n멋대로 나오면 [KATAKANA]안 돼[HIRAGANA]!\n자, 맡은 자리로 돌아가!	npc-dialogue	translated
+C0-09A243	[DFT]··········\n[PAU:1E]왠지 수상한데˳	npc-dialogue	translated
+C0-09A30B	[DFT][E2:0554]하하하, 꼴 좋다.\n천재 발명가 [KATAKANA]페퍼[HIRAGANA] 님에게 대들면\n이렇게 되는 거다!	npc-dialogue	translated
+C0-09A343	[DFT][E2:0543]무례한 [KATAKANA]쥐[HIRAGANA] 자식!\n어서 그 방 구석의\n쥐구멍으로 나가!	npc-dialogue	translated
+C0-09A374	[DFT][E2:055B]흠, 너는 뭐냐!\n신성한 연구소에 멋대로 들어오다니!	npc-dialogue	translated
+C0-09A39F	[DFT][E2:053F]전처럼 무례한 놈은\n이렇게 해 주마!	npc-dialogue	translated
+C0-09A415	[DFT]\n[PAL:02]천재 발명가 [KATAKANA]페퍼[HIRAGANA]의 일기[FIN] [KATAKANA]*월*일[HIRAGANA]\n[KATAKANA]해커[HIRAGANA]에게 [KATAKANA]스카우트[HIRAGANA]되어\n여기에 왔지만, 고작 공장 아닌가!\n나를 [KATAKANA]바보[HIRAGANA]로 아는군![FIN] [KATAKANA]*월*일[HIRAGANA]\n지금 나는 엄청난 감동에 빠져 있다!\n화산 속에서 굉장한 것을 발견했다![FIN]대체 얼마나 오래된 물건일까.\n[PAL:03]화산 분화를 조작하는 기계[PAL:02]다!\n이걸 이용하지 않을 이유가 없다.\n곧바로 연구소로 가져왔다˳[FIN] [KATAKANA]*월*일[HIRAGANA]\n그 기계에는 뜻밖의 효과가 있었다.\n이것으로 섬의 주민들을 조종할 수 있다.\n마음껏 이용해 주마˳[FIN] [KATAKANA]*월*일[HIRAGANA]\n[KATAKANA]해커[HIRAGANA] 전투원들은\n의욕 없는 녀석들뿐이라\n[KATAKANA]로코코 마을[HIRAGANA]에서 사람들을 데려왔다.[FIN]무료로 남쪽 섬에 초대한다고 하니\n속아 넘어온 [KATAKANA]바보[HIRAGANA]들이다.\n예전에 이 [KATAKANA]페퍼[HIRAGANA] 님을\n[KATAKANA]바보[HIRAGANA] 취급한 대가다. 꼴좋군.[FIN]그 기계가 신경 쓰이니\n화산을 여러모로 조사하기로 했다.\n선대가 만든 발명품이\n더 발견될지도 모른다···˳[PAL:00]	late-story	translated
+C0-09A62D	[DFT]···[PAU:28]빨갛고 읽기 어렵다˳	npc-dialogue	translated
+C0-09A6FF	[DFT][E2:0360]왔구나, [KATAKANA]쥐 녀석[HIRAGANA].\n지금 이 기계로 인간으로\n돌려놓아 줄 테니 [PAU:14]알겠지?	npc-dialogue	translated
+C0-09A733	[DFT][E2:033F]이봐, [KATAKANA]쥐 녀석[HIRAGANA].\n그렇게 구석에 있지 말고\n앞으로 나와˳	npc-dialogue	translated
+C0-09A757	[DFT] [NAM:00]은 인간으로 돌아왔다!	late-story	translated
+C0-09A768	[DFT][E2:03DC]어··· 뭐야··· 너.\n[NXT]가[NAM:00]잖아.\n뭐[KATAKANA]ー[HIRAGANA], 너도 파랗구나.[FIN]그런데 왜 돌아온 거야?\n[PAU:1E]뭐?[PAU:1E]지진을 멈추러 왔다고?\n[KATAKANA]바보[HIRAGANA]구나. [PAL:02]지진 발생 장치[PAL:00]를\n멈추려면 방법이 따로 있어.[FIN]그걸 아는 건 연구소장과\n[PAL:02]관리하던 전투원[PAL:00] 정도일 거야.\n[PAU:1E]하지만 전투원은\n[PAL:02][KATAKANA]쥐[HIRAGANA]로 변해 버렸다[PAL:00]고 하더라.[FIN]그럼 할 일도 끝났으니 돌아가야겠군.\n그 말괄량이 여자가 오면\n상대하기 힘들거든.[FIN]\n그럼 잘 가!\n이제 [KATAKANA]실수[HIRAGANA]는 하지 마!	late-story	translated
+C0-09A976	[DFT][E2:04DC]뭐야, 잠깐! 쉿쉿!\n이쪽으로 오지 마![NXT]가	npc-dialogue	translated
+C0-09A998	[DFT][E2:04DC]뭐··········\n[NXT]가[KATAKANA]으아아아아아아아아아[HIRAGANA]악!\n[KATAKANA]쥐다아아아아아아아아아아악!![NXT]가	npc-dialogue	translated
+C0-09A9D3	[DFT][E2:040A]으· [PAU:28]안 돼[KATAKANA]ーーーーーー[HIRAGANA]!\n더는 못 참겠어!!	npc-dialogue	translated
+C0-09AB1C	[DFT][E2:034A]미안하지만 나는 이런 여자는 질색이야.\n말을 잘 들으면 네가 인간으로\n돌아가는 방법을 알려 줄 수도 있어˳	npc-dialogue	translated
+C0-09AB5D	[DFT][E2:0357]헤헤, 잘했어.\n정말이지 그 여자는 뭐야?\n엄청난 말괄량이더군.[FIN]자, 거래를 시작해 보자.\n[PAU:14]사실 이 연구소 안에는\n본부라는 곳에서 보내오는\n[PAL:02]연구 자금[PAL:00]이 있다는 모양이야.[FIN]그런데 [PAL:02]방 앞을\n경비원 셋이 지키고 있어서[PAL:00] 들어갈 수가 없어.\n너는 [KATAKANA]쥐[HIRAGANA]잖아.\n나보다 여기저기 돌아다니기 쉽겠지?[FIN]그래서 말인데![PAL:02]그 자금을 손에 넣어\n나에게 건네 줘.\n[PAL:00]그러면 네가 인간으로 돌아가도록 도와줄게.[FIN]나는 여기서 기다릴 테니\n저 쥐구멍으로 여러 곳에 갈 수 있을 거야.\n부탁한다, [KATAKANA]쥐 녀석[HIRAGANA]!	late-story	translated
+C0-09ACA1	[DFT][E2:030E]어떻게 됐어? 보물은 찾았나?\n[PAU:0A]···뭐야, 빈손이잖아.\n너도 인간으로 돌아가고 싶지?[FIN]연구 자금이 있는 방 앞에는\n[PAL:02]경비원 셋[PAL:00]이 있을 거야.\n그걸 표식 삼아 찾아.\n부탁한다, [KATAKANA]쥐 녀석[HIRAGANA]!	late-story	translated
+C0-09AD25	[DFT][E2:030D]잘했잖아, [KATAKANA]쥐 녀석[HIRAGANA]!\n그럼 바로 그 보물을\n이쪽에 넘겨 줘.[TPL:D7] [KATAKANA]코테츠[HIRAGANA]에게 [PAL:02]5000[KATAKANA]트론[HIRAGANA][PAL:00]을\n빼앗겼다![FIN]자, 약속은 지켜야겠지.\n너 [PAL:02]비밀 연구실[PAL:00]은 알고 있지?\n네가 [KATAKANA]쥐[HIRAGANA]로 변한 곳 말이야.\n거기서 기다릴 테니 나중에 와˳	late-story	translated
+C0-09ADCC	[DFT]응?\n[PAU:28]···이봐··· 정말 이것밖에 없었어?\n···뭐, 어쩔 수 없지.[FIN] [KATAKANA]코테츠[HIRAGANA]에게 [PAL:02]소지금 전부[PAL:00]를\n빼앗겼다![FIN][JMP]6[BYTE:AD][DFT]응?···잠깐만.\n돈은 어떻게 했어? 돈 말이야!\n돈이 없으면 인간으로 돌아갈 수 없는데.\n아[KATAKANA]ー[HIRAGANA]아[KATAKANA]ー[HIRAGANA], 불쌍하게도˳	late-story	translated
+C0-09AE65	[DFT]수상한데, 이 기계···\n[KATAKANA]스위치[HIRAGANA]를 눌러도\n아무 반응이 없잖아.\n고장 난 건가···˳	npc-dialogue	translated
+C0-09AEA4	[DFT][E2:037E]··········\n···뭐야, 너?\n여기서 뭘 하고 있어? 이런 곳에서˳	npc-dialogue	translated
+C0-09AECF	[DFT][E2:045B]뭐? 너라니! 너라니!\n당신이야말로 뭐야? 보아하니\n이곳 관계자도 아닌 것 같은데?[FIN][E2:0340]이런[KATAKANA]ー[HIRAGANA]! 정말 재수 없는 여자네!\n그런데 거기 [KATAKANA]쥐 녀석[HIRAGANA]은 뭐야?\n너도 [KATAKANA]못된 소장[HIRAGANA]의 희생자인가?[FIN][E2:04D4][KATAKANA]쥐[HIRAGANA] 따위와 이야기하다니,\n점점 더 이상한 사람이네!\n당신 대체 뭐야?[FIN][E2:037E]··시끄러운 여자군.\n이봐, [KATAKANA]쥐 녀석[HIRAGANA]!\n네가 인간의 말을 알아듣는다면\n이 여자를 쫓아내 줘˳	late-story	translated
+C0-09AFBC	[DFT][E2:033F]이봐, [KATAKANA]쥐 녀석[HIRAGANA].\n너를 인간으로 돌려놓는 방법을\n알려 줘도 좋아.	npc-dialogue	translated
+C0-09B119	[DFT]또 새로 온 [KATAKANA]쥐[HIRAGANA]다, 찍!\n요즘 외부인이 늘어서 곤란하다, 찍!\n[KATAKANA]여기[HIRAGANA]는 [KATAKANA]우리[HIRAGANA]의 영역이다, 찍!\n저쪽으로 가라, 찍!˳	npc-dialogue	translated
+C0-09B16D	[DFT]몇 번을 와도 [KATAKANA]안 돼[HIRAGANA], 찍!\n[PAU:14]···뭐라고[KATAKANA]?[HIRAGANA]\n너는 원래 인간이라서 다시\n인간으로 돌려달라는 거냐, 찍?[FIN]아무래도 수상하다, 찍!\n그런데 [KATAKANA]쥐[HIRAGANA] 주제에\n인간을 동경하는 것도 이상하다, 찍!\n[PAU:14]좋아! 그럼 시험해 보겠다, 찍![FIN]지금 [PAL:02]식당에서\n[PAL:02][KATAKANA]쥐[HIRAGANA] 소탕 작업[PAL:00]을 하고 있어서\n먹을 것을 가지러 갈 수가 없어\n아주 곤란하다, 찍![FIN]네가 가서\n저 녀석들을 어떻게든 해라, 찍!\n못 하겠다면\n여기를 지나가게 해 주지 않겠다, 찍!	late-story	translated
+C0-09B277	[DFT]아직도 식당 녀석들을\n어떻게 못 하겠나, 찍?\n원래 인간이라는 건\n[KATAKANA]거짓말[HIRAGANA]이지, 찍?˳	npc-dialogue	translated
+C0-09B2B3	[DFT]뭐? 정말 식당 녀석들을\n어떻게 해 준 거냐, 찍?\n너 대단하다, 찍!\n그럼 식사하러 가겠다, 찍!	npc-dialogue	translated
+C0-09B324	[DFT]너도 공장장에게 [KATAKANA]쥐[HIRAGANA]로\n변해 버린 거냐, 찍?\n머지않아 이 공장은\n[KATAKANA]쥐[HIRAGANA] 천지가 될 거다, 찍![FIN]그러고 보니 위쪽에 있는\n[PAL:02]지진 발생 장치[PAL:00]의 관리자도\n[KATAKANA]쥐[HIRAGANA]가 됐다는 모양이다, 찍!\n그 녀석은 어디로 갔는지 아나, 찍?˳	late-story	translated
+C0-09B3B0	[DFT]아까 저 안쪽 방에서\n여자아이가 [KATAKANA]어슬렁[HIRAGANA]거리고 있었어, 찍!\n잠깐 들여다봤더니 엄청난 소리로\n비명을 질러서 깜짝 놀랐지, 찍!˳	npc-dialogue	translated
+C0-09B455	[DFT]잠깐 식사하러 왔을 뿐인데\n저 인간이 방해한다, 찍!\n어떻게 좀 해 줘, 찍!˳	npc-dialogue	translated
+C0-09B48C	[DFT]이제 편하게\n식사를 할 수 있게 됐다, 찍!\n여기 밥은\n제법 맛있다, 찍!˳	npc-dialogue	translated
+C0-09B523	[DFT]나도 전에는\n전투원이었어, 찍!···\n이런 꼴을 당하다니\n소장이 원망스럽다, 찍!˳	npc-dialogue	translated
+C0-09B55C	[DFT]나도 전에는 전투원이었어, 찍!\n실수로 지진 발생 장치의\n자폭 [KATAKANA]스위치[HIRAGANA]를 누를 뻔해서\n소장에게 [KATAKANA]쥐[HIRAGANA]로 변해 버렸지, 찍![FIN]지진 발생 장치는\n[PAL:02]오른쪽으로 세 번, 왼쪽으로 두 번[PAL:00] [KATAKANA]스위치[HIRAGANA]를 누르면\n자폭해 버린다는 모양이야, 찍![FIN]하지만 지금의 나는 상관없어, 찍!\n[KATAKANA]쥐[HIRAGANA]는 마음 편해서 좋다, 찍!˳	late-story	translated
+C0-09BC61	[DFT]···여긴 대체 어디지···[FIN]우주선은?\n[PAU:1E][KATAKANA]티아트론[HIRAGANA]은?\n[PAU:1E]···[PAU:1E][NAM:00]은?	late-story	translated
+C0-09BE44	[DFT][E2:127E]··난 모르겠어.\n[PAU:28]그럼 너는···\n대체 누구야?	npc-dialogue	translated
+C0-09BE72	[DFT][E2:123B]이분은 [PAL:02][KATAKANA]나폴레옹[HIRAGANA][PAL:00]이야.\n우리의 소중한 동료지.\n우리 외의 사람에게는 말투가 거칠지만\n[PAU:1E]기분 나쁘게 생각하지 마˳	npc-dialogue	translated
+C0-09BEC3	[DFT][E2:1280]아무것도 모르는 당신을\n끌어들여 미안해.[FIN]하지만 당신이라면 믿을 수 있을 것 같아.\n처음 만났는데도···\n[PAU:1E]왜 그런 걸까˳	event-dialogue	translated
+C0-09BF0D	[DFT][E2:12D4][KATAKANA]러스[HIRAGANA]크···[PAU:1E]가 아니네.\n[PAU:1E][KATAKANA]나폴레옹[HIRAGANA]에게 들었어.\n[PAL:00][KATAKANA]러스[HIRAGANA]크가 [KATAKANA]부상[HIRAGANA]을 입었다면서?[FIN]걱정이야···[PAU:1E]하지만 나는\n여기를 떠날 수가 없어···[FIN]뭐?[PAU:1E][KATAKANA]나폴레옹[HIRAGANA]과 [KATAKANA]가토[HIRAGANA] 말이야?\n[PAU:1E][KATAKANA]러스[HIRAGANA]크가 아주 소중한 것을\n누군가에게 빼앗긴 모양이야.[FIN]그걸 찾으러\n[PAL:02]동굴[PAL:00]에 갔어.\n그게 누군가의 손에 넘어가면\n큰일이 나니까···˳	late-story	translated
+C0-09BFE5	[DFT][E2:1280][SKP:4A]우리는 다른 별에서 왔어···\n[PAU:1E]믿어 줄 수 있을까?[FIN][KATAKANA]러스[HIRAGANA]크와 [KATAKANA]가토[HIRAGANA]와 나는\n같은 일을 하고 있었어.\n그런데···\n[PAU:1E][KATAKANA]러스[HIRAGANA]크는 왜···˳	event-dialogue	translated
+C0-09C04B	[DF4][E2:0D80][DF5]정말 [PAL:02][KATAKANA]러스[HIRAGANA]크[PAL:00]였던 건가?\n[PAU:1E]···[PAU:28]그래서 그 녀석은\n무슨 말은 하지 않았나?[FIN][E2:124F]조금 멍해 보이긴 했지만\n그건 평소에도 그렇고···\n[PAU:1E]일단 이곳에 관해서는\n이야기하고 왔지만···˳	event-dialogue	translated
+C0-09C132	[DFT][E2:124B]잠깐 기다려!	npc-dialogue	translated
+C0-09C140	[DFT]당신, 자신과 똑같이 생긴 남자를\n본 적 없어?\n[PAU:28]···뭐?[PAU:1E]그 마을 민가에?\n[PAU:1E]정말이야?	npc-dialogue	translated
+C0-09C17D	[DF4][E2:0DD4][KATAKANA]밀피[HIRAGANA][PAU:1E] 기다려.\n[PAU:1E]이 녀석 말이 사실인지 아닌지\n이 녀석에게 안내를 시켜\n[KATAKANA]나폴레옹[HIRAGANA]에게 확인하게 하자˳	npc-dialogue	translated
+C0-09C1D8	[DF4][E2:0D3F]예전의 나와 나는 구별할 수 없어.\n[PAU:1E]게다가 이 녀석은 아무래도 수상해.\n눈을 뗄 수가 없어˳	npc-dialogue	translated
+C0-09C210	[DFT][E2:127E]··············\n[PAU:1E]··········알겠어[TPL:]	npc-dialogue	translated
+C0-09C236	[DFT]저기, [PAU:28]당신에게 그 [E2:1A4E]\n[KATAKANA]러스[HIRAGANA]크가 있는 곳으로 가 줬으면 해.\n[PAU:1E]당신에게 나쁜 짓은 하지 않을 테니···\n[PAU:1E]부탁이야˳	npc-dialogue	translated
+C0-09C281	[DFT]···놀랐어.\n당신은 그런 모습으로 변할 수 있어?\n하지만 우리에게는 당신의\n진짜 모습이 보여˳	npc-dialogue	translated
+C0-09C3B1	[DFT][E2:0D7E]···········\n[PAU:28]설마 나를\n속이려는 건 아니겠지?	npc-dialogue	translated
+C0-09C3DF	[DFT][E2:0DD4][KATAKANA]러스[HIRAGANA]크인가?[PAU:1E]아니, 어느 쪽이든 상관없어.\n[PAU:14]어슬렁어슬렁 나타나다니\n[KATAKANA]바보[HIRAGANA] 같은 녀석![FIN]뭐?[PAU:14]이 [E2:0054]가\n불완전한 몸이라고?\n[PAU:1E]하하하! [PAU:14]그런 수작에\n내가 속을 것 같나?[FIN]너는 언제나 그랬지.\n[PAU:14][KATAKANA]러스[HIRAGANA]크.\n[PAU:1E]싱글벙글 웃는 얼굴로 어느새\n내 앞을 앞질러 가 버렸지···[FIN]확실히 이 [E2:005D]는\n네가 만든 발명품이다.\n[PAU:14]하지만 너는 이것을 사용하는 걸\n거부했지···[FIN]그러니 이 내가 써 주마.\n[PAU:14]시간을 보는 [KATAKANA]프리즘[HIRAGANA]으로\n과거를, [PAU:0A]미래를, [PAU:0A]마음껏 들여다보며\n시간의 흐름을 조종해 주마!	late-story	translated
+C0-09C500	[DF4][E2:0CD4][KATAKANA]가토[HIRAGANA] 님···\n이· 이렇게 무서운 일을!\n[KATAKANA]밀피[HIRAGANA] 님도 반대하십니다![FIN][E2:0D81]하지만 곧 이 배는 출발한다.\n나는 사람들의 눈에 띄지 않는 곳에서\n이 연구를 계속할 생각이다.[FIN][KATAKANA]나폴레옹[HIRAGANA].\n이 별을 떠나면\n[KATAKANA]메모리[HIRAGANA]를 개조해 주마.\n앞으로는 내 조수로 일하도록 해˳[FIN][E2:0C7E]··[PAU:1E][E2:1A0D]하지만\n[KATAKANA]나[HIRAGANA]는 당신에게 거역할 수 없습니다.\n[PAU:1E]···출발 준비를 하고 오겠습니다˳	late-story	translated
+C0-09C5EE	[DF4][E2:0D7E]··하지만 보이는 것이다···\n이 계획을 방해하는\n저 [KATAKANA]러스[HIRAGANA]크를 닮은 소년이···˳[PAU:3C]	npc-dialogue	translated
+C0-09C628	[DFT]···뭐야?!\n무슨 일이 일어난 거지?!	npc-dialogue	translated
+C0-09C63F	[DFT]\n[NXT]지···[PAU:1E]설마···[PAU:3C]이 녀석이?!	npc-dialogue	translated
+C0-09C657	[DFT]우스꽝스러운 모습으로···\n내가 모를 거라고 생각하나?	npc-dialogue	translated
+C0-09C78C	[DFT][E2:0CD4][KATAKANA]나는[HIRAGANA] [KATAKANA]러스[HIRAGANA]크 님이 만들었어.\n[PAU:1E]그러니 [KATAKANA]러스[HIRAGANA]크 님에 대해서는\n잘 알고 있지.[FIN][KATAKANA]너[HIRAGANA]는 [KATAKANA]러스[HIRAGANA]크 님이 아니야.\n···하지만\n[PAU:28]어딘가 [KATAKANA]러스[HIRAGANA]크 님과\n비슷한 점도···˳	event-dialogue	translated
+C0-09C7F3	[DFT][E2:0C4B]여기 있습니다, [KATAKANA]밀피[HIRAGANA] 님.\n[PAU:1E]이 남자는 [KATAKANA]러스[HIRAGANA]크 님이 아닙니다.\n유전자 구성은 매우 비슷하지만\n다른 사람입니다˳[TPL:D7][E2:127E]·····[PAU:3C]뭐라고!?\n[PAU:1E]하지만 이상해! 이 별의 인간이\n우주선을 발견할 수 있을 리가 없어.\n문화[KATAKANA]수준[HIRAGANA]이 너무 다르잖아!	late-story	translated
+C0-09C8D1	[DFT][E2:0CD4][KATAKANA]너 같은 [HIRAGANA][KATAKANA]인간[HIRAGANA]의 뒤를 걷는 건\n내키지 않지만,\n[KATAKANA]밀피[HIRAGANA] 님의 명령이라면 어쩔 수 없지.[FIN][KATAKANA]나는 이 세계의 인간에게\n경계받지 않도록\n[PAL:02]모습을 숨기고\n[PAL:00][KATAKANA]네[HIRAGANA] 뒤를 따르겠다.[FIN]하지만[KATAKANA]네[HIRAGANA]가 서둘러\n[KATAKANA]러스[HIRAGANA]크 님에게 안내하지 않으면\n즉시 경고를 내리겠다.\n[PAU:1E]잘 기억해 두도록˳	late-story	translated
+C0-09C993	[DF4][E2:0CD4][KATAKANA]가토[HIRAGANA] 님, 대체 무슨\n생각을 하시는 겁니까!?[FIN]이 [KATAKANA]티아트론[HIRAGANA]을 사용해서\n무엇을 하시려는 겁니까?[TPL:D8][E2:0D81]궁금한가?[KATAKANA]나폴레옹[HIRAGANA].\n그렇다면 알려 주지.\n이 [KATAKANA]티아트론[HIRAGANA]을 들여다보아라.	event-dialogue	translated
+C0-09CA22	[CLR]···[E2:20]	static-short	translated
+C0-09CA9F	[CLR][CMD:F7][CA][CMD:F4][CB][DF4][E2:0D80][DF5]수백 년 후에 [KATAKANA]쇼콜라 별[HIRAGANA]을\n공격할 우주 요새다	engine-data	translated
+C0-09CAF7	[DF4][E2:0D44]이 우주 요새는\n강력한 [KATAKANA]에너지[HIRAGANA]를 품고\n그 힘이 [KATAKANA]배리어[HIRAGANA]가 되기도 하지	npc-dialogue	translated
+C0-09CB2F	[DF4]게다가 이 우주 요새는\n[KATAKANA]쇼콜라 별[HIRAGANA]에 머무르지 않고\n온 우주를 공포에 빠뜨릴\n힘을 가지고 있다네	npc-dialogue	translated
+C0-09CC05	[DFT][E2:143F][KATAKANA]마법[HIRAGANA]을 쓰는 소년!\n잘 와 주었네.\n자, [PAU:1E]내 저택에 들어가게.[FIN]···라고 말하고 싶지만\n아쉽게도 저택은 아직\n완성되지 않았네.[FIN]무려 [KATAKANA]이고르[HIRAGANA] 혼자\n작업하고 있거든.\n[PAU:1E]이런, [PAU:1E]어디 믿음직한 일손은\n없을까···˳	late-story	translated
+C0-09CCA3	[DFT][E2:14D4]마법을 쓰는 소년아.\n혹시 좋은 일손을 알고 있다면\n데려와 주면 좋겠구나˳	npc-dialogue	translated
+C0-09CCD4	[DFT][E2:1459]정말 고맙구나.\n이제 [KATAKANA]이고르[HIRAGANA]도\n조금 편하게 일할 수 있겠어˳	npc-dialogue	translated
+C0-09CD02	[DFT][E2:143F]오, 소년인가!\n지난번 그 기계인형은\n정말 일을 잘하더군![FIN]이 정도라면 곧\n저택도 완성되겠어.\n진심으로 고맙네˳	event-dialogue	translated
+C0-09CD57	[DFT][E2:147E]··이런.\n이 기묘한 물체를\n가지고 있군.[FIN]뭐? 사람을 도와주는\n기계인형이라고?\n[PAU:1E]그렇다면 저택 건설도\n할 수 있다는 말인가?[FIN]소년이여! 이 기계인형을\n빌려주지 않겠나?\n물론이지.\n싫어요.[TER][CLR]매정하구나.\n[PAU:1E]생각이 바뀌면\n다시 기계인형을 보여 주게.\n사례는 충분히 하겠네˳	late-story	translated
+C0-09CE23	[CLR]정말인가?\n[PAU:1E]그럼 고맙게 받도록 하지.\n[KATAKANA]이고르[HIRAGANA]도 크게\n도움을 받겠구나.[FIN]자네에게 사례를 해야겠지.\n[PAU:1E]많지는 않지만 받아 주게.\n진심으로 고맙네˳[FIN]\n[NAM:00]은\n[PAL:02]5000[KATAKANA]트론[HIRAGANA][PAL:00]을 받았다!	late-story	translated
+C0-09CEAE	[DFT]흠, 꽤나\n붙임성 있는 [KATAKANA]쥐[HIRAGANA]로군˳	npc-dialogue	translated
+C0-09CF13	[CLR]으[DFT][E2:1380][SKP:54]제법 손재주가 좋아서···\n백작님의 부탁이라면 웬만한 일은\n해낼 수 있답니다˳	npc-dialogue	translated
+C0-09CF4B	[DFT][E2:1354]설마[PAU:1E] 제가 일을 돕도록\n기계인형을 보내 주신 겁니까?[FIN]정말···\n[PAU:1E]백작님께서 바라신 일이라면\n기꺼이 도움을 받겠습니다˳	event-dialogue	translated
+C0-09CFAC	[DFT][E2:1344]아, 이건 정말···\n[PAU:1E]덕분에 일이 아주\n순조롭게 진행되고 있습니다···[FIN]그런데 저 기계인형은\n지치지도 않고 정말 열심히 일하네요.\n[PAU:1E]백작님도 저 녀석의 솜씨를\n재미있게 지켜보시는 것 같습니다˳	event-dialogue	translated
+C0-09D025	[DFT]어라···[KATAKANA]쥐[HIRAGANA]?	npc-dialogue	translated
+C0-09D27D	[DF4][PAL:03]여자아이:\n[PAL:00]저기, [PAU:1E]지나가게 해 주면 안 될까요?\n집에 아픈 사람이 있어요.\n[PAU:1E]빨리 돌아가야 해요···˳[FIN][E2:0881][BYTE:86]그런 인간은 내버려 두고\n[KATAKANA]나[HIRAGANA]와 제대로 어울리지 않을래?\n응?[PAU:1E]귀여운 아가씨˳[FIN][PAL:03]여자아이:\n[PAL:00]저기··· 곤란해요···\n···········앗\n[PAU:1E][NXT]가당신은····![NXT]가	late-story	translated
+C0-09D40E	[DFT]흠! 이 [KATAKANA]쥐[HIRAGANA]는 뭐야!\n방해되니까 저리 가!	npc-dialogue	translated
+C0-09D466	[CLR][CMD:FF][CB][DFT][PAL:03]여자아이:\n[PAL:00]이제 몸은 괜찮아요?\n그렇게 열이 심했는데,\n지금도 무리하고 있잖아요···[FIN]아···[PAU:1E]미안해요.\n[PAU:1E]당신은 계속 자고 있었으니까\n아무것도 모르는 게 당연하죠.\n[PAU:1E]저는 [PAL:03][KATAKANA]포론[HIRAGANA][PAL:00]이라고 해요.[FIN]강가에 쓰러져 있던\n당신을 발견해서\n우리 집으로 데려왔어요.\n[PAU:1E]당신은 심하게 [KATAKANA]다쳤[HIRAGANA]었고···[FIN]아무튼 우리 집으로 돌아가요.\n당신도 아직 무리하지 않는 편이\n좋을 것 같으니까···[PAU:3C]그렇죠?	late-story	translated
+C0-09D6A2	[DFT]···[BYTE:84][BYTE:98]···	npc-dialogue	translated
+C0-09D77E	[DFT][BYTE:8A][DFT][BYTE:8D][DFT]지금 한창 바쁘니까\n저리 가 줘···˳	event-dialogue	translated
+C0-09D879	[CLR][DFT][PAL:03]귀여운 [KATAKANA]쥐[HIRAGANA]로구나.\n[PAU:14]그런 모습으로 변해도\n나를 속일 수는 없어.[TPL:D7][PAL:03]또 왔니, 꼬마야?\n[PAU:1E]그렇게 두들겨 맞았는데\n정말 빨리 나았구나.[FIN]설마 내 목소리를 잊은 건 아니겠지?\n그렇게 섭섭한 말은 하지 마.\n[PAU:28]그래, [PAU:1E]나다.\n[PAU:1E][KATAKANA]해커 간부[HIRAGANA] [PAL:02][KATAKANA]로즈[HIRAGANA][PAL:03]야.[FIN][KATAKANA]해커 요새[HIRAGANA] 폭발 때문에\n어쩌다 보니\n[PAL:02]100년 전으로[PAL:03][KATAKANA]시간 이동[HIRAGANA]했지···\n[PAU:3C]그 뒤의 나날은 고통스러웠어.[FIN]나와 마찬가지로 이곳에 온\n전투원들과 도적단을 만들어\n자금을 모으고 원래 세계로 돌아가기 위해\n여러 연구를 해 왔지.[FIN]그 모든 게\n전부 네 덕분···\n[PAU:1E]그래.[PAU:1E] 네가 내 계획을\n엉망으로 만들었어.[PAU:14][KATAKANA]키익[HIRAGANA]!![FIN]이 세계에서 널 만났을 때는\n정말 기뻤어.\n게다가 네게서 [E2:00C3]를\n다시 빼앗을 수도 있었지.[FIN]이 [E2:00C3]는\n이번에야말로 내 것이다.\n[PAU:1E]하지만 다시는\n방해하지 못하게 해 주겠어˳[PAL:00]	late-story	translated
+C0-09DA8A	[DFT][E2:0BC3][KATAKANA]호호호호호[HIRAGANA]!\n어때? 햇빛도 닿지 않는\n어둠 속은···[FIN]잘 가, 꼬마야.\n다시는 만날 일도 없겠지˳\n[KATAKANA]호호호호호[HIRAGANA]!\n꼴좋다![PAL:00]	event-dialogue	translated
+C0-09DAEF	[DFT][NAM:00]은\n[PAL:02]소지품[PAL:00] 몇 가지를\n떨어뜨린 것을 알아차렸다!	late-story	translated
+C0-09DBE0	[DFT][E2:083B][KATAKANA]터프[HIRAGANA]한 [E2:1A0A]인데!\n이렇게나 두들겨 맞고도\n아직 움직이는 거야?[FIN][E2:0C7E]··당연하지. [KATAKANA]나는\n[KATAKANA]러스[HIRAGANA]크 님과 [KATAKANA]가토[HIRAGANA] 님이\n설계한 [E2:1A7E]··\n[PAU:1E]그렇게 쉽게 당할 수는 없다˳[FIN][E2:080D]그런데 그 [PAL:02][KATAKANA]가토[HIRAGANA][PAL:00]라는 사람이\n[KATAKANA]너[HIRAGANA]를 처리하라고 했어.\n그 대신 협력하겠다고 했고˳[FIN][E2:0CD4][KATAKANA]가토[HIRAGANA] 님이!?\n[PAU:28]···설마···˳[FIN][E2:0845]끝장을 내고 돌아가지 않으면\n[KATAKANA]히스테리[HIRAGANA] 기미가 있는 [KATAKANA]로즈[HIRAGANA] 님에게\n혼날 거야˳	late-story	translated
+C0-09DCDB	[DFT][E2:0868]누구냐!?\n[PAU:28]아[KATAKANA]ー[HIRAGANA]악, 엿보던 자식!\n그때는 잘도[KATAKANA]ー[HIRAGANA]!\n[FIN]이번에는 절대 안 질 거야!\n각오해!	event-dialogue	translated
+C0-09DD20	[DFT][E2:0868]누구냐!?\n[PAU:1E]이 [KATAKANA]쥐[HIRAGANA]는 뭐야!?\n[FIN]지금 [KATAKANA]나[HIRAGANA]는 기분이 나쁘니까\n너부터 처리해 버리겠다!	event-dialogue	translated
+C0-09DD6A	[DFT][E2:08DC]여· 여자아이와 손을 잡고\n걸어 보고 싶었을 뿐이야[KATAKANA]ー[HIRAGANA]![NXT]가	npc-dialogue	translated
+C0-09DF53	[DFT][E2:0C7E]··놀랍군.\n[PAU:1E]이 별의 인간이\n[E2:1A67]를 만들 수 있다니.[FIN][KATAKANA]나는?[HIRAGANA] [KATAKANA]나는[HIRAGANA] [KATAKANA]가토[HIRAGANA] 님과\n이곳에 왔지만 도중에 헤어졌다.\n[PAU:1E]하지만 설마 [KATAKANA]가토[HIRAGANA] 님이\n그런 일을···˳	event-dialogue	translated
+C0-09DFC7	[DFT][E2:0CD4][KATAKANA]나[HIRAGANA]는 신경 쓰지 마라.\n[KATAKANA]상처[HIRAGANA]를 치료하지 못하면\n움직이지도 못하는 고철일 뿐이다.[FIN]게다가 주인에게 배신당한 지금\n움직일 힘도 사라졌다˳\n고쳐 줄게.\n그것도 그렇네, 불쌍하게도.[TER][CLR][E2:0CD4]네가? 무리다!\n[PAL:02]수리에 필요한 물건[PAL:00]도 없는데\n어떻게 고치겠나!	late-story	translated
+C0-09E078	[CLR][E2:0C49]그건 수리 도구인가?\n[PAU:1E]그래···[PAU:1E]잊고 있었군.\n해야 할 일도 남아 있다.[FIN][E2:0067]를 되찾지 않으면\n[KATAKANA]러스[HIRAGANA]크 님을 뵐 면목이 없다.\n[PAU:1E][NAM:00]이라고 했나···\n[PAU:1E]이 은혜는 잊지 않겠다.[FIN] [NAM:00]은\n[PAL:02][KATAKANA]수리 키트[HIRAGANA][PAL:00]를\n[PAL:02][KATAKANA]나폴레옹[HIRAGANA][PAL:00]에게 사용했다!	late-story	translated
+C0-09E112	[CLR][E2:0C81]동정 따위는 필요 없다. 어서 가!\n움직임이 멈추는 곳 따위\n남에게 보여 주고 싶지 않다!	npc-dialogue	translated
+C0-09E145	[DFT][E2:0C7E]··음, 잘 움직이는군.\n[NAM:00] 덕분이야.\n인사를 해야겠어.[FIN]그건 그렇고 [KATAKANA]너[HIRAGANA]는\n이 어두운 곳에서 불도 없이 괜찮나?\n뭐?[PAU:1E]어딘가에 떨어뜨렸다고?[FIN]무엇을 떨어뜨렸지? 소중한 물건인가?\n[KATAKANA]내[HIRAGANA]가 함께 걷지.\n어둠을 밝힐 수 있다면\n잃어버린 물건도 찾기 쉬울 거다˳	late-story	translated
+C0-09E1E6	[DFT][E2:0C0D]그럼 가도록 하지˳	npc-dialogue	translated
+C0-09E1F5	[DFT][E2:0C80][CMD:EA]를 걱정하는 건가?\n이래 보여도 [KATAKANA]나[HIRAGANA]는 튼튼하다.\n자, 뒤로 물러나˳	npc-dialogue	translated
+C0-09E22A	[DFT][NAM:00]겠지?\n그런 모습으로··· 참 태평한 녀석이군˳	late-story	translated
+C0-09E2D4	[DFT][E2:0C49]그건 [KATAKANA]네[HIRAGANA] 물건인가?\n다른 것도 더 떨어져 있을지 모르니\n잘 찾아보는 게 좋을 거다˳	npc-dialogue	translated
+C0-09E30B	[DFT][E2:0C3F]보물상자가 있군.\n가져가지 않아도 되나?	npc-dialogue	translated
+C0-09E327	[DFT][E2:0C49]이 정도 [KATAKANA]벽[HIRAGANA]이라면 부술 수 있겠군.\n자, 한바탕 해 볼까.\n[KATAKANA]네[HIRAGANA]는 조금 물러나 있어˳	npc-dialogue	translated
+C0-09E422	[DFT][E2:0C44]이건······\n[PAU:1E][KATAKANA]러스[HIRAGANA]크 님의 우주선인가!?	npc-dialogue	translated
+C0-09E443	[DFT][E2:0C80]부품을 모조리\n[KATAKANA]산산조각[HIRAGANA] 내 놓았군···\n[PAU:1E]하지만 누가, 무슨 목적으로···[FIN]불길한 예감이 드는군···\n미안하다, [KATAKANA]나[HIRAGANA]는 먼저 가겠다.\n[PAU:1E][KATAKANA]라이트[HIRAGANA]가 있다면 길을 잃지 않을 거다.\n[PAU:1E]미안하다![KATAKANA]너[HIRAGANA]도 조심해라!	late-story	translated
+C0-09E5FB	[DFT][E2:0B80][DF5]정말 [E2:0067]를\n당신에게 건네면\n원래 시대로 돌아갈 수 있는 건가요˳[FIN][E2:0D80][DF5]정말 아무것도 모르는군.\n[E2:0054][PAL:02]시간을 보여 주는\n[KATAKANA]프리즘[HIRAGANA][PAL:00] 같은 물건이다.[FIN]시험 삼아 네 과거를\n이 [KATAKANA]프리즘[HIRAGANA] 안에\n비춰 주지˳	late-story	translated
+C0-09E67D	[DFT][E2:0B7E]··[PAU:1E]놀랍네.\n[PAU:1E]전에는 전혀\n반응하지 않았는데···˳[FIN][E2:0D80][DF5]그 힘을 모르는 자가\n가지고 있어 봐야 아무것도 못 하지.\n[PAU:1E]자, [PAU:1E]어떻게 할 거지?[FIN][E2:0B49]그래[PAU:1E] 당신에게\n[PAL:02]그 [KATAKANA]기계[HIRAGANA][PAL:00]를 완성시켜 달라고 했고\n[PAU:1E]이제는 믿어도 될 것 같군	late-story	translated
+C0-09E714	[DFT][E2:0BDC]누구냐!?\n[PAU:1E]지금은 아무도 들어오지 말라고···\n[PAU:1E][NXT]가너···[PAU:14][NAM:00]!	late-story	translated
+C0-09E744	[DFT][E2:0BDC]누구냐!?\n[PAU:1E]지금은 아무도 들어오지 말라고···\n[PAU:1E][NXT]가너···[PAU:14][NAM:00] 맞지!?	late-story	translated
+C0-09E776	[DFT][E2:0B46]제법 끈질기구나, 꼬마야.\n하지만 이번에야말로 끝이야.\n이번에는 나에게도 강력한 [KATAKANA]메카[HIRAGANA]가 있거든.[FIN]어른 여자를 화나게 하면\n어떻게 되는지\n똑똑히 가르쳐 주마!	event-dialogue	translated
+C0-09E7D3	[DFT][E2:0B44]··이럴 리가 없는데···\n[PAU:28]맞아···[PAU:1E][KATAKANA]가토[HIRAGANA]인가 하는 녀석 말이야.\n전부 그 녀석 탓이야![FIN][KATAKANA]키익[HIRAGANA]!\n용서 못 해!\n내 [E2:0067]를\n돌려줘!!	event-dialogue	translated
+C0-09E827	[DFT][E2:0B41]야아[KATAKANA]ーーーーーーーーーー[HIRAGANA]악!	npc-dialogue	translated
+C0-09E83B	[DFT][E2:0B80]아무리 도망쳐도\n여긴 막다른 길이야.\n어떻게 할 생각이지, 꼬마야?	npc-dialogue	translated
+C0-09E866	[DFT][E2:0B45]이번에야말로 끝이다.\n각오해라, 꼬마야!	npc-dialogue	translated
+C0-09E8E5	[DFT][E2:0D82][E2:0067]를 모으고 있었다는 건\n역시 이 녀석이었군···[FIN]네 숨통을 끊어 두면\n나중에 귀찮은 일도 없겠지˳[FIN][E2:0CD4][KATAKANA]가토[HIRAGANA] 님···!\n잠시만 기다려 주세요!!	event-dialogue	translated
+C0-09E9A4	[DFT][E2:0C3C]대체 무슨 생각을 하시는 겁니까!?\n[E2:0054]는 [KATAKANA]러스[HIRAGANA]크 님이\n발명하신 물건인데···[FIN]저· [KATAKANA]저[HIRAGANA]는 알고 있습니다···\n[PAU:1E][KATAKANA]러스[HIRAGANA]크 님은 그것을 만든 일을\n몹시 후회하셨습니다···\n[PAU:14]시간의 흐름 따위 알아서는 안 된다고 하셨죠.[FIN]그래서 혼자 [KATAKANA]쇼콜라 별[HIRAGANA]을 떠나\n그것을 묻을 장소를\n찾고 계셨는데···˳[FIN][E2:0D56]··[PAU:1E]어차피 너는\n[E2:1A0A]일 뿐이다, [PAU:14][KATAKANA]나폴레옹[HIRAGANA].\n[PAU:1E]사람의 마음 따위 네가 알 리 없지.[TPL:D7][KATAKANA]로즈[HIRAGANA]라고 했나.\n계속되는 이야기는 이 녀석을 처리한 뒤다.\n저 [KATAKANA]기계[HIRAGANA]를 시험해 보도록 해.\n[PAU:1E][E2:0054]는 내가 가져가겠다˳	late-story	translated
+C0-09EAD7	[DFT][E2:0CD4][KATAKANA]가토[HIRAGANA] 님···!	npc-dialogue	translated
+C0-09EB72	[CLR][CMD:F0][CB][DF4][E2:0B52]읍, 촌장님.\n부탁이 하나 있는데요···[FIN][E2:093F]오? 무슨 일이냐? 조르는 거냐?\n뭐든 말해 보거라.[FIN][E2:0B80][DF5]저기요.\n[NAM:00]이 가진\n보석 세 개를 갖고 싶어요˳[TPL:D8][E2:0955]··남의 물건 아니냐?\n[PAU:1E]다른 것으로는 안 되겠느냐?\n새로 사 주마˳[TPL:D8][E2:0B3C]안 돼요, 그게 아니면 안 돼요!\n[PAU:28]그래[PAU:1E] 어떻게 해서든 [PAU:1E]갖고 싶어요˳	engine-data	translated
+C0-09EC80	[CLR][CMD:F0][CB][DF4][E2:0B02]꾸물거리지 마!\n너희들![FIN]이 시대 녀석들에게서\n돈 되는 물건을 빼앗는 거야!\n그러면 언젠가 원래 시대로 돌아갈\n발판을 마련할 수 있을 거야!	engine-data	translated
+C0-09ED1E	[DFT]문은 굳게 닫혀 있다˳	npc-dialogue	translated
+C0-09ED9B	[DFT][KATAKANA]쥐[HIRAGANA]로는\n문이 무거워서 열 수 없다˳	npc-dialogue	translated
+C0-09EDB8	[DFT][PAL:03][KATAKANA]나폴레옹[HIRAGANA] [KATAKANA]가토[HIRAGANA], 미안해요.\n[KATAKANA]러스[HIRAGANA]크의 상태가 아무래도\n걱정돼서 가서 보고 올게요˳\n[SKP:24][KATAKANA]밀피[HIRAGANA][PAL:00]	npc-dialogue	translated
+C0-09EE60	[DFT]\n[KATAKANA]해치[HIRAGANA]가 닫혀 있다!	npc-dialogue	translated
+C0-09EE72	[DFT][E2:0CD4][KATAKANA]너[HIRAGANA]는 왜\n그런 모습을 하고 있지?\n원래대로 돌아가는 게 어때?	npc-dialogue	translated
+C0-09EEAF	[DFT]\n이 앞은 [KATAKANA]엔진실[HIRAGANA]\n비상시 이외에는 출입 금지	npc-dialogue	translated
+C0-09EF56	[DFT][E2:0CC2][KATAKANA]가토[HIRAGANA] 님!\n[PAU:14][KATAKANA]밀피[HIRAGANA] 님을 못 봤나?\n[PAU:14][KATAKANA]가토[HIRAGANA] 님이 큰일이야![FIN][KATAKANA]밀피[HIRAGANA] 님과 [KATAKANA]러스[HIRAGANA]크 님을\n기다리지 않고 우주선을 출발시키겠다고 하셔서···[TPL:D7]큰일이야! 움직이기 시작했어!\n미안하다, [NAM:00].\n[KATAKANA]조종석[HIRAGANA]으로 가서\n[KATAKANA]가토[HIRAGANA] 님의 주의를 끌어 줘.[FIN]10분이면 돼!\n[KATAKANA]나[HIRAGANA]는 그동안 지상으로 돌아갈 수 있도록\n[KATAKANA]엔진[HIRAGANA]을 조작하겠다˳	late-story	translated
+C0-09F020	[DFT][NAM:00]인가!?\n그런 모습으로 놀고 있을\n때가 아니야!?	late-story	translated
+C0-05806C	[DFT][PAL:02][NXT]·········\n[NXT]가 아쉽게도 자리를 비운 모양이다˳	early-town	translated
+C0-05828C	[DFT][PAL:02] [KATAKANA]크리스피[HIRAGANA]의 가게\n\n당신의 생활을 도와주는\n편리한 도구점입니다˳[PAL:00]	early-town	translated
+C0-05913A	[DFT]뭐 하는 거야아.\n지금 중요한 회의 중이니까\n용건은 나중에 말해 줘˳	early-town	translated
+C0-059164	[DFT]앗! 발명가 형이다!\n발명가란 정말 대단하구나!\n동경하게 돼[KATAKANA]ー[HIRAGANA]\n[KATAKANA]두근두근[HIRAGANA]˳	early-town	translated
+C0-0593A1	[CLR]그렇구나···\n외롭겠구나···˳	early-town	translated
+C0-0593B4	[DFT][NXT]저······[NXT]가어라?\n누가 나를 불렀나?	early-town	translated
+C0-0593CF	[DFT]호오, [KATAKANA]쥐[HIRAGANA]로구나.\n귀여운 녀석이군˳	early-town	translated
+C0-0595F8	[DFT]얌전히 지내고 있나?\n네 아버지가 여러 가지\n문제를 일으켰으니\n너도 방심할 수 없지˳	early-town	translated
+C0-059635	[DFT]흠···\n아무래도 너는\n아버지보다는 조금\n쓸모가 있는 모양이군˳	early-town	translated
+C0-05985E	[DFT]뭐· 뭐냐, 너는!\n경찰을 우습게 보는 거냐!	early-town	translated
+C0-05987C	[DFT]뭐야, [KATAKANA]쥐[HIRAGANA]인가···\n[KATAKANA]쥐[HIRAGANA]라고 해도\n나쁜 짓을 하면\n봐주지 않을 테다!	early-town	translated
+C0-059A7E	[DFT][KATAKANA]민트[HIRAGANA] 씨가···\n취재 여행을 간다니···\n[KATAKANA]내[HIRAGANA] 즐거움이···\n[KATAKANA]내[HIRAGANA] 마음의 버팀목이···!	early-town	translated
+C0-059ABB	[DFT][KATAKANA]민트[HIRAGANA] 씨는 대단하지?!\n그래도 [KATAKANA]민트[HIRAGANA] 씨가\n위험한 일을 당하지 않았으면\n좋겠는데˳	early-town	translated
+C0-059AF4	[DFT]촌장이 가짜로\n바꿔치기되어 있었다니···\n그걸 밝혀내다니\n[KATAKANA]민트[HIRAGANA] 씨는 정말 대단해!	early-town	translated
+C0-059B31	[DFT]비가 와도\n[KATAKANA]민트[HIRAGANA] 씨의 기사를 읽을 수 있으면\n나는 행복해˳	early-town	translated
+C0-059E4B	[DFT]정말 깜짝 놀랐네!\n놀라게 하지 마!	early-town	translated
+C0-059E63	[DFT]아까 강가 쪽으로\n커다란 빛이 날아갔어.\n정말 깜짝 놀랐다니까!	early-town	translated
+C0-059FB9	[DFT]같이 놀고 싶다[KATAKANA]멍[HIRAGANA]!\n어디든 데려가 줘[KATAKANA]멍[HIRAGANA]!	early-town	translated
+C0-059FFE	[DFT]···개의 [KATAKANA]똥[HIRAGANA]을 발견했다!	early-town	translated
+C0-05A011	[DFT]···새의 [KATAKANA]똥[HIRAGANA]을 발견했다!	early-town	translated
+C0-05A070	[DFT]\n낑낑, 낑낑\n	early-town	translated
+C0-05A07D	[DFT]우리 주인은\n성격이 거칠어서 말을 안 들으면\n귀를 잡아당긴다[KATAKANA]멍[HIRAGANA]···˳	early-town	translated
+C0-05A118	[DFT]이 강아지 귀엽지?\n이름은 [KATAKANA]터보[HIRAGANA]야.[PAU:1E]\n할머니가 예전에 키우던 개와\n같은 이름을 붙였어˳	early-town	translated
+C0-05A75A	[DFT][E2:063D]으···냐아앙	early-town	translated
+C0-05A768	[DFT][E2:063F]우리의 주인은\n[KATAKANA]아키하바라 박사[HIRAGANA]뿐이다[KATAKANA]냥[HIRAGANA].\n너는 우리 주인이 아니다[KATAKANA]냥[HIRAGANA]˳	early-town	translated
+C0-05B3EE	[DFT]어라···\n소지품이 가득 찬 것 같은데···\n번거롭겠지만 소지품을\n정리해 주시겠습니까˳	early-town	translated
+C0-05B73D	[DFT]···라고 말하고 싶지만\n너 소지품이 가득하잖아.\n기다려 줄 테니 정리해.\n정말 칠칠맞구나˳	early-town	translated
+C0-05B8C4	[DFT][E2:074F]뭐야, 이 [KATAKANA]쥐[HIRAGANA]는.\n얼빠진 얼굴이네˳	early-town	translated
+C0-05B961	[DFT]뭐냐, 너는?\n뭐? 발명가라고!?\n그런 헛소리에 속을 것 같으냐!\n사실은 그 젊은 녀석의 심부름꾼이지.[FIN]좋아! 그 젊은 녀석에게 전해라!\n앞으로 우리 딸에게\n추근대지 말라고!	early-town	translated
+C0-05B9CD	[DFT]멋대로 우리 집에\n들어오지 마!!\n나가! 나가!!	early-town	translated
+C0-05B9F1	[DFT][NXT]가뭐· 뭐라고!!\n우리 딸을 못 봤나?!\n편지만 남기고\n사라져 버렸어!![FIN]읽어 봐 줘!\n[PAU:14][PAL:03]그와 함께 가겠습니다.\n미안해요˳\n[PAL:00]아아! 이럴 수가!![NXT]가	early-town	translated
+C0-05BA62	[DFT]너···[PAU:1E][NXT]가아니, 자네!\n혹시 우리 딸을 보면\n데려와 주게![PAU:1E]부탁이야!![NXT]가	early-town	translated
+C0-05BA9D	[DFT]아, 이번에 우리 딸이\n[KATAKANA]코커[HIRAGANA] 씨 아들과\n결혼하게 됐답니다.[TPL:D7]쓸쓸해지겠지만\n[KATAKANA]코커[HIRAGANA] 씨 아들은\n좋은 청년이고 경사스러운 일이죠˳	early-town	translated
+C0-05BAFE	[DFT][KATAKANA]쥐[HIRAGANA] 따위가 내 마음을\n알 리 없잖아!\n저리 가!!	early-town	translated
+C0-05BB28	[DFT]오?\n자네도 축하해 주는 건가?\n고맙네˳	early-town	translated
+C0-05BC93	[CLR]···그렇지.\n꼬마와는 상관없는 일이네.\n미안해˳	early-town	translated
+C0-05BCB4	[DFT]나는 곧 이 사람과\n결혼할 거야.\n오늘은 결혼식\n상의를 하러 왔어.[FIN]아버지도 기뻐하시고,\n결혼식 때는 대대로 내려온\n[PAL:02]보석[PAL:00]을 주신대.\n정말 기대돼˳[PAL:00]	early-town	translated
+C0-05BD2D	[DFT][KATAKANA]쥐[HIRAGANA] 씨, 나는 정말\n행복해˳	early-town	translated
+C0-05BD6A	[DFT]그녀의 아버지가\n결혼을 허락해 주셔서\n정말 다행이야˳	early-town	translated
+C0-05BE6B	[DFT]뭐?[PAU:1E] 무슨 일이냐?\n[PAU:14]나는 귀가 조금 어두우니\n좀 더 큰 소리로\n말해 주렴.[FIN]뭐?[PAU:1E] 발명가라고?\n[PAU:14]그래, 젊은데도 기특하구나.\n그럼 모두에게 도움이 되는\n발명을 많이 하거라˳	early-town	translated
+C0-05BED8	[DFT]우리 아들이 요즘\n기운이 없어 보여서 말이지···\n잠깐 이야기를\n들어 주지 않겠나?	early-town	translated
+C0-05BF0F	[DFT]뭐?[PAU:1E] 우리 아들 말이냐?\n[PAU:1E] 어디론가 가 버렸단다.\n[PAU:1E] 나는 이렇게 말했지.\n네 마음대로 하렴···라고˳	early-town	translated
+C0-05BF53	[DFT][KATAKANA]펩시[HIRAGANA] 씨에게는 미안하게 됐지.\n그렇게나 딸을\n예뻐했는데···[FIN]나도 나이가 들어서인지\n혼자서 생활하는 게\n힘들어졌단다.\n아들이 있을 때는 편했는데˳	early-town	translated
+C0-05BFBD	[DFT]뭐?[PAU:1E] 우리 아들 말이냐?\n[PAU:1E][KATAKANA]펩시[HIRAGANA] 씨 댁에 갔단다.\n[PAU:1E]곧 결혼한다며\n그 상의를 하러 간 모양이야˳	early-town	translated
+C0-05BFFF	[DFT][KATAKANA]펩시[HIRAGANA] 씨의 따님처럼\n좋은 아가씨가 며느리로\n와 주다니 정말 기쁘구나.\n오래 살고 볼 일이야˳	early-town	translated
+C0-05C043	[DFT]몸 상태가 좋지 않아서 말이야···\n도우미라도 있으면\n도움이 될 텐데···˳	early-town	translated
+C0-05C135	[CLR]그렇구나, 안됐네˳	early-town	translated
+C0-05C144	[DFT]이 아이는 말을 못 하지만\n마음씨가 착하고 좋은 아이란다.\n덕분에 도움을 받고 있어˳	early-town	translated
+C0-05C173	[DFT]···어머나, [KATAKANA]쥐[HIRAGANA]잖아.\n[KATAKANA]고양이[HIRAGANA]에게 쫓기기 전에\n어서 돌아가렴˳	early-town	translated
+C0-05C214	[DFT]주인님은 아드님을\n정말 걱정하고 계셔[KATAKANA]냥[HIRAGANA]˳	early-town	translated
+C0-05C2A8	[DFT]주인님이 기뻐하시면\n[KATAKANA]고양이[HIRAGANA]인 나까지\n기뻐진다[KATAKANA]냐앙[HIRAGANA]˳	early-town	translated
+C0-05C328	[CLR][CMD:FD][STR:0EC385][PAL:6B][DFT][PAL:02]남쪽 섬에 [KATAKANA]휴가[HIRAGANA]를\n떠나 있습니다.\n\n      [KATAKANA]스텔라[HIRAGANA] 아주머니[PAL:00]	early-town	translated
+C0-05C56E	[DFT][NXT]가그런데 그 발명가라는 사람은\n그렇게 유명한 사람이니?\n연예인 이야기라면\n나도 잘 알지만 말이야˳[NXT]가	early-town	translated
+C0-05C809	[DFT][NXT]가아앗! 깜짝이야!\n아주머니는 겁이 많으니까\n놀라게 하지 말아 줘![NXT]가	early-town	translated
+C0-05C838	[DFT][NXT]가어머, 사람을 잘 따르는 [KATAKANA]쥐[HIRAGANA]구나.\n배가 고픈 거니?[NXT]가	early-town	translated
+C0-05C8DE	[DFT]이상한 버섯이\n잔뜩 들어 있다···˳	early-town	translated
+C0-05CA2E	[DFT][PAL:02] [KATAKANA]*월*일[HIRAGANA]\n그녀와 이 마을을 떠나기로 했다.\n그녀와 함께 살려면\n다른 방법이 없었다.[FIN]어머니를 남겨 두고 가는 것이\n마음에 걸려 견딜 수가 없다.\n미안해요, 어머니˳[PAL:00]	early-town	translated
+C0-05CAA5	[DFT][PAL:02] [KATAKANA]*월*일[HIRAGANA]\n이제 곧 그녀와 결혼식\n상의를 시작하기로 했다.\n결혼식 날이 벌써부터 기대된다.[FIN]우리를 만나게 해 준\n신께 마음 깊이\n감사하지 않을 수 없다˳[PAL:00]	early-town	translated
+C0-05CD0D	[DFT]자네는 뭔가?\n멋대로 경찰서 안에\n들어오면 안 되네˳	early-town	translated
+C0-05CDDE	[DFT]이봐!\n뭘 그렇게 난리법석이냐?\n얌전히 있지 않으면\n밧줄로 꽁꽁 묶어 버리겠다!	early-town	translated
+C0-05CE10	[DFT][NXT]저········ 이·[NXT]가없어!\n[PAU:28][NXT]가어떻게 하지···\n촌장님께 혼나 버리겠어.\n월급이 깎일까?˳	early-town	translated
+C0-05CE52	[DFT]···[PAU:30]뭐야!\n여기 있잖아!\n정말 사람을 놀라게 하는군!!\n좋아! 얌전히 있어!	early-town	translated
+C0-05CE8A	[DFT]···정말이지.\n언제 도망친 거야?\n도망치면 죄가 더 무거워진다고!\n이번에는 얌전히 있어!	early-town	translated
+C0-05CEC7	[DFT]촌장이 아까 와서\n자네는 무죄라고 말했어.\n이제 내 월급도 안 깎이겠군.\n뭐, 잘됐어˳	early-town	translated
+C0-05CF2C	[DFT]그 [KATAKANA]페퍼[HIRAGANA]라는 남자,\n천재 과학자라는 건\n완전히 [KATAKANA]거짓말[HIRAGANA]이었어.\n어쩐지 이상하다 했지!	early-town	translated
+C0-05CFF8	[CLR][CMD:F3][STR:028001][BYTE:97][CLR][DFT]흠, 너였군![FIN]지금은 강가에서\n아이들을 구출하기 위한\n회의 중이야.\n용건이 없으면 돌아가!	early-town	translated
+C0-05D239	[DFT]촌장님을 만나러 왔다고요?\n촌장님은 안쪽 막다른 곳의\n방에 계십니다˳	early-town	translated
+C0-05D4FA	[DFT]촌장님은 지금 안 계세요.\n아무래도 [PAL:02]남쪽 섬[PAL:00]으로\n[KATAKANA]로즈[HIRAGANA] 씨와 출장 가셨대요˳	early-town	translated
+C0-05D52C	[DFT]···저기요.\n[PAU:3C]촌장님을 만나실 거라면\n개는 두고 가는 편이\n좋을 것 같은데요···˳	early-town	translated
+C0-05D5E5	[DFT][KATAKANA]쥐[HIRAGANA] 씨, 안에는 들어가지 마세요˳	early-town	translated
