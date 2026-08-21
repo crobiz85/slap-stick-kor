@@ -31,6 +31,7 @@ GLYPH_MAP_PATH = ROOT / "translation" / "korean-glyph-map.tsv"
 MENU_PREVIEW_PATH = ROOT / "translation" / "korean-menu-preview.tsv"
 GAME_MENU_PATH = ROOT / "translation" / "korean-game-menu.tsv"
 EARLY_GAME_PATH = ROOT / "translation" / "korean-early-game.tsv"
+C0_DIALOGUE_PATH = ROOT / "translation" / "korean-c0-dialogue.tsv"
 ITEM_PREVIEW_PATH = ROOT / "translation" / "korean-item-preview.tsv"
 DEFAULT_ROM_OUT = ROOT / "build" / "slap-stick-kor-preview.smc"
 DEFAULT_BPS_OUT = ROOT / "patches" / "slap-stick-kor-preview.bps"
@@ -45,9 +46,10 @@ GAME_MENU_IDS = (
     "GAME-0018", "GAME-0019", "GAME-0020", "GAME-0021", "GAME-0025", "GAME-0029",
     "GAME-0033", "GAME-0042", "GAME-0043", "GAME-0044", "GAME-0045",
 )
-EARLY_GAME_IDS = ("GAME-WAKE-001",)
+EARLY_GAME_IDS = ()
+C0_DIALOGUE_IDS = ("C0-05A3A8", "C0-05A3EA", "C0-06C3BE")
 MAIN_DIALOG_IDS = ("0058", "0059", "0060", "0061", "0062", "0063", "0064", "0065", "0066", "0067")
-PATCHED_IDS = RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS + GAME_MENU_IDS + EARLY_GAME_IDS + MAIN_DIALOG_IDS
+PATCHED_IDS = RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS + GAME_MENU_IDS + EARLY_GAME_IDS + C0_DIALOGUE_IDS + MAIN_DIALOG_IDS
 INLINE_DIALOG_IDS = ("0058", "0064", "0065", "0066", "0067")
 RELOCATED_IDS = tuple(entry_id for entry_id in MAIN_DIALOG_IDS if entry_id not in INLINE_DIALOG_IDS)
 DIALOG_BANK_START = 0x58000
@@ -146,6 +148,22 @@ def read_early_game() -> dict[str, GameMenuRow]:
     return rows
 
 
+def read_c0_dialogue() -> dict[str, GameMenuRow]:
+    rows: dict[str, GameMenuRow] = {}
+    for line in C0_DIALOGUE_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) >= 4:
+            rows[columns[0]] = GameMenuRow(
+                entry_id=columns[0],
+                offset=int(columns[1], 16),
+                original_length=int(columns[2], 16),
+                korean=columns[3],
+            )
+    return rows
+
+
 def read_glyph_tiles() -> list[tuple[str, int, bytes]]:
     result = []
     for line in GLYPH_MAP_PATH.read_text(encoding="utf-8").splitlines():
@@ -196,6 +214,7 @@ def encode_rows(
     drafts: dict[str, DraftRow],
     game_menu: dict[str, GameMenuRow],
     early_game: dict[str, GameMenuRow],
+    c0_dialogue: dict[str, GameMenuRow],
     glyphs: dict[str, bytes],
 ) -> dict[str, bytes]:
     encoded = {}
@@ -238,6 +257,14 @@ def encode_rows(
                 f"{entry_id} preview is {len(encoded[entry_id])} bytes, "
                 f"slot is {row.original_length} bytes"
             )
+    for entry_id in C0_DIALOGUE_IDS:
+        row = c0_dialogue[entry_id]
+        encoded[entry_id] = encode_text(row.korean, glyphs)
+        if len(encoded[entry_id]) > row.original_length:
+            raise ValueError(
+                f"{entry_id} preview is {len(encoded[entry_id])} bytes, "
+                f"slot is {row.original_length} bytes"
+            )
     for entry_id in MAIN_DIALOG_IDS:
         row = drafts[entry_id]
         encoded[entry_id] = encode_text(row.korean, glyphs)
@@ -259,6 +286,7 @@ def patch_rom(
     drafts: dict[str, DraftRow],
     game_menu: dict[str, GameMenuRow],
     early_game: dict[str, GameMenuRow],
+    c0_dialogue: dict[str, GameMenuRow],
     encoded: dict[str, bytes],
 ) -> tuple[bytes, dict]:
     target = bytearray(source)
@@ -346,6 +374,20 @@ def patch_rom(
             "encoded_length": len(payload),
         }
 
+    c0_dialogue_manifest = {}
+    for entry_id in C0_DIALOGUE_IDS:
+        row = c0_dialogue[entry_id]
+        payload = encoded[entry_id]
+        target[row.offset : row.offset + len(payload)] = payload
+        target[row.offset + len(payload) : row.offset + row.original_length] = b" " * (
+            row.original_length - len(payload)
+        )
+        c0_dialogue_manifest[entry_id] = {
+            "offset": f"0x{row.offset:06X}",
+            "slot_length": row.original_length,
+            "encoded_length": len(payload),
+        }
+
     changed = sum(left != right for left, right in zip(source, target))
     manifest = {
         "kind": "Slap Stick Korean preview patch",
@@ -358,6 +400,7 @@ def patch_rom(
         "raw_menu_preview": raw_menu_manifest,
         "game_menu_preview": game_menu_manifest,
         "early_game_preview": early_game_manifest,
+        "c0_dialogue_preview": c0_dialogue_manifest,
         "font_pages": {
             "lead_bytes": ["0x80", "0x81", "0x82"],
             "offset_ranges": ["0x50000-0x53FFF", "0x54000-0x57FFF", "0x60000-0x63FFF"],
@@ -513,6 +556,7 @@ def main() -> None:
     drafts = read_drafts()
     game_menu = read_game_menu()
     early_game = read_early_game()
+    c0_dialogue = read_c0_dialogue()
     missing = [entry_id for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS + MAIN_DIALOG_IDS if entry_id not in drafts]
     if missing:
         raise ValueError(f"missing draft rows: {', '.join(missing)}")
@@ -522,8 +566,11 @@ def main() -> None:
     missing_early = [entry_id for entry_id in EARLY_GAME_IDS if entry_id not in early_game]
     if missing_early:
         raise ValueError(f"missing early game rows: {', '.join(missing_early)}")
-    encoded = encode_rows(drafts, game_menu, early_game, read_glyph_map())
-    target, manifest = patch_rom(source, drafts, game_menu, early_game, encoded)
+    missing_c0 = [entry_id for entry_id in C0_DIALOGUE_IDS if entry_id not in c0_dialogue]
+    if missing_c0:
+        raise ValueError(f"missing C0 dialogue rows: {', '.join(missing_c0)}")
+    encoded = encode_rows(drafts, game_menu, early_game, c0_dialogue, read_glyph_map())
+    target, manifest = patch_rom(source, drafts, game_menu, early_game, c0_dialogue, encoded)
 
     args.rom_output.parent.mkdir(parents=True, exist_ok=True)
     args.rom_output.write_bytes(target)

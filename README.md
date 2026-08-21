@@ -31,6 +31,8 @@
   - 메뉴·대화가 실제로 참조하는 16×16 SNES 2BPP(행별 비트 평면 교차) 글꼴을 확인하고, 초안과 게임 화면 문구에 필요한
     한글 207자를 미사용 `0x80xx`/`0x81xx` 슬롯에 배치해 `translation/korean-glyph-map.tsv`로 생성
   - 초안 41개 중 메인 대사 0058~0063 6개는 실제 재배치·포인터 갱신까지 적용
+  - 이전에 누락된 `C0` 종료형 이벤트 대사는 `scripts/extract_c0_dialogue_catalog.py`로
+    별도 카탈로그화하여, 실제 게임 진행 대사를 일괄 번역·삽입할 기반을 마련
   - 초반 메뉴·이벤트 11개는 `translation/korean-menu-preview.tsv`의 압축형 프리뷰로,
     고정 슬롯 0013~0020은 슬롯에 맞는 프리뷰로 함께 삽입
   - 아이템 설명 0021~0035도 `translation/korean-item-preview.tsv`의 압축형 프리뷰로 삽입

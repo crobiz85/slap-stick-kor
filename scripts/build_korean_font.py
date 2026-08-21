@@ -20,6 +20,7 @@ DRAFT_PATH = ROOT / "translation" / "korean-draft.tsv"
 MENU_PREVIEW_PATH = ROOT / "translation" / "korean-menu-preview.tsv"
 GAME_MENU_PATH = ROOT / "translation" / "korean-game-menu.tsv"
 EARLY_GAME_PATH = ROOT / "translation" / "korean-early-game.tsv"
+C0_DIALOGUE_PATH = ROOT / "translation" / "korean-c0-dialogue.tsv"
 ITEM_PREVIEW_PATH = ROOT / "translation" / "korean-item-preview.tsv"
 DEFAULT_MAP_PATH = ROOT / "translation" / "korean-glyph-map.tsv"
 DEFAULT_PREVIEW_PATH = ROOT / "build" / "korean-font-preview.png"
@@ -62,7 +63,7 @@ def find_default_font() -> Path:
 
 def read_draft_characters() -> list[str]:
     characters = set()
-    for source_path in (DRAFT_PATH, MENU_PREVIEW_PATH, GAME_MENU_PATH, EARLY_GAME_PATH, ITEM_PREVIEW_PATH):
+    for source_path in (DRAFT_PATH, MENU_PREVIEW_PATH, GAME_MENU_PATH, EARLY_GAME_PATH, C0_DIALOGUE_PATH, ITEM_PREVIEW_PATH):
         if not source_path.exists():
             continue
         for line in source_path.read_text(encoding="utf-8").splitlines():
@@ -73,7 +74,7 @@ def read_draft_characters() -> list[str]:
                 continue
             if source_path == DRAFT_PATH and columns[0] not in PREVIEW_DRAFT_IDS:
                 continue
-            korean_column = 3 if source_path in (GAME_MENU_PATH, EARLY_GAME_PATH) else 1
+            korean_column = 3 if source_path in (GAME_MENU_PATH, EARLY_GAME_PATH, C0_DIALOGUE_PATH) else 1
             if len(columns) <= korean_column:
                 continue
             korean = CONTROL_MARKER.sub("", columns[korean_column])
