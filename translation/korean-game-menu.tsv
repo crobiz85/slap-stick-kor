@@ -1,5 +1,6 @@
 # In-game menu and interaction prompts patched in their original CC-terminated slots.
 # id	offset	slot length	Korean preview	status
+GAME-NAME-ENTRY	0x01CFB7	000C	이름 정해	game-screen-slot-preview
 GAME-0018	0x01D18C	003A	[POS:0313][BOX:0D0300][CLR][NXT]로봇에 쓸 아이템을\n골라 줘	game-screen-slot-preview
 GAME-0019	0x01D1C7	0011	[CLR]로봇 선택?	game-screen-slot-preview
 GAME-0020	0x01D1D9	001B	[CLR]이 로봇은\n쓸 수 없어.[WAI]	game-screen-slot-preview

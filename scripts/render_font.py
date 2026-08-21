@@ -46,13 +46,13 @@ def render(
     glyph_size = tile_size * tiles_per_glyph
     glyphs = len(data) // glyph_size
     rows = (glyphs + columns - 1) // columns
-    width, height = columns * 8 * tiles_per_glyph, rows * 8
+    width, height = columns * 8, rows * 8 * tiles_per_glyph
     pixels = bytearray([255] * (width * height))
     max_value = (1 << bpp) - 1
 
     for glyph in range(glyphs):
-        glyph_x = (glyph % columns) * 8 * tiles_per_glyph
-        glyph_y = (glyph // columns) * 8
+        glyph_x = (glyph % columns) * 8
+        glyph_y = (glyph // columns) * 8 * tiles_per_glyph
         for part in range(tiles_per_glyph):
             tile = glyph * tiles_per_glyph + part
             tile_data = data[tile * tile_size : tile * tile_size + tile_size]
@@ -62,14 +62,14 @@ def render(
                 tile_pixels = decode_snes_tile(tile_data, bpp)
             for index, value in enumerate(tile_pixels):
                 row, col = divmod(index, 8)
-                x = glyph_x + part * 8 + col
+                x = glyph_x + col
                 if tile_format == "gb2bpp":
                     # This game's font uses color 3 as the transparent/background
                     # value, so the preview needs the opposite grayscale direction.
                     shade = value * 255 // max_value
                 else:
                     shade = 255 - (value * 255 // max_value)
-                pixels[(glyph_y + row) * width + x] = shade
+                pixels[(glyph_y + part * 8 + row) * width + x] = shade
 
     png = b"\x89PNG\r\n\x1a\n"
     png += png_chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 0, 0, 0, 0))
@@ -86,6 +86,7 @@ def png_chunk(kind: bytes, payload: bytes) -> bytes:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Render a candidate SNES font/graphics block.")
+    parser.add_argument("--input", type=Path, default=ROM, help="ROM or raw graphics input file")
     parser.add_argument("--offset", type=lambda value: int(value, 0), default=0x40000)
     parser.add_argument("--size", type=lambda value: int(value, 0), default=0x2000)
     parser.add_argument("--bpp", type=int, choices=(2, 4, 8), default=2)
@@ -95,7 +96,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path("font-preview.png"))
     args = parser.parse_args()
 
-    data = ROM.read_bytes()[args.offset : args.offset + args.size]
+    data = args.input.read_bytes()[args.offset : args.offset + args.size]
     args.output.write_bytes(
         render(data, args.bpp, args.columns, args.format, args.tiles_per_glyph)
     )

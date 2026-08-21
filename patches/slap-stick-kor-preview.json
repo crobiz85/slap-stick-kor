@@ -3,7 +3,7 @@
   "source_length": 1572864,
   "target_length": 1572864,
   "source_sha256": "08144EA1CE3CF6AB107837278D308E4E859574A047A2EE8EB456F7900AD4BE21",
-  "target_sha256": "F507E9DEDD025BA9D365FE9FA00B0C3EF1684B55FC85FBB4F028791915664634",
+  "target_sha256": "EC81CBC0DA08778C124E25BBA3C6E9675F811C4291C4A86F79B075BA1A0009DD",
   "patched_records": [
     "0002",
     "0003",
@@ -40,6 +40,7 @@
     "0033",
     "0034",
     "0035",
+    "GAME-NAME-ENTRY",
     "GAME-0018",
     "GAME-0019",
     "GAME-0020",
@@ -68,7 +69,7 @@
     "0003": {
       "offset": "0x01D0F8",
       "slot_length": 18,
-      "encoded_length": 9
+      "encoded_length": 6
     },
     "0004": {
       "offset": "0x01D14E",
@@ -173,7 +174,7 @@
     "0023": {
       "offset": "0x01DCC2",
       "slot_length": 36,
-      "encoded_length": 28
+      "encoded_length": 19
     },
     "0024": {
       "offset": "0x01DCE7",
@@ -198,7 +199,7 @@
     "0028": {
       "offset": "0x01DDE2",
       "slot_length": 20,
-      "encoded_length": 20
+      "encoded_length": 13
     },
     "0029": {
       "offset": "0x01DDF7",
@@ -237,6 +238,11 @@
     }
   },
   "game_menu_preview": {
+    "GAME-NAME-ENTRY": {
+      "offset": "0x01CFB7",
+      "slot_length": 12,
+      "encoded_length": 9
+    },
     "GAME-0018": {
       "offset": "0x01D18C",
       "slot_length": 58,
@@ -293,12 +299,18 @@
       "encoded_length": 5
     }
   },
-  "menu_font_page": {
-    "lead_byte": "0x83",
-    "tile_offset_shift": "0x1000",
-    "note": "Menu strings use 0x83xx codes; 0x82xx tiles are mirrored at +0x1000 and overflow glyphs remain on 0x83xx."
+  "font_pages": {
+    "lead_bytes": [
+      "0x80",
+      "0x81"
+    ],
+    "offset_ranges": [
+      "0x50000-0x53FFF",
+      "0x54000-0x57FFF"
+    ],
+    "note": "Korean glyphs use only code slots absent from the extracted Japanese script on the game's visible menu pages."
   },
-  "glyph_count": 252,
+  "glyph_count": 207,
   "inline_record": {
     "id": "0058",
     "offset": "0x058AF4",
@@ -346,5 +358,5 @@
       ]
     }
   },
-  "changed_bytes": 8278
+  "changed_bytes": 12647
 }

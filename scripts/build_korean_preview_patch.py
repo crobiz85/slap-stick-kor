@@ -1,7 +1,7 @@
 """Build a playable Korean preview patch for the verified Japanese ROM.
 
-This is intentionally conservative. It inserts the generated unused 0x82xx/0x83xx Korean
-glyphs, patches compact Korean strings into the verified raw-menu and item-menu
+This is intentionally conservative. It inserts Korean glyphs into unused 16×16
+source glyphs for the 0x80xx/0x81xx dictionary pages, patches compact Korean strings into the verified raw-menu and item-menu
 slots, patches a second set of verified game-screen prompts in their original
 slots, and patches the six contiguous main-dialog records 0058-0063. Record 0058 stays
 at its original inline location; records 0059-0063 are relocated to verified FF
@@ -39,6 +39,7 @@ RAW_MENU_IDS = ("0002", "0003", "0004", "0005", "0006", "0007", "0008", "0009", 
 FIXED_DRAFT_MENU_IDS = ("0001", "0013", "0014", "0015", "0016", "0017", "0018", "0019", "0020")
 ITEM_PREVIEW_IDS = tuple(f"{index:04d}" for index in range(21, 36))
 GAME_MENU_IDS = (
+    "GAME-NAME-ENTRY",
     "GAME-0018", "GAME-0019", "GAME-0020", "GAME-0021", "GAME-0025", "GAME-0029",
     "GAME-0033", "GAME-0042", "GAME-0043", "GAME-0044", "GAME-0045",
 )
@@ -47,10 +48,10 @@ PATCHED_IDS = RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS + GAME_MENU
 RELOCATED_IDS = MAIN_DIALOG_IDS[1:]
 DIALOG_BANK_START = 0x58000
 DIALOG_BANK_END = 0x60000
-FONT_BANK_START = 0x60000
-MENU_FONT_BANK_START = 0x61000
-FONT_BANK_END = 0x62000
-MENU_FONT_PAGE_SHIFT = 0x1000
+FONT_BANK_START = 0x50000
+FONT_BANK_SIZE = 0x4000
+SECOND_FONT_BANK_START = 0x54000
+GLYPH_BYTES = 64
 
 
 @dataclass(frozen=True)
@@ -135,10 +136,17 @@ def read_glyph_tiles() -> list[tuple[str, int, bytes]]:
         character = columns[0]
         offset = int(columns[3], 16)
         tile = bytes.fromhex(columns[4])
-        if len(tile) != 16:
-            raise ValueError(f"glyph {character!r} has {len(tile)} bytes, expected 16")
+        if len(tile) != GLYPH_BYTES:
+            raise ValueError(f"glyph {character!r} has {len(tile)} bytes, expected {GLYPH_BYTES}")
         result.append((character, offset, tile))
     return result
+
+
+def is_visible_font_offset(offset: int, length: int) -> bool:
+    return any(
+        start <= offset and offset + length <= start + FONT_BANK_SIZE
+        for start in (FONT_BANK_START, SECOND_FONT_BANK_START)
+    )
 
 
 def find_ff_run(data: bytes, start: int, end: int, length: int) -> int:
@@ -176,7 +184,7 @@ def encode_rows(
         source_text = menu_previews.get(entry_id, row.korean)
         if not source_text:
             raise ValueError(f"missing menu text: {entry_id}")
-        encoded[entry_id] = encode_text(source_text, glyphs, glyph_lead_byte=0x83)
+        encoded[entry_id] = encode_text(source_text, glyphs)
         if len(encoded[entry_id]) > row.original_length:
             raise ValueError(
                 f"{entry_id} compact preview is {len(encoded[entry_id])} bytes, "
@@ -186,7 +194,7 @@ def encode_rows(
         row = drafts[entry_id]
         if entry_id not in item_previews:
             raise ValueError(f"missing compact item preview: {entry_id}")
-        encoded[entry_id] = encode_text(item_previews[entry_id], glyphs, glyph_lead_byte=0x83)
+        encoded[entry_id] = encode_text(item_previews[entry_id], glyphs)
         if len(encoded[entry_id]) > row.original_length:
             raise ValueError(
                 f"{entry_id} compact item preview is {len(encoded[entry_id])} bytes, "
@@ -194,7 +202,7 @@ def encode_rows(
             )
     for entry_id in GAME_MENU_IDS:
         row = game_menu[entry_id]
-        encoded[entry_id] = encode_text(row.korean, glyphs, glyph_lead_byte=0x83)
+        encoded[entry_id] = encode_text(row.korean, glyphs)
         if len(encoded[entry_id]) > row.original_length:
             raise ValueError(
                 f"{entry_id} preview is {len(encoded[entry_id])} bytes, "
@@ -223,15 +231,8 @@ def patch_rom(
         if offset < 0 or offset + len(tile) > len(target):
             raise ValueError(f"glyph {character!r} is outside the ROM: 0x{offset:06X}")
         target[offset : offset + len(tile)] = tile
-        # 0x82xx is the dialog page and is mirrored at 0x83xx for menu output.
-        # Overflow glyphs already allocated on 0x83xx must not be shifted again.
-        if FONT_BANK_START <= offset < MENU_FONT_BANK_START:
-            menu_offset = offset + MENU_FONT_PAGE_SHIFT
-            if menu_offset + len(tile) > len(target) or menu_offset >= FONT_BANK_END:
-                raise ValueError(f"menu glyph {character!r} is outside the ROM: 0x{menu_offset:06X}")
-            target[menu_offset : menu_offset + len(tile)] = tile
-        elif not MENU_FONT_BANK_START <= offset < FONT_BANK_END:
-            raise ValueError(f"glyph {character!r} is outside the Korean font pages: 0x{offset:06X}")
+        if not is_visible_font_offset(offset, len(tile)):
+            raise ValueError(f"glyph {character!r} is outside the visible Korean font pages: 0x{offset:06X}")
 
     total_relocated = sum(len(encoded[entry_id]) for entry_id in RELOCATED_IDS)
     relocation_start = find_ff_run(target, DIALOG_BANK_START, DIALOG_BANK_END, total_relocated)
@@ -303,10 +304,10 @@ def patch_rom(
         "unpatched_draft_records": [entry_id for entry_id in drafts if entry_id not in PATCHED_IDS],
         "raw_menu_preview": raw_menu_manifest,
         "game_menu_preview": game_menu_manifest,
-        "menu_font_page": {
-            "lead_byte": "0x83",
-            "tile_offset_shift": "0x1000",
-            "note": "Menu strings use 0x83xx codes; 0x82xx tiles are mirrored at +0x1000 and overflow glyphs remain on 0x83xx.",
+        "font_pages": {
+            "lead_bytes": ["0x80", "0x81"],
+            "offset_ranges": ["0x50000-0x53FFF", "0x54000-0x57FFF"],
+            "note": "Korean glyphs use only code slots absent from the extracted Japanese script on the game's visible menu pages.",
         },
         "glyph_count": len(glyphs),
         "inline_record": {
@@ -465,7 +466,7 @@ def main() -> None:
 
     args.rom_output.parent.mkdir(parents=True, exist_ok=True)
     args.rom_output.write_bytes(target)
-    write_bps(source, target, args.bps_output, b"Slap Stick Korean preview; game menus, raw menus, dialog, unused 0x82xx font")
+    write_bps(source, target, args.bps_output, b"Slap Stick Korean preview; menus, dialog, unused 16x16 0x80xx/0x81xx font glyphs")
     write_ips(source, target, args.ips_output)
     args.manifest_output.parent.mkdir(parents=True, exist_ok=True)
     args.manifest_output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
