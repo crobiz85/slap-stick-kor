@@ -140,7 +140,12 @@ def encode_tile(mask: Image.Image) -> bytes:
         high = 0
         for column in range(8):
             ink = mask.getpixel((column, row)) != 0
-            value = 0 if ink else 3
+            # The game's high-resolution text palette treats colour 3 as the
+            # transparent/background entry.  Colour 0 is also transparent on
+            # these screens, so using it for Hangul strokes produces blank
+            # menu text.  Native glyphs use colours 1/2 for visible pixels;
+            # use 1 for the initial monochrome Hangul pass.
+            value = 1 if ink else 3
             bit = 7 - column
             low |= (value & 1) << bit
             high |= ((value >> 1) & 1) << bit
