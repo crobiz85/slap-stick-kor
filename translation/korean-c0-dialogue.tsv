@@ -33,3 +33,11 @@ C0-06892F	0x06892F	001F	[DFT]폭탄이 가득 든 상자다.˳	cave-sequence
 C0-06894F	0x06894F	0024	[DFT]폭탄 상자는 비어 있어!	cave-sequence
 C0-068A5C	0x068A5C	0018	[DFT]폭발음이 들렸다.˳	cave-sequence
 C0-068B1B	0x068B1B	001E	[DFT]아이 울음소리가 들려.˳	cave-sequence
+C0-058AA3	0x058AA3	007B	[DFT]집으로 이사했지?\n[CMD:E2] 버튼으로\n문을 열어.˳	early-house-route
+C0-058C86	0x058C86	003F	[DFT]숲 쪽에서\n빛이 났어!˳	early-house-route
+C0-058DB6	0x058DB6	003F	[DFT]할아버지 이야기는\n재미있어.˳	early-house-route
+C0-05A15D	0x05A15D	006E	[DFT]아이들이\n동굴에서 해커를 찾고 있어.˳	early-house-route
+C0-05A1CC	0x05A1CC	0025	[DFT][NXT]내 개가\n더 좋아.\n[PAU:1E]	early-house-route
+C0-058B1F	0x058B1F	001E	[DFT]지금은 안 돼.\n저쪽에 있어.˳	early-house-route
+C0-058B3E	0x058B3E	0035	[DFT]오빠 꽤 괜찮네!	early-house-route
+C0-058B74	0x058B74	0029	[DFT]어? 돌려달라고?\n싫어.\n재미있어.˳	early-house-route
