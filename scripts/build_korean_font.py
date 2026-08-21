@@ -19,9 +19,8 @@ DEFAULT_PREVIEW_PATH = ROOT / "build" / "korean-font-preview.png"
 HANGUL_START = 0xAC00
 HANGUL_END = 0xD7A3
 GLYPH_BYTES = 16
-FONT_BANK_OFFSET = 0x61000
-FONT_LEAD_BYTE = 0x83
-RESERVED_LOW_BYTES = set(range(0x54, 0x59)) | set(range(0xD4, 0xD9))
+FONT_BANK_OFFSET = 0x60000
+FONT_LEAD_BYTE = 0x82
 CONTROL_MARKER = re.compile(r"\[[^\]]+\]|\\n|˳")
 
 
@@ -54,8 +53,27 @@ def read_draft_characters() -> list[str]:
     return sorted(characters)
 
 
+def read_used_kanji_codes() -> set[int]:
+    used: set[int] = set()
+    for line in (ROOT / "translation" / "script.tsv").read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) < 4:
+            continue
+        raw = columns[3].split()
+        for index, token in enumerate(raw[:-1]):
+            if token.upper() == "82":
+                used.add(int(raw[index + 1], 16))
+    return used
+
+
 def allocate_codes(characters: list[str]) -> dict[str, int]:
-    available = [value for value in range(0x100) if value not in RESERVED_LOW_BYTES]
+    # 0x82xx is the dictionary/font page used by ordinary dialog rendering.
+    # Prefer slots outside the Japanese dictionary, then unused lower slots.
+    used = read_used_kanji_codes()
+    available = list(range(0x90, 0x100))
+    available.extend(value for value in range(0x90) if value not in used)
     if len(characters) > len(available):
         raise ValueError(f"Need {len(characters)} glyph slots but only {len(available)} are available")
     return dict(zip(characters, available))
@@ -132,7 +150,7 @@ def write_map(
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8", newline="\n") as handle:
-        handle.write("# Generated from translation/korean-draft.tsv; 0x83xx is a font-test page not seen in extracted dialogue.\n")
+        handle.write("# Generated from translation/korean-draft.tsv; unused 0x82xx dialog-font slots.\n")
         handle.write("# character\tcodepoint\tcode bytes\tfile offset\t2bpp tile bytes\n")
         for character in characters:
             low = codes[character]

@@ -1,6 +1,6 @@
 """Build a playable Korean preview patch for the verified Japanese ROM.
 
-This is intentionally conservative.  It inserts the generated 0x83xx Korean
+This is intentionally conservative.  It inserts the generated unused 0x82xx Korean
 glyphs and patches the six contiguous main-dialog records 0058-0063.  Record
 0058 stays at its original inline location; records 0059-0063 are relocated
 to verified FF padding in the same HiROM bank and their ``02 1D`` references
@@ -311,7 +311,7 @@ def main() -> None:
 
     args.rom_output.parent.mkdir(parents=True, exist_ok=True)
     args.rom_output.write_bytes(target)
-    write_bps(source, target, args.bps_output, b"Slap Stick Korean preview; 0058-0063 and 0x83xx font")
+    write_bps(source, target, args.bps_output, b"Slap Stick Korean preview; 0058-0063 and unused 0x82xx font")
     write_ips(source, target, args.ips_output)
     args.manifest_output.parent.mkdir(parents=True, exist_ok=True)
     args.manifest_output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

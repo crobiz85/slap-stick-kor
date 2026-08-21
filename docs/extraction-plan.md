@@ -26,15 +26,15 @@
 - 일본판 글꼴을 `0x40000`(기본), `0x42000`(가타카나),
   `0x50000`·`0x52000`·`0x60000`·`0x61000`(한자 페이지)에서 확인
 - 각 글리프는 8×8 Game Boy 2BPP 타일이고 색상값 `3`이 배경인 반전 형식으로 확인
-- 일반 추출 대사에는 등장하지 않고 폰트 테스트 데이터에만 등장하는 `0x83xx` 페이지를
-  한글 글리프 후보 영역으로 잡아 131자를 `translation/korean-glyph-map.tsv`에 기록
-  (`translation/font-layout.tsv`에 확정 영역과 후보 영역을 구분해 기록)
+- 대화 출력 루틴이 사용하는 `0x82xx` 페이지의 일본어 미사용 슬롯을 한글 글리프 영역으로
+  잡아 131자를 `translation/korean-glyph-map.tsv`에 기록했다. 메뉴·폰트 테스트 전용
+  `0x83xx` 페이지는 대화 패치에 사용하지 않는다.
 - 폰트 페이지와 제어코드 교차 확인에는 [동일 일본판을 대상으로 한 공개 영문 패치의 기술 메모](https://github.com/brianblakely/slapstick-english-translation/blob/master/docs/technical-notes.md)를 참고했으며,
   그 저장소의 실행 파일·ROM은 이 프로젝트에 포함하지 않음
 - 결과: `translation/pointer-report.tsv`, `translation/anchored-text.tsv`
 - 휴리스틱 후보 167개는 코드와 데이터가 섞여 있으므로 원시 파일과 디코드 파일 모두 연구용으로만 사용
 - 한국어 초안 17개는 이벤트 스트림 안의 인라인 레코드로 보이며, 원문 슬롯·다음 `CC` 위치·3바이트/16비트 포인터 후보를 `translation/relocation-plan.tsv`에 보수적으로 기록함. 여러 세그먼트가 같은 `CC`를 공유하는 경우도 있어 해당 위치를 개별 문자열의 확정 종결자로 해석하지 않음
-- 공개 기술 메모에서 확인한 `02 1D [주소]` 대사 인덱스와 동일 은행 FF 여유 공간을 이용해 대사 0058~0063과 0x83xx 한글 폰트를 `patches/slap-stick-kor-preview.bps` 및 `.ips`에 삽입함
+- 공개 기술 메모에서 확인한 `02 1D [주소]` 대사 인덱스와 동일 은행 FF 여유 공간을 이용해 대사 0058~0063과 미사용 0x82xx 한글 폰트를 `patches/slap-stick-kor-preview.bps` 및 `.ips`에 삽입함
 
 ## 확인된 ROM 구조
 

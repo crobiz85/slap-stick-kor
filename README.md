@@ -27,7 +27,7 @@
   - 검토용 대사 원고 240개를 `translation/script.tsv`로 분리했으며
     초반 메뉴·이벤트 17개에는 `translation/korean-draft.tsv`의 한국어 초안을 덧씌움
   - 일본판 폰트 위치와 반전 Game Boy 2BPP 형식을 확인하고, 초안에 필요한 한글 글리프
-    131자를 `translation/korean-glyph-map.tsv`로 생성
+    131자를 대화용 `0x82xx` 미사용 슬롯에 배치해 `translation/korean-glyph-map.tsv`로 생성
   - 초안 17개 중 메인 대사 0058~0063 6개는 실제 재배치·포인터 갱신까지 적용한 프리뷰 패치를 생성함
   - 초반 메뉴·이벤트 11개는 컨테이너 진입점 확인 전이라 원본 ROM에 손대지 않음
   - `translation/relocation-plan.tsv`에 원문 슬롯·CC 종료 위치·포인터 후보·재배치 조치를 기록함
@@ -79,7 +79,9 @@
 
 `patches/slap-stick-kor-preview.bps` 또는 `patches/slap-stick-kor-preview.ips`를
 무헤더 일본판 원본 ROM에 적용합니다. 원본 ROM 자체는 저장소에 포함하지 않습니다.
-패치는 131자 한글 폰트와 대사 ID 0058~0063을 포함하며, 적용 후에도 나머지 11개 초안은 일본어로 남습니다.
+패치는 대화용 `0x82xx` 미사용 슬롯에 넣은 131자 한글 폰트와 대사 ID 0058~0063을 포함하며,
+적용 후에도 나머지 11개 초안은 일본어로 남습니다. `0x83xx`는 메뉴·폰트 테스트용 영역이라
+대화 패치에는 사용하지 않습니다.
 
 ## 검증
 
