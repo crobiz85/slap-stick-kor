@@ -1,0 +1,19 @@
+# Conservative worksheet; heuristic references require emulator/code verification.
+# id	original offset	original length	encoded length	overflow bytes	fits	next CC offset	bytes after segment before next CC	next draft offset	region	raw 3-byte refs	CF pointer refs	16-bit word refs	CF ref samples	action
+0002	0x01D0E7	0010	0024	0014	no	0x01D0F7	0	0x01D0F8	script-data-18000-27FFF	0	0	20	-	relocate-and-update-container-reference
+0003	0x01D0F8	0012	0014	0002	no	0x01D10A	0	0x01D14E	script-data-18000-27FFF	0	0	27	-	relocate-and-update-container-reference
+0004	0x01D14E	001D	002F	0012	no	0x01D16B	0	0x01D28A	script-data-18000-27FFF	0	0	18	-	relocate-and-update-container-reference
+0005	0x01D28A	001A	0022	0008	no	0x01D2A4	0	0x01D2DE	script-data-18000-27FFF	1	0	18	-	relocate-and-update-container-reference
+0006	0x01D2DE	0022	0037	0015	no	0x01D300	0	0x01D301	script-data-18000-27FFF	0	0	5	-	relocate-and-update-container-reference
+0007	0x01D301	0025	0034	000F	no	0x01D326	0	0x01D440	script-data-18000-27FFF	0	0	21	-	relocate-and-update-container-reference
+0008	0x01D440	002D	0042	0015	no	0x01D46D	0	0x01D47D	script-data-18000-27FFF	0	0	32	-	relocate-and-update-container-reference
+0009	0x01D47D	001F	0035	0016	no	0x01D49C	0	0x01D49D	script-data-18000-27FFF	0	0	15	-	relocate-and-update-container-reference
+0010	0x01D49D	0023	0033	0010	no	0x01D4C0	0	0x01D60B	script-data-18000-27FFF	1	0	7	-	relocate-and-update-container-reference
+0011	0x01D60B	0010	0017	0007	no	0x01D61B	0	0x01D686	script-data-18000-27FFF	0	0	13	-	relocate-and-update-container-reference
+0012	0x01D686	001B	0029	000E	no	0x01D6A1	0	0x058AF4	script-data-18000-27FFF	0	0	8	-	relocate-and-update-container-reference
+0058	0x058AF4	002B	0046	001B	no	0x058BF4	213	0x058B1F	script-page-58000-5FFFF	0	0	15	-	relocate-and-update-container-reference
+0059	0x058B1F	001F	002E	000F	no	0x058BF4	182	0x058B3E	script-page-58000-5FFFF	1	0	23	-	relocate-and-update-container-reference
+0060	0x058B3E	0036	0047	0011	no	0x058BF4	128	0x058B74	script-page-58000-5FFFF	0	0	4	-	relocate-and-update-container-reference
+0061	0x058B74	002A	0034	000A	no	0x058BF4	86	0x058B9E	script-page-58000-5FFFF	0	0	4	-	relocate-and-update-container-reference
+0062	0x058B9E	000A	000E	0004	no	0x058BF4	76	0x058BA8	script-page-58000-5FFFF	0	0	8	-	relocate-and-update-container-reference
+0063	0x058BA8	004C	005D	0011	no	0x058BF4	0	-	script-page-58000-5FFFF	0	0	10	-	relocate-and-update-container-reference

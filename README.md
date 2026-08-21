@@ -29,6 +29,7 @@
   - 일본판 폰트 위치와 반전 Game Boy 2BPP 형식을 확인하고, 초안에 필요한 한글 글리프
     131자를 `translation/korean-glyph-map.tsv`로 생성
   - 현재 초안 17개는 일본어 원문 슬롯보다 길어 모두 재배치 대상이며, 아직 ROM 패치는 만들지 않음
+  - `translation/relocation-plan.tsv`에 원문 슬롯·CC 종료 위치·포인터 후보·재배치 조치를 기록함
 
 ## 작업 방향
 
@@ -68,6 +69,7 @@
 - `scripts/render_font.py`: 일본판 2BPP 글꼴 영역을 미리보기 PNG로 렌더링
 - `scripts/build_korean_font.py`: 초안에서 한글 글리프를 뽑아 후보 코드·타일 바이트·미리보기 생성
 - `scripts/encode_translation_drafts.py`: 제어코드를 유지한 한글 바이트열과 원문 슬롯 길이 사전 검사
+- `scripts/build_relocation_plan.py`: 원문 슬롯·다음 `CC` 위치·포인터 후보를 재배치 검토표로 생성
 
 도구 사용법과 출처는 `tools/README.md`에 기록합니다. 실행 파일 자체는 저장소에 올리지 않습니다.
 
