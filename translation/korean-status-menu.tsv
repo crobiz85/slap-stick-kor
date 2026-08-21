@@ -13,3 +13,5 @@ STATUS-PROGRAM-1	0x01D7C8	0005	1B 65 02 61 5B	기능	status-menu-fixed-slot
 STATUS-PROGRAM-2	0x01D7F2	0005	1B 65 02 61 5B	기능	status-menu-fixed-slot
 STATUS-POINT	0x01D806	0004	1D 3C 68 4E	점수	status-menu-fixed-slot
 STATUS-INSPIRATION	0x01EC6E	0004	55 61 5C 41	힌트	status-menu-fixed-slot
+STATUS-SPEED-OPTIONS	0x01E9FB	000F	54 5E 3C 20 20 20 56 4C 3D 20 20 20 3F 49 3C	빠름 보통 느림 	status-menu-fixed-slot
+STATUS-EXAMINE	0x01EA44	0005	46 61 57 82 63	조사	status-menu-fixed-slot

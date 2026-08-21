@@ -4,7 +4,8 @@ The game's dictionary codes ``80xx``, ``81xx``, and ``82xx`` resolve to 16×16 J
 glyphs at ``0x50000``, ``0x54000``, and ``0x60000`` respectively.  Each glyph is four
 8×8 SNES 2BPP tiles (64 bytes), and the text engine writes those
 glyphs to its VRAM cells at run time.  This script allocates only codes absent
-from the extracted Japanese script, then renders replacement source tiles into
+from the extracted Japanese script and verified Other Menus block, then renders
+replacement source tiles into
 their actual locations.  It never modifies a ROM itself.
 """
 
@@ -40,6 +41,12 @@ SECOND_FONT_LEAD_BYTE = 0x81
 THIRD_FONT_BANK_OFFSET = 0x60000
 THIRD_FONT_LEAD_BYTE = 0x82
 CONTROL_MARKER = re.compile(r"\[[^\]]+\]|\\n|˳")
+
+# The status/settings UI is stored in a separate raw block rather than in
+# script.tsv.  Its 80xx/81xx/82xx pairs still refer to live Japanese glyphs,
+# so reserve them before allocating Korean replacements.  The range covers
+# the verified Other Menus data block and stops before unrelated tables.
+OTHER_MENUS_RANGE = (0x1E300, 0x1F300)
 
 # These are the only long dialogue drafts inserted by the current preview
 # patch.  The rest remain in korean-draft.tsv for translation work until their
@@ -106,6 +113,13 @@ def read_used_kanji_codes(lead_byte: int) -> set[int]:
         for index, token in enumerate(raw[:-1]):
             if token.upper() == f"{lead_byte:02X}":
                 used.add(int(raw[index + 1], 16))
+    menu_start, menu_end = OTHER_MENUS_RANGE
+    rom = (ROOT / "Slap Stick (J).smc").read_bytes()
+    used.update(
+        rom[index + 1]
+        for index in range(menu_start, menu_end - 1)
+        if rom[index] == lead_byte
+    )
     return used
 
 

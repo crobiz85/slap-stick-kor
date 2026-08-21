@@ -49,9 +49,9 @@ PARAM_BYTES = {
 }
 
 
-def read_glyph_map() -> dict[str, bytes]:
+def read_glyph_map(path: Path = GLYPH_MAP_PATH) -> dict[str, bytes]:
     mapping = {}
-    for line in GLYPH_MAP_PATH.read_text(encoding="utf-8").splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         if not line or line.startswith("#"):
             continue
         columns = line.split("\t")

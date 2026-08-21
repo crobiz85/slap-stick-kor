@@ -47,7 +47,7 @@ STATUS_MENU_IDS = (
     "STATUS-EQUIP-NONE", "STATUS-SETTING", "STATUS-CONFIRM", "STATUS-CANCEL",
     "STATUS-SETTING-ALT", "STATUS-EMPTY-1", "STATUS-EMPTY-2", "STATUS-EMPTY-3",
     "STATUS-LEVEL", "STATUS-PROGRAM-1", "STATUS-PROGRAM-2", "STATUS-POINT",
-    "STATUS-INSPIRATION",
+    "STATUS-INSPIRATION", "STATUS-SPEED-OPTIONS", "STATUS-EXAMINE",
 )
 EARLY_GAME_IDS = ()
 C0_DIALOGUE_IDS = (
@@ -204,9 +204,9 @@ def read_c0_dialogue() -> dict[str, GameMenuRow]:
     return rows
 
 
-def read_glyph_tiles() -> list[tuple[str, int, bytes]]:
+def read_glyph_tiles(path: Path = GLYPH_MAP_PATH) -> list[tuple[str, int, bytes]]:
     result = []
-    for line in GLYPH_MAP_PATH.read_text(encoding="utf-8").splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         if not line or line.startswith("#"):
             continue
         columns = line.split("\t")
@@ -342,9 +342,10 @@ def patch_rom(
     early_game: dict[str, GameMenuRow],
     c0_dialogue: dict[str, GameMenuRow],
     encoded: dict[str, bytes],
+    glyph_map_path: Path = GLYPH_MAP_PATH,
 ) -> tuple[bytes, dict]:
     target = bytearray(source)
-    glyphs = read_glyph_tiles()
+    glyphs = read_glyph_tiles(glyph_map_path)
     for character, offset, tile in glyphs:
         if offset < 0 or offset + len(tile) > len(target):
             raise ValueError(f"glyph {character!r} is outside the ROM: 0x{offset:06X}")
@@ -568,7 +569,7 @@ def patch_rom(
         "font_pages": {
             "lead_bytes": ["0x80", "0x81", "0x82"],
             "offset_ranges": ["0x50000-0x53FFF", "0x54000-0x57FFF", "0x60000-0x63FFF"],
-            "note": "Korean glyphs use only code slots absent from the extracted Japanese script on the game's visible menu pages.",
+            "note": "Korean glyphs use only code slots absent from the extracted script and verified Other Menus block.",
         },
         "glyph_count": len(glyphs),
         "inline_records": [
@@ -714,6 +715,7 @@ def main() -> None:
     parser.add_argument("--bps-output", type=Path, default=DEFAULT_BPS_OUT)
     parser.add_argument("--ips-output", type=Path, default=DEFAULT_IPS_OUT)
     parser.add_argument("--manifest-output", type=Path, default=DEFAULT_MANIFEST_OUT)
+    parser.add_argument("--glyph-map", type=Path, default=GLYPH_MAP_PATH)
     args = parser.parse_args()
 
     source = args.rom.read_bytes()
@@ -737,8 +739,11 @@ def main() -> None:
     missing_c0 = [entry_id for entry_id in C0_DIALOGUE_IDS if entry_id not in c0_dialogue]
     if missing_c0:
         raise ValueError(f"missing C0 dialogue rows: {', '.join(missing_c0)}")
-    encoded = encode_rows(drafts, game_menu, status_menu, early_game, c0_dialogue, read_glyph_map())
-    target, manifest = patch_rom(source, drafts, game_menu, status_menu, early_game, c0_dialogue, encoded)
+    glyph_map = read_glyph_map(args.glyph_map)
+    encoded = encode_rows(drafts, game_menu, status_menu, early_game, c0_dialogue, glyph_map)
+    target, manifest = patch_rom(
+        source, drafts, game_menu, status_menu, early_game, c0_dialogue, encoded, args.glyph_map
+    )
 
     args.rom_output.parent.mkdir(parents=True, exist_ok=True)
     args.rom_output.write_bytes(target)

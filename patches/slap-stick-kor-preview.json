@@ -3,7 +3,7 @@
   "source_length": 1572864,
   "target_length": 1572864,
   "source_sha256": "08144EA1CE3CF6AB107837278D308E4E859574A047A2EE8EB456F7900AD4BE21",
-  "target_sha256": "5AD1535780654FC761DBC346A61E47E2AE076073B398F6D4B2785B19F474217B",
+  "target_sha256": "753364847F96D9EE048B03999CA68BF6AB1A65C3234D5BC06DAB4738B919228B",
   "patched_records": [
     "0002",
     "0003",
@@ -65,6 +65,8 @@
     "STATUS-PROGRAM-2",
     "STATUS-POINT",
     "STATUS-INSPIRATION",
+    "STATUS-SPEED-OPTIONS",
+    "STATUS-EXAMINE",
     "C0-05A245",
     "C0-05A3A8",
     "C0-05A3EA",
@@ -424,6 +426,18 @@
       "slot_length": 4,
       "encoded_length": 4,
       "source_bytes": "55 61 5C 41"
+    },
+    "STATUS-SPEED-OPTIONS": {
+      "offset": "0x01E9FB",
+      "slot_length": 15,
+      "encoded_length": 15,
+      "source_bytes": "54 5E 3C 20 20 20 56 4C 3D 20 20 20 3F 49 3C"
+    },
+    "STATUS-EXAMINE": {
+      "offset": "0x01EA44",
+      "slot_length": 5,
+      "encoded_length": 4,
+      "source_bytes": "46 61 57 82 63"
     }
   },
   "early_game_preview": {},
@@ -726,9 +740,9 @@
       "0x54000-0x57FFF",
       "0x60000-0x63FFF"
     ],
-    "note": "Korean glyphs use only code slots absent from the extracted Japanese script on the game's visible menu pages."
+    "note": "Korean glyphs use only code slots absent from the extracted script and verified Other Menus block."
   },
-  "glyph_count": 368,
+  "glyph_count": 370,
   "inline_records": [
     {
       "id": "0058",
@@ -798,5 +812,5 @@
       ]
     }
   },
-  "changed_bytes": 23405
+  "changed_bytes": 24199
 }
