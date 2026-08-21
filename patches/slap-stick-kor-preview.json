@@ -3,16 +3,8 @@
   "source_length": 1572864,
   "target_length": 1572864,
   "source_sha256": "08144EA1CE3CF6AB107837278D308E4E859574A047A2EE8EB456F7900AD4BE21",
-  "target_sha256": "71BE309F64234AF8FF974A5958AD8EC44406DD9A8DF1863888679CEE5CBBF5BB",
+  "target_sha256": "3545AC4F90BBAC3810E157732CDED781554A11C28022F75E70063FA62FDD65D5",
   "patched_records": [
-    "0058",
-    "0059",
-    "0060",
-    "0061",
-    "0062",
-    "0063"
-  ],
-  "unpatched_draft_records": [
     "0002",
     "0003",
     "0004",
@@ -23,9 +15,73 @@
     "0009",
     "0010",
     "0011",
-    "0012"
+    "0012",
+    "0058",
+    "0059",
+    "0060",
+    "0061",
+    "0062",
+    "0063"
   ],
-  "glyph_count": 131,
+  "unpatched_draft_records": [],
+  "raw_menu_preview": {
+    "0002": {
+      "offset": "0x01D0E7",
+      "slot_length": 16,
+      "encoded_length": 12
+    },
+    "0003": {
+      "offset": "0x01D0F8",
+      "slot_length": 18,
+      "encoded_length": 9
+    },
+    "0004": {
+      "offset": "0x01D14E",
+      "slot_length": 29,
+      "encoded_length": 24
+    },
+    "0005": {
+      "offset": "0x01D28A",
+      "slot_length": 26,
+      "encoded_length": 20
+    },
+    "0006": {
+      "offset": "0x01D2DE",
+      "slot_length": 34,
+      "encoded_length": 23
+    },
+    "0007": {
+      "offset": "0x01D301",
+      "slot_length": 37,
+      "encoded_length": 23
+    },
+    "0008": {
+      "offset": "0x01D440",
+      "slot_length": 45,
+      "encoded_length": 40
+    },
+    "0009": {
+      "offset": "0x01D47D",
+      "slot_length": 31,
+      "encoded_length": 25
+    },
+    "0010": {
+      "offset": "0x01D49D",
+      "slot_length": 35,
+      "encoded_length": 35
+    },
+    "0011": {
+      "offset": "0x01D60B",
+      "slot_length": 16,
+      "encoded_length": 12
+    },
+    "0012": {
+      "offset": "0x01D686",
+      "slot_length": 27,
+      "encoded_length": 25
+    }
+  },
+  "glyph_count": 132,
   "inline_record": {
     "id": "0058",
     "offset": "0x058AF4",
@@ -73,5 +129,5 @@
       ]
     }
   },
-  "changed_bytes": 2429
+  "changed_bytes": 2739
 }

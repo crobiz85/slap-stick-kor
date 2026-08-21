@@ -1,0 +1,16 @@
+# Compact Korean preview overlay for the raw early-menu block.
+# The full translations remain in translation/korean-draft.tsv; these strings
+# are shortened only to fit the original fixed slots until their entry table is
+# verified.  \n means an in-game line break.
+# id\tKorean preview\tstatus
+0002	[CLR]소지품 가득	compact-slot-preview
+0003	[CLR]뭘 원해?	compact-slot-preview
+0004	[CLR]소지품 가득\n건네기 불가	compact-slot-preview
+0005	[CLR]버릴까?\n아니\n버리기	compact-slot-preview
+0006	[CLR]아이템 정리?\n정리\n그만	compact-slot-preview
+0007	[CLR]아이템 정렬?\n정렬\n그만	compact-slot-preview
+0008	[CLR][TBL:3CE2800B] 만들기\n[NUM:04820B] 트론 필요\n만들기\n그만	compact-slot-preview
+0009	[CLR]소지품 가득\n새 물건 불가	compact-slot-preview
+0010	[CLR]이미 있어\n많이 만들어도 소용없어.[WAI]	compact-slot-preview
+0011	[CLR]합성 불가.[WAI]	compact-slot-preview
+0012	[CLR]아이템은\n리사이클 불가.[WAI]	compact-slot-preview

@@ -14,6 +14,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
 DRAFT_PATH = ROOT / "translation" / "korean-draft.tsv"
+MENU_PREVIEW_PATH = ROOT / "translation" / "korean-menu-preview.tsv"
 DEFAULT_MAP_PATH = ROOT / "translation" / "korean-glyph-map.tsv"
 DEFAULT_PREVIEW_PATH = ROOT / "build" / "korean-font-preview.png"
 HANGUL_START = 0xAC00
@@ -38,18 +39,21 @@ def find_default_font() -> Path:
 
 def read_draft_characters() -> list[str]:
     characters = set()
-    for line in DRAFT_PATH.read_text(encoding="utf-8").splitlines():
-        if not line or line.startswith("#"):
+    for source_path in (DRAFT_PATH, MENU_PREVIEW_PATH):
+        if not source_path.exists():
             continue
-        columns = line.split("\t", 2)
-        if len(columns) < 2:
-            continue
-        korean = CONTROL_MARKER.sub("", columns[1])
-        characters.update(
-            character
-            for character in korean
-            if HANGUL_START <= ord(character) <= HANGUL_END
-        )
+        for line in source_path.read_text(encoding="utf-8").splitlines():
+            if not line or line.startswith("#"):
+                continue
+            columns = line.split("\t", 2)
+            if len(columns) < 2:
+                continue
+            korean = CONTROL_MARKER.sub("", columns[1])
+            characters.update(
+                character
+                for character in korean
+                if HANGUL_START <= ord(character) <= HANGUL_END
+            )
     return sorted(characters)
 
 
@@ -150,7 +154,7 @@ def write_map(
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8", newline="\n") as handle:
-        handle.write("# Generated from translation/korean-draft.tsv; unused 0x82xx dialog-font slots.\n")
+        handle.write("# Generated from Korean draft and compact menu preview; unused 0x82xx dialog-font slots.\n")
         handle.write("# character\tcodepoint\tcode bytes\tfile offset\t2bpp tile bytes\n")
         for character in characters:
             low = codes[character]

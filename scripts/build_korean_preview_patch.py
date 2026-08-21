@@ -1,11 +1,11 @@
 """Build a playable Korean preview patch for the verified Japanese ROM.
 
 This is intentionally conservative.  It inserts the generated unused 0x82xx Korean
-glyphs and patches the six contiguous main-dialog records 0058-0063.  Record
-0058 stays at its original inline location; records 0059-0063 are relocated
-to verified FF padding in the same HiROM bank and their ``02 1D`` references
-are updated.  The remaining early menu/event records still need a container
-entry-point analysis and are not changed by this builder.
+glyphs, patches compact Korean strings into the eleven verified raw-menu slots,
+and patches the six contiguous main-dialog records 0058-0063.  Record 0058 stays
+at its original inline location; records 0059-0063 are relocated to verified FF
+padding in the same HiROM bank and their ``02 1D`` references are updated.  The
+raw-menu strings are deliberately compact until their entry table is verified.
 """
 
 from __future__ import annotations
@@ -24,13 +24,16 @@ ROOT = Path(__file__).resolve().parent.parent
 ROM_PATH = ROOT / "Slap Stick (J).smc"
 SCRIPT_PATH = ROOT / "translation" / "script.tsv"
 GLYPH_MAP_PATH = ROOT / "translation" / "korean-glyph-map.tsv"
+MENU_PREVIEW_PATH = ROOT / "translation" / "korean-menu-preview.tsv"
 DEFAULT_ROM_OUT = ROOT / "build" / "slap-stick-kor-preview.smc"
 DEFAULT_BPS_OUT = ROOT / "patches" / "slap-stick-kor-preview.bps"
 DEFAULT_IPS_OUT = ROOT / "patches" / "slap-stick-kor-preview.ips"
 DEFAULT_MANIFEST_OUT = ROOT / "patches" / "slap-stick-kor-preview.json"
 
-PATCHED_IDS = ("0058", "0059", "0060", "0061", "0062", "0063")
-RELOCATED_IDS = PATCHED_IDS[1:]
+RAW_MENU_IDS = ("0002", "0003", "0004", "0005", "0006", "0007", "0008", "0009", "0010", "0011", "0012")
+MAIN_DIALOG_IDS = ("0058", "0059", "0060", "0061", "0062", "0063")
+PATCHED_IDS = RAW_MENU_IDS + MAIN_DIALOG_IDS
+RELOCATED_IDS = MAIN_DIALOG_IDS[1:]
 DIALOG_BANK_START = 0x58000
 DIALOG_BANK_END = 0x60000
 
@@ -58,6 +61,17 @@ def read_drafts() -> dict[str, DraftRow]:
             korean=columns[5],
         )
     return drafts
+
+
+def read_menu_previews() -> dict[str, str]:
+    previews: dict[str, str] = {}
+    for line in MENU_PREVIEW_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) >= 2:
+            previews[columns[0]] = columns[1]
+    return previews
 
 
 def read_glyph_tiles() -> list[tuple[str, int, bytes]]:
@@ -101,7 +115,18 @@ def pointer_refs(data: bytes, target: int) -> list[int]:
 
 def encode_rows(drafts: dict[str, DraftRow], glyphs: dict[str, bytes]) -> dict[str, bytes]:
     encoded = {}
-    for entry_id in PATCHED_IDS:
+    menu_previews = read_menu_previews()
+    for entry_id in RAW_MENU_IDS:
+        row = drafts[entry_id]
+        if entry_id not in menu_previews:
+            raise ValueError(f"missing compact menu preview: {entry_id}")
+        encoded[entry_id] = encode_text(menu_previews[entry_id], glyphs)
+        if len(encoded[entry_id]) > row.original_length:
+            raise ValueError(
+                f"{entry_id} compact preview is {len(encoded[entry_id])} bytes, "
+                f"slot is {row.original_length} bytes"
+            )
+    for entry_id in MAIN_DIALOG_IDS:
         row = drafts[entry_id]
         encoded[entry_id] = encode_text(row.korean, glyphs)
         if entry_id == "0058":
@@ -149,6 +174,22 @@ def patch_rom(source: bytes, drafts: dict[str, DraftRow], encoded: dict[str, byt
             "references": [f"0x{ref:06X}" for ref in refs],
         }
 
+    raw_menu_manifest = {}
+    for entry_id in RAW_MENU_IDS:
+        row = drafts[entry_id]
+        payload = encoded[entry_id]
+        target[row.offset : row.offset + len(payload)] = payload
+        # The raw block keeps its original slot boundary.  Space-fill the
+        # unused tail so stale Japanese bytes cannot continue the preview text.
+        target[row.offset + len(payload) : row.offset + row.original_length] = b" " * (
+            row.original_length - len(payload)
+        )
+        raw_menu_manifest[entry_id] = {
+            "offset": f"0x{row.offset:06X}",
+            "slot_length": row.original_length,
+            "encoded_length": len(payload),
+        }
+
     changed = sum(left != right for left, right in zip(source, target))
     manifest = {
         "kind": "Slap Stick Korean preview patch",
@@ -158,6 +199,7 @@ def patch_rom(source: bytes, drafts: dict[str, DraftRow], encoded: dict[str, byt
         "target_sha256": hashlib.sha256(target).hexdigest().upper(),
         "patched_records": list(PATCHED_IDS),
         "unpatched_draft_records": [entry_id for entry_id in drafts if entry_id not in PATCHED_IDS],
+        "raw_menu_preview": raw_menu_manifest,
         "glyph_count": len(glyphs),
         "inline_record": {
             "id": "0058",
@@ -311,7 +353,7 @@ def main() -> None:
 
     args.rom_output.parent.mkdir(parents=True, exist_ok=True)
     args.rom_output.write_bytes(target)
-    write_bps(source, target, args.bps_output, b"Slap Stick Korean preview; 0058-0063 and unused 0x82xx font")
+    write_bps(source, target, args.bps_output, b"Slap Stick Korean preview; raw menus 0002-0012, dialog 0058-0063, unused 0x82xx font")
     write_ips(source, target, args.ips_output)
     args.manifest_output.parent.mkdir(parents=True, exist_ok=True)
     args.manifest_output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
