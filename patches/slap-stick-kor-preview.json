@@ -3,7 +3,7 @@
   "source_length": 1572864,
   "target_length": 1572864,
   "source_sha256": "08144EA1CE3CF6AB107837278D308E4E859574A047A2EE8EB456F7900AD4BE21",
-  "target_sha256": "89D91F523F9FF30B58C7D8A15C0ABC3FE5E7355196FF5E4A6D71E3BC6795E9FA",
+  "target_sha256": "7BC5BA955B05E8BFDBC261DB5A2A0A2D10A27C6DB648257BC209470BFE5C574E",
   "patched_records": [
     "0002",
     "0003",
@@ -65,8 +65,6 @@
     "STATUS-PROGRAM-2",
     "STATUS-POINT",
     "STATUS-INSPIRATION",
-    "STATUS-SPEED-OPTIONS",
-    "STATUS-EXAMINE",
     "C0-05A245",
     "C0-05A3A8",
     "C0-05A3EA",
@@ -86,9 +84,6 @@
     "C0-06C4C9",
     "C0-06C655",
     "C0-06C79F",
-    "C0-06C7C1",
-    "C0-06C8B3",
-    "C0-06C96A",
     "C0-078E32",
     "C0-0680C0",
     "C0-06810E",
@@ -429,18 +424,6 @@
       "slot_length": 4,
       "encoded_length": 4,
       "source_bytes": "55 61 5C 41"
-    },
-    "STATUS-SPEED-OPTIONS": {
-      "offset": "0x01E9FB",
-      "slot_length": 15,
-      "encoded_length": 15,
-      "source_bytes": "54 5E 3C 20 20 20 56 4C 3D 20 20 20 3F 49 3C"
-    },
-    "STATUS-EXAMINE": {
-      "offset": "0x01EA44",
-      "slot_length": 5,
-      "encoded_length": 4,
-      "source_bytes": "46 61 57 82 63"
     }
   },
   "early_game_preview": {},
@@ -534,56 +517,35 @@
       "slot_length": 109,
       "encoded_length": 112,
       "mode": "relocated",
-      "new_offset": "0x06C935"
+      "new_offset": "0x06C4CA"
     },
     "C0-06C495": {
       "offset": "0x06C495",
       "slot_length": 51,
       "encoded_length": 60,
       "mode": "relocated",
-      "new_offset": "0x06C507"
+      "new_offset": "0x06C655"
     },
     "C0-06C4C9": {
       "offset": "0x06C4C9",
       "slot_length": 124,
       "encoded_length": 162,
       "mode": "relocated",
-      "new_offset": "0x06FE13"
+      "new_offset": "0x06C427"
     },
     "C0-06C655": {
       "offset": "0x06C655",
       "slot_length": 329,
       "encoded_length": 414,
       "mode": "relocated",
-      "new_offset": "0x06C655"
+      "new_offset": "0x06FE13"
     },
     "C0-06C79F": {
       "offset": "0x06C79F",
       "slot_length": 33,
       "encoded_length": 43,
       "mode": "relocated",
-      "new_offset": "0x06FF1B"
-    },
-    "C0-06C7C1": {
-      "offset": "0x06C7C1",
-      "slot_length": 241,
-      "encoded_length": 320,
-      "mode": "relocated",
-      "new_offset": "0x06C7F4"
-    },
-    "C0-06C8B3": {
-      "offset": "0x06C8B3",
-      "slot_length": 182,
-      "encoded_length": 223,
-      "mode": "relocated",
-      "new_offset": "0x06C427"
-    },
-    "C0-06C96A": {
-      "offset": "0x06C96A",
-      "slot_length": 87,
-      "encoded_length": 100,
-      "mode": "relocated",
-      "new_offset": "0x06FEB6"
+      "new_offset": "0x06C692"
     },
     "C0-078E32": {
       "offset": "0x078E32",
@@ -660,51 +622,33 @@
         "C0-06C495",
         "C0-06C4C9",
         "C0-06C655",
-        "C0-06C79F",
-        "C0-06C7C1",
-        "C0-06C8B3",
-        "C0-06C96A"
+        "C0-06C79F"
       ],
       "allocations": [
         {
           "id": "C0-06C655",
-          "start": "0x06C655",
-          "end": "0x06C7F4"
-        },
-        {
-          "id": "C0-06C7C1",
-          "start": "0x06C7F4",
-          "end": "0x06C935"
-        },
-        {
-          "id": "C0-06C8B3",
-          "start": "0x06C427",
-          "end": "0x06C507"
+          "start": "0x06FE13",
+          "end": "0x06FFB2"
         },
         {
           "id": "C0-06C4C9",
-          "start": "0x06FE13",
-          "end": "0x06FEB6"
+          "start": "0x06C427",
+          "end": "0x06C4CA"
         },
         {
           "id": "C0-06C427",
-          "start": "0x06C935",
-          "end": "0x06C9A6"
-        },
-        {
-          "id": "C0-06C96A",
-          "start": "0x06FEB6",
-          "end": "0x06FF1B"
+          "start": "0x06C4CA",
+          "end": "0x06C53B"
         },
         {
           "id": "C0-06C495",
-          "start": "0x06C507",
-          "end": "0x06C544"
+          "start": "0x06C655",
+          "end": "0x06C692"
         },
         {
           "id": "C0-06C79F",
-          "start": "0x06FF1B",
-          "end": "0x06FF47"
+          "start": "0x06C692",
+          "end": "0x06C6BE"
         }
       ]
     },
@@ -724,7 +668,7 @@
   "c0_pointer_updates": {
     "C0-06C427": {
       "old_offset": "0x06C427",
-      "new_offset": "0x06C935",
+      "new_offset": "0x06C4CA",
       "references": [
         "0x06C30B"
       ],
@@ -732,7 +676,7 @@
     },
     "C0-06C495": {
       "old_offset": "0x06C495",
-      "new_offset": "0x06C507",
+      "new_offset": "0x06C655",
       "references": [
         "0x06C336"
       ],
@@ -740,7 +684,7 @@
     },
     "C0-06C4C9": {
       "old_offset": "0x06C4C9",
-      "new_offset": "0x06FE13",
+      "new_offset": "0x06C427",
       "references": [
         "0x06C33C"
       ],
@@ -748,7 +692,7 @@
     },
     "C0-06C655": {
       "old_offset": "0x06C655",
-      "new_offset": "0x06C655",
+      "new_offset": "0x06FE13",
       "references": [
         "0x06C5CF"
       ],
@@ -756,34 +700,9 @@
     },
     "C0-06C79F": {
       "old_offset": "0x06C79F",
-      "new_offset": "0x06FF1B",
+      "new_offset": "0x06C692",
       "references": [
         "0x06C5ED"
-      ],
-      "terminator": "0xC0"
-    },
-    "C0-06C7C1": {
-      "old_offset": "0x06C7C1",
-      "new_offset": "0x06C7F4",
-      "references": [
-        "0x06C59B"
-      ],
-      "terminator": "0xC0"
-    },
-    "C0-06C8B3": {
-      "old_offset": "0x06C8B3",
-      "new_offset": "0x06C427",
-      "references": [
-        "0x06C601"
-      ],
-      "terminator": "0xC0"
-    },
-    "C0-06C96A": {
-      "old_offset": "0x06C96A",
-      "new_offset": "0x06FEB6",
-      "references": [
-        "0x06C632",
-        "0x06C640"
       ],
       "terminator": "0xC0"
     },
@@ -809,7 +728,7 @@
     ],
     "note": "Korean glyphs use only code slots absent from the extracted script and verified Other Menus block."
   },
-  "glyph_count": 372,
+  "glyph_count": 368,
   "inline_records": [
     {
       "id": "0058",
@@ -879,5 +798,5 @@
       ]
     }
   },
-  "changed_bytes": 24731
+  "changed_bytes": 23130
 }

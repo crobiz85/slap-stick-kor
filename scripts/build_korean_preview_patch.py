@@ -44,17 +44,21 @@ GAME_MENU_IDS = (
     "GAME-0033", "GAME-0042", "GAME-0043", "GAME-0044", "GAME-0045",
 )
 STATUS_MENU_IDS = (
+    # Keep the newly catalogued speed/examine strings out of the stable build
+    # until their shared menu block has been relocated and tested in-game.
     "STATUS-EQUIP-NONE", "STATUS-SETTING", "STATUS-CONFIRM", "STATUS-CANCEL",
     "STATUS-SETTING-ALT", "STATUS-EMPTY-1", "STATUS-EMPTY-2", "STATUS-EMPTY-3",
     "STATUS-LEVEL", "STATUS-PROGRAM-1", "STATUS-PROGRAM-2", "STATUS-POINT",
-    "STATUS-INSPIRATION", "STATUS-SPEED-OPTIONS", "STATUS-EXAMINE",
+    "STATUS-INSPIRATION",
 )
 EARLY_GAME_IDS = ()
 C0_DIALOGUE_IDS = (
     "C0-05A245", "C0-05A3A8", "C0-05A3EA", "C0-05A4DD",
     "C0-05A9BE", "C0-05A9F5", "C0-05AB04", "C0-05ABC0",
     "C0-05AD49", "C0-05AD7C", "C0-05AF11", "C0-05AFDA",
-    "C0-06C3BE", "C0-06C3FB", "C0-06C427", "C0-06C495", "C0-06C4C9", "C0-06C655", "C0-06C79F", "C0-06C7C1", "C0-06C8B3", "C0-06C96A",
+    # The following mansion records are catalogued but not yet safe to
+    # relocate; enabling them makes the event stop before player control.
+    "C0-06C3BE", "C0-06C3FB", "C0-06C427", "C0-06C495", "C0-06C4C9", "C0-06C655", "C0-06C79F",
     "C0-078E32",
     "C0-0680C0", "C0-06810E", "C0-0682A6", "C0-06839C", "C0-0688A4", "C0-0688D7",
     "C0-06892F", "C0-06894F", "C0-068A5C", "C0-068B1B",
