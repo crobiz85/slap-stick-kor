@@ -4,6 +4,8 @@
 
 ## 현재 상태
 
+게임 화면 공통 메뉴 문구 프리뷰도 적용되어 있습니다.
+
 - 기준 ROM: `Slap Stick (J).smc`
 - ROM 형식: 무헤더 HiROM / FastROM
 - ROM 크기: 1,572,864 bytes (12 Mbit)
@@ -27,10 +29,13 @@
   - 검토용 대사 원고 240개를 `translation/script.tsv`로 분리했으며
     초반 메뉴·이벤트 17개에는 `translation/korean-draft.tsv`의 한국어 초안을 덧씌움
   - 일본판 폰트 위치와 반전 Game Boy 2BPP 형식을 확인하고, 초안에 필요한 한글 글리프
-    132자를 대화용 `0x82xx` 미사용 슬롯에 배치해 `translation/korean-glyph-map.tsv`로 생성
+    초안과 게임 화면 문구에 필요한 149자를 대화용 `0x82xx` 미사용 슬롯에 배치해
+    `translation/korean-glyph-map.tsv`로 생성
   - 초안 17개 중 메인 대사 0058~0063 6개는 실제 재배치·포인터 갱신까지 적용
   - 초반 메뉴·이벤트 11개는 원래 고정 슬롯에 들어가는 압축형 프리뷰 문구를
     `translation/korean-menu-preview.tsv`로 관리해 함께 삽입
+  - 실제 게임 화면의 시작 메뉴와 로봇 선택·아이템 사용·버리기·전투 실행·합성 완료 공통 문구 11개는
+    `translation/korean-game-menu.tsv`로 관리해 원래 고정 슬롯에 삽입
   - `translation/relocation-plan.tsv`에 원문 슬롯·CC 종료 위치·포인터 후보·재배치 조치를 기록함
 
 ## 작업 방향
@@ -47,7 +52,8 @@
 `translation/decoded-text-blocks.tsv`, `translation/decoded-anchored-text.tsv`,
 `translation/decoded-static-strings.tsv`, `translation/script.tsv`,
 `translation/korean-draft.tsv`, `translation/korean-glyph-map.tsv`,
-`translation/korean-menu-preview.tsv`, `translation/font-layout.tsv`입니다.
+`translation/korean-menu-preview.tsv`, `translation/korean-game-menu.tsv`,
+`translation/font-layout.tsv`입니다.
 마지막 파일은 오탐이 포함된 연구용 후보 목록이므로 번역 원고로 사용하지 않습니다.
 
 ## 로컬 자료
@@ -72,7 +78,8 @@
 - `scripts/build_korean_font.py`: 초안에서 한글 글리프를 뽑아 후보 코드·타일 바이트·미리보기 생성
 - `scripts/encode_translation_drafts.py`: 제어코드를 유지한 한글 바이트열과 원문 슬롯 길이 사전 검사
 - `scripts/build_relocation_plan.py`: 원문 슬롯·다음 `CC` 위치·포인터 후보를 재배치 검토표로 생성
-- `scripts/build_korean_preview_patch.py`: 한글 폰트와 메인 대사 6개를 삽입하고 BPS/IPS를 자체 검증하여 생성
+- `scripts/build_korean_preview_patch.py`: 한글 폰트와 메뉴·게임 화면 문구·메인 대사 28개를
+  삽입하고 BPS/IPS를 자체 검증하여 생성
 
 도구 사용법과 출처는 `tools/README.md`에 기록합니다. 실행 파일 자체는 저장소에 올리지 않습니다.
 
@@ -80,10 +87,11 @@
 
 `patches/slap-stick-kor-preview.bps` 또는 `patches/slap-stick-kor-preview.ips`를
 무헤더 일본판 원본 ROM에 적용합니다. 원본 ROM 자체는 저장소에 포함하지 않습니다.
-패치는 대화용 `0x82xx` 미사용 슬롯에 넣은 132자 한글 폰트와 초안 17개를 포함합니다.
-메인 대사 0058~0063은 자연스러운 원고를 재배치하고, 0002~0012는 진입점 확인 전까지
-짧은 프리뷰 문구를 원래 슬롯에 넣습니다. `0x83xx`는 메뉴·폰트 테스트용 영역이라
-대화 패치에는 사용하지 않습니다.
+패치는 대화용 `0x82xx` 미사용 슬롯에 넣은 149자 한글 폰트와 프리뷰 레코드 28개를
+포함합니다. 메인 대사 0058~0063은 자연스러운 원고를 재배치하고, 0002~0012와 게임 화면
+공통 문구 11개는 진입점·컨테이너 확인 전까지 원래 고정 슬롯에 들어가는 압축형 문구를 사용합니다.
+대화는 `0x82xx` 글리프를 사용하고, 게임 화면 메뉴는 `0x83xx` 글리프를 사용합니다.
+프리뷰 빌더가 같은 타일을 두 페이지에 복사해 두 출력 경로를 함께 검증합니다.
 
 ## 검증
 

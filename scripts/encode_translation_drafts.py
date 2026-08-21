@@ -25,13 +25,17 @@ CONTROL_BYTES = {
     "KATAKANA": b"\xD4",
     "HIRAGANA": b"\xD5",
     "DFT": b"\xD7",
+    "NXT": b"\xDC",
+    "TER": b"\xCC",
 }
 PARAM_BYTES = {
+    "POS": (0xC1, 2),
     "NAM": (0xC2, 1),
     "PAL": (0xC3, 1),
     "PAU": (0xC9, 1),
     "TBL": (0xC5, 4),
     "NUM": (0xC6, 3),
+    "BOX": (0xC7, 3),
 }
 
 
@@ -59,7 +63,7 @@ def read_drafts() -> dict[str, tuple[int, str]]:
     return drafts
 
 
-def encode_text(text: str, glyphs: dict[str, bytes]) -> bytes:
+def encode_text(text: str, glyphs: dict[str, bytes], glyph_lead_byte: int | None = None) -> bytes:
     output = bytearray()
     layer = HIRAGANA
     position = 0
@@ -94,7 +98,10 @@ def encode_text(text: str, glyphs: dict[str, bytes]) -> bytes:
 
         character = text[position]
         if character in glyphs:
-            output.extend(glyphs[character])
+            if glyph_lead_byte is None:
+                output.extend(glyphs[character])
+            else:
+                output.extend((glyph_lead_byte, glyphs[character][1]))
         elif character == ".":
             output.append(HIRAGANA.index("˳"))
         elif character == ",":

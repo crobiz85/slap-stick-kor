@@ -5,4 +5,4 @@ alternate	0x42000	0x2000	0x10	00xx	confirmed	Katakana/alternate symbols
 kanji-k1	0x50000	0x2000	0x10	80xx	confirmed	Dictionary page 0x80
 kanji-k2	0x52000	0x2000	0x10	81xx	confirmed	Dictionary page 0x81
 kanji-k3	0x60000	0x1000	0x10	82xx	confirmed	Dialog dictionary page; unused slots reserved for Korean
-kanji-k4	0x61000	0x1000	0x10	83xx	candidate	Menu/font-test page; not used by dialog preview
+kanji-k4	0x61000	0x1000	0x10	83xx	confirmed	Game-screen menu page; preview duplicates the 0x82xx Korean tiles here

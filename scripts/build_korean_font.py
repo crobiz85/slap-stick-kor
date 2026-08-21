@@ -15,6 +15,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parent.parent
 DRAFT_PATH = ROOT / "translation" / "korean-draft.tsv"
 MENU_PREVIEW_PATH = ROOT / "translation" / "korean-menu-preview.tsv"
+GAME_MENU_PATH = ROOT / "translation" / "korean-game-menu.tsv"
 DEFAULT_MAP_PATH = ROOT / "translation" / "korean-glyph-map.tsv"
 DEFAULT_PREVIEW_PATH = ROOT / "build" / "korean-font-preview.png"
 HANGUL_START = 0xAC00
@@ -27,8 +28,9 @@ CONTROL_MARKER = re.compile(r"\[[^\]]+\]|\\n|˳")
 
 def find_default_font() -> Path:
     candidates = (
-        Path(r"C:\Windows\Fonts\NotoSansKR-VF.ttf"),
+        Path(r"C:\Windows\Fonts\gulim.ttc"),
         Path(r"C:\Windows\Fonts\malgun.ttf"),
+        Path(r"C:\Windows\Fonts\NotoSansKR-VF.ttf"),
         Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"),
     )
     for candidate in candidates:
@@ -39,16 +41,19 @@ def find_default_font() -> Path:
 
 def read_draft_characters() -> list[str]:
     characters = set()
-    for source_path in (DRAFT_PATH, MENU_PREVIEW_PATH):
+    for source_path in (DRAFT_PATH, MENU_PREVIEW_PATH, GAME_MENU_PATH):
         if not source_path.exists():
             continue
         for line in source_path.read_text(encoding="utf-8").splitlines():
             if not line or line.startswith("#"):
                 continue
-            columns = line.split("\t", 2)
+            columns = line.split("\t")
             if len(columns) < 2:
                 continue
-            korean = CONTROL_MARKER.sub("", columns[1])
+            korean_column = 3 if source_path == GAME_MENU_PATH else 1
+            if len(columns) <= korean_column:
+                continue
+            korean = CONTROL_MARKER.sub("", columns[korean_column])
             characters.update(
                 character
                 for character in korean
@@ -84,31 +89,21 @@ def allocate_codes(characters: list[str]) -> dict[str, int]:
 
 
 def render_mask(character: str, font: ImageFont.FreeTypeFont, render_size: int) -> Image.Image:
-    canvas = Image.new("L", (render_size * 2, render_size * 2), 0)
+    canvas = Image.new("L", (8, 8), 0)
     draw = ImageDraw.Draw(canvas)
+    bbox = draw.textbbox((0, 0), character, font=font)
+    width = bbox[2] - bbox[0]
+    height = bbox[3] - bbox[1]
     draw.text(
-        (render_size, render_size),
+        ((8 - width) // 2 - bbox[0], (8 - height) // 2 - bbox[1]),
         character,
         font=font,
         fill=255,
-        anchor="mm",
     )
-    bbox = canvas.getbbox()
-    if bbox is None:
-        return Image.new("1", (8, 8), 0)
-
-    cropped = canvas.crop(bbox)
-    scale = min(8 / cropped.width, 8 / cropped.height)
-    size = (
-        max(1, round(cropped.width * scale)),
-        max(1, round(cropped.height * scale)),
-    )
-    cropped = cropped.resize(size, Image.Resampling.LANCZOS)
+    # Keep the 8x8 glyph strokes crisp enough for the original low-resolution
+    # renderer; direct pixel rendering avoids turning Hangul into solid blobs.
     mask = Image.new("1", (8, 8), 0)
-    position = ((8 - size[0]) // 2, (8 - size[1]) // 2)
-    # The source glyph is downsampled from a large mask; after shrinking,
-    # even solid strokes can be below 128, so use a conservative ink cutoff.
-    mask.paste(cropped.point(lambda value: 255 if value >= 32 else 0), position)
+    mask.paste(canvas.point(lambda value: 255 if value >= 64 else 0))
     return mask
 
 
@@ -154,7 +149,8 @@ def write_map(
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8", newline="\n") as handle:
-        handle.write("# Generated from Korean draft and compact menu preview; unused 0x82xx dialog-font slots.\n")
+        handle.write("# Generated from Korean draft, compact menu preview, and game-screen prompts; 0x82xx dialog-font slots.\n")
+        handle.write("# The preview builder duplicates these tiles into the 0x83xx game-menu page.\n")
         handle.write("# character\tcodepoint\tcode bytes\tfile offset\t2bpp tile bytes\n")
         for character in characters:
             low = codes[character]
@@ -168,7 +164,7 @@ def write_map(
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build Korean glyph map and preview without modifying the ROM.")
     parser.add_argument("--font", type=Path, default=None, help="Korean-capable TTF/TTC font")
-    parser.add_argument("--font-size", type=int, default=32)
+    parser.add_argument("--font-size", type=int, default=8)
     parser.add_argument("--preview-scale", type=int, default=8)
     parser.add_argument("--output-map", type=Path, default=DEFAULT_MAP_PATH)
     parser.add_argument("--output-preview", type=Path, default=DEFAULT_PREVIEW_PATH)

@@ -2,6 +2,7 @@
 
 This is intentionally conservative.  It inserts the generated unused 0x82xx Korean
 glyphs, patches compact Korean strings into the eleven verified raw-menu slots,
+patches a second set of verified game-screen prompts in their original slots,
 and patches the six contiguous main-dialog records 0058-0063.  Record 0058 stays
 at its original inline location; records 0059-0063 are relocated to verified FF
 padding in the same HiROM bank and their ``02 1D`` references are updated.  The
@@ -25,21 +26,35 @@ ROM_PATH = ROOT / "Slap Stick (J).smc"
 SCRIPT_PATH = ROOT / "translation" / "script.tsv"
 GLYPH_MAP_PATH = ROOT / "translation" / "korean-glyph-map.tsv"
 MENU_PREVIEW_PATH = ROOT / "translation" / "korean-menu-preview.tsv"
+GAME_MENU_PATH = ROOT / "translation" / "korean-game-menu.tsv"
 DEFAULT_ROM_OUT = ROOT / "build" / "slap-stick-kor-preview.smc"
 DEFAULT_BPS_OUT = ROOT / "patches" / "slap-stick-kor-preview.bps"
 DEFAULT_IPS_OUT = ROOT / "patches" / "slap-stick-kor-preview.ips"
 DEFAULT_MANIFEST_OUT = ROOT / "patches" / "slap-stick-kor-preview.json"
 
 RAW_MENU_IDS = ("0002", "0003", "0004", "0005", "0006", "0007", "0008", "0009", "0010", "0011", "0012")
+GAME_MENU_IDS = (
+    "GAME-0018", "GAME-0019", "GAME-0020", "GAME-0021", "GAME-0025", "GAME-0029",
+    "GAME-0033", "GAME-0042", "GAME-0043", "GAME-0044", "GAME-0045",
+)
 MAIN_DIALOG_IDS = ("0058", "0059", "0060", "0061", "0062", "0063")
-PATCHED_IDS = RAW_MENU_IDS + MAIN_DIALOG_IDS
+PATCHED_IDS = RAW_MENU_IDS + GAME_MENU_IDS + MAIN_DIALOG_IDS
 RELOCATED_IDS = MAIN_DIALOG_IDS[1:]
 DIALOG_BANK_START = 0x58000
 DIALOG_BANK_END = 0x60000
+MENU_FONT_PAGE_SHIFT = 0x1000
 
 
 @dataclass(frozen=True)
 class DraftRow:
+    entry_id: str
+    offset: int
+    original_length: int
+    korean: str
+
+
+@dataclass(frozen=True)
+class GameMenuRow:
     entry_id: str
     offset: int
     original_length: int
@@ -72,6 +87,22 @@ def read_menu_previews() -> dict[str, str]:
         if len(columns) >= 2:
             previews[columns[0]] = columns[1]
     return previews
+
+
+def read_game_menu() -> dict[str, GameMenuRow]:
+    rows: dict[str, GameMenuRow] = {}
+    for line in GAME_MENU_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) >= 4:
+            rows[columns[0]] = GameMenuRow(
+                entry_id=columns[0],
+                offset=int(columns[1], 16),
+                original_length=int(columns[2], 16),
+                korean=columns[3],
+            )
+    return rows
 
 
 def read_glyph_tiles() -> list[tuple[str, int, bytes]]:
@@ -113,17 +144,29 @@ def pointer_refs(data: bytes, target: int) -> list[int]:
     ]
 
 
-def encode_rows(drafts: dict[str, DraftRow], glyphs: dict[str, bytes]) -> dict[str, bytes]:
+def encode_rows(
+    drafts: dict[str, DraftRow],
+    game_menu: dict[str, GameMenuRow],
+    glyphs: dict[str, bytes],
+) -> dict[str, bytes]:
     encoded = {}
     menu_previews = read_menu_previews()
     for entry_id in RAW_MENU_IDS:
         row = drafts[entry_id]
         if entry_id not in menu_previews:
             raise ValueError(f"missing compact menu preview: {entry_id}")
-        encoded[entry_id] = encode_text(menu_previews[entry_id], glyphs)
+        encoded[entry_id] = encode_text(menu_previews[entry_id], glyphs, glyph_lead_byte=0x83)
         if len(encoded[entry_id]) > row.original_length:
             raise ValueError(
                 f"{entry_id} compact preview is {len(encoded[entry_id])} bytes, "
+                f"slot is {row.original_length} bytes"
+            )
+    for entry_id in GAME_MENU_IDS:
+        row = game_menu[entry_id]
+        encoded[entry_id] = encode_text(row.korean, glyphs, glyph_lead_byte=0x83)
+        if len(encoded[entry_id]) > row.original_length:
+            raise ValueError(
+                f"{entry_id} preview is {len(encoded[entry_id])} bytes, "
                 f"slot is {row.original_length} bytes"
             )
     for entry_id in MAIN_DIALOG_IDS:
@@ -137,13 +180,22 @@ def encode_rows(drafts: dict[str, DraftRow], glyphs: dict[str, bytes]) -> dict[s
     return encoded
 
 
-def patch_rom(source: bytes, drafts: dict[str, DraftRow], encoded: dict[str, bytes]) -> tuple[bytes, dict]:
+def patch_rom(
+    source: bytes,
+    drafts: dict[str, DraftRow],
+    game_menu: dict[str, GameMenuRow],
+    encoded: dict[str, bytes],
+) -> tuple[bytes, dict]:
     target = bytearray(source)
     glyphs = read_glyph_tiles()
     for character, offset, tile in glyphs:
         if offset < 0 or offset + len(tile) > len(target):
             raise ValueError(f"glyph {character!r} is outside the ROM: 0x{offset:06X}")
         target[offset : offset + len(tile)] = tile
+        menu_offset = offset + MENU_FONT_PAGE_SHIFT
+        if menu_offset + len(tile) > len(target):
+            raise ValueError(f"menu glyph {character!r} is outside the ROM: 0x{menu_offset:06X}")
+        target[menu_offset : menu_offset + len(tile)] = tile
 
     total_relocated = sum(len(encoded[entry_id]) for entry_id in RELOCATED_IDS)
     relocation_start = find_ff_run(target, DIALOG_BANK_START, DIALOG_BANK_END, total_relocated)
@@ -190,6 +242,20 @@ def patch_rom(source: bytes, drafts: dict[str, DraftRow], encoded: dict[str, byt
             "encoded_length": len(payload),
         }
 
+    game_menu_manifest = {}
+    for entry_id in GAME_MENU_IDS:
+        row = game_menu[entry_id]
+        payload = encoded[entry_id]
+        target[row.offset : row.offset + len(payload)] = payload
+        target[row.offset + len(payload) : row.offset + row.original_length] = b" " * (
+            row.original_length - len(payload)
+        )
+        game_menu_manifest[entry_id] = {
+            "offset": f"0x{row.offset:06X}",
+            "slot_length": row.original_length,
+            "encoded_length": len(payload),
+        }
+
     changed = sum(left != right for left, right in zip(source, target))
     manifest = {
         "kind": "Slap Stick Korean preview patch",
@@ -200,6 +266,12 @@ def patch_rom(source: bytes, drafts: dict[str, DraftRow], encoded: dict[str, byt
         "patched_records": list(PATCHED_IDS),
         "unpatched_draft_records": [entry_id for entry_id in drafts if entry_id not in PATCHED_IDS],
         "raw_menu_preview": raw_menu_manifest,
+        "game_menu_preview": game_menu_manifest,
+        "menu_font_page": {
+            "lead_byte": "0x83",
+            "tile_offset_shift": "0x1000",
+            "note": "Menu strings use 0x83xx codes; tiles are duplicated from the 0x82xx preview map.",
+        },
         "glyph_count": len(glyphs),
         "inline_record": {
             "id": "0058",
@@ -345,15 +417,19 @@ def main() -> None:
 
     source = args.rom.read_bytes()
     drafts = read_drafts()
-    missing = [entry_id for entry_id in PATCHED_IDS if entry_id not in drafts]
+    game_menu = read_game_menu()
+    missing = [entry_id for entry_id in RAW_MENU_IDS + MAIN_DIALOG_IDS if entry_id not in drafts]
     if missing:
         raise ValueError(f"missing draft rows: {', '.join(missing)}")
-    encoded = encode_rows(drafts, read_glyph_map())
-    target, manifest = patch_rom(source, drafts, encoded)
+    missing_game = [entry_id for entry_id in GAME_MENU_IDS if entry_id not in game_menu]
+    if missing_game:
+        raise ValueError(f"missing game menu rows: {', '.join(missing_game)}")
+    encoded = encode_rows(drafts, game_menu, read_glyph_map())
+    target, manifest = patch_rom(source, drafts, game_menu, encoded)
 
     args.rom_output.parent.mkdir(parents=True, exist_ok=True)
     args.rom_output.write_bytes(target)
-    write_bps(source, target, args.bps_output, b"Slap Stick Korean preview; raw menus 0002-0012, dialog 0058-0063, unused 0x82xx font")
+    write_bps(source, target, args.bps_output, b"Slap Stick Korean preview; game menus, raw menus, dialog, unused 0x82xx font")
     write_ips(source, target, args.ips_output)
     args.manifest_output.parent.mkdir(parents=True, exist_ok=True)
     args.manifest_output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
