@@ -1,13 +1,13 @@
 """Build a playable Korean preview patch for the verified Japanese ROM.
 
 This is intentionally conservative. It inserts the generated unused 0x82xx/0x83xx Korean
-glyphs, patches compact Korean strings into the eleven verified raw-menu slots,
-patches a second set of verified game-screen prompts in their original slots,
-and patches the six contiguous main-dialog records 0058-0063.  Record 0058 stays
+glyphs, patches compact Korean strings into the verified raw-menu and item-menu
+slots, patches a second set of verified game-screen prompts in their original
+slots, and patches the six contiguous main-dialog records 0058-0063. Record 0058 stays
 at its original inline location; records 0059-0063 are relocated to verified FF
 padding in the same HiROM bank and their ``02 1D`` references are updated.  The
 raw-menu strings are deliberately compact until their entry table is verified;
-five additional fixed-length save/skill menu records are patched only when the
+eight additional fixed-length save/skill menu records are patched only when the
 encoded Korean draft fits its original slot.
 """
 
@@ -29,19 +29,21 @@ SCRIPT_PATH = ROOT / "translation" / "script.tsv"
 GLYPH_MAP_PATH = ROOT / "translation" / "korean-glyph-map.tsv"
 MENU_PREVIEW_PATH = ROOT / "translation" / "korean-menu-preview.tsv"
 GAME_MENU_PATH = ROOT / "translation" / "korean-game-menu.tsv"
+ITEM_PREVIEW_PATH = ROOT / "translation" / "korean-item-preview.tsv"
 DEFAULT_ROM_OUT = ROOT / "build" / "slap-stick-kor-preview.smc"
 DEFAULT_BPS_OUT = ROOT / "patches" / "slap-stick-kor-preview.bps"
 DEFAULT_IPS_OUT = ROOT / "patches" / "slap-stick-kor-preview.ips"
 DEFAULT_MANIFEST_OUT = ROOT / "patches" / "slap-stick-kor-preview.json"
 
 RAW_MENU_IDS = ("0002", "0003", "0004", "0005", "0006", "0007", "0008", "0009", "0010", "0011", "0012")
-FIXED_DRAFT_MENU_IDS = ("0016", "0017", "0018", "0019", "0020")
+FIXED_DRAFT_MENU_IDS = ("0001", "0013", "0014", "0015", "0016", "0017", "0018", "0019", "0020")
+ITEM_PREVIEW_IDS = tuple(f"{index:04d}" for index in range(21, 36))
 GAME_MENU_IDS = (
     "GAME-0018", "GAME-0019", "GAME-0020", "GAME-0021", "GAME-0025", "GAME-0029",
     "GAME-0033", "GAME-0042", "GAME-0043", "GAME-0044", "GAME-0045",
 )
 MAIN_DIALOG_IDS = ("0058", "0059", "0060", "0061", "0062", "0063")
-PATCHED_IDS = RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + GAME_MENU_IDS + MAIN_DIALOG_IDS
+PATCHED_IDS = RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS + GAME_MENU_IDS + MAIN_DIALOG_IDS
 RELOCATED_IDS = MAIN_DIALOG_IDS[1:]
 DIALOG_BANK_START = 0x58000
 DIALOG_BANK_END = 0x60000
@@ -87,6 +89,17 @@ def read_drafts() -> dict[str, DraftRow]:
 def read_menu_previews() -> dict[str, str]:
     previews: dict[str, str] = {}
     for line in MENU_PREVIEW_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) >= 2:
+            previews[columns[0]] = columns[1]
+    return previews
+
+
+def read_item_previews() -> dict[str, str]:
+    previews: dict[str, str] = {}
+    for line in ITEM_PREVIEW_PATH.read_text(encoding="utf-8").splitlines():
         if not line or line.startswith("#"):
             continue
         columns = line.split("\t")
@@ -157,6 +170,7 @@ def encode_rows(
 ) -> dict[str, bytes]:
     encoded = {}
     menu_previews = read_menu_previews()
+    item_previews = read_item_previews()
     for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS:
         row = drafts[entry_id]
         source_text = menu_previews.get(entry_id, row.korean)
@@ -166,6 +180,16 @@ def encode_rows(
         if len(encoded[entry_id]) > row.original_length:
             raise ValueError(
                 f"{entry_id} compact preview is {len(encoded[entry_id])} bytes, "
+                f"slot is {row.original_length} bytes"
+            )
+    for entry_id in ITEM_PREVIEW_IDS:
+        row = drafts[entry_id]
+        if entry_id not in item_previews:
+            raise ValueError(f"missing compact item preview: {entry_id}")
+        encoded[entry_id] = encode_text(item_previews[entry_id], glyphs, glyph_lead_byte=0x83)
+        if len(encoded[entry_id]) > row.original_length:
+            raise ValueError(
+                f"{entry_id} compact item preview is {len(encoded[entry_id])} bytes, "
                 f"slot is {row.original_length} bytes"
             )
     for entry_id in GAME_MENU_IDS:
@@ -239,7 +263,7 @@ def patch_rom(
         }
 
     raw_menu_manifest = {}
-    for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS:
+    for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS:
         row = drafts[entry_id]
         payload = encoded[entry_id]
         target[row.offset : row.offset + len(payload)] = payload
@@ -430,7 +454,7 @@ def main() -> None:
     source = args.rom.read_bytes()
     drafts = read_drafts()
     game_menu = read_game_menu()
-    missing = [entry_id for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + MAIN_DIALOG_IDS if entry_id not in drafts]
+    missing = [entry_id for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS + MAIN_DIALOG_IDS if entry_id not in drafts]
     if missing:
         raise ValueError(f"missing draft rows: {', '.join(missing)}")
     missing_game = [entry_id for entry_id in GAME_MENU_IDS if entry_id not in game_menu]

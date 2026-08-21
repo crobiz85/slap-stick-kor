@@ -3,7 +3,7 @@
   "source_length": 1572864,
   "target_length": 1572864,
   "source_sha256": "08144EA1CE3CF6AB107837278D308E4E859574A047A2EE8EB456F7900AD4BE21",
-  "target_sha256": "94A4518C09D29E8CACE4DC56A865330920AB4C41C37859EF425BCFD62A2D640A",
+  "target_sha256": "F507E9DEDD025BA9D365FE9FA00B0C3EF1684B55FC85FBB4F028791915664634",
   "patched_records": [
     "0002",
     "0003",
@@ -16,11 +16,30 @@
     "0010",
     "0011",
     "0012",
+    "0001",
+    "0013",
+    "0014",
+    "0015",
     "0016",
     "0017",
     "0018",
     "0019",
     "0020",
+    "0021",
+    "0022",
+    "0023",
+    "0024",
+    "0025",
+    "0026",
+    "0027",
+    "0028",
+    "0029",
+    "0030",
+    "0031",
+    "0032",
+    "0033",
+    "0034",
+    "0035",
     "GAME-0018",
     "GAME-0019",
     "GAME-0020",
@@ -39,27 +58,7 @@
     "0062",
     "0063"
   ],
-  "unpatched_draft_records": [
-    "0001",
-    "0013",
-    "0014",
-    "0015",
-    "0021",
-    "0022",
-    "0023",
-    "0024",
-    "0025",
-    "0026",
-    "0027",
-    "0028",
-    "0029",
-    "0030",
-    "0031",
-    "0032",
-    "0033",
-    "0034",
-    "0035"
-  ],
+  "unpatched_draft_records": [],
   "raw_menu_preview": {
     "0002": {
       "offset": "0x01D0E7",
@@ -116,6 +115,26 @@
       "slot_length": 27,
       "encoded_length": 25
     },
+    "0001": {
+      "offset": "0x01CF69",
+      "slot_length": 38,
+      "encoded_length": 12
+    },
+    "0013": {
+      "offset": "0x01D6D8",
+      "slot_length": 82,
+      "encoded_length": 35
+    },
+    "0014": {
+      "offset": "0x01D760",
+      "slot_length": 19,
+      "encoded_length": 10
+    },
+    "0015": {
+      "offset": "0x01D859",
+      "slot_length": 15,
+      "encoded_length": 6
+    },
     "0016": {
       "offset": "0x01D869",
       "slot_length": 14,
@@ -140,6 +159,81 @@
       "offset": "0x01D9DE",
       "slot_length": 30,
       "encoded_length": 25
+    },
+    "0021": {
+      "offset": "0x01DC5D",
+      "slot_length": 50,
+      "encoded_length": 45
+    },
+    "0022": {
+      "offset": "0x01DC90",
+      "slot_length": 49,
+      "encoded_length": 37
+    },
+    "0023": {
+      "offset": "0x01DCC2",
+      "slot_length": 36,
+      "encoded_length": 28
+    },
+    "0024": {
+      "offset": "0x01DCE7",
+      "slot_length": 54,
+      "encoded_length": 30
+    },
+    "0025": {
+      "offset": "0x01DD1E",
+      "slot_length": 58,
+      "encoded_length": 38
+    },
+    "0026": {
+      "offset": "0x01DD59",
+      "slot_length": 49,
+      "encoded_length": 26
+    },
+    "0027": {
+      "offset": "0x01DDB0",
+      "slot_length": 49,
+      "encoded_length": 41
+    },
+    "0028": {
+      "offset": "0x01DDE2",
+      "slot_length": 20,
+      "encoded_length": 20
+    },
+    "0029": {
+      "offset": "0x01DDF7",
+      "slot_length": 30,
+      "encoded_length": 26
+    },
+    "0030": {
+      "offset": "0x01DE16",
+      "slot_length": 54,
+      "encoded_length": 47
+    },
+    "0031": {
+      "offset": "0x01DE4D",
+      "slot_length": 38,
+      "encoded_length": 31
+    },
+    "0032": {
+      "offset": "0x01DEA7",
+      "slot_length": 28,
+      "encoded_length": 16
+    },
+    "0033": {
+      "offset": "0x01DEC4",
+      "slot_length": 46,
+      "encoded_length": 34
+    },
+    "0034": {
+      "offset": "0x01DEF3",
+      "slot_length": 36,
+      "encoded_length": 35
+    },
+    "0035": {
+      "offset": "0x01DF18",
+      "slot_length": 36,
+      "encoded_length": 35
     }
   },
   "game_menu_preview": {
@@ -204,7 +298,7 @@
     "tile_offset_shift": "0x1000",
     "note": "Menu strings use 0x83xx codes; 0x82xx tiles are mirrored at +0x1000 and overflow glyphs remain on 0x83xx."
   },
-  "glyph_count": 247,
+  "glyph_count": 252,
   "inline_record": {
     "id": "0058",
     "offset": "0x058AF4",
@@ -252,5 +346,5 @@
       ]
     }
   },
-  "changed_bytes": 7453
+  "changed_bytes": 8278
 }

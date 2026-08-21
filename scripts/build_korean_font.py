@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DRAFT_PATH = ROOT / "translation" / "korean-draft.tsv"
 MENU_PREVIEW_PATH = ROOT / "translation" / "korean-menu-preview.tsv"
 GAME_MENU_PATH = ROOT / "translation" / "korean-game-menu.tsv"
+ITEM_PREVIEW_PATH = ROOT / "translation" / "korean-item-preview.tsv"
 DEFAULT_MAP_PATH = ROOT / "translation" / "korean-glyph-map.tsv"
 DEFAULT_PREVIEW_PATH = ROOT / "build" / "korean-font-preview.png"
 HANGUL_START = 0xAC00
@@ -43,7 +44,7 @@ def find_default_font() -> Path:
 
 def read_draft_characters() -> list[str]:
     characters = set()
-    for source_path in (DRAFT_PATH, MENU_PREVIEW_PATH, GAME_MENU_PATH):
+    for source_path in (DRAFT_PATH, MENU_PREVIEW_PATH, GAME_MENU_PATH, ITEM_PREVIEW_PATH):
         if not source_path.exists():
             continue
         for line in source_path.read_text(encoding="utf-8").splitlines():

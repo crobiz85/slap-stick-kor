@@ -1,0 +1,19 @@
+# Compact Korean item-description previews for fixed menu slots.
+# Full translations remain in translation/korean-draft.tsv; these shorter
+# lines preserve the item meaning until a larger text container is needed.
+# id	Korean preview	status
+0021	연구소 나기사 통신 가능\n전파 나쁘면 통신 불가	compact-item-preview
+0022	큰 소리로 놀라게 함\n주의를 끌 수 있음	compact-item-preview
+0023	두더지 드릴\n바위와 벽을 판다	compact-item-preview
+0024	잠시 모습을 숨김\n끝나면 사라짐	compact-item-preview
+0025	쥐로 변신해 쥐구멍 통과\n쥐와 대화 가능	compact-item-preview
+0026	적의 함정과 숨은 문이 보임	compact-item-preview
+0027	집안일 목공일용 로봇\n필요한 사람에게 대여	compact-item-preview
+0028	어둠을 밝히는 라이트	compact-item-preview
+0029	숲에서 얻은 꽃씨\n용도 불명	compact-item-preview
+0030	카를 아저씨의 비행기\n걸어갈 수 없는 곳으로 이동	compact-item-preview
+0031	머나먼 우주 끝 쇼콜라 별로 이동	compact-item-preview
+0032	동물과 대화 가능	compact-item-preview
+0033	컴퓨터 안으로 들어가는 사이버 물건	compact-item-preview
+0034	해커 우주요새 엔진 정지용 빨간 포트	compact-item-preview
+0035	해커 우주요새 엔진 정지용 파란 포트	compact-item-preview
