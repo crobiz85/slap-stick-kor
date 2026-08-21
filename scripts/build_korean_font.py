@@ -52,9 +52,9 @@ PREVIEW_DRAFT_IDS = {
 
 def find_default_font() -> Path:
     candidates = (
+        Path(r"C:\Windows\Fonts\malgun.ttf"),
         Path(r"C:\Windows\Fonts\malgunbd.ttf"),
         Path(r"C:\Windows\Fonts\gulim.ttc"),
-        Path(r"C:\Windows\Fonts\malgun.ttf"),
         Path(r"C:\Windows\Fonts\NotoSansKR-VF.ttf"),
         Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"),
     )
@@ -280,7 +280,7 @@ def write_map(
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build Korean glyph map and preview without modifying the ROM.")
     parser.add_argument("--font", type=Path, default=None, help="Korean-capable TTF/TTC font")
-    parser.add_argument("--font-size", type=int, default=13)
+    parser.add_argument("--font-size", type=int, default=12)
     parser.add_argument("--preview-scale", type=int, default=8)
     parser.add_argument("--output-map", type=Path, default=DEFAULT_MAP_PATH)
     parser.add_argument("--output-preview", type=Path, default=DEFAULT_PREVIEW_PATH)

@@ -3,7 +3,7 @@
   "source_length": 1572864,
   "target_length": 1572864,
   "source_sha256": "08144EA1CE3CF6AB107837278D308E4E859574A047A2EE8EB456F7900AD4BE21",
-  "target_sha256": "47BE98B0DC7F0E309F2B1266EEEE24BF7014DC2292CC762266F3E3E816E4AB58",
+  "target_sha256": "5AD1535780654FC761DBC346A61E47E2AE076073B398F6D4B2785B19F474217B",
   "patched_records": [
     "0002",
     "0003",
@@ -57,6 +57,14 @@
     "STATUS-CONFIRM",
     "STATUS-CANCEL",
     "STATUS-SETTING-ALT",
+    "STATUS-EMPTY-1",
+    "STATUS-EMPTY-2",
+    "STATUS-EMPTY-3",
+    "STATUS-LEVEL",
+    "STATUS-PROGRAM-1",
+    "STATUS-PROGRAM-2",
+    "STATUS-POINT",
+    "STATUS-INSPIRATION",
     "C0-05A245",
     "C0-05A3A8",
     "C0-05A3EA",
@@ -76,6 +84,7 @@
     "C0-06C4C9",
     "C0-06C655",
     "C0-06C79F",
+    "C0-078E32",
     "C0-0680C0",
     "C0-06810E",
     "C0-0682A6",
@@ -367,6 +376,54 @@
       "slot_length": 4,
       "encoded_length": 4,
       "source_bytes": "48 6E 4D 3C"
+    },
+    "STATUS-EMPTY-1": {
+      "offset": "0x01EBAE",
+      "slot_length": 5,
+      "encoded_length": 4,
+      "source_bytes": "25 2D 30 34 39"
+    },
+    "STATUS-EMPTY-2": {
+      "offset": "0x01EBBE",
+      "slot_length": 5,
+      "encoded_length": 4,
+      "source_bytes": "25 2D 30 34 39"
+    },
+    "STATUS-EMPTY-3": {
+      "offset": "0x01EBCE",
+      "slot_length": 5,
+      "encoded_length": 4,
+      "source_bytes": "25 2D 30 34 39"
+    },
+    "STATUS-LEVEL": {
+      "offset": "0x01EBE4",
+      "slot_length": 5,
+      "encoded_length": 4,
+      "source_bytes": "2C 25 36 25 2C"
+    },
+    "STATUS-PROGRAM-1": {
+      "offset": "0x01D7C8",
+      "slot_length": 5,
+      "encoded_length": 4,
+      "source_bytes": "1B 65 02 61 5B"
+    },
+    "STATUS-PROGRAM-2": {
+      "offset": "0x01D7F2",
+      "slot_length": 5,
+      "encoded_length": 4,
+      "source_bytes": "1B 65 02 61 5B"
+    },
+    "STATUS-POINT": {
+      "offset": "0x01D806",
+      "slot_length": 4,
+      "encoded_length": 4,
+      "source_bytes": "1D 3C 68 4E"
+    },
+    "STATUS-INSPIRATION": {
+      "offset": "0x01EC6E",
+      "slot_length": 4,
+      "encoded_length": 4,
+      "source_bytes": "55 61 5C 41"
     }
   },
   "early_game_preview": {},
@@ -490,6 +547,13 @@
       "mode": "relocated",
       "new_offset": "0x06C692"
     },
+    "C0-078E32": {
+      "offset": "0x078E32",
+      "slot_length": 391,
+      "encoded_length": 486,
+      "mode": "relocated",
+      "new_offset": "0x07FBD8"
+    },
     "C0-0680C0": {
       "offset": "0x0680C0",
       "slot_length": 60,
@@ -587,6 +651,18 @@
           "end": "0x06C6BE"
         }
       ]
+    },
+    "0x078000-0x080000": {
+      "records": [
+        "C0-078E32"
+      ],
+      "allocations": [
+        {
+          "id": "C0-078E32",
+          "start": "0x07FBD8",
+          "end": "0x07FDBF"
+        }
+      ]
     }
   },
   "c0_pointer_updates": {
@@ -629,6 +705,14 @@
         "0x06C5ED"
       ],
       "terminator": "0xC0"
+    },
+    "C0-078E32": {
+      "old_offset": "0x078E32",
+      "new_offset": "0x07FBD8",
+      "references": [
+        "0x078B26"
+      ],
+      "terminator": "0xC0"
     }
   },
   "font_pages": {
@@ -644,7 +728,7 @@
     ],
     "note": "Korean glyphs use only code slots absent from the extracted Japanese script on the game's visible menu pages."
   },
-  "glyph_count": 340,
+  "glyph_count": 368,
   "inline_records": [
     {
       "id": "0058",
@@ -714,5 +798,5 @@
       ]
     }
   },
-  "changed_bytes": 20847
+  "changed_bytes": 23405
 }
