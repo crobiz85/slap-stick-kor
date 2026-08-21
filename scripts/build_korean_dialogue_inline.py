@@ -159,8 +159,8 @@ def write_report(rows: list[dict], reasons: dict[str, str], path: Path) -> None:
 
 
 def assert_font_only_base(base: bytes) -> None:
-    if len(base) != 0x200000:
-        raise ValueError("font-only ROM size is not 2 MiB")
+    if len(base) != 0x180000:
+        raise ValueError("font-only ROM size is not 1.5 MiB")
     original = ORIGINAL_ROM.read_bytes()
     for start, end in FONT_RANGES:
         if base[start:end] == original[start:end]:
