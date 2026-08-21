@@ -3,7 +3,7 @@
   "source_length": 1572864,
   "target_length": 1572864,
   "source_sha256": "08144EA1CE3CF6AB107837278D308E4E859574A047A2EE8EB456F7900AD4BE21",
-  "target_sha256": "EA5FA83A0E7448CD5BEC605C91688C98C3D783535121D01160718BCDD3B28FB7",
+  "target_sha256": "37425B1142BC49AD301ACE16D98A718A644E9C886B05E042F9C70B5094653031",
   "patched_records": [
     "0002",
     "0003",
@@ -62,6 +62,16 @@
     "C0-06C4C9",
     "C0-06C655",
     "C0-06C79F",
+    "C0-0680C0",
+    "C0-06810E",
+    "C0-0682A6",
+    "C0-06839C",
+    "C0-0688A4",
+    "C0-0688D7",
+    "C0-06892F",
+    "C0-06894F",
+    "C0-068A5C",
+    "C0-068B1B",
     "0058",
     "0059",
     "0060",
@@ -379,6 +389,66 @@
       "encoded_length": 43,
       "mode": "relocated",
       "new_offset": "0x06C692"
+    },
+    "C0-0680C0": {
+      "offset": "0x0680C0",
+      "slot_length": 60,
+      "encoded_length": 51,
+      "mode": "inline"
+    },
+    "C0-06810E": {
+      "offset": "0x06810E",
+      "slot_length": 62,
+      "encoded_length": 54,
+      "mode": "inline"
+    },
+    "C0-0682A6": {
+      "offset": "0x0682A6",
+      "slot_length": 51,
+      "encoded_length": 39,
+      "mode": "inline"
+    },
+    "C0-06839C": {
+      "offset": "0x06839C",
+      "slot_length": 54,
+      "encoded_length": 44,
+      "mode": "inline"
+    },
+    "C0-0688A4": {
+      "offset": "0x0688A4",
+      "slot_length": 50,
+      "encoded_length": 35,
+      "mode": "inline"
+    },
+    "C0-0688D7": {
+      "offset": "0x0688D7",
+      "slot_length": 55,
+      "encoded_length": 42,
+      "mode": "inline"
+    },
+    "C0-06892F": {
+      "offset": "0x06892F",
+      "slot_length": 31,
+      "encoded_length": 24,
+      "mode": "inline"
+    },
+    "C0-06894F": {
+      "offset": "0x06894F",
+      "slot_length": 36,
+      "encoded_length": 23,
+      "mode": "inline"
+    },
+    "C0-068A5C": {
+      "offset": "0x068A5C",
+      "slot_length": 24,
+      "encoded_length": 18,
+      "mode": "inline"
+    },
+    "C0-068B1B": {
+      "offset": "0x068B1B",
+      "slot_length": 30,
+      "encoded_length": 23,
+      "mode": "inline"
     }
   },
   "c0_relocation_ranges": {
@@ -474,7 +544,7 @@
     ],
     "note": "Korean glyphs use only code slots absent from the extracted Japanese script on the game's visible menu pages."
   },
-  "glyph_count": 296,
+  "glyph_count": 310,
   "inline_records": [
     {
       "id": "0058",
@@ -544,5 +614,5 @@
       ]
     }
   },
-  "changed_bytes": 18102
+  "changed_bytes": 19201
 }
