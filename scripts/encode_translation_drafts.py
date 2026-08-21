@@ -36,6 +36,7 @@ PARAM_BYTES = {
     "TBL": (0xC5, 4),
     "NUM": (0xC6, 3),
     "BOX": (0xC7, 3),
+    "DEC": (0xDD, 4),
 }
 
 
@@ -90,6 +91,10 @@ def encode_text(text: str, glyphs: dict[str, bytes], glyph_lead_byte: int | None
                 if params is None or len(params) != expected_length * 2:
                     raise ValueError(f"bad {name} parameter length: {params}")
                 output.append(opcode)
+                output.extend(bytes.fromhex(params))
+            elif name == "CMD":
+                if params is None or len(params) != 2:
+                    raise ValueError(f"bad CMD parameter length: {params}")
                 output.extend(bytes.fromhex(params))
             else:
                 raise ValueError(f"unsupported control token: {match.group(0)}")

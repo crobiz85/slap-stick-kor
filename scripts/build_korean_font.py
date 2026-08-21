@@ -23,6 +23,8 @@ HANGUL_END = 0xD7A3
 GLYPH_BYTES = 16
 FONT_BANK_OFFSET = 0x60000
 FONT_LEAD_BYTE = 0x82
+MENU_FONT_BANK_OFFSET = 0x61000
+MENU_FONT_LEAD_BYTE = 0x83
 CONTROL_MARKER = re.compile(r"\[[^\]]+\]|\\n|˳")
 
 
@@ -62,7 +64,7 @@ def read_draft_characters() -> list[str]:
     return sorted(characters)
 
 
-def read_used_kanji_codes() -> set[int]:
+def read_used_kanji_codes(lead_byte: int) -> set[int]:
     used: set[int] = set()
     for line in (ROOT / "translation" / "script.tsv").read_text(encoding="utf-8").splitlines():
         if not line or line.startswith("#"):
@@ -72,17 +74,34 @@ def read_used_kanji_codes() -> set[int]:
             continue
         raw = columns[3].split()
         for index, token in enumerate(raw[:-1]):
-            if token.upper() == "82":
+            if token.upper() == f"{lead_byte:02X}":
                 used.add(int(raw[index + 1], 16))
     return used
 
 
-def allocate_codes(characters: list[str]) -> dict[str, int]:
-    # 0x82xx is the dictionary/font page used by ordinary dialog rendering.
-    # Prefer slots outside the Japanese dictionary, then unused lower slots.
-    used = read_used_kanji_codes()
+def available_codes(lead_byte: int) -> list[int]:
+    used = read_used_kanji_codes(lead_byte)
     available = list(range(0x90, 0x100))
     available.extend(value for value in range(0x90) if value not in used)
+    return available
+
+
+def allocate_codes(characters: list[str]) -> dict[str, tuple[int, int]]:
+    # Use the unused 0x82xx dialog page first. If the Korean vocabulary grows
+    # past that page, continue in unused 0x83xx slots. The preview builder
+    # mirrors 0x82xx tiles to the menu page while leaving overflow tiles on
+    # their native 0x83xx slots.
+    primary_lows = available_codes(FONT_LEAD_BYTE)
+    primary = [(FONT_LEAD_BYTE, value) for value in primary_lows]
+    # Every 0x82xx tile is mirrored to the same low byte on 0x83xx. Keep
+    # overflow glyphs away from those mirrored slots so the two allocations
+    # cannot overwrite one another in the menu page.
+    secondary = [
+        (MENU_FONT_LEAD_BYTE, value)
+        for value in available_codes(MENU_FONT_LEAD_BYTE)
+        if value not in primary_lows
+    ]
+    available = primary + secondary
     if len(characters) > len(available):
         raise ValueError(f"Need {len(characters)} glyph slots but only {len(available)} are available")
     return dict(zip(characters, available))
@@ -125,7 +144,7 @@ def encode_tile(mask: Image.Image) -> bytes:
 def write_preview(
     characters: list[str],
     masks: dict[str, Image.Image],
-    codes: dict[str, int],
+    codes: dict[str, tuple[int, int]],
     output_path: Path,
     scale: int,
 ) -> None:
@@ -149,14 +168,15 @@ def write_map(
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8", newline="\n") as handle:
-        handle.write("# Generated from Korean draft, compact menu preview, and game-screen prompts; 0x82xx dialog-font slots.\n")
-        handle.write("# The preview builder duplicates these tiles into the 0x83xx game-menu page.\n")
+        handle.write("# Generated from Korean draft, compact menu preview, and game-screen prompts; unused 0x82xx/0x83xx font slots.\n")
+        handle.write("# The preview builder duplicates 0x82xx tiles into the 0x83xx game-menu page; overflow tiles stay on 0x83xx.\n")
         handle.write("# character\tcodepoint\tcode bytes\tfile offset\t2bpp tile bytes\n")
         for character in characters:
-            low = codes[character]
-            offset = FONT_BANK_OFFSET + low * GLYPH_BYTES
+            lead_byte, low = codes[character]
+            bank_offset = FONT_BANK_OFFSET if lead_byte == FONT_LEAD_BYTE else MENU_FONT_BANK_OFFSET
+            offset = bank_offset + low * GLYPH_BYTES
             handle.write(
-                f"{character}\tU+{ord(character):04X}\t{FONT_LEAD_BYTE:02X} {low:02X}\t"
+                f"{character}\tU+{ord(character):04X}\t{lead_byte:02X} {low:02X}\t"
                 f"0x{offset:05X}\t{tiles[character].hex(' ').upper()}\n"
             )
 

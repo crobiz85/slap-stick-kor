@@ -1,5 +1,6 @@
 # Conservative worksheet; heuristic references require emulator/code verification.
 # id	original offset	original length	encoded length	overflow bytes	fits	next CC offset	bytes after segment before next CC	next draft offset	region	raw 3-byte refs	CF pointer refs	16-bit word refs	CF ref samples	action
+0001	0x01CF69	0026	0037	0011	no	0x01CF8F	0	0x01D0E7	script-data-18000-27FFF	0	0	12	-	relocate-and-update-container-reference
 0002	0x01D0E7	0010	0024	0014	no	0x01D0F7	0	0x01D0F8	script-data-18000-27FFF	0	0	20	-	relocate-and-update-container-reference
 0003	0x01D0F8	0012	0014	0002	no	0x01D10A	0	0x01D14E	script-data-18000-27FFF	0	0	27	-	relocate-and-update-container-reference
 0004	0x01D14E	001D	002F	0012	no	0x01D16B	0	0x01D28A	script-data-18000-27FFF	0	0	18	-	relocate-and-update-container-reference
@@ -10,7 +11,30 @@
 0009	0x01D47D	001F	0035	0016	no	0x01D49C	0	0x01D49D	script-data-18000-27FFF	0	0	15	-	relocate-and-update-container-reference
 0010	0x01D49D	0023	0033	0010	no	0x01D4C0	0	0x01D60B	script-data-18000-27FFF	1	0	7	-	relocate-and-update-container-reference
 0011	0x01D60B	0010	0017	0007	no	0x01D61B	0	0x01D686	script-data-18000-27FFF	0	0	13	-	relocate-and-update-container-reference
-0012	0x01D686	001B	0029	000E	no	0x01D6A1	0	0x058AF4	script-data-18000-27FFF	0	0	8	-	relocate-and-update-container-reference
+0012	0x01D686	001B	0029	000E	no	0x01D6A1	0	0x01D6D8	script-data-18000-27FFF	0	0	8	-	relocate-and-update-container-reference
+0013	0x01D6D8	0052	005C	000A	no	0x01D72A	0	0x01D760	script-data-18000-27FFF	0	0	11	-	relocate-and-update-container-reference
+0014	0x01D760	0013	0016	0003	no	0x01D773	0	0x01D859	script-data-18000-27FFF	0	0	16	-	relocate-and-update-container-reference
+0015	0x01D859	000F	0016	0007	no	0x01D868	0	0x01D869	script-data-18000-27FFF	0	0	8	-	relocate-and-update-container-reference
+0016	0x01D869	000E	000E	0000	yes	0x01D877	0	0x01D89F	script-data-18000-27FFF	0	0	8	-	relocate-and-update-container-reference
+0017	0x01D89F	002F	002C	0000	yes	0x01D8CE	0	0x01D8CF	script-data-18000-27FFF	0	0	31	-	relocate-and-update-container-reference
+0018	0x01D8CF	007F	0078	0000	yes	0x01D94E	0	0x01D96F	script-data-18000-27FFF	0	0	21	-	relocate-and-update-container-reference
+0019	0x01D96F	001F	001D	0000	yes	0x01D98E	0	0x01D9DE	script-data-18000-27FFF	0	0	6	-	relocate-and-update-container-reference
+0020	0x01D9DE	001E	0019	0000	yes	0x01D9FC	0	0x01DC5D	script-data-18000-27FFF	0	0	6	-	relocate-and-update-container-reference
+0021	0x01DC5D	0032	0050	001E	no	0x01DC8F	0	0x01DC90	script-data-18000-27FFF	0	0	9	-	relocate-and-update-container-reference
+0022	0x01DC90	0031	0046	0015	no	0x01DCC1	0	0x01DCC2	script-data-18000-27FFF	0	0	12	-	relocate-and-update-container-reference
+0023	0x01DCC2	0024	003C	0018	no	0x01DCE6	0	0x01DCE7	script-data-18000-27FFF	0	0	3	-	relocate-and-update-container-reference
+0024	0x01DCE7	0036	0053	001D	no	0x01DD1D	0	0x01DD1E	script-data-18000-27FFF	0	0	7	-	relocate-and-update-container-reference
+0025	0x01DD1E	003A	004A	0010	no	0x01DD58	0	0x01DD59	script-data-18000-27FFF	0	0	33	-	relocate-and-update-container-reference
+0026	0x01DD59	0031	0049	0018	no	0x01DD8A	0	0x01DDB0	script-data-18000-27FFF	0	0	9	-	relocate-and-update-container-reference
+0027	0x01DDB0	0031	003C	000B	no	0x01DDE1	0	0x01DDE2	script-data-18000-27FFF	0	0	7	-	relocate-and-update-container-reference
+0028	0x01DDE2	0014	0019	0005	no	0x01DDF6	0	0x01DDF7	script-data-18000-27FFF	0	0	25	-	relocate-and-update-container-reference
+0029	0x01DDF7	001E	0022	0004	no	0x01DE15	0	0x01DE16	script-data-18000-27FFF	0	0	5	-	relocate-and-update-container-reference
+0030	0x01DE16	0036	0046	0010	no	0x01DE4C	0	0x01DE4D	script-data-18000-27FFF	0	0	4	-	relocate-and-update-container-reference
+0031	0x01DE4D	0026	0038	0012	no	0x01DE73	0	0x01DEA7	script-data-18000-27FFF	0	0	10	-	relocate-and-update-container-reference
+0032	0x01DEA7	001C	002A	000E	no	0x01DEC3	0	0x01DEC4	script-data-18000-27FFF	0	0	9	-	relocate-and-update-container-reference
+0033	0x01DEC4	002E	003C	000E	no	0x01DEF2	0	0x01DEF3	script-data-18000-27FFF	0	0	23	-	relocate-and-update-container-reference
+0034	0x01DEF3	0024	002D	0009	no	0x01DF17	0	0x01DF18	script-data-18000-27FFF	0	0	8	-	relocate-and-update-container-reference
+0035	0x01DF18	0024	002D	0009	no	0x01DF3C	0	0x058AF4	script-data-18000-27FFF	0	0	12	-	relocate-and-update-container-reference
 0058	0x058AF4	002B	0046	001B	no	0x058BF4	213	0x058B1F	script-page-58000-5FFFF	0	0	15	-	relocate-and-update-container-reference
 0059	0x058B1F	001F	002E	000F	no	0x058BF4	182	0x058B3E	script-page-58000-5FFFF	1	0	23	-	relocate-and-update-container-reference
 0060	0x058B3E	0036	0047	0011	no	0x058BF4	128	0x058B74	script-page-58000-5FFFF	0	0	4	-	relocate-and-update-container-reference

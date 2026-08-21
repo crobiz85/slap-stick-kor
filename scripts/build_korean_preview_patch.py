@@ -1,12 +1,14 @@
 """Build a playable Korean preview patch for the verified Japanese ROM.
 
-This is intentionally conservative.  It inserts the generated unused 0x82xx Korean
+This is intentionally conservative. It inserts the generated unused 0x82xx/0x83xx Korean
 glyphs, patches compact Korean strings into the eleven verified raw-menu slots,
 patches a second set of verified game-screen prompts in their original slots,
 and patches the six contiguous main-dialog records 0058-0063.  Record 0058 stays
 at its original inline location; records 0059-0063 are relocated to verified FF
 padding in the same HiROM bank and their ``02 1D`` references are updated.  The
-raw-menu strings are deliberately compact until their entry table is verified.
+raw-menu strings are deliberately compact until their entry table is verified;
+five additional fixed-length save/skill menu records are patched only when the
+encoded Korean draft fits its original slot.
 """
 
 from __future__ import annotations
@@ -33,15 +35,19 @@ DEFAULT_IPS_OUT = ROOT / "patches" / "slap-stick-kor-preview.ips"
 DEFAULT_MANIFEST_OUT = ROOT / "patches" / "slap-stick-kor-preview.json"
 
 RAW_MENU_IDS = ("0002", "0003", "0004", "0005", "0006", "0007", "0008", "0009", "0010", "0011", "0012")
+FIXED_DRAFT_MENU_IDS = ("0016", "0017", "0018", "0019", "0020")
 GAME_MENU_IDS = (
     "GAME-0018", "GAME-0019", "GAME-0020", "GAME-0021", "GAME-0025", "GAME-0029",
     "GAME-0033", "GAME-0042", "GAME-0043", "GAME-0044", "GAME-0045",
 )
 MAIN_DIALOG_IDS = ("0058", "0059", "0060", "0061", "0062", "0063")
-PATCHED_IDS = RAW_MENU_IDS + GAME_MENU_IDS + MAIN_DIALOG_IDS
+PATCHED_IDS = RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + GAME_MENU_IDS + MAIN_DIALOG_IDS
 RELOCATED_IDS = MAIN_DIALOG_IDS[1:]
 DIALOG_BANK_START = 0x58000
 DIALOG_BANK_END = 0x60000
+FONT_BANK_START = 0x60000
+MENU_FONT_BANK_START = 0x61000
+FONT_BANK_END = 0x62000
 MENU_FONT_PAGE_SHIFT = 0x1000
 
 
@@ -151,11 +157,12 @@ def encode_rows(
 ) -> dict[str, bytes]:
     encoded = {}
     menu_previews = read_menu_previews()
-    for entry_id in RAW_MENU_IDS:
+    for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS:
         row = drafts[entry_id]
-        if entry_id not in menu_previews:
-            raise ValueError(f"missing compact menu preview: {entry_id}")
-        encoded[entry_id] = encode_text(menu_previews[entry_id], glyphs, glyph_lead_byte=0x83)
+        source_text = menu_previews.get(entry_id, row.korean)
+        if not source_text:
+            raise ValueError(f"missing menu text: {entry_id}")
+        encoded[entry_id] = encode_text(source_text, glyphs, glyph_lead_byte=0x83)
         if len(encoded[entry_id]) > row.original_length:
             raise ValueError(
                 f"{entry_id} compact preview is {len(encoded[entry_id])} bytes, "
@@ -192,10 +199,15 @@ def patch_rom(
         if offset < 0 or offset + len(tile) > len(target):
             raise ValueError(f"glyph {character!r} is outside the ROM: 0x{offset:06X}")
         target[offset : offset + len(tile)] = tile
-        menu_offset = offset + MENU_FONT_PAGE_SHIFT
-        if menu_offset + len(tile) > len(target):
-            raise ValueError(f"menu glyph {character!r} is outside the ROM: 0x{menu_offset:06X}")
-        target[menu_offset : menu_offset + len(tile)] = tile
+        # 0x82xx is the dialog page and is mirrored at 0x83xx for menu output.
+        # Overflow glyphs already allocated on 0x83xx must not be shifted again.
+        if FONT_BANK_START <= offset < MENU_FONT_BANK_START:
+            menu_offset = offset + MENU_FONT_PAGE_SHIFT
+            if menu_offset + len(tile) > len(target) or menu_offset >= FONT_BANK_END:
+                raise ValueError(f"menu glyph {character!r} is outside the ROM: 0x{menu_offset:06X}")
+            target[menu_offset : menu_offset + len(tile)] = tile
+        elif not MENU_FONT_BANK_START <= offset < FONT_BANK_END:
+            raise ValueError(f"glyph {character!r} is outside the Korean font pages: 0x{offset:06X}")
 
     total_relocated = sum(len(encoded[entry_id]) for entry_id in RELOCATED_IDS)
     relocation_start = find_ff_run(target, DIALOG_BANK_START, DIALOG_BANK_END, total_relocated)
@@ -227,7 +239,7 @@ def patch_rom(
         }
 
     raw_menu_manifest = {}
-    for entry_id in RAW_MENU_IDS:
+    for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS:
         row = drafts[entry_id]
         payload = encoded[entry_id]
         target[row.offset : row.offset + len(payload)] = payload
@@ -270,7 +282,7 @@ def patch_rom(
         "menu_font_page": {
             "lead_byte": "0x83",
             "tile_offset_shift": "0x1000",
-            "note": "Menu strings use 0x83xx codes; tiles are duplicated from the 0x82xx preview map.",
+            "note": "Menu strings use 0x83xx codes; 0x82xx tiles are mirrored at +0x1000 and overflow glyphs remain on 0x83xx.",
         },
         "glyph_count": len(glyphs),
         "inline_record": {
@@ -418,7 +430,7 @@ def main() -> None:
     source = args.rom.read_bytes()
     drafts = read_drafts()
     game_menu = read_game_menu()
-    missing = [entry_id for entry_id in RAW_MENU_IDS + MAIN_DIALOG_IDS if entry_id not in drafts]
+    missing = [entry_id for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + MAIN_DIALOG_IDS if entry_id not in drafts]
     if missing:
         raise ValueError(f"missing draft rows: {', '.join(missing)}")
     missing_game = [entry_id for entry_id in GAME_MENU_IDS if entry_id not in game_menu]
