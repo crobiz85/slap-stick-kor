@@ -138,8 +138,7 @@ def render_mask(character: str, font: ImageFont.FreeTypeFont, render_size: int) 
 
 
 def encode_tile(mask: Image.Image) -> bytes:
-    low_plane = bytearray()
-    high_plane = bytearray()
+    encoded = bytearray()
     for row in range(8):
         low = 0
         high = 0
@@ -154,13 +153,12 @@ def encode_tile(mask: Image.Image) -> bytes:
             bit = 7 - column
             low |= (value & 1) << bit
             high |= ((value >> 1) & 1) << bit
-        low_plane.append(low)
-        high_plane.append(high)
-    # The 16x16 pages are SNES 2BPP tiles: all eight low-plane rows are
-    # followed by all eight high-plane rows.  They are not Game Boy tiles
-    # (which would interleave low/high bytes per row).  Interleaving caused
-    # the broken pseudo-Hanja shapes seen on the title menu.
-    return bytes(low_plane + high_plane)
+        # SNES 2BPP stores the two bit planes *per row*: P0 row 0, P1 row 0,
+        # P0 row 1, P1 row 1, and so on.  Writing all P0 rows before all P1
+        # rows makes the text engine read the wrong pixels and leaves menu
+        # glyphs blank or mangled on a cold boot.
+        encoded.extend((low, high))
+    return bytes(encoded)
 
 
 def encode_glyph(mask: Image.Image) -> bytes:

@@ -28,7 +28,7 @@
   - 후보 블록에는 오탐이 남아 있어 게임 화면 대조 전에는 패치 입력으로 사용하지 않음
   - 검토용 대사 원고 240개를 `translation/script.tsv`로 분리했으며
     현재 41개에 `translation/korean-draft.tsv`의 한국어 초안을 덧씌움
-  - 메뉴·대화가 실제로 참조하는 16×16 Game Boy 2BPP 글꼴을 확인하고, 초안과 게임 화면 문구에 필요한
+  - 메뉴·대화가 실제로 참조하는 16×16 SNES 2BPP(행별 비트 평면 교차) 글꼴을 확인하고, 초안과 게임 화면 문구에 필요한
     한글 207자를 미사용 `0x80xx`/`0x81xx` 슬롯에 배치해 `translation/korean-glyph-map.tsv`로 생성
   - 초안 41개 중 메인 대사 0058~0063 6개는 실제 재배치·포인터 갱신까지 적용
   - 초반 메뉴·이벤트 11개는 `translation/korean-menu-preview.tsv`의 압축형 프리뷰로,
