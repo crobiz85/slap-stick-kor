@@ -44,12 +44,12 @@ GAME_MENU_IDS = (
     "GAME-0033", "GAME-0042", "GAME-0043", "GAME-0044", "GAME-0045",
 )
 STATUS_MENU_IDS = (
-    # Keep the newly catalogued speed/examine strings out of the stable build
-    # until their shared menu block has been relocated and tested in-game.
+    # These two entries are fixed-length slots and have been tested separately;
+    # the longer shared menu block remains out of the stable build.
     "STATUS-EQUIP-NONE", "STATUS-SETTING", "STATUS-CONFIRM", "STATUS-CANCEL",
     "STATUS-SETTING-ALT", "STATUS-EMPTY-1", "STATUS-EMPTY-2", "STATUS-EMPTY-3",
     "STATUS-LEVEL", "STATUS-PROGRAM-1", "STATUS-PROGRAM-2", "STATUS-POINT",
-    "STATUS-INSPIRATION",
+    "STATUS-INSPIRATION", "STATUS-SPEED-OPTIONS", "STATUS-EXAMINE",
 )
 EARLY_GAME_IDS = ()
 C0_DIALOGUE_IDS = (
