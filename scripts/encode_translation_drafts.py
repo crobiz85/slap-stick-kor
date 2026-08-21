@@ -16,7 +16,7 @@ SCRIPT_PATH = ROOT / "translation" / "script.tsv"
 GLYPH_MAP_PATH = ROOT / "translation" / "korean-glyph-map.tsv"
 DEFAULT_OUTPUT_PATH = ROOT / "build" / "draft-encoded.tsv"
 
-TOKEN = re.compile(r"\[(?P<name>[A-Z]+)(?::(?P<params>[0-9A-F]+))?\]")
+TOKEN = re.compile(r"\[(?P<name>[A-Z0-9]+)(?::(?P<params>[0-9A-F]+))?\]")
 CONTROL_BYTES = {
     "END": b"\xC0",
     "CLR": b"\xD0",
@@ -37,6 +37,9 @@ PARAM_BYTES = {
     "NUM": (0xC6, 3),
     "BOX": (0xC7, 3),
     "DEC": (0xDD, 4),
+    # The decoder labels opcode E0 as E2; it has a two-byte argument and is
+    # used by the first in-game cutscene.
+    "E2": (0xE0, 2),
 }
 
 

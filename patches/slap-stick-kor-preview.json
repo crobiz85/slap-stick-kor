@@ -3,7 +3,7 @@
   "source_length": 1572864,
   "target_length": 1572864,
   "source_sha256": "08144EA1CE3CF6AB107837278D308E4E859574A047A2EE8EB456F7900AD4BE21",
-  "target_sha256": "71397A54985BE9A4D1081BA11FF1B0A32EF3ED8185E1BF92B09E7EFDDD557C7F",
+  "target_sha256": "192FE4580D282F7D1D105686F8337B1B51DC2EEF26D72B2D920750AE1DB8FA90",
   "patched_records": [
     "0002",
     "0003",
@@ -57,7 +57,8 @@
     "0060",
     "0061",
     "0062",
-    "0063"
+    "0063",
+    "0067"
   ],
   "unpatched_draft_records": [],
   "raw_menu_preview": {
@@ -302,20 +303,29 @@
   "font_pages": {
     "lead_bytes": [
       "0x80",
-      "0x81"
+      "0x81",
+      "0x82"
     ],
     "offset_ranges": [
       "0x50000-0x53FFF",
-      "0x54000-0x57FFF"
+      "0x54000-0x57FFF",
+      "0x60000-0x63FFF"
     ],
     "note": "Korean glyphs use only code slots absent from the extracted Japanese script on the game's visible menu pages."
   },
-  "glyph_count": 207,
-  "inline_record": {
-    "id": "0058",
-    "offset": "0x058AF4",
-    "encoded_length": 70
-  },
+  "glyph_count": 229,
+  "inline_records": [
+    {
+      "id": "0058",
+      "offset": "0x058AF4",
+      "encoded_length": 70
+    },
+    {
+      "id": "0067",
+      "offset": "0x05AC0D",
+      "encoded_length": 231
+    }
+  ],
   "relocation_start": "0x05FEB3",
   "relocation_end": "0x05FFC7",
   "relocated_bytes": 276,
@@ -358,5 +368,5 @@
       ]
     }
   },
-  "changed_bytes": 11921
+  "changed_bytes": 13153
 }

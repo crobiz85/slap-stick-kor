@@ -1,7 +1,7 @@
 """Build the Korean glyph map used by the playable Slap Stick preview.
 
-The game's dictionary codes ``80xx`` and ``81xx`` resolve to 16×16 Japanese
-glyphs at ``0x50000`` and ``0x54000`` respectively.  Each glyph is four
+The game's dictionary codes ``80xx``, ``81xx``, and ``82xx`` resolve to 16×16 Japanese
+glyphs at ``0x50000``, ``0x54000``, and ``0x60000`` respectively.  Each glyph is four
 8×8 Game Boy-style 2BPP tiles (64 bytes), and the text engine writes those
 glyphs to its VRAM cells at run time.  This script allocates only codes absent
 from the extracted Japanese script, then renders replacement source tiles into
@@ -33,14 +33,16 @@ FONT_BANK_OFFSET = 0x50000
 FONT_LEAD_BYTE = 0x80
 SECOND_FONT_BANK_OFFSET = 0x54000
 SECOND_FONT_LEAD_BYTE = 0x81
+THIRD_FONT_BANK_OFFSET = 0x60000
+THIRD_FONT_LEAD_BYTE = 0x82
 CONTROL_MARKER = re.compile(r"\[[^\]]+\]|\\n|˳")
 
 # These are the only long dialogue drafts inserted by the current preview
-# patch.  The rest remain in korean-draft.tsv for translation work but must
-# not consume scarce, verified 0x80/0x81 glyph slots yet.
+# patch.  The rest remain in korean-draft.tsv for translation work until their
+# pointer/relocation route has been verified.
 PREVIEW_DRAFT_IDS = {
     "0016", "0017", "0018", "0019", "0020",
-    "0058", "0059", "0060", "0061", "0062", "0063",
+    "0058", "0059", "0060", "0061", "0062", "0063", "0067",
 }
 
 
@@ -108,7 +110,8 @@ def available_codes(lead_byte: int) -> list[int]:
 def allocate_codes(characters: list[str]) -> dict[str, tuple[int, int]]:
     primary = [(FONT_LEAD_BYTE, value) for value in available_codes(FONT_LEAD_BYTE)]
     secondary = [(SECOND_FONT_LEAD_BYTE, value) for value in available_codes(SECOND_FONT_LEAD_BYTE)]
-    available = primary + secondary
+    tertiary = [(THIRD_FONT_LEAD_BYTE, value) for value in available_codes(THIRD_FONT_LEAD_BYTE)]
+    available = primary + secondary + tertiary
     if len(characters) > len(available):
         raise ValueError(f"Need {len(characters)} glyph slots but only {len(available)} are available")
     return dict(zip(characters, available))
@@ -197,11 +200,15 @@ def write_map(
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8", newline="\n") as handle:
         handle.write("# Generated for the current Korean preview from compact menus, game-screen prompts, and six dialogue drafts.\n")
-        handle.write("# Uses script-unused slots in the verified 0x80xx/0x81xx 16x16 source font pages.\n")
+        handle.write("# Uses script-unused slots in the verified 0x80xx/0x81xx/0x82xx 16x16 source font pages.\n")
         handle.write("# character\tcodepoint\tcode bytes\tfile offset\t2bpp tile bytes\n")
         for character in characters:
             lead_byte, low = codes[character]
-            bank_offset = FONT_BANK_OFFSET if lead_byte == FONT_LEAD_BYTE else SECOND_FONT_BANK_OFFSET
+            bank_offset = {
+                FONT_LEAD_BYTE: FONT_BANK_OFFSET,
+                SECOND_FONT_LEAD_BYTE: SECOND_FONT_BANK_OFFSET,
+                THIRD_FONT_LEAD_BYTE: THIRD_FONT_BANK_OFFSET,
+            }[lead_byte]
             offset = bank_offset + low * GLYPH_BYTES
             handle.write(
                 f"{character}\tU+{ord(character):04X}\t{lead_byte:02X} {low:02X}\t"

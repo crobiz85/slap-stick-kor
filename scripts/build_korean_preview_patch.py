@@ -1,10 +1,11 @@
 """Build a playable Korean preview patch for the verified Japanese ROM.
 
 This is intentionally conservative. It inserts Korean glyphs into unused 16×16
-source glyphs for the 0x80xx/0x81xx dictionary pages, patches compact Korean strings into the verified raw-menu and item-menu
+source glyphs for the 0x80xx/0x81xx/0x82xx dictionary pages, patches compact Korean strings into the verified raw-menu and item-menu
 slots, patches a second set of verified game-screen prompts in their original
-slots, and patches the six contiguous main-dialog records 0058-0063. Record 0058 stays
-at its original inline location; records 0059-0063 are relocated to verified FF
+slots, and patches the six early main-dialog records 0058-0063 plus the first
+post-intro cutscene record 0067. Record 0058 stays at its original inline location;
+records 0059-0063 are relocated to verified FF
 padding in the same HiROM bank and their ``02 1D`` references are updated.  The
 raw-menu strings are deliberately compact until their entry table is verified;
 eight additional fixed-length save/skill menu records are patched only when the
@@ -43,14 +44,16 @@ GAME_MENU_IDS = (
     "GAME-0018", "GAME-0019", "GAME-0020", "GAME-0021", "GAME-0025", "GAME-0029",
     "GAME-0033", "GAME-0042", "GAME-0043", "GAME-0044", "GAME-0045",
 )
-MAIN_DIALOG_IDS = ("0058", "0059", "0060", "0061", "0062", "0063")
+MAIN_DIALOG_IDS = ("0058", "0059", "0060", "0061", "0062", "0063", "0067")
 PATCHED_IDS = RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS + GAME_MENU_IDS + MAIN_DIALOG_IDS
-RELOCATED_IDS = MAIN_DIALOG_IDS[1:]
+INLINE_DIALOG_IDS = ("0058", "0067")
+RELOCATED_IDS = tuple(entry_id for entry_id in MAIN_DIALOG_IDS if entry_id not in INLINE_DIALOG_IDS)
 DIALOG_BANK_START = 0x58000
 DIALOG_BANK_END = 0x60000
 FONT_BANK_START = 0x50000
 FONT_BANK_SIZE = 0x4000
 SECOND_FONT_BANK_START = 0x54000
+THIRD_FONT_BANK_START = 0x60000
 GLYPH_BYTES = 64
 
 
@@ -145,7 +148,7 @@ def read_glyph_tiles() -> list[tuple[str, int, bytes]]:
 def is_visible_font_offset(offset: int, length: int) -> bool:
     return any(
         start <= offset and offset + length <= start + FONT_BANK_SIZE
-        for start in (FONT_BANK_START, SECOND_FONT_BANK_START)
+        for start in (FONT_BANK_START, SECOND_FONT_BANK_START, THIRD_FONT_BANK_START)
     )
 
 
@@ -214,6 +217,11 @@ def encode_rows(
         if entry_id == "0058":
             if len(encoded[entry_id]) <= row.original_length:
                 raise ValueError("0058 unexpectedly fits; patch assumptions should be reviewed")
+        elif entry_id == "0067":
+            if len(encoded[entry_id]) > row.original_length:
+                raise ValueError(
+                    f"0067 is {len(encoded[entry_id])} bytes, slot is {row.original_length} bytes"
+                )
         elif len(encoded[entry_id]) <= row.original_length:
             raise ValueError(f"{entry_id} no longer needs relocation; patch assumptions should be reviewed")
     return encoded
@@ -243,9 +251,12 @@ def patch_rom(
         target[cursor : cursor + len(encoded[entry_id])] = encoded[entry_id]
         cursor += len(encoded[entry_id])
 
-    # 0058 is an inline record.  The relocated records free its old tail.
-    inline = drafts["0058"]
-    target[inline.offset : inline.offset + len(encoded["0058"])] = encoded["0058"]
+    # 0058 deliberately uses the old 0059 tail; those records are relocated
+    # before it is written.  0067 has been shortened to its verified original
+    # slot and remains in place.
+    for entry_id in INLINE_DIALOG_IDS:
+        inline = drafts[entry_id]
+        target[inline.offset : inline.offset + len(encoded[entry_id])] = encoded[entry_id]
 
     pointer_manifest = {}
     for entry_id in RELOCATED_IDS:
@@ -305,16 +316,19 @@ def patch_rom(
         "raw_menu_preview": raw_menu_manifest,
         "game_menu_preview": game_menu_manifest,
         "font_pages": {
-            "lead_bytes": ["0x80", "0x81"],
-            "offset_ranges": ["0x50000-0x53FFF", "0x54000-0x57FFF"],
+            "lead_bytes": ["0x80", "0x81", "0x82"],
+            "offset_ranges": ["0x50000-0x53FFF", "0x54000-0x57FFF", "0x60000-0x63FFF"],
             "note": "Korean glyphs use only code slots absent from the extracted Japanese script on the game's visible menu pages.",
         },
         "glyph_count": len(glyphs),
-        "inline_record": {
-            "id": "0058",
-            "offset": f"0x{inline.offset:06X}",
-            "encoded_length": len(encoded["0058"]),
-        },
+        "inline_records": [
+            {
+                "id": entry_id,
+                "offset": f"0x{drafts[entry_id].offset:06X}",
+                "encoded_length": len(encoded[entry_id]),
+            }
+            for entry_id in INLINE_DIALOG_IDS
+        ],
         "relocation_start": f"0x{relocation_start:06X}",
         "relocation_end": f"0x{cursor:06X}",
         "relocated_bytes": total_relocated,
@@ -466,7 +480,7 @@ def main() -> None:
 
     args.rom_output.parent.mkdir(parents=True, exist_ok=True)
     args.rom_output.write_bytes(target)
-    write_bps(source, target, args.bps_output, b"Slap Stick Korean preview; menus, dialog, unused 16x16 0x80xx/0x81xx font glyphs")
+    write_bps(source, target, args.bps_output, b"Slap Stick Korean preview; menus, dialog, unused 16x16 0x80xx/0x81xx/0x82xx font glyphs")
     write_ips(source, target, args.ips_output)
     args.manifest_output.parent.mkdir(parents=True, exist_ok=True)
     args.manifest_output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
