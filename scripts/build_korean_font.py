@@ -109,14 +109,48 @@ def available_codes(lead_byte: int) -> list[int]:
     return [value for value in range(0x100) if value not in used]
 
 
-def allocate_codes(characters: list[str]) -> dict[str, tuple[int, int]]:
+def read_existing_codes(path: Path) -> dict[str, tuple[int, int]]:
+    """Read a previous generated map so later batches keep their code slots."""
+    if not path.exists():
+        return {}
+    existing = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) < 3:
+            continue
+        code = tuple(bytes.fromhex(columns[2]))
+        if len(code) == 2:
+            existing[columns[0]] = code
+    return existing
+
+
+def allocate_codes(
+    characters: list[str],
+    previous_codes: dict[str, tuple[int, int]] | None = None,
+) -> dict[str, tuple[int, int]]:
     primary = [(FONT_LEAD_BYTE, value) for value in available_codes(FONT_LEAD_BYTE)]
     secondary = [(SECOND_FONT_LEAD_BYTE, value) for value in available_codes(SECOND_FONT_LEAD_BYTE)]
     tertiary = [(THIRD_FONT_LEAD_BYTE, value) for value in available_codes(THIRD_FONT_LEAD_BYTE)]
     available = primary + secondary + tertiary
     if len(characters) > len(available):
         raise ValueError(f"Need {len(characters)} glyph slots but only {len(available)} are available")
-    return dict(zip(characters, available))
+    previous_codes = previous_codes or {}
+    available_set = set(available)
+    allocated: dict[str, tuple[int, int]] = {}
+    used = set()
+    for character in characters:
+        code = previous_codes.get(character)
+        if code in available_set and code not in used:
+            allocated[character] = code
+            used.add(code)
+
+    free_codes = (code for code in available if code not in used)
+    for character in characters:
+        if character not in allocated:
+            allocated[character] = next(free_codes)
+    return allocated
 
 
 def render_mask(character: str, font: ImageFont.FreeTypeFont, render_size: int) -> Image.Image:
@@ -205,7 +239,7 @@ def write_map(
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8", newline="\n") as handle:
-        handle.write("# Generated for the current Korean preview from compact menus, game-screen prompts, and six dialogue drafts.\n")
+        handle.write("# Generated for the current Korean preview from menus, game-screen prompts, and dialogue drafts.\n")
         handle.write("# Uses script-unused slots in the verified 0x80xx/0x81xx/0x82xx 16x16 source font pages.\n")
         handle.write("# character\tcodepoint\tcode bytes\tfile offset\t2bpp tile bytes\n")
         for character in characters:
@@ -233,7 +267,10 @@ def main() -> None:
 
     font_path = args.font or find_default_font()
     characters = read_draft_characters()
-    codes = allocate_codes(characters)
+    # Reusing the prior generated assignments is important: a newly added
+    # syllable must not silently renumber every existing glyph in a save-state
+    # or in already translated text.
+    codes = allocate_codes(characters, read_existing_codes(args.output_map))
     font = ImageFont.truetype(str(font_path), args.font_size)
     masks = {character: render_mask(character, font, args.font_size) for character in characters}
     tiles = {character: encode_glyph(masks[character]) for character in characters}

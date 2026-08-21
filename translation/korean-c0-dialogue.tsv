@@ -2,4 +2,11 @@
 # id	file offset	original length	Korean	status
 C0-05A3A8	0x05A3A8	0041	[DF4][DF2:00][NAM:00] [PAU:3C][NAM:00]\n[PAU:3C]일어나![TPL:D8][DF2:00]…[PAU:1E]그래?\n아직 안 일어날래?\n그럼…	cold-boot-opening
 C0-05A3EA	0x05A3EA	008F	[DLY:E0]하하하!\n잠이 깼지?\n푹 잤구나.[FIN]네가 자는 동안\n이삿짐은\n벌써 끝났단다.[FIN]자, 일어나\n[PAL:02]나기사[PAL:00]에게 인사해.\n네 몫까지\n정리해 주었단다.˳	cold-boot-opening
+C0-05A4DD	0x05A4DD	002C	[DFT][DF2:00]부탁해![NAM:00]!\n[PAU:32]어서 깨어나.\n힘내!	cold-boot-opening
 C0-06C3BE	0x06C3BE	003C	[DFT][E2:043B]내가 볼게.\n[PAL:02]개를 찾아줘![PAL:00]\n개가 약을 갖고 있대.˳	live-game-screen
+C0-06C3FB	0x06C3FB	002B	[DFT][E2:043E]너구나!\n다행이야.\n이제 움직여!	live-game-screen
+C0-06C427	0x06C427	006D	[DF4][E2:0481]너! 아직 있었네!?\n[PAU:28]…라고 할 뻔했지만\n마침 잘 왔어.[FIN]이 사람 다쳤어.\n[PAL:02]개를 찾아줘![PAL:00]\n개가 약을 갖고 있대.˳	live-game-screen
+C0-06C495	0x06C495	0033	[DFT][E2:044B]야, 너!\n다친 사람을 두고 가는 거야?\n얘기 정도는 듣고 가!	live-game-screen
+C0-06C4C9	0x06C4C9	007C	[DFT][E2:0445]자, [PAU:1E]취재 재개야!\n해커들이 이 저택에서\n뭔가 하는 건 알아냈어.[FIN]녀석들의 목적이 뭔지\n밝혀서 기사로 써야 해!\n[PAU:1E]그럼 플라보노 씨, 몸조심해.\n[PAU:1E][NAM:00]군은 어서 돌아가!	live-game-screen
+C0-06C655	0x06C655	0149	[DFT]낯익은데…\n[PAU:1E]응? 네가 [NAM:00]군인가?\n[PAU:1E]아버지를 닮았구나.[FIN]나는 [PAL:02]플라보노야.\n[PAU:1E][PAL:00]네 아버지의 지인이지.\n네 아버지와\n함께 있었는데…[FIN]아야…\n[PAU:1E]해커라는 녀석들에게\n쫓겨 이 안으로\n도망쳤다가 허리를 다쳤어.[FIN][PAL:02]가방을\n찾아주겠나?\n[PAL:00]내 개가 갖고 있을 거야.\n하얀 개, 파슬리라는 녀석이지.[FIN][JMP]そ[BOX:D7E00F]파슬리는 하얗고 작은 개야.\n등에는 보자기를 메고 있어.[FIN]그리고 [PAL:02]반짝이는 걸 좋아해.[PAL:00]\n반짝이는 걸 보여주면\n기뻐하며 가까이 올 거야.˳	live-game-screen
+C0-06C79F	0x06C79F	0021	[DFT][E2:0F3F]오, 파슬리를 데려왔구나!\n덕분에 살았어!	live-game-screen

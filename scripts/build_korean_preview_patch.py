@@ -1,15 +1,11 @@
 """Build a playable Korean preview patch for the verified Japanese ROM.
 
-This is intentionally conservative. It inserts Korean glyphs into unused 16×16
-source glyphs for the 0x80xx/0x81xx/0x82xx dictionary pages, patches compact Korean strings into the verified raw-menu and item-menu
-slots, patches a second set of verified game-screen prompts in their original
-slots, and patches the six early main-dialog records 0058-0063 plus the first
-post-intro cutscene record 0067. Record 0058 stays at its original inline location;
-records 0059-0063 are relocated to verified FF
-padding in the same HiROM bank and their ``02 1D`` references are updated.  The
-raw-menu strings are deliberately compact until their entry table is verified;
-eight additional fixed-length save/skill menu records are patched only when the
-encoded Korean draft fits its original slot.
+It inserts Korean glyphs into unused 16×16 source glyphs for the
+0x80xx/0x81xx/0x82xx dictionary pages, patches compact Korean strings into
+verified menu slots, relocates overlength early dialogue records, and now also
+relocates overlength C0-terminated story records within their verified HiROM
+script bank.  Every relocation requires and updates an existing ``02 1D``
+reference; records without that verified route remain unpatched.
 """
 
 from __future__ import annotations
@@ -47,13 +43,26 @@ GAME_MENU_IDS = (
     "GAME-0033", "GAME-0042", "GAME-0043", "GAME-0044", "GAME-0045",
 )
 EARLY_GAME_IDS = ()
-C0_DIALOGUE_IDS = ("C0-05A3A8", "C0-05A3EA", "C0-06C3BE")
+C0_DIALOGUE_IDS = (
+    "C0-05A3A8", "C0-05A3EA", "C0-05A4DD",
+    "C0-06C3BE", "C0-06C3FB", "C0-06C427", "C0-06C495", "C0-06C4C9", "C0-06C655", "C0-06C79F",
+)
 MAIN_DIALOG_IDS = ("0058", "0059", "0060", "0061", "0062", "0063", "0064", "0065", "0066", "0067")
 PATCHED_IDS = RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS + GAME_MENU_IDS + EARLY_GAME_IDS + C0_DIALOGUE_IDS + MAIN_DIALOG_IDS
 INLINE_DIALOG_IDS = ("0058", "0064", "0065", "0066", "0067")
 RELOCATED_IDS = tuple(entry_id for entry_id in MAIN_DIALOG_IDS if entry_id not in INLINE_DIALOG_IDS)
 DIALOG_BANK_START = 0x58000
 DIALOG_BANK_END = 0x60000
+# C0 dialogue calls retain their 16-bit address and therefore must continue
+# to point into their original 64 KiB HiROM bank.  These are verified script
+# pages; the ranges exclude graphics/font data at the front of each page.
+C0_RELOCATION_RANGES = {
+    0x50000: (0x58000, 0x60000),
+    0x60000: (0x68000, 0x70000),
+    0x70000: (0x78000, 0x80000),
+    0x80000: (0x88000, 0x90000),
+    0x90000: (0x98000, 0xA0000),
+}
 FONT_BANK_START = 0x50000
 FONT_BANK_SIZE = 0x4000
 SECOND_FONT_BANK_START = 0x54000
@@ -210,6 +219,15 @@ def pointer_refs(data: bytes, target: int) -> list[int]:
     ]
 
 
+def c0_relocation_range(offset: int) -> tuple[int, int]:
+    """Return the verified free-space search range for a C0 record's bank."""
+    bank = offset & ~0xFFFF
+    try:
+        return C0_RELOCATION_RANGES[bank]
+    except KeyError as exc:
+        raise ValueError(f"no verified C0 relocation range for 0x{offset:06X}") from exc
+
+
 def encode_rows(
     drafts: dict[str, DraftRow],
     game_menu: dict[str, GameMenuRow],
@@ -260,11 +278,6 @@ def encode_rows(
     for entry_id in C0_DIALOGUE_IDS:
         row = c0_dialogue[entry_id]
         encoded[entry_id] = encode_text(row.korean, glyphs)
-        if len(encoded[entry_id]) > row.original_length:
-            raise ValueError(
-                f"{entry_id} preview is {len(encoded[entry_id])} bytes, "
-                f"slot is {row.original_length} bytes"
-            )
     for entry_id in MAIN_DIALOG_IDS:
         row = drafts[entry_id]
         encoded[entry_id] = encode_text(row.korean, glyphs)
@@ -299,13 +312,13 @@ def patch_rom(
             raise ValueError(f"glyph {character!r} is outside the visible Korean font pages: 0x{offset:06X}")
 
     total_relocated = sum(len(encoded[entry_id]) for entry_id in RELOCATED_IDS)
-    relocation_start = find_ff_run(target, DIALOG_BANK_START, DIALOG_BANK_END, total_relocated)
+    main_relocation_start = find_ff_run(target, DIALOG_BANK_START, DIALOG_BANK_END, total_relocated)
     relocation_offsets: dict[str, int] = {}
-    cursor = relocation_start
+    main_relocation_cursor = main_relocation_start
     for entry_id in RELOCATED_IDS:
-        relocation_offsets[entry_id] = cursor
-        target[cursor : cursor + len(encoded[entry_id])] = encoded[entry_id]
-        cursor += len(encoded[entry_id])
+        relocation_offsets[entry_id] = main_relocation_cursor
+        target[main_relocation_cursor : main_relocation_cursor + len(encoded[entry_id])] = encoded[entry_id]
+        main_relocation_cursor += len(encoded[entry_id])
 
     # 0058 deliberately uses the old 0059 tail; those records are relocated
     # before it is written.  The remaining early scene records fit in their
@@ -329,6 +342,79 @@ def patch_rom(
             "new_offset": f"0x{new_offset:06X}",
             "references": [f"0x{ref:06X}" for ref in refs],
         }
+
+    # Story dialogue is C0-terminated and uses direct ``02 1D`` calls.  Its
+    # Korean text may exceed the Japanese record's physical slot, so group
+    # only the oversized records by their original HiROM bank, append the
+    # terminator in the relocated copy, then retarget every verified call.
+    c0_relocated_ids = tuple(
+        entry_id
+        for entry_id in C0_DIALOGUE_IDS
+        if len(encoded[entry_id]) > c0_dialogue[entry_id].original_length
+    )
+    c0_relocation_offsets: dict[str, int] = {}
+    c0_pointer_manifest = {}
+    c0_relocation_ranges = {}
+    c0_groups: dict[tuple[int, int], list[str]] = {}
+    for entry_id in c0_relocated_ids:
+        row = c0_dialogue[entry_id]
+        c0_groups.setdefault(c0_relocation_range(row.offset), []).append(entry_id)
+
+    # A relocated record's old slot becomes available only after proving that
+    # its physical tail is really the expected C0 terminator.  This lets one
+    # story scene reuse its own contiguous Japanese slots without borrowing
+    # unrelated data or expanding the ROM.
+    for entry_id in c0_relocated_ids:
+        row = c0_dialogue[entry_id]
+        terminator_offset = row.offset + row.original_length
+        if source[terminator_offset] != 0xC0:
+            raise ValueError(f"{entry_id} is not C0-terminated at 0x{terminator_offset:06X}")
+        target[row.offset : terminator_offset + 1] = b"\xFF" * (row.original_length + 1)
+
+    for relocation_range, entry_ids in c0_groups.items():
+        allocations = []
+        # Largest-first allocation avoids stranding a long dialogue behind
+        # the small holes created by its neighbouring records.
+        for entry_id in sorted(entry_ids, key=lambda value: len(encoded[value]), reverse=True):
+            payload = encoded[entry_id] + b"\xC0"
+            relocation_start = find_ff_run(
+                target,
+                relocation_range[0],
+                relocation_range[1],
+                len(payload),
+            )
+            c0_relocation_offsets[entry_id] = relocation_start
+            target[relocation_start : relocation_start + len(payload)] = payload
+            allocations.append({
+                "id": entry_id,
+                "start": f"0x{relocation_start:06X}",
+                "end": f"0x{relocation_start + len(payload):06X}",
+            })
+        c0_relocation_ranges[f"0x{relocation_range[0]:06X}-0x{relocation_range[1]:06X}"] = {
+            "records": entry_ids,
+            "allocations": allocations,
+        }
+
+    for entry_id in c0_relocated_ids:
+        row = c0_dialogue[entry_id]
+        new_offset = c0_relocation_offsets[entry_id]
+        refs = pointer_refs(source, row.offset)
+        if not refs:
+            raise ValueError(f"no 02 1D pointer reference found for {entry_id} at 0x{row.offset:06X}")
+        for ref in refs:
+            target[ref + 2] = new_offset & 0xFF
+            target[ref + 3] = (new_offset >> 8) & 0xFF
+        c0_pointer_manifest[entry_id] = {
+            "old_offset": f"0x{row.offset:06X}",
+            "new_offset": f"0x{new_offset:06X}",
+            "references": [f"0x{ref:06X}" for ref in refs],
+            "terminator": "0xC0",
+        }
+
+    for entry_id, new_offset in c0_relocation_offsets.items():
+        payload = encoded[entry_id]
+        if target[new_offset : new_offset + len(payload)] != payload or target[new_offset + len(payload)] != 0xC0:
+            raise ValueError(f"C0 relocation verification failed for {entry_id}")
 
     raw_menu_manifest = {}
     for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS:
@@ -378,15 +464,25 @@ def patch_rom(
     for entry_id in C0_DIALOGUE_IDS:
         row = c0_dialogue[entry_id]
         payload = encoded[entry_id]
-        target[row.offset : row.offset + len(payload)] = payload
-        target[row.offset + len(payload) : row.offset + row.original_length] = b" " * (
-            row.original_length - len(payload)
-        )
-        c0_dialogue_manifest[entry_id] = {
-            "offset": f"0x{row.offset:06X}",
-            "slot_length": row.original_length,
-            "encoded_length": len(payload),
-        }
+        if entry_id in c0_relocation_offsets:
+            c0_dialogue_manifest[entry_id] = {
+                "offset": f"0x{row.offset:06X}",
+                "slot_length": row.original_length,
+                "encoded_length": len(payload),
+                "mode": "relocated",
+                "new_offset": f"0x{c0_relocation_offsets[entry_id]:06X}",
+            }
+        else:
+            target[row.offset : row.offset + len(payload)] = payload
+            target[row.offset + len(payload) : row.offset + row.original_length] = b" " * (
+                row.original_length - len(payload)
+            )
+            c0_dialogue_manifest[entry_id] = {
+                "offset": f"0x{row.offset:06X}",
+                "slot_length": row.original_length,
+                "encoded_length": len(payload),
+                "mode": "inline",
+            }
 
     changed = sum(left != right for left, right in zip(source, target))
     manifest = {
@@ -401,6 +497,8 @@ def patch_rom(
         "game_menu_preview": game_menu_manifest,
         "early_game_preview": early_game_manifest,
         "c0_dialogue_preview": c0_dialogue_manifest,
+        "c0_relocation_ranges": c0_relocation_ranges,
+        "c0_pointer_updates": c0_pointer_manifest,
         "font_pages": {
             "lead_bytes": ["0x80", "0x81", "0x82"],
             "offset_ranges": ["0x50000-0x53FFF", "0x54000-0x57FFF", "0x60000-0x63FFF"],
@@ -415,8 +513,8 @@ def patch_rom(
             }
             for entry_id in INLINE_DIALOG_IDS
         ],
-        "relocation_start": f"0x{relocation_start:06X}",
-        "relocation_end": f"0x{cursor:06X}",
+        "relocation_start": f"0x{main_relocation_start:06X}",
+        "relocation_end": f"0x{main_relocation_cursor:06X}",
         "relocated_bytes": total_relocated,
         "pointer_updates": pointer_manifest,
         "changed_bytes": changed,
