@@ -97,10 +97,10 @@ def read_translations() -> dict[str, dict]:
     return rows
 
 
-def encode_rows(original: bytes) -> list[dict]:
+def encode_rows(original: bytes, glyph_map_path: Path = ROOT / "translation" / "korean-glyph-map.tsv") -> list[dict]:
     catalog = read_catalog()
     translations = read_translations()
-    glyphs = read_glyph_map()
+    glyphs = read_glyph_map(glyph_map_path)
     result = []
     for entry_id, row in translations.items():
         cat = catalog.get(entry_id)
@@ -195,7 +195,7 @@ def assert_font_only_base(base: bytes) -> None:
             raise ValueError(f"font-only baseline has no glyph changes in 0x{start:06X}-0x{end:06X}")
 
 
-def build_rom(base: bytes, selected: list[dict]) -> tuple[bytes, dict]:
+def build_rom(base: bytes, selected: list[dict], base_path: Path = FONT_ONLY_ROM) -> tuple[bytes, dict]:
     target = bytearray(base)
     original = ORIGINAL_ROM.read_bytes()
     changed_ranges = []
@@ -226,7 +226,7 @@ def build_rom(base: bytes, selected: list[dict]) -> tuple[bytes, dict]:
 
     manifest = {
         "kind": "Slap Stick Korean dialogue-inline test",
-        "base_rom": str(FONT_ONLY_ROM.relative_to(ROOT)),
+        "base_rom": str(base_path.relative_to(ROOT)),
         "base_sha256": sha256(base),
         "target_sha256": sha256(bytes(target)),
         "source_original_sha256": sha256(original),
@@ -253,17 +253,36 @@ def main() -> None:
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--include-opening", action="store_true", help="allow opening rows in default selection")
     parser.add_argument("--ids", help="comma-separated C0 IDs to select explicitly")
+    parser.add_argument("--ids-file", type=Path, help="text file containing one C0 ID per line")
+    parser.add_argument("--base", type=Path, default=FONT_ONLY_ROM, help="font-only base ROM")
+    parser.add_argument(
+        "--glyph-map",
+        type=Path,
+        default=ROOT / "translation" / "korean-glyph-map.tsv",
+        help="glyph map used for encoding",
+    )
     args = parser.parse_args()
 
     if not ORIGINAL_ROM.exists():
         raise SystemExit(f"missing original ROM: {ORIGINAL_ROM}")
-    if not FONT_ONLY_ROM.exists():
-        raise SystemExit(f"missing font-only baseline: {FONT_ONLY_ROM}")
+    base_path = args.base.resolve()
+    glyph_map_path = args.glyph_map.resolve()
+    if not base_path.exists():
+        raise SystemExit(f"missing font-only baseline: {base_path}")
+    if not glyph_map_path.exists():
+        raise SystemExit(f"missing glyph map: {glyph_map_path}")
     original = ORIGINAL_ROM.read_bytes()
-    base = FONT_ONLY_ROM.read_bytes()
+    base = base_path.read_bytes()
     assert_font_only_base(base)
-    rows = encode_rows(original)
+    rows = encode_rows(original, glyph_map_path)
     requested = {item.strip() for item in args.ids.split(",") if item.strip()} if args.ids else None
+    if args.ids_file:
+        file_ids = {
+            line.strip()
+            for line in args.ids_file.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.startswith("#")
+        }
+        requested = file_ids if requested is None else requested | file_ids
     selected, reasons = choose_rows(rows, requested, args.include_opening)
     write_report(rows, reasons, args.report)
 
@@ -274,7 +293,7 @@ def main() -> None:
     if not args.build:
         return
 
-    target, manifest = build_rom(base, selected)
+    target, manifest = build_rom(base, selected, base_path)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_bytes(target)
     args.manifest.parent.mkdir(parents=True, exist_ok=True)
