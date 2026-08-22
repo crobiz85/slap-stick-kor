@@ -60,6 +60,49 @@ REWRITES = (
     ("것을", "걸"),
 )
 
+# These rows contain control bytes that the generic Korean manuscript cannot
+# express safely.  The RAW prefixes below were copied from the verified
+# original C0 records through their first DFT opcode; only the visible text
+# after that point is replaced.  The marker in column 8 makes the relocation
+# builder treat the row as reviewed rather than restoring the Japanese slot.
+CONTROL_SAFE_OVERRIDES = {
+    "C0-058AA3": (
+        "[DFT]오빠, 그 집에 이사 왔지?\\n"
+        "[PAL:02][BTN:8000][KATAKANA]버튼[HIRAGANA]으로\\n"
+        "[KATAKANA]차임[HIRAGANA]을 울리는 거야.[PAL:00][FIN]\\n\\n"
+        "답례는 이사 떡이면 충분하니까˳",
+        "safe:restored-fin",
+    ),
+    "C0-05DADC": (
+        "[RAW:DADA028000029780F5026202000BDB020BC88001DB020B2080FCDA021D10DB6B021D6DDB6B021D39DB6B021D98DB6B021DC5DB6BD7]"
+        "촌장님은 바빠.\\n할 말은\\n간단히.",
+        "safe:preserved-original-controls",
+    ),
+    "C0-05E67E": (
+        "[DFT][E2:053F]예전 발명품은\\n자원을 많이 써.\\n재능 차이지.",
+        "safe:normalized-terminal-punctuation",
+    ),
+    "C0-06B72E": (
+        "[DFT]으[KATAKANA]ー[HIRAGANA]앙!\\n[PAU:1E]안 움직여!",
+        "safe:restored-pause",
+    ),
+    "C0-07D767": (
+        "[RAW:D03C00021D7DD7][E2:0FDC]············\\n"
+        "[PAU:1E]···[NXT]가[KATAKANA]아키하바라[HIRAGANA] 군···˳",
+        "safe:preserved-original-controls",
+    ),
+    "C0-07E786": (
+        "[RAW:DA020A6903020A6A8302CF1EE7876B021DCBE86BD7]"
+        "벽을 부숴!\\n[PAU:0A]뒤로!",
+        "safe:preserved-original-controls",
+    ),
+    "C0-06C96A": (
+        "[DFT][E2:0F5D]미안하지만\\n[PAL:02]빈방[PAL:00]에서\\n잠깐 쉴게.[FIN]볼일 있으면 오게.\\n"
+        "[PAU:1E]\\n에고, 정말\\n미안하군.",
+        "safe:shortened-inline",
+    ),
+}
+
 
 def compact_text(text: str) -> tuple[str, list[tuple[str, str]]]:
     result = text
@@ -111,6 +154,10 @@ def main() -> None:
         # conservative compaction is applied to that effective text.
         before = canonical_texts.get(columns[0], columns[3])
         after, applied = compact_text(before)
+        override = CONTROL_SAFE_OVERRIDES.get(columns[0])
+        if override is not None:
+            after = override[0]
+            columns[7] = override[1]
         columns[3] = after
         output_lines.append("\t".join(columns))
         if not applied or before == after:

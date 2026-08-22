@@ -102,10 +102,13 @@ def read_translations(path: Path | None = None) -> dict[str, dict]:
             "status": status,
             "control_review": control_review,
         }
-    # The canonical subset is the previously tested, known-good ROM route.
-    # Keep it as a fallback/override so a manuscript line that needs a glyph
-    # not present in the current font cannot make an older working line vanish
-    # from the test ROM.
+    # The canonical subset is the previously tested, known-good ROM route when
+    # the default manuscript is used.  An explicit manuscript path is a
+    # deliberate build input (for example the compact control-safe revision),
+    # so it must remain authoritative instead of being silently overwritten by
+    # the older canonical text.
+    if path is not None:
+        return rows
     for line in CANONICAL_PATH.read_text(encoding="utf-8").splitlines():
         if not line or line.startswith("#"):
             continue

@@ -11,7 +11,7 @@ C0-058364	0x058364	0054	[DFT][PAL:02]마을사무소 알림[PAL:00]\n천재 발�
 C0-0583B9	0x0583B9	0051	[DFT][PAL:02]마을사무소 부탁[PAL:00]\n강가 동굴에 놀러 갔던\n아이들이 행방불명되었습니다.\n수색에 협조해 주세요.˳	early-town	translated	korean-c0-manuscript-early.tsv	ok
 C0-05840B	0x05840B	0086	[DFT][PAL:02]마을사무소 알림[PAL:00]\n얼마 전 행방불명됐던\n아이들은 [KATAKANA]로코코 마을[HIRAGANA]에 사는\n발명가 [NAM:00] 씨가[FIN] 무사히 구해 냈습니다.\n또한 [NAM:00] 씨에게는\n촌장님이 포상금을\n전달할 예정입니다.˳	early-story	translated	korean-c0-manuscript-early.tsv	ok
 C0-058743	0x058743	01C6	[DFT]┌안녕하세요. [KATAKANA]민트[HIRAGANA]입니다.\n최근 이 마을에 갑자기 나타난\n[KATAKANA]해커[HIRAGANA]의 진짜 목적은 무엇일까요?!\n그 일부가 밝혀졌습니다.[FIN]그들은 [PAL:02][KATAKANA]티아트론[HIRAGANA][PAL:00]이라는 돌을\n찾고 있는 모양입니다.\n하지만 그 돌의 정체는 아직\n분명하지 않습니다.[FIN]아직 [KATAKANA]해커[HIRAGANA]에 관해서는\n모르는 점이 많지만\n앞으로도 계속 이 취재를\n이어 갈 생각입니다.[FIN][JMP]K[BYTE:87][DFT]┌안녕하세요. [KATAKANA]민트[HIRAGANA]입니다.\n놀랍게도 촌장 비서인 [KATAKANA]로즈[HIRAGANA] 씨가\n그 [KATAKANA]해커[HIRAGANA]의 일원이었던 사실이\n밝혀졌습니다![FIN]게다가 [KATAKANA]해커[HIRAGANA]에게\n진짜 촌장은 납치되고\n가짜 촌장이 대신\n촌장 일을 하고 있었던 것입니다.[FIN][KATAKANA]로코코 마을[HIRAGANA]을 [KATAKANA]해커[HIRAGANA]의 손에서\n구한 사람은 [KATAKANA]로코코 마을[HIRAGANA]에 사는\n[NAM:00] 군!\n그의 활약으로 촌장도 구출되었습니다.[FIN][JMP][HIRAGANA][BYTE:87][PAL:03] [KATAKANA]로코코 마을 사건 담당 기자[HIRAGANA] [KATAKANA]민트[HIRAGANA][PAL:00]┘	early-story	translated	korean-c0-manuscript-early.tsv	ok
-C0-058AA3	0x058AA3	007B	[DFT]오빠, 그 집에 이사 왔지?\n[PAL:02][BTN:8000][KATAKANA]버튼[HIRAGANA]으로\n[KATAKANA]차임[HIRAGANA]을 울리는 거야.[PAL:00]\n\n답례는 이사 떡이면 충분하니까˳	early-house-route	translated	korean-c0-manuscript-early.tsv	missing:FIN
+C0-058AA3	0x058AA3	007B	[DFT]오빠, 그 집에 이사 왔지?\n[PAL:02][BTN:8000][KATAKANA]버튼[HIRAGANA]으로\n[KATAKANA]차임[HIRAGANA]을 울리는 거야.[PAL:00][FIN]\n\n답례는 이사 떡이면 충분하니까˳	early-house-route	translated	korean-c0-manuscript-early.tsv	safe:restored-fin
 C0-058B1F	0x058B1F	001E	[DFT]지금은 안 돼.\n저쪽에 있어.˳	early-house-route	draft-existing	korean-c0-dialogue.tsv	ok
 C0-058B3E	0x058B3E	0035	[DFT]오빠 꽤 괜찮네!	early-house-route	draft-existing	korean-c0-dialogue.tsv	ok
 C0-058B74	0x058B74	0029	[DFT]어? 돌려달라고?\n싫어.\n재미있어.˳	early-house-route	translated	korean-c0-manuscript-early.tsv	ok
@@ -171,7 +171,7 @@ C0-05D8F9	0x05D8F9	0034	[DFT][E2:044F]촌장의 정체를 밝혀낼\n방법은 �
 C0-05D92E	0x05D92E	007E	[DFT][E2:04DC][PAU:3C][NXT]바로 그거야!\n[PAU:1E]촌장님이 개를 아주 싫어한다는 건\n마을 사람이라면 누구나 알아![FIN][NXT]자, [NAM:00]\n그 개를 촌장실까지\n데려와 줘.\n나는 먼저 가서\n취재 허가를 받아 둘게!	early-story	translated	korean-c0-manuscript-early.tsv	ok
 C0-05D9D4	0x05D9D4	0025	[DFT]이봐, 꼬마야.\n이 앞은 직원 외에는\n출입 금지야˳	early-town	translated	korean-c0-manuscript-early.tsv	ok
 C0-05DA21	0x05DA21	007D	[DFT]요즘 촌장님은\n일을 전혀 하지 않을 뿐 아니라\n주의를 준 직원들을\n차례로 [KATAKANA]해고[HIRAGANA]하고 있어![FIN]\n그것도 저 비서 [PAL:03][KATAKANA]로즈[HIRAGANA][PAL:00]라는 여자가\n온 뒤부터야.\n정말 한심한 노릇이지!	early-story	translated	korean-c0-manuscript-early.tsv	ok
-C0-05DADC	0x05DADC	005C	[DFT]촌장님은 바쁜 분이란다.\n할 말이 있다면\n간단히 말하렴, 꼬마야˳	early-town	translated	korean-c0-manuscript-early.tsv	missing:BYTE,DD,DES,DLY,TBL
+C0-05DADC	0x05DADC	005C	[RAW:DADA028000029780F5026202000BDB020BC88001DB020B2080FCDA021D10DB6B021D6DDB6B021D39DB6B021D98DB6B021DC5DB6BD7]촌장님은 바빠.\n할 말은\n간단히.	early-town	translated	korean-c0-manuscript-early.tsv	safe:preserved-original-controls
 C0-05DB39	0x05DB39	0033	[DFT][E2:0B3C]장난치면 안 돼, 꼬마야.\n촌장님은 개를 싫어하시니까\n개를 밖에 내보내렴˳	early-town	translated	korean-c0-manuscript-early.tsv	ok
 C0-05DB6D	0x05DB6D	002A	[DFT][E2:0B59]너였니?\n어른들 일을\n너무 방해하면 안 된단다˳	early-town	translated	korean-c0-manuscript-early.tsv	ok
 C0-05DB98	0x05DB98	002C	[DFT][E2:0B80][CMD:EA]를 하고 있었냐고?\n[PAU:1E]후후후···\n[PAU:1E]아주 좋은 일을 하고 있었지, [PAU:1E]꼬마야˳	early-town	translated	korean-c0-manuscript-early.tsv	ok
@@ -196,7 +196,7 @@ C0-05E4A7	0x05E4A7	0057	[DFT][PAL:02]촌장의 오늘 [KATAKANA]일정[HIRAGANA]
 C0-05E4FF	0x05E4FF	0057	[DFT][PAL:02]촌장의 오늘 [KATAKANA]일정[HIRAGANA]\n 아침: [KATAKANA]로코코 마을[HIRAGANA] 친목회 참석\n 점심: [KATAKANA]로코코 마을 발전 회의[HIRAGANA] 참석\n 저녁: [KATAKANA]므흐흐 클럽[HIRAGANA] 참석[PAL:00]	early-town	translated	korean-c0-manuscript-early.tsv	ok
 C0-05E557	0x05E557	003F	[DFT] [NAM:00]은\n[PAL:02] [KATAKANA]열쇠[HIRAGANA][PAL:00]를 찾았다![TER][DFT] [NAM:00]은\n[PAL:02] [KATAKANA]열쇠[HIRAGANA][PAL:00]를 찾았다!\n하지만 소지품이 가득 찼다.˳	early-story	translated	korean-c0-manuscript-early.tsv	ok
 C0-05E5CE	0x05E5CE	00AF	[DFT][E2:0549]바로 내가\n금세기가 낳은 천재 발명가\n[PAL:02][KATAKANA]페퍼 박사[HIRAGANA][PAL:00]다.[FIN]\n너도 발명가라고?\n캭캭, 너와 나는\n격도 품위도 다르단다.\n상대가 안 돼.[FIN]\n나에게 가르침을 받고 싶으냐?\n[PAU:14]캭캭캭, 안 돼, 안 돼.\n너 같은 아이에게\n가르칠 건 아무것도 없다!˳	early-story	translated	korean-c0-manuscript-early.tsv	ok
-C0-05E67E	0x05E67E	0033	[DFT][E2:053F]예전의 발명품 따위는\n자원 낭비의 산더미야.\n결국은 재능의 차이지˳	early-town	translated	korean-c0-manuscript-early.tsv	missing:HIRAGANA,KATAKANA
+C0-05E67E	0x05E67E	0033	[DFT][E2:053F]예전 발명품은\n자원을 많이 써.\n재능 차이지.	early-town	translated	korean-c0-manuscript-early.tsv	safe:normalized-terminal-punctuation
 C0-05E72F	0x05E72F	0052	[DFT][E2:04C2]가좋아?\n개를 데리고 촌장에게\n말을 거는 거야.[FIN]진짜 촌장이라면\n개가 다가오기만 해도\n난리를 칠 테니까.\n꼭 부탁해!!	early-town	translated	korean-c0-manuscript-early.tsv	ok
 C0-05E782	0x05E782	0025	[DFT][E2:045D]아, 어떡해?!\n남자아이잖아?!\n힘내, [NAM:00]!	early-story	translated	korean-c0-manuscript-early.tsv	ok
 C0-05E7A8	0x05E7A8	0030	[DFT][E2:044B]··잠깐만···\n개는 어디 갔어!? 개 말이야!\n개가 없으면 아무 소용 없잖아!	early-town	translated	korean-c0-manuscript-early.tsv	ok
@@ -316,7 +316,7 @@ C0-06B4A1	0x06B4A1	0063	[DFT][PAL:03]후후후.\n[PAU:1E]어서 와, 꼬마야.\
 C0-06B505	0x06B505	0048	[DFT][PAL:03]또 왔니? 말귀를 못 알아듣는 아이구나.\n[PAU:1E]하지만 포기하는 게 좋을걸.\n[KATAKANA]너[HIRAGANA] 따위는 [KATAKANA]마무라나[HIRAGANA] 님을\n상대할 수 없으니까˳[PAL:00]	npc-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-06B5A6	0x06B5A6	000A	[DFT]\n[KATAKANA]찍찍[HIRAGANA]	npc-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-06B5B1	0x06B5B1	0074	[DFT]늦지 않아서 다행이[KATAKANA]찍[HIRAGANA].\n우리 아이를 구해 준\n답례라[KATAKANA]찍[HIRAGANA].[FIN]여기서부터 시계탑 지하로\n내려갈 수 있[KATAKANA]찍[HIRAGANA].\n인형 모습을 한 괴물이 있어[KATAKANA]찍[HIRAGANA].\n조심하는 게 좋겠[KATAKANA]찍[HIRAGANA].˳	event-dialogue	translated	korean-c0-manuscript-early.tsv	ok
-C0-06B72E	0x06B72E	0019	[DFT]으[KATAKANA]ー[HIRAGANA]앙.\n몸이 움직이지 않아아!	npc-dialogue	translated	korean-c0-manuscript-early.tsv	missing:PAU
+C0-06B72E	0x06B72E	0019	[DFT]으[KATAKANA]ー[HIRAGANA]앙!\n[PAU:1E]안 움직여!	npc-dialogue	translated	korean-c0-manuscript-early.tsv	safe:restored-pause
 C0-06B935	0x06B935	0084	[DLY:02][STR:D9B886]ぅぐぽぱ[BYTE:BA]Ⅰ[DFT][PAL:03]분명 올 줄 알았어.\n[PAU:1E]너도 이 돌을\n찾고 있지?[FIN]하지만 [PAU:1E][KATAKANA]나[HIRAGANA]를\n인형이라고 [KATAKANA]바보[HIRAGANA] 취급하면 [KATAKANA]안 돼[HIRAGANA].\n[KATAKANA]나[HIRAGANA]는 이 돌 덕분에\n이런 모습으로 변신할 수 있거든.˳	event-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-06B9BA	0x06B9BA	0043	[DFT][PAL:03]겨우 도망쳤는데 정말 [KATAKANA]바보[HIRAGANA]구나.\n[PAU:1E]그래도 네 돌까지 손에 넣으면\n분명 더 대단한 힘을\n쓸 수 있게 될 거야˳	npc-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-06B9FE	0x06B9FE	0043	[DFT] [NAM:00]은\n[PAL:02]보석 2[PAL:00]를 손에 넣었다![NXT]가[TER][DFT] [NAM:00]은\n[PAL:02]보석 2[PAL:00]를 찾았다!\n하지만 소지품이 가득 찼다.˳	event-dialogue	translated	korean-c0-manuscript-early.tsv	ok
@@ -338,7 +338,7 @@ C0-06C655	0x06C655	0149	[DFT]낯익은데…\n[PAU:1E]응? 네가 [NAM:00]군인
 C0-06C79F	0x06C79F	0021	[DFT][E2:0F3F]오, 파슬리를 데려왔구나!\n덕분에 살았어!	live-game-screen	draft-existing	korean-c0-dialogue.tsv	missing:HIRAGANA,KATAKANA
 C0-06C7C1	0x06C7C1	00F1	[DFT][E2:0FDC]아…[NXT]그 아가씨는 없는가?\n[PAU:1E]이제야 말할 수 있겠군.[FIN][NAM:00]군은 아버지가\n[E2:004E]라는 돌을 찾는 건 아나?\n아버지가 찾는 돌이지.[FIN]전부터 자네 아버지가\n그 돌을 찾고 있었다네.\n[KATAKANA]해커[HIRAGANA]들도\n그 돌을 찾는다는 말을 들었지.[FIN]자네 아버지 이야기는 나중에 하세.\n지금은 [E2:0067]을 찾아야 해.\n[KATAKANA]해커[HIRAGANA]에게\n지기 전에 말이야.\n자, 어서···[TPL:D7]\n아… 아야…˳	live-game-screen	draft-existing	korean-c0-dialogue.tsv	ok
 C0-06C8B3	0x06C8B3	00B6	[DFT][E2:0F0E]아직 허리가 아파서···\n[PAU:28][NAM:00]군,\n나 신경 쓰지 말고 먼저 가게.[TPL:D7]아, 이걸 주지.\n[PAL:02][KATAKANA]라이트[HIRAGANA][PAL:00]야.\n이게 있으면 어두운 곳도\n잘 다닐 거야.˳[TPL:D7][NAM:00]은\n[PAL:02][KATAKANA]라이트[HIRAGANA][PAL:00]를 얻었다![TER][DFT]자네에게 줄 게\n있는데 말이야…\n짐이 가득하군.\n어떡하지…˳	live-game-screen	draft-existing	korean-c0-dialogue.tsv	ok
-C0-06C96A	0x06C96A	0057	[DFT][E2:0F5D]미안하지만 나는\n[PAL:02]빈방[PAL:00] 근처에서\n잠시 쉬겠네.[FIN]볼일 있으면 찾아오게.\n[PAU:1E]\n에고, 정말\n면목이 없군.˳	live-game-screen	draft-existing	korean-c0-dialogue.tsv	ok
+C0-06C96A	0x06C96A	0057	[DFT][E2:0F5D]미안하지만\n[PAL:02]빈방[PAL:00]에서\n잠깐 쉴게.[FIN]볼일 있으면 오게.\n[PAU:1E]\n에고, 정말\n미안하군.	live-game-screen	draft-existing	korean-c0-dialogue.tsv	safe:shortened-inline
 C0-06CA38	0x06CA38	0026	[DFT][PAL:03][NXT]가후후후후·····\n[PAU:3C][NXT]가안녕, [PAU:1E]귀여운 꼬마야˳[PAL:00]	npc-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-06CA5F	0x06CA5F	006D	[DFT][PAL:03]어머···\n[PAU:28]너, 좋은 걸 가지고 있구나.\n[KATAKANA]반짝반짝 빛나는[HIRAGANA] 멋진 돌이네.\n[PAU:1E]내가 가진 것과 똑같아···[FIN]나도 그 돌을 갖고 싶어.\n[PAU:1E]그 돌에는 아주\n멋진 힘이 있거든.˳	event-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-06CB27	0x06CB27	004E	[DFT][PAL:03][NXT]기아라라···\n[PAU:1E][NXT]가다 해치워 버린 거야?\n[PAU:3C]어쩔 수 없네.\n이번에는 봐주도록 할게.[FIN]\n하지만 [PAU:32]포기하지 않을 거야.˳[PAL:00]	event-dialogue	translated	korean-c0-manuscript-early.tsv	ok
@@ -547,7 +547,7 @@ C0-07D37C	0x07D37C	0060	[DFT]네, 네. 여기는\n마을 최고의 주술사입�
 C0-07D3DD	0x07D3DD	001C	[DFT]··········\n···응답이 없다˳	npc-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-07D477	0x07D477	0079	[DFT]이봐, 이봐!\n[KATAKANA]아키하바라[HIRAGANA]와 [KATAKANA]플라보노[HIRAGANA]지!\n우리 [KATAKANA]해커[HIRAGANA]의 연구를 위해서는\n두 분의 힘이 필요하다![FIN]···라고 높은 분께서 말씀하셨으니\n아픈 꼴을 당하고 싶지 않다면\n얌전히 함께\n따라오시지.˳	event-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-07D53A	0x07D53A	00A8	[CLR]いがぐだご섬[CA][DFT][E2:02D4]플라보노 군.\n자네는 이대로 도망가게.\n이 녀석은 내가 어떻게든 하겠네.[FIN][E2:0F46]·하지만···[FIN][E2:0266]하하, 나는 발명가다.\n이런 때를 위해 쓸 만한 걸\n한두 가지 준비해 두었지.[FIN]자,\n[PAU:1E]위험하니 뒤로 물러나게.\n뭐, 이런 녀석들은\n순식간에 날려 버릴 수 있다네.˳	event-dialogue	translated	korean-c0-manuscript-early.tsv	missing:HIRAGANA
-C0-07D767	0x07D767	003C	[CLR][DFT][E2:0FDC]············\n[PAU:1E]···[NXT]가[KATAKANA]아키하바라[HIRAGANA] 군···˳	npc-dialogue	translated	korean-c0-manuscript-early.tsv	missing:CB
+C0-07D767	0x07D767	003C	[RAW:D03C00021D7DD7][E2:0FDC]············\n[PAU:1E]···[NXT]가[KATAKANA]아키하바라[HIRAGANA] 군···˳	npc-dialogue	translated	korean-c0-manuscript-early.tsv	safe:preserved-original-controls
 C0-07D7A4	0x07D7A4	000D	[DFT]\n[KATAKANA]찍[HIRAGANA] [KATAKANA]찍[HIRAGANA]	npc-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-07D7FB	0x07D7FB	0045	[DFT]이 아래는 화산.\n화산 안은 [KATAKANA]스릴[HIRAGANA] 만점!\n여기서부터는 네 혼자 가!\n나는 여기서 기다릴게!	npc-dialogue	translated	korean-c0-manuscript-early.tsv	missing:CMD,DF4,STR
 C0-07D858	0x07D858	008A	[DF4]여행 안내인:\n[PAL:00]관광이라는 건 사실 거짓말이었어!\n거짓말은 나쁘지만\n신께서 제물을 원하신단다.[FIN]분명 신의 사자가\n너를 맞이할 거야.\n너는 신의 제물이 될 거란다.\n원망하지 말아 줘. 안녕.˳	event-dialogue	translated	korean-c0-manuscript-early.tsv	missing:BYTE,DFT,HIRAGANA,KATAKANA
@@ -566,7 +566,7 @@ C0-07E41D	0x07E41D	008F	[DFT]나는 이곳에서 [E2:0067]를 찾아\n오랫동�
 C0-07E501	0x07E501	0021	[DFT]안 돼!\n여기서는 갈 수 없어!\n다른 [KATAKANA]경로[HIRAGANA]를 찾자˳	npc-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-07E5A8	0x07E5A8	0023	[DFT]이 [KATAKANA]벽[HIRAGANA]을 부술 수밖에 없겠군.\n[KATAKANA]너[HIRAGANA]는 조금 뒤로 물러나˳	npc-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-07E5CC	0x07E5CC	001C	[DFT]···아· 열린 것 같다···\n자· 자, 가자˳	npc-dialogue	translated	korean-c0-manuscript-early.tsv	ok
-C0-07E786	0x07E786	0042	[DFT]이··· 이 벽도\n부··· 부숴야 해.\n[PAU:0A][KATAKANA]너[HIRAGANA]는··· 뒤로··· 물러나˳	npc-dialogue	translated	korean-c0-manuscript-early.tsv	missing:BYTE,CB,CMD,DLY,STR
+C0-07E786	0x07E786	0042	[RAW:DA020A6903020A6A8302CF1EE7876B021DCBE86BD7]벽을 부숴!\n[PAU:0A]뒤로!	npc-dialogue	translated	korean-c0-manuscript-early.tsv	safe:preserved-original-controls
 C0-07E7C9	0x07E7C9	002C	[DFT]이··· 벽도\n부··· 숴야···\n··뒤·로 물·러·나˳	npc-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-07E7F6	0x07E7F6	0018	[DFT]···열린··· 것 같다.\n자· 자, 가자˳	npc-dialogue	translated	korean-c0-manuscript-early.tsv	ok
 C0-07E80F	0x07E80F	009D	[DFT][NXT]고··· 이제 [KATAKANA]안 돼[HIRAGANA]···\n[KATAKANA]에너지[HIRAGANA]가··· 다 떨어졌다.\n하지만··· 늦지 않아 다행이구나.[FIN]···가능하다면···\n[KATAKANA]스크랩[HIRAGANA]이 될 [KATAKANA]내[HIRAGANA] 조각이라도···\n주워 주렴.\n[KATAKANA]너[HIRAGANA]를 지켜볼 수 있도록.[FIN]뒤의 일은··· 부탁한다.\n[PAL:02][KATAKANA]라스크[HIRAGANA][PAL:00] 님의 뜻을\n···이어 가 다오.˳[NXT]가	event-dialogue	translated	korean-c0-manuscript-early.tsv	ok

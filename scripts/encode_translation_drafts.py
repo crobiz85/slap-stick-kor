@@ -109,6 +109,14 @@ def encode_text(text: str, glyphs: dict[str, bytes], glyph_lead_byte: int | None
                 if params is None or len(params) != 2:
                     raise ValueError(f"bad CMD parameter length: {params}")
                 output.extend(bytes.fromhex(params))
+            elif name == "RAW":
+                # Build-only escape for a verified original byte prefix.  It
+                # deliberately emits no game opcode; this lets a reviewed
+                # row retain opaque control bytes while replacing only the
+                # visible text that follows them.
+                if params is None:
+                    raise ValueError("RAW requires hexadecimal bytes")
+                output.extend(bytes.fromhex(params))
             else:
                 raise ValueError(f"unsupported control token: {match.group(0)}")
             position = match.end()
