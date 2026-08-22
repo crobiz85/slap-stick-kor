@@ -17,7 +17,12 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from build_korean_dialogue_inline import ORIGINAL_ROM, read_catalog, read_translations  # noqa: E402
+from build_korean_dialogue_inline import (  # noqa: E402
+    ORIGINAL_ROM,
+    control_review_is_dangerous,
+    read_catalog,
+    read_translations,
+)
 from encode_translation_drafts import encode_text, read_glyph_map  # noqa: E402
 
 
@@ -39,7 +44,9 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest().upper()
 
 
-def pointer_refs(data: bytes, target: int) -> list[int]:
+def pointer_refs(
+    data: bytes, target: int, catalog: dict[str, dict] | None = None
+) -> list[int]:
     address = target & 0xFFFF
     needle = bytes((0x02, 0x1D, address & 0xFF, address >> 8))
     result = []
@@ -48,7 +55,11 @@ def pointer_refs(data: bytes, target: int) -> list[int]:
         found = data.find(needle, start)
         if found < 0:
             return result
-        result.append(found)
+        if catalog is None or not any(
+            item["offset"] <= found <= item["offset"] + item["length"]
+            for item in catalog.values()
+        ):
+            result.append(found)
         start = found + 1
 
 
@@ -76,20 +87,31 @@ def load_plan(path: Path) -> set[str]:
     return set(plan["selected_ids"])
 
 
-def build(base: bytes, original: bytes, map_path: Path, plan_path: Path, base_path: Path = DEFAULT_BASE) -> tuple[bytes, dict]:
+def build(
+    base: bytes,
+    original: bytes,
+    map_path: Path,
+    plan_path: Path,
+    base_path: Path = DEFAULT_BASE,
+    translation_path: Path | None = None,
+) -> tuple[bytes, dict]:
     catalog = read_catalog()
-    translations = read_translations()
+    translations = read_translations(translation_path)
     glyphs = read_glyph_map(map_path)
     selected_ids = load_plan(plan_path)
     if not selected_ids:
         raise ValueError("relocation plan contains no selected IDs")
 
     rows = []
+    skipped = []
     for entry_id in selected_ids:
         if entry_id not in catalog or entry_id not in translations:
             raise ValueError(f"plan ID is missing from catalog/manuscript: {entry_id}")
         cat = catalog[entry_id]
         row = translations[entry_id]
+        if control_review_is_dangerous(row.get("control_review", "")):
+            skipped.append({"id": entry_id, "reason": row["control_review"]})
+            continue
         actual = original[cat["offset"] : cat["offset"] + cat["length"]]
         if actual != cat["raw"]:
             raise ValueError(f"source mismatch for {entry_id}")
@@ -98,20 +120,42 @@ def build(base: bytes, original: bytes, map_path: Path, plan_path: Path, base_pa
         try:
             encoded = encode_text(row["text"], glyphs)
         except ValueError as exc:
-            raise ValueError(f"cannot encode {entry_id}: {exc}") from exc
+            # A row with an unmapped manuscript glyph cannot be safely
+            # rewritten either.  Keep its original bytes and report it with
+            # the other conservative fallbacks instead of aborting the whole
+            # dialogue build.
+            skipped.append({"id": entry_id, "reason": f"encoding-error: {exc}"})
+            continue
         rows.append({
             "id": entry_id,
             "offset": cat["offset"],
             "slot_length": cat["length"],
             "text": row["text"],
             "encoded": encoded,
-            "pointers": pointer_refs(original, cat["offset"]),
+            "pointers": pointer_refs(original, cat["offset"], catalog),
         })
 
     target = bytearray(base)
     allowed: list[tuple[int, int]] = []
     inline = []
     relocated = []
+    restored_original = []
+    # Rows whose manuscript control review is incomplete are deliberately
+    # left in the original byte form.  The font baseline may already contain
+    # an earlier preview replacement at these offsets, so restore the complete
+    # source slot and its C0 terminator before allocating relocation space.
+    for item in skipped:
+        cat = catalog[item["id"]]
+        start = cat["offset"]
+        end = start + cat["length"] + 1
+        target[start:end] = original[start:end]
+        allowed.append((start, end))
+        restored_original.append({
+            "id": item["id"],
+            "offset": f"0x{start:06X}",
+            "length": cat["length"],
+            "reason": item["reason"],
+        })
     # First release the old physical slots of oversized records.  This is
     # safe only after their direct call sites have been found and retargeted.
     for row in rows:
@@ -198,6 +242,8 @@ def build(base: bytes, original: bytes, map_path: Path, plan_path: Path, base_pa
         "inline_count": len(inline),
         "relocated_count": len(relocation_manifest),
         "selected_ids": sorted(selected_ids, key=lambda entry_id: catalog[entry_id]["offset"]),
+        "skipped_control_rows": skipped,
+        "restored_original_rows": restored_original,
         "inline": inline,
         "relocated": relocation_manifest,
         "pointer_updates": pointer_manifest,
@@ -214,6 +260,7 @@ def main() -> None:
     parser.add_argument("--plan", type=Path, default=DEFAULT_PLAN)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    parser.add_argument("--translation", type=Path, help="translation manuscript override")
     args = parser.parse_args()
 
     original = args.original.resolve().read_bytes()
@@ -221,7 +268,14 @@ def main() -> None:
     base = base_path.read_bytes()
     if len(original) != len(base):
         raise ValueError("original and base ROM sizes differ")
-    target, manifest = build(base, original, args.glyph_map.resolve(), args.plan.resolve(), base_path)
+    target, manifest = build(
+        base,
+        original,
+        args.glyph_map.resolve(),
+        args.plan.resolve(),
+        base_path,
+        args.translation.resolve() if args.translation else None,
+    )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_bytes(target)
     args.manifest.parent.mkdir(parents=True, exist_ok=True)

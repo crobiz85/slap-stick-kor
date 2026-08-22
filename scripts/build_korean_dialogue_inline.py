@@ -34,6 +34,28 @@ DEFAULT_MANIFEST = ROOT / "build" / "slap-stick-kor-dialogue-inline.json"
 
 # These are the verified Korean glyph pages used by the font-only baseline.
 FONT_RANGES = ((0x50000, 0x54000), (0x54000, 0x58000), (0x60000, 0x64000))
+DANGEROUS_CONTROL_MARKERS = (
+    "BYTE",
+    "DD",
+    "DES",
+    "DLY",
+    "TBL",
+    "FIN",
+    "PAU",
+    "CLR",
+    "CMD",
+    "DEC",
+    "WAI",
+    "CB",
+    "STR",
+)
+
+
+def control_review_is_dangerous(review: str) -> bool:
+    if not review.startswith("missing:"):
+        return False
+    missing = set(review.removeprefix("missing:").split(","))
+    return bool(missing.intersection(DANGEROUS_CONTROL_MARKERS))
 
 
 def sha256(data: bytes) -> str:
@@ -57,9 +79,10 @@ def read_catalog() -> dict[str, dict]:
     return rows
 
 
-def read_translations() -> dict[str, dict]:
+def read_translations(path: Path | None = None) -> dict[str, dict]:
     rows = {}
-    for line in TRANSLATION_PATH.read_text(encoding="utf-8").splitlines():
+    translation_path = path or TRANSLATION_PATH
+    for line in translation_path.read_text(encoding="utf-8").splitlines():
         if not line or line.startswith("#"):
             continue
         columns = line.split("\t")
@@ -70,12 +93,14 @@ def read_translations() -> dict[str, dict]:
         # cold-boot opening rows remain excluded by default.
         category = columns[4]
         status = columns[5] if len(columns) >= 6 else columns[4]
+        control_review = columns[7] if len(columns) >= 8 else ""
         rows[columns[0]] = {
             "offset": int(columns[1], 16),
             "length": int(columns[2], 16),
             "text": columns[3],
             "category": category,
             "status": status,
+            "control_review": control_review,
         }
     # The canonical subset is the previously tested, known-good ROM route.
     # Keep it as a fallback/override so a manuscript line that needs a glyph
@@ -93,13 +118,20 @@ def read_translations() -> dict[str, dict]:
             "text": columns[3],
             "category": columns[4],
             "status": columns[4],
+            # Preserve the manuscript's control-code review when a
+            # canonical row overrides its translation text.
+            "control_review": rows.get(columns[0], {}).get("control_review", ""),
         }
     return rows
 
 
-def encode_rows(original: bytes, glyph_map_path: Path = ROOT / "translation" / "korean-glyph-map.tsv") -> list[dict]:
+def encode_rows(
+    original: bytes,
+    glyph_map_path: Path = ROOT / "translation" / "korean-glyph-map.tsv",
+    translation_path: Path | None = None,
+) -> list[dict]:
     catalog = read_catalog()
-    translations = read_translations()
+    translations = read_translations(translation_path)
     glyphs = read_glyph_map(glyph_map_path)
     result = []
     for entry_id, row in translations.items():
@@ -128,6 +160,7 @@ def encode_rows(original: bytes, glyph_map_path: Path = ROOT / "translation" / "
                 "terminator": terminator == 0xC0,
                 "category": row["category"],
                 "status": row["status"],
+                "control_review": row.get("control_review", ""),
                 "text": row["text"],
                 "encoded": encoded,
                 "error": error,
@@ -152,6 +185,9 @@ def choose_rows(rows: list[dict], requested: set[str] | None, include_opening: b
             continue
         if not row["terminator"]:
             reasons[row["id"]] = "missing-c0-terminator"
+            continue
+        if control_review_is_dangerous(row["control_review"]):
+            reasons[row["id"]] = "control-review-missing"
             continue
         if row["error"]:
             reasons[row["id"]] = "encoding-error"
@@ -252,6 +288,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=DEFAULT_ROM)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--include-opening", action="store_true", help="allow opening rows in default selection")
+    parser.add_argument("--translation", type=Path, help="translation manuscript override")
     parser.add_argument("--ids", help="comma-separated C0 IDs to select explicitly")
     parser.add_argument("--ids-file", type=Path, help="text file containing one C0 ID per line")
     parser.add_argument("--base", type=Path, default=FONT_ONLY_ROM, help="font-only base ROM")
@@ -274,7 +311,7 @@ def main() -> None:
     original = ORIGINAL_ROM.read_bytes()
     base = base_path.read_bytes()
     assert_font_only_base(base)
-    rows = encode_rows(original, glyph_map_path)
+    rows = encode_rows(original, glyph_map_path, args.translation.resolve() if args.translation else None)
     requested = {item.strip() for item in args.ids.split(",") if item.strip()} if args.ids else None
     if args.ids_file:
         file_ids = {

@@ -30,6 +30,7 @@ from build_korean_font import (  # noqa: E402
     read_used_kanji_codes,
 )
 from build_korean_dialogue_inline import (  # noqa: E402
+    control_review_is_dangerous,
     ORIGINAL_ROM,
     read_catalog,
     read_translations,
@@ -99,7 +100,9 @@ def available_codes(
     ]
 
 
-def pointer_refs(data: bytes, target: int) -> list[int]:
+def pointer_refs(
+    data: bytes, target: int, catalog: dict[str, dict] | None = None
+) -> list[int]:
     address = target & 0xFFFF
     needle = bytes((0x02, 0x1D, address & 0xFF, address >> 8))
     result = []
@@ -108,12 +111,19 @@ def pointer_refs(data: bytes, target: int) -> list[int]:
         found = data.find(needle, start)
         if found < 0:
             return result
-        result.append(found)
+        if catalog is None or not any(
+            item["offset"] <= found <= item["offset"] + item["length"]
+            for item in catalog.values()
+        ):
+            result.append(found)
         start = found + 1
 
 
 def safe_rows(
-    original: bytes, catalog: dict[str, dict], translations: dict[str, dict]
+    original: bytes,
+    catalog: dict[str, dict],
+    translations: dict[str, dict],
+    allow_control_risk: bool = False,
 ) -> dict[str, dict]:
     rows = {}
     for entry_id, row in translations.items():
@@ -125,6 +135,12 @@ def safe_rows(
             continue
         actual = original[cat["offset"] : cat["offset"] + cat["length"]]
         if actual != cat["raw"] or original[cat["offset"] + cat["length"]] != 0xC0:
+            continue
+        # A manuscript row with missing control-code review is not safe to
+        # replace as plain text.  Runtime markers such as DLY/DD/DES/TBL can
+        # control the dialogue engine, so dropping them may freeze or blank
+        # the game even when the Korean text itself encodes correctly.
+        if not allow_control_risk and control_review_is_dangerous(row.get("control_review", "")):
             continue
         rows[entry_id] = {
             "text": row["text"],
@@ -162,11 +178,12 @@ def main() -> None:
     parser.add_argument("--allow-overlength", action="store_true", help="include rows intended for pointer relocation")
     parser.add_argument("--require-pointer", action="store_true", help="only include rows with a verified 02 1D reference")
     parser.add_argument("--exclude-ids", help="comma-separated IDs to leave out of the plan")
+    parser.add_argument("--translation", type=Path, help="translation manuscript override")
     args = parser.parse_args()
 
     original = ORIGINAL_ROM.read_bytes()
     catalog = read_catalog()
-    translations = read_translations()
+    translations = read_translations(args.translation.resolve() if args.translation else None)
     glyphs = read_glyph_map(DEFAULT_MAP_PATH)
     existing_codes = read_existing_codes(DEFAULT_MAP_PATH)
     used = {
@@ -180,7 +197,7 @@ def main() -> None:
     } if args.exclude_ids else set()
     rows = {entry_id: row for entry_id, row in rows.items() if entry_id not in excluded}
     pointers = {
-        entry_id: pointer_refs(original, catalog[entry_id]["offset"])
+        entry_id: pointer_refs(original, catalog[entry_id]["offset"], catalog)
         for entry_id in rows
     }
     all_usage = code_usage(catalog, set(catalog))

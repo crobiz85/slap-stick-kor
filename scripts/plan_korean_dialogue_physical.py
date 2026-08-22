@@ -216,13 +216,20 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--ids-output", type=Path, default=DEFAULT_IDS)
     parser.add_argument("--trials", type=int, default=4)
+    parser.add_argument("--translation", type=Path, help="translation manuscript override")
+    parser.add_argument(
+        "--allow-control-risk",
+        action="store_true",
+        help="include rows with missing control review for planning only; the builder still restores them",
+    )
+    parser.add_argument("--exclude-ids", help="comma-separated IDs to leave out of the plan")
     args = parser.parse_args()
 
     original = ORIGINAL_ROM.read_bytes()
     base = args.base.resolve().read_bytes()
     catalog = read_catalog()
-    translations = read_translations()
-    rows = safe_rows(original, catalog, translations)
+    translations = read_translations(args.translation.resolve() if args.translation else None)
+    rows = safe_rows(original, catalog, translations, args.allow_control_risk)
     glyphs = merge_glyph_maps(args.candidate_map.resolve(), args.previous_map.resolve())
     used = {lead: read_used_kanji_codes(lead) for lead in FONT_BANKS}
     all_usage = code_usage(catalog, set(catalog))
@@ -239,7 +246,7 @@ def main() -> None:
             continue
         cat = catalog[entry_id]
         inline = encoded_length <= row["length"]
-        pointers = pointer_refs(original, cat["offset"])
+        pointers = pointer_refs(original, cat["offset"], catalog)
         if not inline and not pointers:
             continue
         usage = {lead: set() for lead in FONT_BANKS}
@@ -268,6 +275,13 @@ def main() -> None:
     else:
         seed_manifest = json.loads(args.seed_manifest.read_text(encoding="utf-8"))
         seed = set(seed_manifest["selected_ids"])
+    excluded = {
+        item.strip() for item in args.exclude_ids.split(",") if item.strip()
+    } if args.exclude_ids else set()
+    seed -= excluded
+    candidates = {
+        entry_id: row for entry_id, row in candidates.items() if entry_id not in excluded
+    }
     missing_seed = sorted(seed - set(candidates))
     if missing_seed:
         raise ValueError(f"seed IDs are not safe candidates: {', '.join(missing_seed)}")
