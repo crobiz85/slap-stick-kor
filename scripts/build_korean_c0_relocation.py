@@ -82,6 +82,18 @@ def c0_range(offset: int) -> tuple[int, int]:
     return C0_RELOCATION_RANGES[bank]
 
 
+def contains_embedded_event_call(raw: bytes) -> bool:
+    """Return true when a C0 record contains an inline event-string call.
+
+    ``02 1D`` is executable event data in this game's dialogue stream, not
+    ordinary printable text.  Replacing the whole record with encoded text
+    removes the call and leaves the event interpreter waiting at the next
+    message.  Such records must remain byte-identical until they receive a
+    script-aware translation.
+    """
+    return b"\x02\x1D" in raw
+
+
 def load_plan(path: Path) -> set[str]:
     plan = json.loads(path.read_text(encoding="utf-8"))
     return set(plan["selected_ids"])
@@ -117,6 +129,12 @@ def build(
             raise ValueError(f"source mismatch for {entry_id}")
         if original[cat["offset"] + cat["length"]] != 0xC0:
             raise ValueError(f"missing C0 terminator for {entry_id}")
+        if contains_embedded_event_call(actual):
+            skipped.append({
+                "id": entry_id,
+                "reason": "embedded-event-call-02-1D",
+            })
+            continue
         try:
             encoded = encode_text(row["text"], glyphs)
         except ValueError as exc:
@@ -126,13 +144,23 @@ def build(
             # dialogue build.
             skipped.append({"id": entry_id, "reason": f"encoding-error: {exc}"})
             continue
+        pointers = pointer_refs(original, cat["offset"], catalog)
+        if len(encoded) > cat["length"] and not pointers:
+            # An oversized record without a verified 02 1D call cannot be
+            # relocated safely.  Preserve the source bytes and continue with
+            # the rest of the catalogue instead of corrupting unrelated code.
+            skipped.append({
+                "id": entry_id,
+                "reason": "oversized-without-verified-02-1D-pointer",
+            })
+            continue
         rows.append({
             "id": entry_id,
             "offset": cat["offset"],
             "slot_length": cat["length"],
             "text": row["text"],
             "encoded": encoded,
-            "pointers": pointer_refs(original, cat["offset"], catalog),
+            "pointers": pointers,
         })
 
     target = bytearray(base)
