@@ -4,6 +4,8 @@
 
 ## 현재 상태
 
+게임 화면 공통 메뉴 문구 프리뷰도 적용되어 있습니다.
+
 - 기준 ROM: `Slap Stick (J).smc`
 - ROM 형식: 무헤더 HiROM / FastROM
 - ROM 크기: 1,572,864 bytes (12 Mbit)
@@ -24,7 +26,22 @@
     `translation/decoded-text-blocks.tsv`, `translation/decoded-anchored-text.tsv`,
     `translation/decoded-static-strings.tsv`에 추출
   - 후보 블록에는 오탐이 남아 있어 게임 화면 대조 전에는 패치 입력으로 사용하지 않음
-  - 검토용 대사 원고 240개를 `translation/script.tsv`로 분리했으며 한국어 칸은 비워 둠
+  - 검토용 대사 원고 240개를 `translation/script.tsv`로 분리했으며
+    현재 41개에 `translation/korean-draft.tsv`의 한국어 초안을 덧씌움
+  - 메뉴·대화가 실제로 참조하는 16×16 SNES 2BPP(행별 비트 평면 교차) 글꼴을 확인하고, 초안과 게임 화면 문구에 필요한
+    한글 370자를 메뉴 원문 슬롯과 충돌하지 않는 `0x80xx`/`0x81xx`/`0x82xx` 슬롯에 배치해
+    `translation/korean-glyph-map.tsv`로 생성
+  - 초안 41개 중 메인 대사 0058~0063 6개는 실제 재배치·포인터 갱신까지 적용
+  - 이전에 누락된 `C0` 종료형 이벤트 대사는 `scripts/extract_c0_dialogue_catalog.py`로
+    별도 카탈로그화하여, 실제 게임 진행 대사를 일괄 번역·삽입할 기반을 마련
+  - 초반 메뉴·이벤트 11개는 `translation/korean-menu-preview.tsv`의 압축형 프리뷰로,
+    고정 슬롯 0013~0020은 슬롯에 맞는 프리뷰로 함께 삽입
+  - 아이템 설명 0021~0035도 `translation/korean-item-preview.tsv`의 압축형 프리뷰로 삽입
+  - 실제 게임 화면의 시작 메뉴·이름 입력과 로봇 선택·아이템 사용·버리기·전투 실행·합성 완료 공통 문구는
+    `translation/korean-game-menu.tsv`로 관리해 원래 고정 슬롯에 삽입
+  - 상태·설정 메뉴의 원문 슬롯도 보호하고, 설정 속도·조사·설정·확인·취소·레벨·힌트 문구를
+    `translation/korean-status-menu.tsv`로 관리
+  - `translation/relocation-plan.tsv`에 원문 슬롯·CC 종료 위치·포인터 후보·재배치 조치를 기록함
 
 ## 작업 방향
 
@@ -38,7 +55,11 @@
 `translation/pointer-report.tsv`, `translation/anchored-text.tsv`, `translation/static-strings.tsv`,
 `translation/text-blocks-raw.tsv`, `translation/control-annotated.tsv`,
 `translation/decoded-text-blocks.tsv`, `translation/decoded-anchored-text.tsv`,
-`translation/decoded-static-strings.tsv`, `translation/script.tsv`입니다.
+`translation/decoded-static-strings.tsv`, `translation/script.tsv`,
+`translation/korean-draft.tsv`, `translation/korean-glyph-map.tsv`,
+`translation/korean-menu-preview.tsv`, `translation/korean-game-menu.tsv`,
+`translation/korean-item-preview.tsv`,
+`translation/font-layout.tsv`입니다.
 마지막 파일은 오탐이 포함된 연구용 후보 목록이므로 번역 원고로 사용하지 않습니다.
 
 ## 로컬 자료
@@ -58,9 +79,31 @@
 - `scripts/annotate_control_codes.py`: 확인 전 제어코드를 보수적으로 표시
 - `scripts/extract_font_test_codes.py`: 내장 폰트 테스트의 글리프 코드 목록 추출
 - `scripts/decode_japanese_strings.py`: 일본판 문자표·사전·제어코드로 후보 대사 해독
-- `scripts/build_script_catalog.py`: 해독 후보를 대화 단위 검토 원고로 정리
+- `scripts/build_script_catalog.py`: 해독 후보를 대화 단위 검토 원고로 정리하고 한국어 초안을 병합
+- `scripts/render_font.py`: 일본판 2BPP 글꼴 영역을 미리보기 PNG로 렌더링
+- `scripts/build_korean_font.py`: 초안에서 한글 글리프를 뽑아 후보 코드·타일 바이트·미리보기 생성
+- `scripts/encode_translation_drafts.py`: 제어코드를 유지한 한글 바이트열과 원문 슬롯 길이 사전 검사
+- `scripts/build_relocation_plan.py`: 원문 슬롯·다음 `CC` 위치·포인터 후보를 재배치 검토표로 생성
+- `scripts/build_korean_preview_patch.py`: 한글 폰트와 메뉴·게임 화면 문구·메인/C0 대화 프리뷰를
+  삽입하고 BPS/IPS를 자체 검증하여 생성
 
 도구 사용법과 출처는 `tools/README.md`에 기록합니다. 실행 파일 자체는 저장소에 올리지 않습니다.
+
+## 프리뷰 패치
+
+`patches/slap-stick-kor-preview.bps` 또는 `patches/slap-stick-kor-preview.ips`를
+무헤더 일본판 원본 ROM에 적용합니다. 원본 ROM 자체는 저장소에 포함하지 않습니다.
+패치는 `0x80xx`·`0x81xx`·`0x82xx`의 미사용 코드에 넣은 370자 한글 폰트와
+검증된 메뉴·게임 화면·대화 프리뷰 레코드와 370자 글리프를 포함합니다. 메인 대사 0058~0063은 자연스러운 원고를 재배치하고,
+초반 메뉴·이벤트 0001~0020과 아이템 설명 0021~0035는 원래 슬롯에 맞춘 프리뷰로,
+이름 입력과 게임 화면 공통 문구는 원래 고정 슬롯에 삽입합니다. 현재 번역 초안 41개는
+모두 패치 대상에 연결되어 있으며, 긴 자연스러운 문구는 원고 파일에 보존되어 있습니다.
+현재 파일은 전체 대사 번역 완료본이 아니라, 실제 게임에서 글꼴·메뉴·초반 진행을 검증하는
+재현 가능한 프리뷰 빌드입니다. 오프닝 그래픽은 후순위로 둡니다.
+
+화면이 느리거나 배경이 한 프레임씩 갈라져 보일 때는 함께 제공한 Snes9x 설정에서
+바이리니어 확대와 프레임 스킵을 끈 상태인지 확인합니다. 이 설정은 ROM 데이터가 아니라
+에뮬레이터의 화면 갱신 성능을 조정합니다.
 
 ## 검증
 

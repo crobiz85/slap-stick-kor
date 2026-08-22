@@ -1,0 +1,8 @@
+# Japanese Slap Stick font layout; offsets are file offsets in the verified headerless ROM.
+# bank	file offset	length	glyph bytes	code page	status	note
+default	0x40000	0x2000	0x10	00xx	confirmed	Hiragana/default symbols
+alternate	0x42000	0x2000	0x10	00xx	confirmed	Katakana/alternate symbols
+kanji-k1	0x50000	0x4000	0x40	80xx	confirmed	16x16 SNES 2BPP glyphs, four 8x8 tiles in top-left/top-right/bottom-left/bottom-right order
+kanji-k2	0x54000	0x4000	0x40	81xx	confirmed	16x16 SNES 2BPP glyphs, four 8x8 tiles in top-left/top-right/bottom-left/bottom-right order
+kanji-k3	0x60000	0x4000	0x40	82xx	confirmed	16x16 SNES 2BPP glyphs; used after 80xx/81xx capacity is exhausted
+kanji-k4	0x53000	0x1000	0x10	8x8-view-alias	verified	Subset of 80xx high-resolution data when interpreted as 8x8 tiles; not a separate dialogue/menu page

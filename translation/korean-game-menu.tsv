@@ -1,0 +1,14 @@
+# In-game menu and interaction prompts patched in their original CC-terminated slots.
+# id	offset	slot length	Korean preview	status
+GAME-NAME-ENTRY	0x01CFB7	000C	이름 정해	game-screen-slot-preview
+GAME-0018	0x01D18C	003A	[POS:0313][BOX:0D0300][CLR][NXT]로봇에 쓸 아이템을\n골라 줘	game-screen-slot-preview
+GAME-0019	0x01D1C7	0011	[CLR]로봇 선택?	game-screen-slot-preview
+GAME-0020	0x01D1D9	001B	[CLR]이 로봇은\n쓸 수 없어.[WAI]	game-screen-slot-preview
+GAME-0021	0x01D1F5	001B	[CLR][TBL:3CE2800B] 쓸까?\n 사용\n 그만	game-screen-slot-preview
+GAME-0025	0x01D2A5	0011	[CLR][TBL:3CE2800B]못 버려.[WAI]	game-screen-slot-preview
+GAME-0029	0x01D327	001F	[POS:031B][BOX:0D0100][NXT]전투 중 RUN 실행.[WAI]	game-screen-slot-preview
+GAME-0033	0x01D46E	000E	[CLR][TBL:3CE2800B]완성![WAI]	game-screen-slot-preview
+GAME-0042	0x01D5F7	0013	[CLR][TBL:3CE29C0B][TBL:B3E69E0B]완성![WAI]	game-screen-slot-preview
+GAME-0043	0x01D880	000B	새로 시작\n	game-screen-slot-preview
+GAME-0044	0x01D88B	000B	기록 복사\n	game-screen-slot-preview
+GAME-0045	0x01D896	0009	삭제[TER]	game-screen-slot-preview

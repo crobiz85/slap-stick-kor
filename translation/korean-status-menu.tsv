@@ -1,0 +1,17 @@
+# Fixed strings in the status/settings menu's raw Other Menus block.
+# id	offset	slot length	expected source bytes	Korean preview	status
+STATUS-EQUIP-NONE	0x01E349	0005	49 3D 15 4F 46	없음	status-menu-fixed-slot
+STATUS-SETTING	0x01EA33	0004	48 6E 4D 3C	설정	status-menu-fixed-slot
+STATUS-CONFIRM	0x01EA3B	0004	43 6E 4D 3C	확인	status-menu-fixed-slot
+STATUS-CANCEL	0x01EA4A	0004	4E 62 43 46	취소	status-menu-fixed-slot
+STATUS-SETTING-ALT	0x01EAA1	0004	48 6E 4D 3C	설정	status-menu-fixed-slot
+STATUS-EMPTY-1	0x01EBAE	0005	25 2D 30 34 39	빈칸	status-menu-fixed-slot
+STATUS-EMPTY-2	0x01EBBE	0005	25 2D 30 34 39	빈칸	status-menu-fixed-slot
+STATUS-EMPTY-3	0x01EBCE	0005	25 2D 30 34 39	빈칸	status-menu-fixed-slot
+STATUS-LEVEL	0x01EBE4	0005	2C 25 36 25 2C	레벨	status-menu-fixed-slot
+STATUS-PROGRAM-1	0x01D7C8	0005	1B 65 02 61 5B	기능	status-menu-fixed-slot
+STATUS-PROGRAM-2	0x01D7F2	0005	1B 65 02 61 5B	기능	status-menu-fixed-slot
+STATUS-POINT	0x01D806	0004	1D 3C 68 4E	점수	status-menu-fixed-slot
+STATUS-INSPIRATION	0x01EC6E	0004	55 61 5C 41	힌트	status-menu-fixed-slot
+STATUS-SPEED-OPTIONS	0x01E9FB	000F	54 5E 3C 20 20 20 56 4C 3D 20 20 20 3F 49 3C	빠름 보통 느림 	status-menu-fixed-slot
+STATUS-EXAMINE	0x01EA44	0005	46 61 57 82 63	조사	status-menu-fixed-slot

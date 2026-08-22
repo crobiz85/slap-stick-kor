@@ -1,0 +1,772 @@
+"""Build a playable Korean preview patch for the verified Japanese ROM.
+
+It inserts Korean glyphs into unused 16×16 source glyphs for the
+0x80xx/0x81xx/0x82xx dictionary pages, patches compact Korean strings into
+verified menu slots, relocates overlength early dialogue records, and now also
+relocates overlength C0-terminated story records within their verified HiROM
+script bank.  Every relocation requires and updates an existing ``02 1D``
+reference; records without that verified route remain unpatched.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from pathlib import Path
+import argparse
+import binascii
+import hashlib
+import json
+
+from encode_translation_drafts import encode_text, read_glyph_map
+
+
+ROOT = Path(__file__).resolve().parent.parent
+ROM_PATH = ROOT / "Slap Stick (J).smc"
+SCRIPT_PATH = ROOT / "translation" / "script.tsv"
+GLYPH_MAP_PATH = ROOT / "translation" / "korean-glyph-map.tsv"
+MENU_PREVIEW_PATH = ROOT / "translation" / "korean-menu-preview.tsv"
+GAME_MENU_PATH = ROOT / "translation" / "korean-game-menu.tsv"
+STATUS_MENU_PATH = ROOT / "translation" / "korean-status-menu.tsv"
+EARLY_GAME_PATH = ROOT / "translation" / "korean-early-game.tsv"
+C0_DIALOGUE_PATH = ROOT / "translation" / "korean-c0-dialogue.tsv"
+ITEM_PREVIEW_PATH = ROOT / "translation" / "korean-item-preview.tsv"
+DEFAULT_ROM_OUT = ROOT / "build" / "slap-stick-kor-preview.smc"
+DEFAULT_BPS_OUT = ROOT / "patches" / "slap-stick-kor-preview.bps"
+DEFAULT_IPS_OUT = ROOT / "patches" / "slap-stick-kor-preview.ips"
+DEFAULT_MANIFEST_OUT = ROOT / "patches" / "slap-stick-kor-preview.json"
+
+RAW_MENU_IDS = ("0002", "0003", "0004", "0005", "0006", "0007", "0008", "0009", "0010", "0011", "0012")
+FIXED_DRAFT_MENU_IDS = ("0001", "0013", "0014", "0015", "0016", "0017", "0018", "0019", "0020")
+ITEM_PREVIEW_IDS = tuple(f"{index:04d}" for index in range(21, 36))
+GAME_MENU_IDS = (
+    "GAME-NAME-ENTRY",
+    "GAME-0018", "GAME-0019", "GAME-0020", "GAME-0021", "GAME-0025", "GAME-0029",
+    "GAME-0033", "GAME-0042", "GAME-0043", "GAME-0044", "GAME-0045",
+)
+STATUS_MENU_IDS = (
+    # These two entries are fixed-length slots and have been tested separately;
+    # the longer shared menu block remains out of the stable build.
+    "STATUS-EQUIP-NONE", "STATUS-SETTING", "STATUS-CONFIRM", "STATUS-CANCEL",
+    "STATUS-SETTING-ALT", "STATUS-EMPTY-1", "STATUS-EMPTY-2", "STATUS-EMPTY-3",
+    "STATUS-LEVEL", "STATUS-PROGRAM-1", "STATUS-PROGRAM-2", "STATUS-POINT",
+    "STATUS-INSPIRATION", "STATUS-SPEED-OPTIONS", "STATUS-EXAMINE",
+)
+EARLY_GAME_IDS = ()
+C0_DIALOGUE_IDS = (
+    "C0-05A245", "C0-05A3A8", "C0-05A3EA", "C0-05A4DD",
+    "C0-05A9BE", "C0-05A9F5", "C0-05AB04", "C0-05ABC0",
+    "C0-05AD49", "C0-05AD7C", "C0-05AF11", "C0-05AFDA",
+    # The following mansion records are catalogued but not yet safe to
+    # relocate; enabling them makes the event stop before player control.
+    "C0-06C3BE", "C0-06C3FB", "C0-06C427", "C0-06C495", "C0-06C4C9", "C0-06C655", "C0-06C79F",
+    "C0-078E32",
+    "C0-0680C0", "C0-06810E", "C0-0682A6", "C0-06839C", "C0-0688A4", "C0-0688D7",
+    "C0-06892F", "C0-06894F", "C0-068A5C", "C0-068B1B",
+)
+MAIN_DIALOG_IDS = ("0058", "0059", "0060", "0061", "0062", "0063", "0064", "0065", "0066", "0067")
+PATCHED_IDS = RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS + GAME_MENU_IDS + STATUS_MENU_IDS + EARLY_GAME_IDS + C0_DIALOGUE_IDS + MAIN_DIALOG_IDS
+INLINE_DIALOG_IDS = ("0058", "0064", "0065", "0066", "0067")
+RELOCATED_IDS = tuple(entry_id for entry_id in MAIN_DIALOG_IDS if entry_id not in INLINE_DIALOG_IDS)
+DIALOG_BANK_START = 0x58000
+DIALOG_BANK_END = 0x60000
+# C0 dialogue calls retain their 16-bit address and therefore must continue
+# to point into their original 64 KiB HiROM bank.  These are verified script
+# pages; the ranges exclude graphics/font data at the front of each page.
+C0_RELOCATION_RANGES = {
+    0x50000: (0x58000, 0x60000),
+    0x60000: (0x68000, 0x70000),
+    0x70000: (0x78000, 0x80000),
+    0x80000: (0x88000, 0x90000),
+    0x90000: (0x98000, 0xA0000),
+}
+FONT_BANK_START = 0x50000
+FONT_BANK_SIZE = 0x4000
+SECOND_FONT_BANK_START = 0x54000
+THIRD_FONT_BANK_START = 0x60000
+GLYPH_BYTES = 64
+
+
+@dataclass(frozen=True)
+class DraftRow:
+    entry_id: str
+    offset: int
+    original_length: int
+    korean: str
+
+
+@dataclass(frozen=True)
+class GameMenuRow:
+    entry_id: str
+    offset: int
+    original_length: int
+    korean: str
+    expected: bytes | None = None
+
+
+def read_drafts() -> dict[str, DraftRow]:
+    drafts: dict[str, DraftRow] = {}
+    for line in SCRIPT_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) < 7 or columns[6] != "draft-ko" or not columns[5]:
+            continue
+        drafts[columns[0]] = DraftRow(
+            entry_id=columns[0],
+            offset=int(columns[1], 16),
+            original_length=int(columns[2], 16),
+            korean=columns[5],
+        )
+    return drafts
+
+
+def read_menu_previews() -> dict[str, str]:
+    previews: dict[str, str] = {}
+    for line in MENU_PREVIEW_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) >= 2:
+            previews[columns[0]] = columns[1]
+    return previews
+
+
+def read_item_previews() -> dict[str, str]:
+    previews: dict[str, str] = {}
+    for line in ITEM_PREVIEW_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) >= 2:
+            previews[columns[0]] = columns[1]
+    return previews
+
+
+def read_game_menu() -> dict[str, GameMenuRow]:
+    rows: dict[str, GameMenuRow] = {}
+    for line in GAME_MENU_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) >= 4:
+            rows[columns[0]] = GameMenuRow(
+                entry_id=columns[0],
+                offset=int(columns[1], 16),
+                original_length=int(columns[2], 16),
+                korean=columns[3],
+            )
+    return rows
+
+
+def read_status_menu() -> dict[str, GameMenuRow]:
+    rows: dict[str, GameMenuRow] = {}
+    for line in STATUS_MENU_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) >= 5:
+            expected = bytes.fromhex(columns[3])
+            rows[columns[0]] = GameMenuRow(
+                entry_id=columns[0],
+                offset=int(columns[1], 16),
+                original_length=int(columns[2], 16),
+                korean=columns[4],
+                expected=expected,
+            )
+    return rows
+
+
+def read_early_game() -> dict[str, GameMenuRow]:
+    rows: dict[str, GameMenuRow] = {}
+    for line in EARLY_GAME_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) >= 4:
+            rows[columns[0]] = GameMenuRow(
+                entry_id=columns[0],
+                offset=int(columns[1], 16),
+                original_length=int(columns[2], 16),
+                korean=columns[3],
+            )
+    return rows
+
+
+def read_c0_dialogue() -> dict[str, GameMenuRow]:
+    rows: dict[str, GameMenuRow] = {}
+    for line in C0_DIALOGUE_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) >= 4:
+            rows[columns[0]] = GameMenuRow(
+                entry_id=columns[0],
+                offset=int(columns[1], 16),
+                original_length=int(columns[2], 16),
+                korean=columns[3],
+            )
+    return rows
+
+
+def read_glyph_tiles(path: Path = GLYPH_MAP_PATH) -> list[tuple[str, int, bytes]]:
+    result = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) < 5:
+            continue
+        character = columns[0]
+        offset = int(columns[3], 16)
+        tile = bytes.fromhex(columns[4])
+        if len(tile) != GLYPH_BYTES:
+            raise ValueError(f"glyph {character!r} has {len(tile)} bytes, expected {GLYPH_BYTES}")
+        result.append((character, offset, tile))
+    return result
+
+
+def is_visible_font_offset(offset: int, length: int) -> bool:
+    return any(
+        start <= offset and offset + length <= start + FONT_BANK_SIZE
+        for start in (FONT_BANK_START, SECOND_FONT_BANK_START, THIRD_FONT_BANK_START)
+    )
+
+
+def find_ff_run(data: bytes, start: int, end: int, length: int) -> int:
+    run_start = None
+    for offset in range(start, end):
+        if data[offset] == 0xFF:
+            run_start = offset if run_start is None else run_start
+            if offset - run_start + 1 >= length:
+                return run_start
+        else:
+            run_start = None
+    raise ValueError(f"no FF run of {length} bytes in 0x{start:06X}-0x{end:06X}")
+
+
+def pointer_refs(data: bytes, target: int) -> list[int]:
+    address = target & 0xFFFF
+    needle = bytes((0x02, 0x1D, address & 0xFF, address >> 8))
+    return [
+        offset
+        for offset in range(len(data) - len(needle) + 1)
+        if data[offset : offset + len(needle)] == needle
+    ]
+
+
+def c0_relocation_range(offset: int) -> tuple[int, int]:
+    """Return the verified free-space search range for a C0 record's bank."""
+    bank = offset & ~0xFFFF
+    try:
+        return C0_RELOCATION_RANGES[bank]
+    except KeyError as exc:
+        raise ValueError(f"no verified C0 relocation range for 0x{offset:06X}") from exc
+
+
+def encode_rows(
+    drafts: dict[str, DraftRow],
+    game_menu: dict[str, GameMenuRow],
+    status_menu: dict[str, GameMenuRow],
+    early_game: dict[str, GameMenuRow],
+    c0_dialogue: dict[str, GameMenuRow],
+    glyphs: dict[str, bytes],
+) -> dict[str, bytes]:
+    encoded = {}
+    menu_previews = read_menu_previews()
+    item_previews = read_item_previews()
+    for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS:
+        row = drafts[entry_id]
+        source_text = menu_previews.get(entry_id, row.korean)
+        if not source_text:
+            raise ValueError(f"missing menu text: {entry_id}")
+        encoded[entry_id] = encode_text(source_text, glyphs)
+        if len(encoded[entry_id]) > row.original_length:
+            raise ValueError(
+                f"{entry_id} compact preview is {len(encoded[entry_id])} bytes, "
+                f"slot is {row.original_length} bytes"
+            )
+    for entry_id in ITEM_PREVIEW_IDS:
+        row = drafts[entry_id]
+        if entry_id not in item_previews:
+            raise ValueError(f"missing compact item preview: {entry_id}")
+        encoded[entry_id] = encode_text(item_previews[entry_id], glyphs)
+        if len(encoded[entry_id]) > row.original_length:
+            raise ValueError(
+                f"{entry_id} compact item preview is {len(encoded[entry_id])} bytes, "
+                f"slot is {row.original_length} bytes"
+            )
+    for entry_id in GAME_MENU_IDS:
+        row = game_menu[entry_id]
+        encoded[entry_id] = encode_text(row.korean, glyphs)
+        if len(encoded[entry_id]) > row.original_length:
+            raise ValueError(
+                f"{entry_id} preview is {len(encoded[entry_id])} bytes, "
+                f"slot is {row.original_length} bytes"
+            )
+    for entry_id in STATUS_MENU_IDS:
+        row = status_menu[entry_id]
+        encoded[entry_id] = encode_text(row.korean, glyphs)
+        if len(encoded[entry_id]) > row.original_length:
+            raise ValueError(
+                f"{entry_id} preview is {len(encoded[entry_id])} bytes, "
+                f"slot is {row.original_length} bytes"
+            )
+    for entry_id in EARLY_GAME_IDS:
+        row = early_game[entry_id]
+        encoded[entry_id] = encode_text(row.korean, glyphs)
+        if len(encoded[entry_id]) > row.original_length:
+            raise ValueError(
+                f"{entry_id} preview is {len(encoded[entry_id])} bytes, "
+                f"slot is {row.original_length} bytes"
+            )
+    for entry_id in C0_DIALOGUE_IDS:
+        row = c0_dialogue[entry_id]
+        encoded[entry_id] = encode_text(row.korean, glyphs)
+    for entry_id in MAIN_DIALOG_IDS:
+        row = drafts[entry_id]
+        encoded[entry_id] = encode_text(row.korean, glyphs)
+        if entry_id == "0058":
+            if len(encoded[entry_id]) <= row.original_length:
+                raise ValueError("0058 unexpectedly fits; patch assumptions should be reviewed")
+        elif entry_id in INLINE_DIALOG_IDS:
+            if len(encoded[entry_id]) > row.original_length:
+                raise ValueError(
+                    f"{entry_id} is {len(encoded[entry_id])} bytes, slot is {row.original_length} bytes"
+                )
+        elif len(encoded[entry_id]) <= row.original_length:
+            raise ValueError(f"{entry_id} no longer needs relocation; patch assumptions should be reviewed")
+    return encoded
+
+
+def patch_rom(
+    source: bytes,
+    drafts: dict[str, DraftRow],
+    game_menu: dict[str, GameMenuRow],
+    status_menu: dict[str, GameMenuRow],
+    early_game: dict[str, GameMenuRow],
+    c0_dialogue: dict[str, GameMenuRow],
+    encoded: dict[str, bytes],
+    glyph_map_path: Path = GLYPH_MAP_PATH,
+) -> tuple[bytes, dict]:
+    target = bytearray(source)
+    glyphs = read_glyph_tiles(glyph_map_path)
+    for character, offset, tile in glyphs:
+        if offset < 0 or offset + len(tile) > len(target):
+            raise ValueError(f"glyph {character!r} is outside the ROM: 0x{offset:06X}")
+        target[offset : offset + len(tile)] = tile
+        if not is_visible_font_offset(offset, len(tile)):
+            raise ValueError(f"glyph {character!r} is outside the visible Korean font pages: 0x{offset:06X}")
+
+    total_relocated = sum(len(encoded[entry_id]) for entry_id in RELOCATED_IDS)
+    main_relocation_start = find_ff_run(target, DIALOG_BANK_START, DIALOG_BANK_END, total_relocated)
+    relocation_offsets: dict[str, int] = {}
+    main_relocation_cursor = main_relocation_start
+    for entry_id in RELOCATED_IDS:
+        relocation_offsets[entry_id] = main_relocation_cursor
+        target[main_relocation_cursor : main_relocation_cursor + len(encoded[entry_id])] = encoded[entry_id]
+        main_relocation_cursor += len(encoded[entry_id])
+
+    # 0058 deliberately uses the old 0059 tail; those records are relocated
+    # before it is written.  The remaining early scene records fit in their
+    # verified original slots and remain in place.
+    for entry_id in INLINE_DIALOG_IDS:
+        inline = drafts[entry_id]
+        target[inline.offset : inline.offset + len(encoded[entry_id])] = encoded[entry_id]
+
+    pointer_manifest = {}
+    for entry_id in RELOCATED_IDS:
+        old_offset = drafts[entry_id].offset
+        new_offset = relocation_offsets[entry_id]
+        refs = pointer_refs(source, old_offset)
+        if not refs:
+            raise ValueError(f"no 02 1D pointer reference found for {entry_id} at 0x{old_offset:06X}")
+        for ref in refs:
+            target[ref + 2] = new_offset & 0xFF
+            target[ref + 3] = (new_offset >> 8) & 0xFF
+        pointer_manifest[entry_id] = {
+            "old_offset": f"0x{old_offset:06X}",
+            "new_offset": f"0x{new_offset:06X}",
+            "references": [f"0x{ref:06X}" for ref in refs],
+        }
+
+    # Story dialogue is C0-terminated and uses direct ``02 1D`` calls.  Its
+    # Korean text may exceed the Japanese record's physical slot, so group
+    # only the oversized records by their original HiROM bank, append the
+    # terminator in the relocated copy, then retarget every verified call.
+    c0_relocated_ids = tuple(
+        entry_id
+        for entry_id in C0_DIALOGUE_IDS
+        if len(encoded[entry_id]) > c0_dialogue[entry_id].original_length
+    )
+    c0_relocation_offsets: dict[str, int] = {}
+    c0_pointer_manifest = {}
+    c0_relocation_ranges = {}
+    c0_groups: dict[tuple[int, int], list[str]] = {}
+    for entry_id in c0_relocated_ids:
+        row = c0_dialogue[entry_id]
+        c0_groups.setdefault(c0_relocation_range(row.offset), []).append(entry_id)
+
+    # A relocated record's old slot becomes available only after proving that
+    # its physical tail is really the expected C0 terminator.  This lets one
+    # story scene reuse its own contiguous Japanese slots without borrowing
+    # unrelated data or expanding the ROM.
+    for entry_id in c0_relocated_ids:
+        row = c0_dialogue[entry_id]
+        terminator_offset = row.offset + row.original_length
+        if source[terminator_offset] != 0xC0:
+            raise ValueError(f"{entry_id} is not C0-terminated at 0x{terminator_offset:06X}")
+        target[row.offset : terminator_offset + 1] = b"\xFF" * (row.original_length + 1)
+
+    for relocation_range, entry_ids in c0_groups.items():
+        allocations = []
+        # Largest-first allocation avoids stranding a long dialogue behind
+        # the small holes created by its neighbouring records.
+        for entry_id in sorted(entry_ids, key=lambda value: len(encoded[value]), reverse=True):
+            payload = encoded[entry_id] + b"\xC0"
+            relocation_start = find_ff_run(
+                target,
+                relocation_range[0],
+                relocation_range[1],
+                len(payload),
+            )
+            c0_relocation_offsets[entry_id] = relocation_start
+            target[relocation_start : relocation_start + len(payload)] = payload
+            allocations.append({
+                "id": entry_id,
+                "start": f"0x{relocation_start:06X}",
+                "end": f"0x{relocation_start + len(payload):06X}",
+            })
+        c0_relocation_ranges[f"0x{relocation_range[0]:06X}-0x{relocation_range[1]:06X}"] = {
+            "records": entry_ids,
+            "allocations": allocations,
+        }
+
+    for entry_id in c0_relocated_ids:
+        row = c0_dialogue[entry_id]
+        new_offset = c0_relocation_offsets[entry_id]
+        refs = pointer_refs(source, row.offset)
+        if not refs:
+            raise ValueError(f"no 02 1D pointer reference found for {entry_id} at 0x{row.offset:06X}")
+        for ref in refs:
+            target[ref + 2] = new_offset & 0xFF
+            target[ref + 3] = (new_offset >> 8) & 0xFF
+        c0_pointer_manifest[entry_id] = {
+            "old_offset": f"0x{row.offset:06X}",
+            "new_offset": f"0x{new_offset:06X}",
+            "references": [f"0x{ref:06X}" for ref in refs],
+            "terminator": "0xC0",
+        }
+
+    for entry_id, new_offset in c0_relocation_offsets.items():
+        payload = encoded[entry_id]
+        if target[new_offset : new_offset + len(payload)] != payload or target[new_offset + len(payload)] != 0xC0:
+            raise ValueError(f"C0 relocation verification failed for {entry_id}")
+
+    raw_menu_manifest = {}
+    for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS:
+        row = drafts[entry_id]
+        payload = encoded[entry_id]
+        target[row.offset : row.offset + len(payload)] = payload
+        # The raw block keeps its original slot boundary.  Space-fill the
+        # unused tail so stale Japanese bytes cannot continue the preview text.
+        target[row.offset + len(payload) : row.offset + row.original_length] = b" " * (
+            row.original_length - len(payload)
+        )
+        raw_menu_manifest[entry_id] = {
+            "offset": f"0x{row.offset:06X}",
+            "slot_length": row.original_length,
+            "encoded_length": len(payload),
+        }
+
+    game_menu_manifest = {}
+    for entry_id in GAME_MENU_IDS:
+        row = game_menu[entry_id]
+        payload = encoded[entry_id]
+        target[row.offset : row.offset + len(payload)] = payload
+        target[row.offset + len(payload) : row.offset + row.original_length] = b" " * (
+            row.original_length - len(payload)
+        )
+        game_menu_manifest[entry_id] = {
+            "offset": f"0x{row.offset:06X}",
+            "slot_length": row.original_length,
+            "encoded_length": len(payload),
+        }
+
+    status_menu_manifest = {}
+    for entry_id in STATUS_MENU_IDS:
+        row = status_menu[entry_id]
+        expected = row.expected
+        if expected is None or len(expected) != row.original_length:
+            raise ValueError(f"{entry_id} must declare an exact source slot")
+        actual = source[row.offset : row.offset + row.original_length]
+        if actual != expected:
+            raise ValueError(
+                f"{entry_id} source bytes changed at 0x{row.offset:06X}: "
+                f"expected {expected.hex(' ')}, found {actual.hex(' ')}"
+            )
+        payload = encoded[entry_id]
+        target[row.offset : row.offset + len(payload)] = payload
+        target[row.offset + len(payload) : row.offset + row.original_length] = b" " * (
+            row.original_length - len(payload)
+        )
+        status_menu_manifest[entry_id] = {
+            "offset": f"0x{row.offset:06X}",
+            "slot_length": row.original_length,
+            "encoded_length": len(payload),
+            "source_bytes": expected.hex(" ").upper(),
+        }
+
+    early_game_manifest = {}
+    for entry_id in EARLY_GAME_IDS:
+        row = early_game[entry_id]
+        payload = encoded[entry_id]
+        target[row.offset : row.offset + len(payload)] = payload
+        target[row.offset + len(payload) : row.offset + row.original_length] = b" " * (
+            row.original_length - len(payload)
+        )
+        early_game_manifest[entry_id] = {
+            "offset": f"0x{row.offset:06X}",
+            "slot_length": row.original_length,
+            "encoded_length": len(payload),
+        }
+
+    c0_dialogue_manifest = {}
+    for entry_id in C0_DIALOGUE_IDS:
+        row = c0_dialogue[entry_id]
+        payload = encoded[entry_id]
+        if entry_id in c0_relocation_offsets:
+            c0_dialogue_manifest[entry_id] = {
+                "offset": f"0x{row.offset:06X}",
+                "slot_length": row.original_length,
+                "encoded_length": len(payload),
+                "mode": "relocated",
+                "new_offset": f"0x{c0_relocation_offsets[entry_id]:06X}",
+            }
+        else:
+            target[row.offset : row.offset + len(payload)] = payload
+            target[row.offset + len(payload) : row.offset + row.original_length] = b" " * (
+                row.original_length - len(payload)
+            )
+            c0_dialogue_manifest[entry_id] = {
+                "offset": f"0x{row.offset:06X}",
+                "slot_length": row.original_length,
+                "encoded_length": len(payload),
+                "mode": "inline",
+            }
+
+    changed = sum(left != right for left, right in zip(source, target))
+    manifest = {
+        "kind": "Slap Stick Korean preview patch",
+        "source_length": len(source),
+        "target_length": len(target),
+        "source_sha256": hashlib.sha256(source).hexdigest().upper(),
+        "target_sha256": hashlib.sha256(target).hexdigest().upper(),
+        "patched_records": list(PATCHED_IDS),
+        "unpatched_draft_records": [entry_id for entry_id in drafts if entry_id not in PATCHED_IDS],
+        "raw_menu_preview": raw_menu_manifest,
+        "game_menu_preview": game_menu_manifest,
+        "status_menu_preview": status_menu_manifest,
+        "early_game_preview": early_game_manifest,
+        "c0_dialogue_preview": c0_dialogue_manifest,
+        "c0_relocation_ranges": c0_relocation_ranges,
+        "c0_pointer_updates": c0_pointer_manifest,
+        "font_pages": {
+            "lead_bytes": ["0x80", "0x81", "0x82"],
+            "offset_ranges": ["0x50000-0x53FFF", "0x54000-0x57FFF", "0x60000-0x63FFF"],
+            "note": "Korean glyphs use only code slots absent from the extracted script and verified Other Menus block.",
+        },
+        "glyph_count": len(glyphs),
+        "inline_records": [
+            {
+                "id": entry_id,
+                "offset": f"0x{drafts[entry_id].offset:06X}",
+                "encoded_length": len(encoded[entry_id]),
+            }
+            for entry_id in INLINE_DIALOG_IDS
+        ],
+        "relocation_start": f"0x{main_relocation_start:06X}",
+        "relocation_end": f"0x{main_relocation_cursor:06X}",
+        "relocated_bytes": total_relocated,
+        "pointer_updates": pointer_manifest,
+        "changed_bytes": changed,
+    }
+    return bytes(target), manifest
+
+
+def encode_number(value: int) -> bytes:
+    result = bytearray()
+    while True:
+        digit = value & 0x7F
+        value >>= 7
+        if value:
+            result.append(digit | 0x80)
+            value -= 1
+        else:
+            result.append(digit)
+            return bytes(result)
+
+
+def write_bps(source: bytes, target: bytes, output: Path, metadata: bytes) -> None:
+    patch = bytearray(b"BPS1")
+    patch.extend(encode_number(len(source)))
+    patch.extend(encode_number(len(target)))
+    patch.extend(encode_number(len(metadata)))
+    patch.extend(metadata)
+    cursor = 0
+    while cursor < len(source):
+        same = source[cursor] == target[cursor]
+        end = cursor + 1
+        while end < len(source) and (source[end] == target[end]) == same:
+            end += 1
+        length = end - cursor
+        mode = 0 if same else 1
+        patch.extend(encode_number(((length - 1) << 2) | mode))
+        if not same:
+            patch.extend(target[cursor:end])
+        cursor = end
+    patch.extend((binascii.crc32(source) & 0xFFFFFFFF).to_bytes(4, "little"))
+    patch.extend((binascii.crc32(target) & 0xFFFFFFFF).to_bytes(4, "little"))
+    patch.extend((binascii.crc32(patch) & 0xFFFFFFFF).to_bytes(4, "little"))
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_bytes(patch)
+
+
+def write_ips(source: bytes, target: bytes, output: Path) -> None:
+    patch = bytearray(b"PATCH")
+    cursor = 0
+    while cursor < len(source):
+        if source[cursor] == target[cursor]:
+            cursor += 1
+            continue
+        start = cursor
+        cursor += 1
+        while cursor < len(source) and source[cursor] != target[cursor] and cursor - start < 0xFFFF:
+            cursor += 1
+        length = cursor - start
+        patch.extend(start.to_bytes(3, "big"))
+        patch.extend(length.to_bytes(2, "big"))
+        patch.extend(target[start:cursor])
+    patch.extend(b"EOF")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_bytes(patch)
+
+
+def apply_our_bps(source: bytes, patch: bytes) -> bytes:
+    if patch[:4] != b"BPS1":
+        raise ValueError("not a BPS patch")
+
+    def read_number(position: int) -> tuple[int, int]:
+        result = 0
+        shift = 1
+        while True:
+            digit = patch[position]
+            position += 1
+            result += (digit & 0x7F) * shift
+            if digit & 0x80:
+                shift <<= 7
+                result += shift
+            else:
+                return result, position
+
+    position = 4
+    source_size, position = read_number(position)
+    target_size, position = read_number(position)
+    metadata_size, position = read_number(position)
+    position += metadata_size
+    if source_size != len(source):
+        raise ValueError("BPS source size does not match ROM")
+
+    result = bytearray()
+    while len(result) < target_size:
+        action, position = read_number(position)
+        mode = action & 3
+        length = (action >> 2) + 1
+        if mode == 0:
+            source_offset = len(result)
+            result.extend(source[source_offset : source_offset + length])
+        elif mode == 1:
+            result.extend(patch[position : position + length])
+            position += length
+        else:
+            raise ValueError(f"unsupported BPS action mode {mode}")
+    return bytes(result)
+
+
+def apply_our_ips(source: bytes, patch: bytes) -> bytes:
+    if patch[:5] != b"PATCH":
+        raise ValueError("not an IPS patch")
+    result = bytearray(source)
+    position = 5
+    while patch[position : position + 3] != b"EOF":
+        offset = int.from_bytes(patch[position : position + 3], "big")
+        size = int.from_bytes(patch[position + 3 : position + 5], "big")
+        position += 5
+        if size:
+            result[offset : offset + size] = patch[position : position + size]
+            position += size
+            continue
+        run_length = int.from_bytes(patch[position : position + 2], "big")
+        value = patch[position + 2]
+        position += 3
+        result[offset : offset + run_length] = bytes((value,)) * run_length
+    return bytes(result)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Build and verify the Korean preview BPS/IPS patch.")
+    parser.add_argument("--rom", type=Path, default=ROM_PATH)
+    parser.add_argument("--rom-output", type=Path, default=DEFAULT_ROM_OUT)
+    parser.add_argument("--bps-output", type=Path, default=DEFAULT_BPS_OUT)
+    parser.add_argument("--ips-output", type=Path, default=DEFAULT_IPS_OUT)
+    parser.add_argument("--manifest-output", type=Path, default=DEFAULT_MANIFEST_OUT)
+    parser.add_argument("--glyph-map", type=Path, default=GLYPH_MAP_PATH)
+    args = parser.parse_args()
+
+    source = args.rom.read_bytes()
+    drafts = read_drafts()
+    game_menu = read_game_menu()
+    status_menu = read_status_menu()
+    early_game = read_early_game()
+    c0_dialogue = read_c0_dialogue()
+    missing = [entry_id for entry_id in RAW_MENU_IDS + FIXED_DRAFT_MENU_IDS + ITEM_PREVIEW_IDS + MAIN_DIALOG_IDS if entry_id not in drafts]
+    if missing:
+        raise ValueError(f"missing draft rows: {', '.join(missing)}")
+    missing_game = [entry_id for entry_id in GAME_MENU_IDS if entry_id not in game_menu]
+    if missing_game:
+        raise ValueError(f"missing game menu rows: {', '.join(missing_game)}")
+    missing_status = [entry_id for entry_id in STATUS_MENU_IDS if entry_id not in status_menu]
+    if missing_status:
+        raise ValueError(f"missing status menu rows: {', '.join(missing_status)}")
+    missing_early = [entry_id for entry_id in EARLY_GAME_IDS if entry_id not in early_game]
+    if missing_early:
+        raise ValueError(f"missing early game rows: {', '.join(missing_early)}")
+    missing_c0 = [entry_id for entry_id in C0_DIALOGUE_IDS if entry_id not in c0_dialogue]
+    if missing_c0:
+        raise ValueError(f"missing C0 dialogue rows: {', '.join(missing_c0)}")
+    glyph_map = read_glyph_map(args.glyph_map)
+    encoded = encode_rows(drafts, game_menu, status_menu, early_game, c0_dialogue, glyph_map)
+    target, manifest = patch_rom(
+        source, drafts, game_menu, status_menu, early_game, c0_dialogue, encoded, args.glyph_map
+    )
+
+    args.rom_output.parent.mkdir(parents=True, exist_ok=True)
+    args.rom_output.write_bytes(target)
+    write_bps(source, target, args.bps_output, b"Slap Stick Korean preview; menus, dialog, unused 16x16 0x80xx/0x81xx/0x82xx font glyphs")
+    write_ips(source, target, args.ips_output)
+    args.manifest_output.parent.mkdir(parents=True, exist_ok=True)
+    args.manifest_output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    rebuilt = apply_our_bps(source, args.bps_output.read_bytes())
+    if rebuilt != target:
+        raise ValueError("BPS self-check failed: applying the generated patch did not reproduce target ROM")
+    rebuilt_ips = apply_our_ips(source, args.ips_output.read_bytes())
+    if rebuilt_ips != target:
+        raise ValueError("IPS self-check failed: applying the generated patch did not reproduce target ROM")
+    print(json.dumps(manifest, ensure_ascii=False, indent=2))
+    print(f"BPS={args.bps_output}")
+    print(f"IPS={args.ips_output}")
+    print(f"ROM={args.rom_output}")
+
+
+if __name__ == "__main__":
+    main()

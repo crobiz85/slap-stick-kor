@@ -5,6 +5,8 @@
 *.ips
 *.bps
 *.ups
+!patches/*.ips
+!patches/*.bps
 
 # Bundled Windows tools and archives
 *.exe
@@ -25,8 +27,7 @@ __pycache__/
 *.pyc
 
 # Generated local previews
-/font-preview.png
-font-*bpp.png
+/font-*.png
 
 # OS/editor files
 Thumbs.db

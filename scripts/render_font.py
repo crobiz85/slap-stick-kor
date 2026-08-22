@@ -8,7 +8,7 @@ import binascii
 ROM = Path(__file__).parent.parent / "Slap Stick (J).smc"
 
 
-def decode_tile(tile_data: bytes, bpp: int) -> list[int]:
+def decode_snes_tile(tile_data: bytes, bpp: int) -> list[int]:
     """Decode one SNES planar 8x8 tile into grayscale palette indices."""
     pixels = [0] * 64
     for row in range(8):
@@ -20,21 +20,56 @@ def decode_tile(tile_data: bytes, bpp: int) -> list[int]:
     return pixels
 
 
-def render(data: bytes, bpp: int, columns: int) -> bytes:
-    tile_size = 8 * bpp
-    tiles = len(data) // tile_size
-    rows = (tiles + columns - 1) // columns
-    width, height = columns * 8, rows * 8
+def decode_gb2bpp_tile(tile_data: bytes) -> list[int]:
+    """Decode one Game Boy 2BPP 8x8 tile."""
+    pixels = [0] * 64
+    for row in range(8):
+        low = tile_data[row * 2]
+        high = tile_data[row * 2 + 1]
+        for col in range(8):
+            bit = 7 - col
+            pixels[row * 8 + col] = ((high >> bit) & 1) << 1 | ((low >> bit) & 1)
+    return pixels
+
+
+def render(
+    data: bytes,
+    bpp: int,
+    columns: int,
+    tile_format: str,
+    tiles_per_glyph: int,
+) -> bytes:
+    if tile_format == "gb2bpp" and bpp != 2:
+        raise ValueError("Game Boy 2BPP format requires --bpp 2")
+
+    tile_size = 16 if tile_format == "gb2bpp" else 8 * bpp
+    glyph_size = tile_size * tiles_per_glyph
+    glyphs = len(data) // glyph_size
+    rows = (glyphs + columns - 1) // columns
+    width, height = columns * 8, rows * 8 * tiles_per_glyph
     pixels = bytearray([255] * (width * height))
     max_value = (1 << bpp) - 1
 
-    for tile in range(tiles):
-        tile_x = (tile % columns) * 8
-        tile_y = (tile // columns) * 8
-        tile_data = data[tile * tile_size : tile * tile_size + tile_size]
-        for index, value in enumerate(decode_tile(tile_data, bpp)):
-            row, col = divmod(index, 8)
-            pixels[(tile_y + row) * width + tile_x + col] = 255 - (value * 255 // max_value)
+    for glyph in range(glyphs):
+        glyph_x = (glyph % columns) * 8
+        glyph_y = (glyph // columns) * 8 * tiles_per_glyph
+        for part in range(tiles_per_glyph):
+            tile = glyph * tiles_per_glyph + part
+            tile_data = data[tile * tile_size : tile * tile_size + tile_size]
+            if tile_format == "gb2bpp":
+                tile_pixels = decode_gb2bpp_tile(tile_data)
+            else:
+                tile_pixels = decode_snes_tile(tile_data, bpp)
+            for index, value in enumerate(tile_pixels):
+                row, col = divmod(index, 8)
+                x = glyph_x + col
+                if tile_format == "gb2bpp":
+                    # This game's font uses color 3 as the transparent/background
+                    # value, so the preview needs the opposite grayscale direction.
+                    shade = value * 255 // max_value
+                else:
+                    shade = 255 - (value * 255 // max_value)
+                pixels[(glyph_y + part * 8 + row) * width + x] = shade
 
     png = b"\x89PNG\r\n\x1a\n"
     png += png_chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 0, 0, 0, 0))
@@ -51,15 +86,20 @@ def png_chunk(kind: bytes, payload: bytes) -> bytes:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Render a candidate SNES font/graphics block.")
-    parser.add_argument("--offset", type=lambda value: int(value, 0), default=0x80000)
+    parser.add_argument("--input", type=Path, default=ROM, help="ROM or raw graphics input file")
+    parser.add_argument("--offset", type=lambda value: int(value, 0), default=0x40000)
     parser.add_argument("--size", type=lambda value: int(value, 0), default=0x2000)
     parser.add_argument("--bpp", type=int, choices=(2, 4, 8), default=2)
+    parser.add_argument("--format", choices=("gb2bpp", "snes"), default="gb2bpp")
+    parser.add_argument("--tiles-per-glyph", type=int, choices=(1, 2), default=1)
     parser.add_argument("--columns", type=int, default=32)
     parser.add_argument("--output", type=Path, default=Path("font-preview.png"))
     args = parser.parse_args()
 
-    data = ROM.read_bytes()[args.offset : args.offset + args.size]
-    args.output.write_bytes(render(data, args.bpp, args.columns))
+    data = args.input.read_bytes()[args.offset : args.offset + args.size]
+    args.output.write_bytes(
+        render(data, args.bpp, args.columns, args.format, args.tiles_per_glyph)
+    )
     print(args.output)
 
 
