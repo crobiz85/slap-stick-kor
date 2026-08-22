@@ -46,6 +46,10 @@ PARAM_BYTES = {
     # The decoder labels opcode E0 as E2; it has a two-byte argument and is
     # used by the first in-game cutscene.
     "E2": (0xE0, 2),
+    # This is a distinct in-game button prompt opcode.  The source ROM uses
+    # the literal E2 byte followed by a two-byte glyph payload; do not confuse
+    # it with the decoder's E0-labelled E2 control above.
+    "BTN": (0xE2, 2),
 }
 
 

@@ -71,7 +71,7 @@ def main() -> None:
             # The decoder exposes the original button/icon sequence as
             # [CMD:E2], while the encoder needs its actual two-byte E2
             # argument.  Treat the normalized form as equivalent here.
-            if "CMD" in source_controls and "E2" in target_controls:
+            if "CMD" in source_controls and ("E2" in target_controls or "BTN" in target_controls):
                 source_controls.remove("CMD")
             missing = sorted(source_controls - target_controls)
             note = "ok" if not missing else "missing:" + ",".join(missing)

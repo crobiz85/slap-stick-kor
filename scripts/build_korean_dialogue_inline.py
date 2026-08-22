@@ -23,7 +23,11 @@ from encode_translation_drafts import encode_text, read_glyph_map  # noqa: E402
 ORIGINAL_ROM = ROOT / "Slap Stick (J).smc"
 FONT_ONLY_ROM = ROOT / "build" / "slap-stick-kor-font-only.smc"
 CATALOG_PATH = ROOT / "translation" / "c0-dialogue-catalog.tsv"
-TRANSLATION_PATH = ROOT / "translation" / "korean-c0-dialogue.tsv"
+# The reviewed manuscript is the source of truth.  The older canonical file
+# contains only the first ROM-safe test subset and must not silently limit the
+# dialogue build.
+TRANSLATION_PATH = ROOT / "translation" / "korean-c0-manuscript.tsv"
+CANONICAL_PATH = ROOT / "translation" / "korean-c0-dialogue.tsv"
 DEFAULT_REPORT = ROOT / "build" / "korean-c0-dialogue-report.tsv"
 DEFAULT_ROM = ROOT / "build" / "slap-stick-kor-dialogue-inline.smc"
 DEFAULT_MANIFEST = ROOT / "build" / "slap-stick-kor-dialogue-inline.json"
@@ -61,10 +65,33 @@ def read_translations() -> dict[str, dict]:
         columns = line.split("\t")
         if len(columns) < 5:
             raise ValueError(f"bad translation row: {line}")
+        # Canonical rows have five columns; the complete manuscript has eight
+        # and stores category/status separately.  Keep category available so
+        # cold-boot opening rows remain excluded by default.
+        category = columns[4]
+        status = columns[5] if len(columns) >= 6 else columns[4]
         rows[columns[0]] = {
             "offset": int(columns[1], 16),
             "length": int(columns[2], 16),
             "text": columns[3],
+            "category": category,
+            "status": status,
+        }
+    # The canonical subset is the previously tested, known-good ROM route.
+    # Keep it as a fallback/override so a manuscript line that needs a glyph
+    # not present in the current font cannot make an older working line vanish
+    # from the test ROM.
+    for line in CANONICAL_PATH.read_text(encoding="utf-8").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        columns = line.split("\t")
+        if len(columns) < 5:
+            raise ValueError(f"bad canonical translation row: {line}")
+        rows[columns[0]] = {
+            "offset": int(columns[1], 16),
+            "length": int(columns[2], 16),
+            "text": columns[3],
+            "category": columns[4],
             "status": columns[4],
         }
     return rows
@@ -99,6 +126,7 @@ def encode_rows(original: bytes) -> list[dict]:
                 "fits": bool(encoded) and len(encoded) <= cat["length"],
                 "source_match": source_match,
                 "terminator": terminator == 0xC0,
+                "category": row["category"],
                 "status": row["status"],
                 "text": row["text"],
                 "encoded": encoded,
@@ -116,7 +144,7 @@ def choose_rows(rows: list[dict], requested: set[str] | None, include_opening: b
             if row["id"] not in requested:
                 reasons[row["id"]] = "not-requested"
                 continue
-        elif row["status"] == "cold-boot-opening" and not include_opening:
+        elif row["category"] == "cold-boot-opening" and not include_opening:
             reasons[row["id"]] = "opening-excluded"
             continue
         if not row["source_match"]:
