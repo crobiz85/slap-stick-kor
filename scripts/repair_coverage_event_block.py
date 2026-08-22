@@ -31,23 +31,39 @@ def main() -> None:
     if len(original) != len(base):
         raise ValueError("original and base ROM sizes differ")
 
-    # C0-05F3F5 is the first failing message boundary in the coverage ROM.
-    offset = 0x05F3F5
-    slot_length = 0x12
-    original_block = bytes.fromhex(
-        "DA 02 1D 3D F6 02 41 28 02 D0 3E 00 02 1D 66 F6 02 0A C0"
-    )
-    before = base[offset : offset + slot_length + 1]
-    source = original[offset : offset + slot_length + 1]
-    if source != original_block:
-        raise ValueError("source C0-05F3F5 bytes do not match the expected event block")
-    if b"\x02\x1D" not in source:
-        raise ValueError("expected embedded event call is missing")
-    if before == source:
-        raise ValueError("base already contains the original event block")
-
     target = bytearray(base)
-    target[offset : offset + len(source)] = source
+    # These records contain executable 02 1D string calls.  The coverage
+    # preview replaced them as if they were ordinary dialogue, so preserve
+    # every affected source record, not just the first observed boundary.
+    event_blocks = [
+        ("C0-05DADC", 0x05DADC, 0x5C),
+        ("C0-05F3F5", 0x05F3F5, 0x12),
+        ("C0-06C631", 0x06C631, 0x23),
+        ("C0-06DDD4", 0x06DDD4, 0x2C),
+        ("C0-07D767", 0x07D767, 0x3C),
+        ("C0-07E786", 0x07E786, 0x42),
+    ]
+    restored_blocks = []
+    changed_byte_count = 0
+    for entry_id, offset, slot_length in event_blocks:
+        before = base[offset : offset + slot_length + 1]
+        source = original[offset : offset + slot_length + 1]
+        if len(source) != slot_length + 1 or bytes([2, 29]) not in source:
+            raise ValueError(f"source {entry_id} is not an embedded-event block")
+        if source[-1] != 0xC0:
+            raise ValueError(f"source {entry_id} is missing its C0 terminator")
+        target[offset : offset + len(source)] = source
+        changed = sum(a != b for a, b in zip(before, source))
+        changed_byte_count += changed
+        restored_blocks.append({
+            "id": entry_id,
+            "offset": f"0x{offset:06X}",
+            "slot_length": slot_length,
+            "reason": "preserve embedded event calls 02 1D",
+            "changed_bytes": changed,
+            "before": before.hex(" ").upper(),
+            "after": source.hex(" ").upper(),
+        })
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_bytes(target)
     manifest = {
@@ -56,15 +72,8 @@ def main() -> None:
         "original_rom": str(args.original),
         "base_sha256": sha256(base),
         "target_sha256": sha256(target),
-        "changed_bytes_vs_base": len(source),
-        "restored_event_block": {
-            "id": "C0-05F3F5",
-            "offset": "0x05F3F5",
-            "slot_length": slot_length,
-            "reason": "preserve embedded event calls 02 1D",
-            "before": before.hex(" ").upper(),
-            "after": source.hex(" ").upper(),
-        },
+        "changed_bytes_vs_base": changed_byte_count,
+        "restored_event_blocks": restored_blocks,
     }
     args.manifest.parent.mkdir(parents=True, exist_ok=True)
     args.manifest.write_text(
