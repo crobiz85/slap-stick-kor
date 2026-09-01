@@ -6,7 +6,6 @@
 *.bps
 *.ups
 !patches/*.ips
-!patches/*.bps
 
 # Bundled Windows tools and archives
 *.exe
@@ -23,8 +22,44 @@
 /work/
 /tmp/
 /logs/
+/release/
+/diagnostics/
+/outputs/
+/_external/
+/_work_*/
+/archive/
+/node_modules/
 __pycache__/
 *.pyc
+
+# Local source font experiments; only the selected build font is versioned.
+/assets/fonts/*
+!/assets/fonts/gilche-1bpp-8x16.fnt
+
+# One-off local helpers
+/build_dialogue_review_workbook.mjs
+/tmp-artifact-help.mjs
+
+# The public repository keeps only the active Robotrek build dependency set.
+/docs/
+/src/
+/tools/
+/SNESMem.txt
+/scripts/*
+!/scripts/build_korean_font.py
+!/scripts/build_robotrek_e4_d8_single_probe.py
+!/scripts/build_robotrek_e4_e7_full_font_probe.py
+!/scripts/build_robotrek_e4_e7_gilche_font_probe.py
+!/scripts/build_robotrek_english_korean_inline_safe_test.py
+!/scripts/build_robotrek_english_korean_safe_test.py
+!/scripts/build_robotrek_english_retranslation_list.py
+!/scripts/build_robotrek_initial_release.py
+!/scripts/build_slap_stick_font_loader_probe.py
+!/scripts/verify_robotrek_english_korean_inline_safe_test.py
+/translation/*
+!/translation/robotrek-e4-e7-glyph-map.tsv
+!/translation/robotrek-english-dialogue-candidates.tsv
+!/translation/robotrek-english-dialogue-catalog.tsv
 
 # Generated local previews
 /font-*.png

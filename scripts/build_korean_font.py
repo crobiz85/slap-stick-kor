@@ -295,6 +295,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Build Korean glyph map and preview without modifying the ROM.")
     parser.add_argument("--font", type=Path, default=None, help="Korean-capable TTF/TTC font")
     parser.add_argument("--font-size", type=int, default=12)
+    parser.add_argument(
+        "--extra-text",
+        default="",
+        help="additional Hangul text whose syllables must be allocated in the map",
+    )
     parser.add_argument("--preview-scale", type=int, default=8)
     parser.add_argument("--output-map", type=Path, default=DEFAULT_MAP_PATH)
     parser.add_argument("--output-preview", type=Path, default=DEFAULT_PREVIEW_PATH)
@@ -302,6 +307,14 @@ def main() -> None:
 
     font_path = args.font or find_default_font()
     characters = read_draft_characters()
+    characters = sorted(
+        set(characters)
+        | {
+            character
+            for character in args.extra_text
+            if HANGUL_START <= ord(character) <= HANGUL_END
+        }
+    )
     # Reusing the prior generated assignments is important: a newly added
     # syllable must not silently renumber every existing glyph in a save-state
     # or in already translated text.
