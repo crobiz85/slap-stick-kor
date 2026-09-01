@@ -47,8 +47,10 @@ python scripts/build_robotrek_initial_release.py
 - [Pillow](https://python-pillow.org/) `12.3.0`: 한글 글리프 렌더링과 SNES 타일 변환
 - `assets/fonts/gilche-1bpp-8x16.fnt`: 실제 패치에 사용한 GILCHE 1bpp 8×16 글꼴
   (38,912 bytes, SHA-256 `5BE8F0C52F8FDA3AF4E8B7429D49AE69C4C4BD7D3A59D9C5B848CD1EFAEDB586`)
-- 글꼴 파일에는 제작자·라이선스 메타데이터가 없어 출처를 추가로 확인하지 못했습니다.
-  재배포 조건이 확인되면 해당 고지를 갱신합니다.
+- 이 파일은 작업 폴더에 있던 후보를 글꼴 경로 검증 후 사용한 것이며, 이번 작업에서
+  외부 링크를 통해 참고하거나 내려받은 파일이 아닙니다. 파일 내부와 Git 이전 기록에
+  제작자·원출처·라이선스 메타데이터가 없어 재배포 조건은 확인하지 못했습니다.
+  권리 정보가 확인되기 전까지는 이 글꼴 파일을 다른 프로젝트에 재사용하지 마세요.
 
 ## v0.1.9-alpha 핵심 수정
 
