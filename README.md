@@ -76,8 +76,16 @@ python scripts/build_robotrek_initial_release.py
 - 패치는 비상업적·개인적 사용을 전제로 하며, 적용 결과물을 재배포하지 마세요.
 - 번역·패치 사용에 따른 손상이나 진행 문제에 대해 보증하지 않습니다.
 
-## 문서 구성 참고
+## 실제 확인한 외부 자료
 
-패치 적용 절차와 ROM 미포함·차분 패치 중심의 법적 고지 구성은
-[GBA-SRW-J 프로젝트](https://github.com/snake7594/GBA-SRW-J)의 README를 참고했습니다.
-해당 프로젝트의 코드·번역·자료를 이 패치에 사용하지는 않았습니다.
+- [Data Crystal — Robotrek](https://datacrystal.tcrf.net/wiki/Robotrek): 영문판의
+  무헤더·HiROM·1.5 MiB·FastROM 형식을 대조하는 데 사용했습니다.
+- [Data Crystal — Robotrek ROM map](https://datacrystal.tcrf.net/wiki/Robotrek/ROM_map):
+  ROM 주소 범위를 확인하는 기술 참고 자료입니다.
+- [SuperFamicom.org — Slap Stick](https://superfamicom.org/info/slap-stick):
+  Robotrek/Slap Stick 명칭과 USA 원본의 크기·내부 타이틀·SHA-256을 교차 확인하는 데 사용했습니다.
+- [GBA-SRW-J](https://github.com/snake7594/GBA-SRW-J): 패치 적용 절차와 ROM 미포함·법적 고지의
+  문서 구성만 참고했습니다. 코드·번역·폰트·게임 자료는 사용하지 않았습니다.
+
+위 링크의 코드나 게임 데이터를 패치에 복사한 것은 아니며, 확인한 ROM 구조·식별 정보만 문서와
+검증 기준에 반영했습니다.
