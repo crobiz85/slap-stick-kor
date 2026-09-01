@@ -18,7 +18,7 @@ SNES 영문판 `Robotrek (USA)`를 기준으로 작업하는 한국어 패치 �
 ## 적용 방법
 
 1. 합법적으로 소유한 무헤더 영문판 `Robotrek (USA)` ROM을 준비합니다.
-2. [IPS 패처](https://fusoya.eludevisibility.org/ips/) 또는 사용하는 에뮬레이터의 IPS 기능으로
+2. 사용하는 IPS 패처 또는 에뮬레이터의 IPS 기능으로
    `robotrek-korean-v0.1.9-alpha.ips`를 원본에 적용합니다.
 3. 패처가 생성한 확장 ROM을 에뮬레이터에서 실행합니다. 원본 해시가 위 값과 다르면 적용하지 마세요.
 
@@ -40,6 +40,15 @@ python scripts/build_robotrek_initial_release.py
 
 마지막 명령은 `patches/`에 IPS 파일만 생성하며, 생성한 IPS를 원본에 다시 적용해 결과 ROM과
 완전히 같은지 자체 검증합니다. BPS, ZIP, 완성 ROM은 생성하거나 배포하지 않습니다.
+
+## 실제 사용한 외부 도구·글꼴
+
+- [Python](https://www.python.org/) `3.12.13`: 빌드·검증·IPS 생성 스크립트 실행
+- [Pillow](https://python-pillow.org/) `12.3.0`: 한글 글리프 렌더링과 SNES 타일 변환
+- `assets/fonts/gilche-1bpp-8x16.fnt`: 실제 패치에 사용한 GILCHE 1bpp 8×16 글꼴
+  (38,912 bytes, SHA-256 `5BE8F0C52F8FDA3AF4E8B7429D49AE69C4C4BD7D3A59D9C5B848CD1EFAEDB586`)
+- 글꼴 파일에는 제작자·라이선스 메타데이터가 없어 출처를 추가로 확인하지 못했습니다.
+  재배포 조건이 확인되면 해당 고지를 갱신합니다.
 
 ## v0.1.9-alpha 핵심 수정
 
@@ -64,3 +73,9 @@ python scripts/build_robotrek_initial_release.py
 - 공개 배포물은 합법적으로 소유한 원본 ROM에 직접 적용하는 IPS 차분 패치뿐입니다.
 - 패치는 비상업적·개인적 사용을 전제로 하며, 적용 결과물을 재배포하지 마세요.
 - 번역·패치 사용에 따른 손상이나 진행 문제에 대해 보증하지 않습니다.
+
+## 문서 구성 참고
+
+패치 적용 절차와 ROM 미포함·차분 패치 중심의 법적 고지 구성은
+[GBA-SRW-J 프로젝트](https://github.com/snake7594/GBA-SRW-J)의 README를 참고했습니다.
+해당 프로젝트의 코드·번역·자료를 이 패치에 사용하지는 않았습니다.
