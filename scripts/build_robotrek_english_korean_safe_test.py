@@ -53,7 +53,7 @@ from build_robotrek_english_retranslation_list import (  # noqa: E402
     MIXED_DATA_IDS,
     NON_DIALOGUE_IDS,
 )
-from build_slap_stick_font_loader_probe import refresh_full_hirom_checksum  # noqa: E402
+from robotrek_hirom_utils import refresh_full_hirom_checksum  # noqa: E402
 
 
 CATALOG = ROOT / "translation" / "robotrek-english-dialogue-catalog.tsv"

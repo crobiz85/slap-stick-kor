@@ -1217,7 +1217,7 @@ def write_tsv(rows: list[dict[str, str]], phrases: list[bytes]) -> None:
 def write_txt(rows: list[dict[str, str]], phrases: list[bytes]) -> None:
     with OUT_TXT.open("w", encoding="utf-8", newline="\n") as handle:
         handle.write("Robotrek (USA) 영문판 기준 재번역 목록\n")
-        handle.write("일본판 대사·일본판 참조 번역은 포함하지 않았습니다.\n")
+        handle.write("일본어 원문·일본판 참조 번역은 포함하지 않았습니다.\n")
         handle.write("영문판 E3 압축 구문은 USA 롬의 원문표에서 복원했습니다.\n\n")
         for row in rows:
             draft = DRAFTS.get(row["record_id"], "")

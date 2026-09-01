@@ -46,7 +46,7 @@ __pycache__/
 /tools/
 /SNESMem.txt
 /scripts/*
-!/scripts/build_korean_font.py
+!/scripts/robotrek_font_utils.py
 !/scripts/build_robotrek_e4_d8_single_probe.py
 !/scripts/build_robotrek_e4_e7_full_font_probe.py
 !/scripts/build_robotrek_e4_e7_gilche_font_probe.py
@@ -54,7 +54,7 @@ __pycache__/
 !/scripts/build_robotrek_english_korean_safe_test.py
 !/scripts/build_robotrek_english_retranslation_list.py
 !/scripts/build_robotrek_initial_release.py
-!/scripts/build_slap_stick_font_loader_probe.py
+!/scripts/robotrek_hirom_utils.py
 !/scripts/verify_robotrek_english_korean_inline_safe_test.py
 /translation/*
 !/translation/robotrek-e4-e7-glyph-map.tsv

@@ -14,7 +14,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from build_korean_font import encode_tile, find_default_font, render_mask
+from robotrek_font_utils import encode_tile, find_default_font, render_mask
 from build_robotrek_e4_d8_single_probe import (
     DISPATCHER_CPU,
     DISPATCHER_OFFSET,
@@ -42,7 +42,7 @@ from build_robotrek_e4_d8_single_probe import (
     make_source_calculator,
     sha256,
 )
-from build_slap_stick_font_loader_probe import refresh_full_hirom_checksum
+from robotrek_hirom_utils import refresh_full_hirom_checksum
 
 
 ROOT = Path(__file__).resolve().parent.parent

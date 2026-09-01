@@ -15,7 +15,7 @@ from pathlib import Path
 from PIL import Image, ImageFont
 
 from build_korean_font import encode_tile, find_default_font, render_mask
-from build_slap_stick_font_loader_probe import Assembler, refresh_full_hirom_checksum
+from robotrek_hirom_utils import Assembler, refresh_full_hirom_checksum
 
 
 ROOT = Path(__file__).resolve().parent.parent

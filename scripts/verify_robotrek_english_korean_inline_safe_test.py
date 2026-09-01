@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import build_robotrek_english_korean_inline_safe_test as build  # noqa: E402
 import build_robotrek_english_korean_safe_test as common  # noqa: E402
-from build_slap_stick_font_loader_probe import refresh_full_hirom_checksum  # noqa: E402
+from robotrek_hirom_utils import refresh_full_hirom_checksum  # noqa: E402
 
 
 def merged(ranges: list[tuple[int, int]]) -> list[tuple[int, int]]:
