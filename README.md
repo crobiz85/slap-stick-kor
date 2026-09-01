@@ -55,14 +55,9 @@ python scripts/build_robotrek_initial_release.py
 - [Pillow](https://python-pillow.org/) `12.3.0`: 한글 글리프 렌더링과 SNES 타일 변환
 - `assets/fonts/gilche-1bpp-8x16.fnt`: 실제 패치에 사용한 GILCHE 1bpp 8×16 글꼴
   (38,912 bytes, SHA-256 `5BE8F0C52F8FDA3AF4E8B7429D49AE69C4C4BD7D3A59D9C5B848CD1EFAEDB586`)
-- 이 파일은 작업 폴더에 있던 후보를 글꼴 경로 검증 후 사용한 것입니다. 사용자가 다시
-  첨부한 파일이 해당 게시글의 첨부파일임을 확인했으며, 저장소 파일과도 바이트 단위로
-  일치합니다. 원출처로
-  [한식구 카페의 「[폰트] 7x11 길체」 게시글](https://cafe.naver.com/hansicgu/824)을
-  확인했습니다(작성자 에슘, 2008-11-22). 게시글 제목은 7×11이고 이 저장소 파일은
-  1bpp 8×16 변형이므로 게시글의 원본 계열과 현재 변형의 규격 차이는 남겨 둡니다.
-  게시글에서 이 변형의 재배포 라이선스는 확인하지 못했으므로 권리 조건이 확인되기
-  전까지 다른 프로젝트에 재사용하지 마세요.
+- 출처: [한식구 카페 「[폰트] 7x11 길체」](https://cafe.naver.com/hansicgu/824)
+  (작성자 에슘, 2008-11-22). 사용자가 제공한 게시글 첨부파일과 저장소의 글꼴 파일은
+  바이트 단위로 일치합니다.
 
 ## v0.1.9-alpha 핵심 수정
 
@@ -91,9 +86,8 @@ python scripts/build_robotrek_initial_release.py
 ## 실제 확인한 외부 자료
 
 - [한식구 카페 — 「[폰트] 7x11 길체」](https://cafe.naver.com/hansicgu/824):
-  GILCHE 글꼴의 원출처와 작성자·게시일을 확인했습니다. 사용자가 제공한 게시글 첨부파일은
-  저장소의 `gilche-1bpp-8x16.fnt`와 바이트 단위로 일치하지만, 게시글 제목의 7×11 표기와
-  현재 파일의 8×16 변형 표기는 함께 기록합니다.
+  실제 사용한 GILCHE 글꼴의 출처입니다(작성자 에슘, 2008-11-22). 게시글 첨부파일과
+  저장소의 `gilche-1bpp-8x16.fnt`가 일치합니다.
 - [Data Crystal — Robotrek](https://datacrystal.tcrf.net/wiki/Robotrek): 영문판의
   무헤더·HiROM·1.5 MiB·FastROM 형식을 대조하는 데 사용했습니다.
 - [Data Crystal — Robotrek ROM map](https://datacrystal.tcrf.net/wiki/Robotrek/ROM_map):
