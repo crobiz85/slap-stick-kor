@@ -2459,6 +2459,16 @@ SCREEN_TEXT_PATCHES += (
         ),
     },
     {
+        "id": "REAUDIT-0AC0FC-MEETING-ROOM-GUARD-SHARED",
+        "start": 0x0AC0FC,
+        "end": 0x0AC14A,
+        "end_command": 0xCC,
+        "draft": (
+            "여긴 웬일이야?\n[PAL:02]회의실[PAL:00]은 사용 중이야.\n"
+            "아무도 못 들어가게\n지키고 있어."
+        ),
+    },
+    {
         "id": "REAUDIT-0AC538-THREE-TETRONS",
         "start": 0x0AC538,
         "end": 0x0AC56B,
@@ -2918,14 +2928,22 @@ SCREEN_TEXT_PATCHES += (
     {
         "id": "REAUDIT-0C979F-DESERTER-LASER-WARNING",
         "start": 0x0C979F,
-        "end": 0x0C98A4,
-        "end_command": 0xC0,
+        # The repeat-talk D3 wrapper enters the next paragraph at 0x0C9865.
+        # Keep its preceding D1 and the paragraph itself at their native addresses.
+        "end": 0x0C9864,
+        "end_command": 0xD1,
         "draft": (
             "[DFT]난 해커 전투원이었지만 끔찍한 얘길 듣고 도망쳤어.[FIN]"
             "해커는 이 별을 차지하려고 무서운 레이저 무기를 만들었어.[FIN]"
-            "그런 계획인 줄 몰랐어… 생각만 해도 떨려.[FIN]"
-            "이 동굴의 [PAL:02]보석 상자[PAL:00]를 가져가. 난 필요 없어."
+            "그런 계획인 줄 몰랐어…\n[PAU:1E]생각만 해도 떨려."
         ),
+    },
+    {
+        "id": "REAUDIT-0C9865-DESERTER-REPEAT-TREASURE",
+        "start": 0x0C9865,
+        "end": 0x0C98A4,
+        "end_command": 0xC0,
+        "draft": "이 동굴의 [PAL:02]보석 상자[PAL:00]를 가져가.\n난 필요 없어.",
     },
     {
         "id": "REAUDIT-0C992A-ROBOT-K-HINT",

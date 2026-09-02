@@ -1,4 +1,4 @@
-"""Create and self-check the public IPS-only Robotrek Korean release."""
+"""Create and self-check a local IPS candidate; never publish automatically."""
 
 from __future__ import annotations
 
@@ -8,11 +8,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "v0.1.10-alpha"
+VERSION = "v0.1.11-alpha"
 SOURCE = ROOT / "Robotrek (USA).sfc"
 TARGET = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.sfc"
 BUILD_MANIFEST = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.json"
-IPS = ROOT / "patches" / f"robotrek-korean-{VERSION}.ips"
+IPS = ROOT / "build" / f"robotrek-korean-{VERSION}.ips"
 MANIFEST = ROOT / "build" / f"robotrek-korean-{VERSION}-release.json"
 
 EXPECTED_SOURCE_SHA256 = "1E2DED7B1E350449B7A99B7EC414525E4B9B086C416DEEEE5EB3E48E032C46BD"
@@ -82,7 +82,7 @@ def main() -> None:
 
     release_manifest = {
         "version": VERSION,
-        "status": "runtime-test-release",
+        "status": "local-test-unpublished",
         "source_rom": "Robotrek (USA), headerless",
         "source_size": len(source),
         "source_sha256": source_hash,
@@ -99,6 +99,10 @@ def main() -> None:
         ],
         "ips_sha256": sha256(IPS.read_bytes()),
         "notes": [
+            "동굴의 탈영 해커 재대화가 참조하는 보석 상자 문단을 0x0C9865에 고정해 빈 대화창 원인 수정",
+            "회의실 경비의 공용 CF 대사 번역 추가 및 두 호출 경로와 CC 복귀 주소 보존 검증",
+        ],
+        "prior_version_improvements": [
             "로코코 구출 후 촌장 대사의 중첩 CF 호출을 제거해 빈 대화창 멈춤 수정",
             "쥐 상점 대사 시작의 문자 [BOTTOM]을 실제 D8 창 명령으로 수정해 대화 진입 불능 해결",
             "같은 직접 화면 패치의 [TOP2] 문자를 실제 D9 창 명령으로 수정하고 재발 검증 추가",

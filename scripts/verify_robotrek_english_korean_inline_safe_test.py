@@ -242,6 +242,28 @@ def main() -> None:
     assert output[0x01CED1:0x01CED6] == bytes.fromhex("DF 01 04 D0 05")
     assert output[0x01CEFB:0x01CEFE] == bytes.fromhex("D3 D1 CE")
 
+    # Repeat interaction calls a D3 wrapper into the final paragraph of the
+    # deserter's first speech. Compacting the whole speech erased this entry.
+    assert source[0x0C9765:0x0C976A] == bytes.fromhex("02 1D A5 98 6B")
+    assert output[0x0C9765:0x0C976A] == source[0x0C9765:0x0C976A]
+    assert source[0x0C98A5:0x0C98AA] == bytes.fromhex("D7 D3 65 98 C0")
+    assert output[0x0C98A5:0x0C98AA] == source[0x0C98A5:0x0C98AA]
+    assert output[0x0C9864] == source[0x0C9864] == 0xD1
+    treasure = common.encode_text(
+        "이 동굴의 [PAL:02]보석 상자[PAL:00]를 가져가.\n난 필요 없어.", code_for
+    ) + b"\xC0"
+    assert output[0x0C9865:0x0C9865 + len(treasure)] == treasure
+    warning = output[0x0C979F:0x0C9865]
+    assert not any(command == 0xC0 for _, command in build.scan_commands(warning))
+
+    # Both guard interactions share a CF body whose operand contains C0.
+    # This is not a dialogue terminator; preserve both calls and the CC return.
+    for guard_start in (0x0AC086, 0x0AC0F6):
+        assert source[guard_start:guard_start + 5] == bytes.fromhex("D7 CF FC C0 8A")
+        assert output[guard_start:guard_start + 5] == source[guard_start:guard_start + 5]
+    assert output[0x0AC14A] == source[0x0AC14A] == 0xCC
+    assert "REAUDIT-0AC0FC-MEETING-ROOM-GUARD-SHARED" in screen_by_id
+
     # Screen-text patches are encoded directly, so symbolic window aliases
     # must never leak into the ROM as visible ASCII.  The mouse shop used to
     # start with the literal string "[BOTTOM]" instead of the D8 command,
