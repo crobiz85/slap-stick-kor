@@ -104,8 +104,22 @@ def main() -> None:
         slot_bytes = int(row["slot_bytes"])
         destination = int(row["destination"], 16)
         payload_bytes = int(row["payload_bytes"])
-        wrapper = bytes.fromhex(row["wrapper"])
         allowed.append((target, target + slot_bytes))
+
+        encoded = common.encode_text(build.DRAFTS[record_id], code_for)
+        continuation = encoded[1:] if encoded and encoded[0] == 0xD7 else encoded
+        expected_payload = continuation + b"\xCC"
+        assert len(expected_payload) == payload_bytes, record_id
+
+        if row.get("mode") == "direct":
+            assert destination == target, record_id
+            assert output[target : target + payload_bytes] == expected_payload, record_id
+            assert output[target + payload_bytes : target + slot_bytes] == bytes(
+                slot_bytes - payload_bytes
+            ), record_id
+            continue
+
+        wrapper = bytes.fromhex(row["wrapper"])
 
         assert output[target : target + len(wrapper)] == wrapper, record_id
         assert output[target + len(wrapper) : target + slot_bytes] == bytes(
@@ -121,10 +135,6 @@ def main() -> None:
         assert destination == page["file_start"] + address - 0x8000, record_id
         assert destination + payload_bytes <= page["file_end"], record_id
 
-        encoded = common.encode_text(build.DRAFTS[record_id], code_for)
-        continuation = encoded[1:] if encoded and encoded[0] == 0xD7 else encoded
-        expected_payload = continuation + b"\xCC"
-        assert len(expected_payload) == payload_bytes, record_id
         assert output[destination : destination + payload_bytes] == expected_payload, record_id
         payload_ranges.append((destination, destination + payload_bytes))
 

@@ -19,7 +19,7 @@ SNES 영문판 `Robotrek (USA)`를 기준으로 작업하는 한국어 패치 �
 - 원본 크기: `1,572,864 bytes`
 - 원본 SHA-256: `1E2DED7B1E350449B7A99B7EC414525E4B9B086C416DEEEE5EB3E48E032C46BD`
 - 적용 결과 크기: `2,097,152 bytes`
-- 적용 결과 SHA-256: `38C7E24A54D2373850884AFA297CC9A3F8D123E77A62C68F9B23E9E28952CD07`
+- 적용 결과 SHA-256: `9A7E7805F586F5627CFD68515B66C2FD1F659ADAA5D586FB9FFBEADA8FD79F86`
 
 원본 ROM과 패치 적용 완료 ROM은 저장소 및 배포 파일에 포함하지 않습니다.
 
@@ -61,6 +61,7 @@ python scripts/build_robotrek_initial_release.py
 
 ## v0.1.9-alpha 핵심 수정
 
+- 로코코 구출 후 촌장 대사의 중첩 `CF` 호출을 제거해 빈 대화창에서 멈추는 문제 수정
 - 쥐 상점 대사 시작에 문자로 들어간 `[BOTTOM]`을 실제 `D8` 창 명령으로 수정
 - 직접 화면 패치의 `[TOP2]`를 실제 `D9` 창 명령으로 수정하고 재발 검증 추가
 - 쥐 상점 강화 결과의 내부 `D3` 대상 주소 보존

@@ -4286,6 +4286,31 @@ def main() -> None:
         encoded = common.encode_text(DRAFTS[record_id], code_for)
         continuation = encoded[1:] if encoded and encoded[0] == 0xD7 else encoded
         payload = continuation + b"\xCC"
+        # The Rococo mayor line is reached through an existing CF continuation.
+        # Its Korean payload fits in the original 52-byte continuation slot.
+        # A second CF hop here opens the box but never renders text on the real
+        # event route, so keep the native single-hop flow and store it directly.
+        if target_offset == 0x08834D and len(payload) <= target_length:
+            target[target_offset : target_offset + target_length] = (
+                payload + bytes(target_length - len(payload))
+            )
+            ranges.append((target_offset, target_offset + target_length))
+            shared_cf_applied.append(
+                {
+                    "id": record_id,
+                    "target": target_hex,
+                    "slot_bytes": target_length,
+                    "destination": target_hex,
+                    "cpu": "C8:834D",
+                    "payload_bytes": len(payload),
+                    "mode": "direct",
+                    "wrapper": "",
+                }
+            )
+            for shared_id, (shared_target, _shared_length) in INDIRECT_CF.items():
+                if int(shared_target, 16) == target_offset:
+                    skipped.pop(shared_id, None)
+            continue
         destination, bank, address, payload_cursor = common.pack(
             target, payload_cursor, payload
         )
@@ -4305,6 +4330,7 @@ def main() -> None:
                 "destination": f"0x{destination:06X}",
                 "cpu": f"{bank:02X}:{address:04X}",
                 "payload_bytes": len(payload),
+                "mode": "relocated",
                 "wrapper": wrapper.hex(" ").upper(),
             }
         )
