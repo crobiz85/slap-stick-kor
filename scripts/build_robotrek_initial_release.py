@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "v0.1.9-alpha"
+VERSION = "v0.1.10-alpha"
 SOURCE = ROOT / "Robotrek (USA).sfc"
 TARGET = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.sfc"
 BUILD_MANIFEST = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.json"
@@ -99,6 +99,7 @@ def main() -> None:
         ],
         "ips_sha256": sha256(IPS.read_bytes()),
         "notes": [
+            "로코코 구출 후 촌장 대사의 중첩 CF 호출을 제거해 빈 대화창 멈춤 수정",
             "쥐 상점 대사 시작의 문자 [BOTTOM]을 실제 D8 창 명령으로 수정해 대화 진입 불능 해결",
             "같은 직접 화면 패치의 [TOP2] 문자를 실제 D9 창 명령으로 수정하고 재발 검증 추가",
             "쥐 상점 강화 결과가 공유하는 내부 D3 대상 0x01CED1을 원본 주소에 고정해 혼합 영문과 화면 이상 수정",
