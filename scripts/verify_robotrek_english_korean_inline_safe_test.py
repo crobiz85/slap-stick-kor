@@ -264,6 +264,20 @@ def main() -> None:
     assert output[0x0AC14A] == source[0x0AC14A] == 0xCC
     assert "REAUDIT-0AC0FC-MEETING-ROOM-GUARD-SHARED" in screen_by_id
 
+    # The mouse experiment chant returns into event code, not another text
+    # segment. Keep its CC fixed and leave the surrounding event scripts intact.
+    chant = common.encode_text(
+        "[DFT][PAL:03]실험! 실험!\n정말 신나!\n실험! 실험!\n정말 좋아![PAL:00]", code_for
+    )
+    assert output[0x0AD9AB:0x0AD9AB + len(chant)] == chant
+    assert output[0x0AD9EA] == source[0x0AD9EA] == 0xCC
+    for event_start, event_end in (
+        (0x0AD250, 0x0AD33E),
+        (0x0AD8CE, 0x0AD944),
+        (0x0AD9EB, 0x0ADAB6),
+    ):
+        assert output[event_start:event_end] == source[event_start:event_end], hex(event_start)
+
     # Screen-text patches are encoded directly, so symbolic window aliases
     # must never leak into the ROM as visible ASCII.  The mouse shop used to
     # start with the literal string "[BOTTOM]" instead of the D8 command,

@@ -2541,6 +2541,15 @@ SCREEN_TEXT_PATCHES += (
         ),
     },
     {
+        "id": "REAUDIT-0AD9AB-MOUSE-EXPERIMENT-CHANT",
+        "start": 0x0AD9AB,
+        "end": 0x0AD9EA,
+        "end_command": 0xCC,
+        # The physical catalogue runs across event bytecode after this CC.
+        # Translate only the chant, preserving the native event return address.
+        "draft": "[DFT][PAL:03]실험! 실험!\n정말 신나!\n실험! 실험!\n정말 좋아![PAL:00]",
+    },
+    {
         "id": "REAUDIT-0ADAB6-PRISON-GUARD",
         "start": 0x0ADAB6,
         "end": 0x0ADAFE,
