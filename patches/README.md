@@ -2,9 +2,13 @@
 
 이 디렉터리에는 원본 ROM이 있어야 사용할 수 있는 IPS 패치만 둡니다.
 
-- 현재 공개 버전: `robotrek-korean-v0.1.10-alpha.ips`
+- 현재 공개 버전: `robotrek-korean-v0.1.12-alpha.ips`
 - 적용 대상: 무헤더 `Robotrek (USA)`
 - 원본 SHA-256: `1E2DED7B1E350449B7A99B7EC414525E4B9B086C416DEEEE5EB3E48E032C46BD`
+- IPS SHA-256: `72D42879D4D1C18D46A4E781111A2A7A70C259733F17DDC91212F3100A434730`
+
+2026-09-02 사용자가 쥐 실험 이벤트 정상 동작을 확인하고 공개를 요청한 테스트본과
+동일한 파일입니다. 이전 `v0.1.10-alpha` IPS는 비교·복구용으로 보존합니다.
 
 원본 ROM, 패치 적용 완료 ROM, BPS 및 배포 ZIP은 포함하지 않습니다.
 

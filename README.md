@@ -12,14 +12,14 @@ SNES 영문판 `Robotrek (USA)`를 기준으로 작업하는 한국어 패치 �
 
 ## 현재 공개 배포본
 
-- 버전: `v0.1.10-alpha`
+- 버전: `v0.1.12-alpha`
 - 배포 형식: IPS만 제공
-- 패치: [`patches/robotrek-korean-v0.1.10-alpha.ips`](patches/robotrek-korean-v0.1.10-alpha.ips)
+- 패치: [`patches/robotrek-korean-v0.1.12-alpha.ips`](patches/robotrek-korean-v0.1.12-alpha.ips)
 - 적용 대상: 무헤더 `Robotrek (USA)` ROM
 - 원본 크기: `1,572,864 bytes`
 - 원본 SHA-256: `1E2DED7B1E350449B7A99B7EC414525E4B9B086C416DEEEE5EB3E48E032C46BD`
 - 적용 결과 크기: `2,097,152 bytes`
-- 적용 결과 SHA-256: `9A7E7805F586F5627CFD68515B66C2FD1F659ADAA5D586FB9FFBEADA8FD79F86`
+- 적용 결과 SHA-256: `9D5E3109A50E541B96B9EB2611EDAC4F169C4D713F7FEB16FB158E858B7C721B`
 
 원본 ROM과 패치 적용 완료 ROM은 저장소 및 배포 파일에 포함하지 않습니다.
 
@@ -32,13 +32,14 @@ SNES 영문판 `Robotrek (USA)`를 기준으로 작업하는 한국어 패치 �
 - 테스트 파일은 내용이 바뀌면 새 버전 또는 테스트 번호를 부여합니다.
   이미 공개한 IPS는 같은 버전명으로 덮어쓰지 않습니다.
 - 변경 이력에는 해당 버전에서 새로 바뀐 내용만 적고 누적 개선 내역은 분리합니다.
-- 현재 `v0.1.12-alpha`는 미공개 로컬 테스트본입니다. 공개 배포본은 `v0.1.10-alpha`입니다.
+- 현재 공개 배포본은 `v0.1.12-alpha`입니다. 사용자가 정상 동작을 확인한 로컬 테스트본과
+  동일한 IPS를 2026-09-02 사용자 요청으로 공개합니다.
 
 ## 적용 방법
 
 1. 합법적으로 소유한 무헤더 영문판 `Robotrek (USA)` ROM을 준비합니다.
 2. 사용하는 IPS 패처 또는 에뮬레이터의 IPS 기능으로
-   `robotrek-korean-v0.1.10-alpha.ips`를 원본에 적용합니다.
+   `robotrek-korean-v0.1.12-alpha.ips`를 원본에 적용합니다.
 3. 패처가 생성한 확장 ROM을 에뮬레이터에서 실행합니다. 원본 해시가 위 값과 다르면 적용하지 마세요.
 
 패치 적용이 실패하면 헤더가 붙은 ROM인지, 원본 버전이 미국판인지, 파일 해시가 일치하는지 먼저 확인하세요.
@@ -65,13 +66,18 @@ python scripts/build_robotrek_initial_release.py
 
 - [Python](https://www.python.org/) `3.12.13`: 빌드·검증·IPS 생성 스크립트 실행
 - [Pillow](https://python-pillow.org/) `12.3.0`: 한글 글리프 렌더링과 SNES 타일 변환
+- [Snes9x](https://github.com/snes9xgit/snes9x) Libretro 코어: 제공받은 슬롯 1을 재생하고
+  쥐 실험 이벤트의 원본·패치본 화면 및 그래픽 메모리를 비교하는 로컬 테스트에 사용
 - `assets/fonts/gilche-1bpp-8x16.fnt`: 실제 패치에 사용한 GILCHE 1bpp 8×16 글꼴
   (38,912 bytes, SHA-256 `5BE8F0C52F8FDA3AF4E8B7429D49AE69C4C4BD7D3A59D9C5B848CD1EFAEDB586`)
 - 출처: [한식구 카페 「[폰트] 7x11 길체」](https://cafe.naver.com/hansicgu/824)
   (작성자 에슘, 2008-11-22). 사용자가 제공한 게시글 첨부파일과 저장소의 글꼴 파일은
   바이트 단위로 일치합니다.
 
-## 미공개 v0.1.12-alpha 테스트 수정
+## v0.1.12-alpha 공개 변경 (이전 공개본 v0.1.10 대비)
+
+로컬 테스트 버전 `v0.1.11`의 수정도 함께 포함합니다. 테스트용으로 전달한
+`v0.1.12`의 ROM·IPS 내용은 변경하지 않았습니다.
 
 - 쥐 실험 이벤트의 조수 대사("A test! A test!") 번역 추가
 - 대사 끝의 `CC` 복귀 주소 및 뒤따르는 이벤트 코드 보존 검증 추가
@@ -79,14 +85,15 @@ python scripts/build_robotrek_initial_release.py
   `v0.1.12-alpha`에서 정상 동작함을 확인했습니다. 이 확인은 해당 장면에 한정하며,
   이전 증상의 근본 원인이나 게임 전체의 정상 동작을 확정한 것은 아닙니다.
 
-## 미공개 v0.1.11-alpha 테스트 수정
+### v0.1.11에서 먼저 반영한 수정
 
 - 동굴의 탈영 해커에게 두 번째로 말을 걸면 빈 대화창이 나오는 원인 수정:
   재대화가 직접 참조하는 보석 상자 문단을 원래 주소에 유지하도록 번역 구간 분할
 - 회의실 경비의 공용 대사 미번역 추가
 - 해커의 재대화 진입점과 경비의 두 공용 대사 호출 경로 보존 검증 추가
 
-정적 검증 및 IPS 재적용 일치 검증을 통과했습니다. 두 장면의 실제 플레이 검증은 필요합니다.
+정적 검증 및 IPS 재적용 일치 검증을 통과했습니다. 해커 재대화·회의실 경비 장면은
+별도의 사용자 플레이 확인이 필요합니다. 쥐 실험 장면의 확인을 다른 장면으로 확대하지 않습니다.
 
 ## v0.1.10-alpha 변경
 
