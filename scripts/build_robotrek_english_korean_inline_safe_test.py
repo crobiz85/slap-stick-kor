@@ -3604,6 +3604,26 @@ def fixed_command_padding(length: int) -> bytes:
     return b" " * length
 
 
+def pad_fixed_segment(data: bytes, slot: int) -> bytes:
+    """Keep filler before a trailing close/reset/return command sequence.
+
+    Spaces are rendered glyphs, not no-ops. After C8 closes the window or D1
+    resets its cursor, drawing them can overwrite the shared frame tiles.
+    CC must also remain at the original fixed return address. Parse command
+    boundaries so a Korean glyph index equal to C8/D1/CC is never moved.
+    """
+
+    if len(data) > slot:
+        raise ValueError("fixed segment exceeds its slot")
+    suffix = len(data)
+    for position, command in reversed(scan_commands(data)):
+        command_end = position + 1 + COMMAND_PARAMETERS.get(command, 0)
+        if command_end != suffix or command not in (0xC8, 0xCC, 0xD1):
+            break
+        suffix = position
+    return data[:suffix] + fixed_command_padding(slot - len(data)) + data[suffix:]
+
+
 def apply_speaker_name_table(
     target: bytearray,
     source: bytes,
@@ -3710,18 +3730,7 @@ def apply_screen_text_patches(
             terminator = start + len(encoded)
         else:
             # The external event resumes at this exact marker address.
-            padding = fixed_command_padding(slot - len(encoded))
-            # D1 resets the text page/cursor.  If fixed-address padding follows
-            # it, those visible spaces are processed on the freshly reset page
-            # and can offset or hide the next continuation.  Keep a final page
-            # break immediately beside every fixed handoff/return marker and
-            # put the inert filler first.  The battle reward template ends in
-            # D1+CC and exposed this bug intermittently on the following level
-            # or experience page.
-            if end_command in (0xD3, 0xCC, 0xDE) and encoded.endswith(b"\xD1"):
-                replacement = encoded[:-1] + padding + encoded[-1:]
-            else:
-                replacement = encoded + padding
+            replacement = pad_fixed_segment(encoded, slot)
             target[start:end] = replacement
             changed_end = end
             terminator = None
@@ -4266,14 +4275,11 @@ def main() -> None:
                 # When it is an AFTER_CC entry, CC itself must remain directly
                 # before that address; padding after CC would change the event
                 # engine's resume PC and can leave the dialogue box open.
-                padding = b" " * (slot_size - len(segment))
                 next_kinds = set(original_markers[index + 1][1])
                 if "AFTER_CC" in next_kinds:
                     if not segment or segment[-1] != 0xCC:
                         raise ValueError(f"missing CC before fixed entry: {record_id}")
-                    replacement = segment[:-1] + padding + segment[-1:]
-                else:
-                    replacement = segment + padding
+                replacement = pad_fixed_segment(segment, slot_size)
             else:
                 replacement = segment + b"\xC0" + bytes(slot_size - len(segment))
             target[destination : destination + len(replacement)] = replacement

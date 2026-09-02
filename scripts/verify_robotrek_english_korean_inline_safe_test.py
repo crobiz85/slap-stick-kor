@@ -27,8 +27,26 @@ def merged(ranges: list[tuple[int, int]]) -> list[tuple[int, int]]:
 
 
 def main() -> None:
+    # Padding must precede C8/D1, while a glyph operand with the same byte
+    # value is still data. These expectations are independent of the builder.
+    for data, slot, expected in (
+        (b"A\xC8\xCC", 7, b"A    \xC8\xCC"),
+        (b"A\xD1\xCC", 6, b"A   \xD1\xCC"),
+        (b"A\xC8", 4, b"A  \xC8"),
+        (b"A\xD1", 4, b"A  \xD1"),
+        (b"\xE4\xC8\xCC", 5, b"\xE4\xC8  \xCC"),
+        (b"\xE4\xD1", 4, b"\xE4\xD1  "),
+        (b"A\xC8\xCC", 3, b"A\xC8\xCC"),
+    ):
+        assert build.pad_fixed_segment(data, slot) == expected
     source = build.SOURCE.read_bytes()
     output = build.OUTPUT.read_bytes()
+    # Polon's post-boss cry closes its window before returning to the event.
+    # In v0.1.12, C8 + four rendered spaces + CC overwrote VRAM $C100.
+    # Keep both commands adjacent and the event resume address unchanged.
+    assert output[0x0A9CA4:0x0A9CA6] == source[0x0A9CA4:0x0A9CA6] == b"\xC8\xCC"
+    assert output[0x0A9CA0:0x0A9CA4] == b"    "
+    assert output[0x0A9CA6] == source[0x0A9CA6] == 0xD7
     manifest = json.loads(build.MANIFEST.read_text(encoding="utf-8"))
     catalog = {row["record_id"]: row for row in common.read_catalog()}
     catalog.update({row["record_id"]: row for row in build.read_supplemental_rows()})
@@ -176,11 +194,7 @@ def main() -> None:
             assert int(row["terminator"], 16) == start + len(encoded), record_id
             allowed.append((start, end + 1))
         else:
-            padding = build.fixed_command_padding(slot - len(encoded))
-            if end_command in (0xD3, 0xCC, 0xDE) and encoded.endswith(b"\xD1"):
-                expected = encoded[:-1] + padding + encoded[-1:]
-            else:
-                expected = encoded + padding
+            expected = build.pad_fixed_segment(encoded, slot)
             assert output[start:end] == expected, record_id
             assert output[end] == end_command, record_id
             assert row["terminator"] is None, record_id

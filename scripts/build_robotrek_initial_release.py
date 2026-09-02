@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "v0.1.12-alpha"
+VERSION = "v0.1.13-alpha"
 SOURCE = ROOT / "Robotrek (USA).sfc"
 TARGET = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.sfc"
 BUILD_MANIFEST = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.json"
@@ -99,10 +99,14 @@ def main() -> None:
         ],
         "ips_sha256": sha256(IPS.read_bytes()),
         "notes": [
-            "쥐 실험 이벤트의 '실험! 실험!' 대사 번역 추가; CC 복귀 주소와 뒤따르는 이벤트 코드 보존",
-            "2026-09-02 사용자가 v0.1.12에서 컴퓨터 내부 이동 장면 정상 동작 확인; 근본 원인 및 다른 장면은 별도 검증 대상",
+            "폴론의 대사 종료 뒤 C8과 CC 사이에 남은 공백이 창 테두리 VRAM 타일을 덮어쓰던 문제 수정",
+            "고정 구간 패딩을 창 닫기(C8)·커서 초기화(D1)·복귀(CC) 연속 명령 앞에 배치; 복귀 주소 유지",
+            "제공된 PC 슬롯 1을 Snes9x Libretro로 재생해 대사 종료, 로코코 이동, 후속 NPC 대화의 테두리 정상 확인",
+            "v0.1.13 로컬 테스트본이며 사용자 에뮬레이터 확인 및 게임 전체 진행 검증은 별도; 공개본은 v0.1.12 유지",
         ],
         "prior_version_improvements": [
+            "쥐 실험 이벤트의 '실험! 실험!' 대사 번역 추가; CC 복귀 주소와 뒤따르는 이벤트 코드 보존",
+            "2026-09-02 사용자가 v0.1.12에서 컴퓨터 내부 이동 장면 정상 동작 확인; 근본 원인 및 다른 장면은 별도 검증 대상",
             "동굴의 탈영 해커 재대화가 참조하는 보석 상자 문단을 0x0C9865에 고정해 빈 대화창 원인 수정",
             "회의실 경비의 공용 CF 대사 번역 추가 및 두 호출 경로와 CC 복귀 주소 보존 검증",
             "로코코 구출 후 촌장 대사의 중첩 CF 호출을 제거해 빈 대화창 멈춤 수정",
