@@ -202,6 +202,14 @@ def main() -> None:
 
     assert len(screen_by_id) == manifest["screen_text_spans_applied"]
 
+    # Blackmore repeat-talk jumps from another record into the program hint.
+    # Preserving the D3 operand alone is insufficient if its target moves.
+    assert output[0x0CC3C3:0x0CC3C9] == source[0x0CC3C3:0x0CC3C9] == bytes.fromhex("D9 E0 0A D3 6C C3")
+    assert output[0x0CC36B] == source[0x0CC36B] == 0xD1
+    program_hint = common.encode_text("프로그램은 [PAL:02]요새 컴퓨터[PAL:00]에 있어.[FIN]", code_for)
+    assert output[0x0CC36C:0x0CC36C + len(program_hint)] == program_hint
+    assert "REPORT-0CC36C-BLACKMORE-REPEAT-PROGRAM" in screen_by_id
+
     # Opening pages are independently called by the timed attract-mode
     # script. Only printable bodies may change; every intervening opcode,
     # parameter, window prefix and E1/D0/CC return stays byte-identical.

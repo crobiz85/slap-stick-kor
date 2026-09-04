@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "v0.1.15-alpha"
+VERSION = "v0.1.16-alpha"
 SOURCE = ROOT / "Robotrek (USA).sfc"
 TARGET = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.sfc"
 BUILD_MANIFEST = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.json"
@@ -99,13 +99,17 @@ def main() -> None:
         ],
         "ips_sha256": sha256(IPS.read_bytes()),
         "notes": [
+            "블랙모어 재대화의 D3 대상 0x0CC36C에 요새 컴퓨터 안내 문단을 고정해 빈 대화창에서 끝나지 않던 문제 수정",
+            "열쇠 거래 대사를 분할하고 앞 문단의 D1 및 재대화 점프 명령 보존; 번역 문장과 이벤트 코드는 변경하지 않음",
+            "제공된 v0.1.15 PC 슬롯 1에서 증상 재현 후 수정본의 두 페이지 출력, 대화 종료와 이동 확인",
+            "v0.1.16 로컬 테스트본; 정적 검증과 IPS 재적용 일치 검증 완료, 사용자 플레이 재확인은 별도",
+        ],
+        "prior_version_improvements": [
             "오프닝 내레이션 15개 화면 전체 번역: 우주·생명체, 퀸티닉스·로코코, 해커의 습격, 안드로이드, 주인공의 꿈",
             "각 페이지의 고정 주소와 E1/D0/CC 전환, 창 설정·글꼴/출력 속도 명령을 보존",
             "Snes9x Libretro 새 부팅에서 한글 표시와 자동 장면 전환, 오프닝 종료 후 타이틀 복귀 확인",
             "정적 검증과 IPS 재적용 일치 검증 완료; 2026-09-04 사용자가 오프닝 정상 출력을 확인하고 v0.1.15 공개 승인",
             "사용자 확인 범위는 오프닝에 한정; 이 스크립트는 로컬 후보만 생성하며 자동 게시하지 않음",
-        ],
-        "prior_version_improvements": [
             "2026-09-04 추가 스크린샷 9장의 중복 제외 7개 미번역 구간과 로즈·촌장 후속 2개 구간 번역",
             "상점 공용 구매/구경 선택지, 연구소 안내 선택지, 쿠키 대사, 우주선의 짧은 웃음·반응 대사 반영",
             "창 크기·색상·화자·대기/속도 명령과 선택지 줄 수, CC/DE 고정 복귀 주소 보존 검증",

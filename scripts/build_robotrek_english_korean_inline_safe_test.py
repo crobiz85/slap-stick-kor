@@ -228,15 +228,6 @@ RUNTIME_RECORD_PATCHES += (
      "draft": ("[WIPE]그럼 들어! 요새 폭발 때 간신히 빠져나와 이곳에 왔지.[FIN]"
                "퀸티닉스 때문에 [PAL:02]영원한 청소부[PAL:00]가 됐어! 난 해커의 지도자였는데![FIN]"
                "도망 못 가게 [PAL:02]달리기 금지 프로그램[PAL:00]도 만들었어. 달리면 몸이 아파!")},
-    {"id": "RUNTIME-0CC22C-JANITOR-KEY-DEAL", "start": 0x0CC22C, "end": 0x0CC3C2,
-     "draft": ("[TOP2]또 뭘 원해!? 공주를 찾는다고? 내 알 바 아냐![FIN]"
-               "…잠깐. 요새 전체를 청소하는 건 나야.[FIN]"
-               "그래서 내 [PAL:02]열쇠[PAL:00]는 모든 문을 열지. 와하하![FIN]"
-               "원해? [PAL:02]달리기 금지 프로그램[PAL:00]을 멈추면 주지.[FIN]"
-               "[PAL:02]노란 암호[PAL:00]도 알려 주마. 다니기 편할 거야.[FIN]"
-               " [NAM:00], [PAL:02]노란 암호[PAL:00]를 익혔다![FIN]"
-               "프로그램은 [PAL:02]요새 컴퓨터[PAL:00]에 있어.[FIN]"
-               "알았으면 가! 공주가 걱정되지?")},
     {"id": "RUNTIME-0CC3C3-PROGRAM-DESTROYED", "start": 0x0CC3C3, "end": 0x0CC3EE,
      "draft": "[TOP2][SPEAKER:0A][JMP][BYTE:6C][BYTE:C3][TOP2][SPEAKER:0A]…뭐!? 프로그램을 없앴어?"},
     {"id": "RUNTIME-0CC3EF-JANITOR-FREE", "start": 0x0CC3EF, "end": 0x0CC41A,
@@ -3201,6 +3192,24 @@ SCREEN_TEXT_PATCHES += (
         "end_command": 0xC0,
         "draft": "[DFT]…아버지…\n…미안해요…",
     },
+)
+
+# Blackmore's repeat-talk wrapper at 0CC3C3 jumps into the previous record
+# at 0CC36C. Preserve that external entry and its preceding D1, just as for
+# the deserter's repeat-talk paragraph; do not compact this as one C0 record.
+SCREEN_TEXT_PATCHES += (
+    {"id": "REPORT-0CC22C-JANITOR-KEY-DEAL", "start": 0x0CC22C, "end": 0x0CC36B,
+     "end_command": 0xD1,
+     "draft": ("[BYTE:D9]또 뭘 원해!? 공주를 찾는다고? 내 알 바 아냐![FIN]"
+               "…잠깐. 요새 전체를 청소하는 건 나야.[FIN]"
+               "그래서 내 [PAL:02]열쇠[PAL:00]는 모든 문을 열지. 와하하![FIN]"
+               "원해? [PAL:02]달리기 금지 프로그램[PAL:00]을 멈추면 주지.[FIN]"
+               "[PAL:02]노란 암호[PAL:00]도 알려 주마. 다니기 편할 거야.[FIN]"
+               " [NAM:00], [PAL:02]노란 암호[PAL:00]를 익혔다!")},
+    {"id": "REPORT-0CC36C-BLACKMORE-REPEAT-PROGRAM", "start": 0x0CC36C, "end": 0x0CC3C2,
+     "end_command": 0xC0,
+     "draft": ("프로그램은 [PAL:02]요새 컴퓨터[PAL:00]에 있어.[FIN]"
+               "알았으면 가! 공주가 걱정되지?")},
 )
 
 # Attract-mode opening narration. Each page is called at a fixed address by
