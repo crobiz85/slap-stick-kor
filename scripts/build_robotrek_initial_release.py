@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "v0.1.16-alpha"
+VERSION = "v0.1.17-alpha"
 SOURCE = ROOT / "Robotrek (USA).sfc"
 TARGET = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.sfc"
 BUILD_MANIFEST = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.json"
@@ -99,12 +99,18 @@ def main() -> None:
         ],
         "ips_sha256": sha256(IPS.read_bytes()),
         "notes": [
+            "사용자 스크린샷을 바탕으로 엔딩 별도 연출용 대사 27개 화면 번역",
+            "엔딩 페이지별 D0/E1/CC 고정 전환 주소와 창 설정, 화자, 색상, 대기 명령 보존 검증",
+            "왕자에게 말하는 짧은 대사와 최종 추격 전 나기사의 저장 안내·선택지 번역",
+            "저장 거절 분기의 D3 대상 0x0CDDA9에 부모의 응원 문단을 고정하고 저장 완료 안내와 분리",
+            "정적 검증 및 별도 렌더링 테스트의 엔딩 27개 화면 확인; 엔딩 저장 파일이 없어 실제 전체 이벤트 진행 검증은 미완료",
+            "v0.1.17 로컬 테스트본; IPS 재적용 일치 검증, Git 공개 업데이트 없음",
+        ],
+        "prior_version_improvements": [
             "블랙모어 재대화의 D3 대상 0x0CC36C에 요새 컴퓨터 안내 문단을 고정해 빈 대화창에서 끝나지 않던 문제 수정",
             "열쇠 거래 대사를 분할하고 앞 문단의 D1 및 재대화 점프 명령 보존; 번역 문장과 이벤트 코드는 변경하지 않음",
             "제공된 v0.1.15 PC 슬롯 1에서 증상 재현 후 수정본의 두 페이지 출력, 대화 종료와 이동 확인",
             "v0.1.16 로컬 테스트본; 정적 검증과 IPS 재적용 일치 검증 완료, 사용자 플레이 재확인은 별도",
-        ],
-        "prior_version_improvements": [
             "오프닝 내레이션 15개 화면 전체 번역: 우주·생명체, 퀸티닉스·로코코, 해커의 습격, 안드로이드, 주인공의 꿈",
             "각 페이지의 고정 주소와 E1/D0/CC 전환, 창 설정·글꼴/출력 속도 명령을 보존",
             "Snes9x Libretro 새 부팅에서 한글 표시와 자동 장면 전환, 오프닝 종료 후 타이틀 복귀 확인",

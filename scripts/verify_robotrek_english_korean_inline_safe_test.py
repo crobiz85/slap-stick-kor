@@ -228,6 +228,31 @@ def main() -> None:
         if not any(start <= address < end for start, end in intro_ranges):
             assert output[address] == source[address], f"opening script changed at {address:06X}"
 
+    # Ending pages retain all control operands and fixed timed handoffs.
+    ending_ranges = [(int(s["start"]), int(s["end"])) for s in build.ENDING_NARRATION_PATCHES]
+    assert len(ending_ranges) == 27
+    def ending_signature(data: bytes) -> list[bytes]:
+        return [data[p:p + 1 + build.COMMAND_PARAMETERS.get(c, 0)]
+                for p, c in build.scan_commands(data)
+                if c not in (0xCD, 0xE3, 0xE4, 0xE5, 0xE6, 0xE7)]
+    for spec in build.ENDING_NARRATION_PATCHES:
+        start, end = int(spec["start"]), int(spec["end"])
+        encoded = common.encode_text(str(spec["draft"]), code_for)
+        assert ending_signature(encoded) == ending_signature(source[start:end]), spec["id"]
+        assert output[end] == source[end] == spec["end_command"]
+        if source[end - 1] == 0xC8:
+            assert output[end - 1:end + 1] == b"\xC8\xCC", spec["id"]
+    for lo, hi in ((0x04DDB5, 0x04E365), (0x0CEABD, 0x0CED64)):
+        for address in range(lo, hi):
+            if not any(start <= address < end for start, end in ending_ranges):
+                assert output[address] == source[address], f"ending event changed at {address:06X}"
+    assert output[0x0CDE18:0x0CDE1B] == source[0x0CDE18:0x0CDE1B] == bytes.fromhex("D3 A9 DD")
+    assert output[0x0CDDA9:0x0CDDAB] == source[0x0CDDA9:0x0CDDAB] == bytes.fromhex("C9 3C")
+    assert output[0x0CDD9E] == source[0x0CDD9E] == 0xCC
+    choice_spec = next(s for s in build.SCREEN_TEXT_PATCHES if s["start"] == 0x0CDCEF)
+    assert str(choice_spec["draft"]).split("[FIN]")[-1].count("\n") == 2
+    assert output[0x0CCB9C:0x0CCBA3] == source[0x0CCB9C:0x0CCBA3]
+
     # 2026-09-04 screenshots: preserve window geometry, speaker/palette,
     # speed/pause operands and both shared-choice layouts, not merely text.
     new_screen_starts = {0x05F5F1, 0x08CD9A, 0x08CDB4, 0x09C508,

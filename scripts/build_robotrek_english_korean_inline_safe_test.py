@@ -358,9 +358,6 @@ RUNTIME_RECORD_PATCHES += (
      "draft": ("[TOP]제법이군. 재미있어.[FIN]"
                "아직 용기가 남았다면 따라와![FIN]"
                "기계 안으로 들어가! 재미있는 걸 보여 주지.")},
-    {"id": "RUNTIME-0CDD9F-PARENTS-MESSAGE", "start": 0x0CDD9F, "end": 0x0CDE05,
-     "draft": ("[WIPE][PAU:30]저장됐다.[PAU:3C] [NAM:00], 아빠와 난 널 사랑해.[FIN]"
-               "친구들에게도 넌 소중할 거야. 조심하고 힘내렴.")},
     {"id": "RUNTIME-0CDE5F-PASSWORD-ENTERED", "start": 0x0CDE5F, "end": 0x0CDE78,
      "draft": "[TOP] [NAM:00], 암호를 입력했다."},
 )
@@ -3248,6 +3245,83 @@ OPENING_NARRATION_PATCHES = (
      "end_command": 0xCC, "draft": "아버지처럼\n발명가를 꿈꿨다."},
 )
 SCREEN_TEXT_PATCHES += OPENING_NARRATION_PATCHES
+
+# Timed ending pages: keep each D0/E1/CC boundary and the intervening
+# C1/C7/DC/D6 setup at its original address. Retain every pause and speaker.
+ENDING_NARRATION_PATCHES = (
+    {"id": "ENDING-04DDC0", "start": 0x04DDC0, "end": 0x04DDE2, "end_command": 0xD0,
+     "draft": "[SPEAKER:03]다 헛수고였나?\n테트론은…[PAU:78]"},
+    {"id": "ENDING-04DDE3", "start": 0x04DDE3, "end": 0x04DE00, "end_command": 0xD0,
+     "draft": "[SPEAKER:01]그냥 두는 게\n좋겠어요.[PAU:3C]"},
+    {"id": "ENDING-04DE01", "start": 0x04DE01, "end": 0x04DE14, "end_command": 0xD0,
+     "draft": "이제 잠들었죠.[PAU:78]"},
+    {"id": "ENDING-04DE15", "start": 0x04DE15, "end": 0x04DE3D, "end_command": 0xCC,
+     "draft": "아주\n[PAU:3C]깊고 [PAU:1E]깊은 [PAU:1E]잠에…[PAU:B4][BYTE:C8]"},
+    {"id": "ENDING-04DFE0", "start": 0x04DFE0, "end": 0x04DFF4, "end_command": 0xD0,
+     "draft": "[SPEAKER:03][NAM:00]!\n뭐 해?[PAU:78]"},
+    {"id": "ENDING-04DFF9", "start": 0x04DFF9, "end": 0x04E02B, "end_command": 0xD0,
+     "draft": "뭐?[PAU:28] 해커 두목을\n쓰러뜨렸다고?!\n[PAU:50]대단한데![PAU:78]"},
+    {"id": "ENDING-04E030", "start": 0x04E030, "end": 0x04E065, "end_command": 0xE1,
+     "draft": "하면 되는구나.\n못 미더운 녀석인 줄\n알았는데.[PAU:B4]"},
+    {"id": "ENDING-04E097", "start": 0x04E097, "end": 0x04E0B3, "end_command": 0xE1,
+     "draft": "[SPEAKER:01][NAM:00], 무사하구나!\n다행이야[PAU:B4]"},
+    {"id": "ENDING-04E123", "start": 0x04E123, "end": 0x04E147, "end_command": 0xD0,
+     "draft": "[SPEAKER:04]잘했어, [NAM:00]!\n기뻐! 대특종이야![PAU:64]"},
+    {"id": "ENDING-04E14C", "start": 0x04E14C, "end": 0x04E17C, "end_command": 0xD0,
+     "draft": "제목은!\n[PAL:02]로코코 소년, 세계 구하다!\n[PAL:00][PAU:3C]어때?[PAU:78]"},
+    {"id": "ENDING-04E181", "start": 0x04E181, "end": 0x04E1A0, "end_command": 0xE1,
+     "draft": "[SPEAKER:03]…너 정말\n[PAU:3C]기자 맞아?[PAU:B4]"},
+    {"id": "ENDING-04E1A6", "start": 0x04E1A6, "end": 0x04E1C8, "end_command": 0xD0,
+     "draft": "[SPEAKER:04]잠깐! 뭐 하는 거야!\n서둘러!![PAU:78]"},
+    {"id": "ENDING-04E1CD", "start": 0x04E1CD, "end": 0x04E1E8, "end_command": 0xE1,
+     "draft": "[SPEAKER:03]그런데…\n테트론은?[PAU:B4]"},
+    {"id": "ENDING-04E239", "start": 0x04E239, "end": 0x04E262, "end_command": 0xD0,
+     "draft": "[SPEAKER:02][NAM:00], 잘했다.\n조상님들도 기뻐하신다![PAU:78]"},
+    {"id": "ENDING-04E267", "start": 0x04E267, "end": 0x04E28C, "end_command": 0xD0,
+     "draft": "가토는 인간에겐\n벅찬 힘을 얻었어…[PAU:78]"},
+    {"id": "ENDING-04E291", "start": 0x04E291, "end": 0x04E2B7, "end_command": 0xD0,
+     "draft": "발명에 생명을 주는 건\n쓰는 사람이야.[PAU:50]"},
+    {"id": "ENDING-04E2BC", "start": 0x04E2BC, "end": 0x04E2ED, "end_command": 0xD0,
+     "draft": "잘 쓰면 선이 되고,\n잘못 쓰면\n악이 되지…[PAU:78]"},
+    {"id": "ENDING-04E2F2", "start": 0x04E2F2, "end": 0x04E336, "end_command": 0xE1,
+     "draft": "테트론은 만든 이와\n쓰는 이의 마음이\n서로 맞물리는\n수수께끼란다.[PAU:B4]"},
+    {"id": "ENDING-04E33C", "start": 0x04E33C, "end": 0x04E364, "end_command": 0xE1,
+     "draft": "[SPEAKER:02]시간의 흐름에\n휩쓸리겠어.\n탈출하자![PAU:B4]"},
+    {"id": "ENDING-0CEAC8", "start": 0x0CEAC8, "end": 0x0CEAE8, "end_command": 0xD0,
+     "draft": "[SPEAKER:02]나기사! 서둘러!\n[NAM:00], 위험해!![PAU:50]"},
+    {"id": "ENDING-0CEAED", "start": 0x0CEAED, "end": 0x0CEB27, "end_command": 0xCC,
+     "draft": "[SPEAKER:01]괜찮아요, 박사님.\n[NAM:00]도 잘하고 있어요.\n편애하시네요.[PAU:50][BYTE:C8]"},
+    {"id": "ENDING-0CEB33", "start": 0x0CEB33, "end": 0x0CEB65, "end_command": 0xD0,
+     "draft": "[SPEAKER:03]농담 마!\n겨우 빠져나왔는데\n왜 다시 가는 거야![PAU:64]"},
+    {"id": "ENDING-0CEB6A", "start": 0x0CEB6A, "end": 0x0CEB96, "end_command": 0xD0,
+     "draft": "[SPEAKER:04]넌 안 가도 돼.\n특종 냄새야!\n난 갈 거야![PAU:64]"},
+    {"id": "ENDING-0CEB9B", "start": 0x0CEB9B, "end": 0x0CEBC6, "end_command": 0xCC,
+     "draft": "[SPEAKER:03]지금 누구 우주선을\n타고 있는 줄 알아!?[PAU:64][BYTE:C8]"},
+    {"id": "ENDING-0CEC0E", "start": 0x0CEC0E, "end": 0x0CEC45, "end_command": 0xCC,
+     "draft": "[SPEAKER:02]아니,[PAU:1E] 그런 게!\n[PAU:14]하지만…[PAU:1E] 아무튼,\n[PAU:1E]가자![PAU:64][BYTE:C8]"},
+    {"id": "ENDING-0CECBF", "start": 0x0CECBF, "end": 0x0CECEF, "end_command": 0xCC,
+     "draft": "[SPEAKER:04]투덜대지 마!!\n서둘러! 이러다\n특종 놓치겠어![PAU:64][BYTE:C8]"},
+    {"id": "ENDING-0CED35", "start": 0x0CED35, "end": 0x0CED63, "end_command": 0xCC,
+     "draft": "[SPEAKER:03]…못 말리는 여자군!\n[PAU:1E]특종 냄새가 뭔데!?[PAU:78][BYTE:C8]"},
+)
+SCREEN_TEXT_PATCHES += ENDING_NARRATION_PATCHES
+
+SCREEN_TEXT_PATCHES += (
+    {"id": "REPORT-0CCBA3-PRINCE-THROUGH", "start": 0x0CCBA3, "end": 0x0CCBB9, "end_command": 0xC0,
+     "draft": "왕자, [PAU:14]넌 끝이야…"},
+    {"id": "REPORT-0CDCEF-NAGISA-SAVE-CHOICE", "start": 0x0CDCEF, "end": 0x0CDD9E, "end_command": 0xCC,
+     "draft": ("[DFT][SPEAKER:01][NAM:00].\n[PAU:1E]다 들었어.\n가토를 쫓아갈 거니?[FIN]"
+               "말려도 소용없겠지.\n[PAU:28]혼자 떠날 땐 불안했지만,\n이젠 네 길을 찾았구나.[FIN]"
+               "앞일은 모르니 저장할래?\n 네.\n 괜찮아요.")},
+    # The refusal branch jumps directly to CDDA9, past the save confirmation.
+    {"id": "REPORT-0CDD9F-SAVED", "start": 0x0CDD9F, "end": 0x0CDDA9, "end_command": 0xC9,
+     "draft": "[WIPE][PAU:30]저장됨."},
+    {"id": "REPORT-0CDDA9-PARENTS-MESSAGE", "start": 0x0CDDA9, "end": 0x0CDE05, "end_command": 0xC0,
+     "draft": ("[PAU:3C][NAM:00],[PAU:1E]\n아빠와 난 널 사랑해.[FIN]"
+               "친구들에게도 넌 소중할 거야.\n[PAU:28]그러니 [PAU:14]조심하고,\n[PAU:28]힘내렴.")},
+    {"id": "REPORT-0CDE06-NO-SAVE", "start": 0x0CDE06, "end": 0x0CDE18, "end_command": 0xD3,
+     "draft": "[WIPE]…알았어.\n"},
+)
 
 # Screens reported 2026-09-04. These independent windows/choice tails are
 # absent from the D7-only catalogue; preserve all fixed CC/DE handoffs.
