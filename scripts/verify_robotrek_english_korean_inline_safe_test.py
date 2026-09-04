@@ -202,6 +202,34 @@ def main() -> None:
 
     assert len(screen_by_id) == manifest["screen_text_spans_applied"]
 
+    # 2026-09-04 screenshots: preserve window geometry, speaker/palette,
+    # speed/pause operands and both shared-choice layouts, not merely text.
+    new_screen_starts = {0x05F5F1, 0x08CD9A, 0x08CDB4, 0x09C508,
+                         0x09EF77, 0x09EFEA, 0x09F01F, 0x0AE47B, 0x0AE981}
+    important_commands = {0xC1, 0xC2, 0xC3, 0xC7, 0xC8, 0xC9,
+                          0xCC, 0xD1, 0xD3, 0xD7, 0xD8, 0xD9, 0xDC, 0xDE, 0xE0}
+    for spec in build.SCREEN_TEXT_PATCHES:
+        start, end = int(spec["start"]), int(spec["end"])
+        if start not in new_screen_starts:
+            continue
+        encoded = common.encode_text(str(spec["draft"]), code_for)
+        def signature(data: bytes) -> list[tuple[int, bytes]]:
+            return [(command, data[position + 1:position + 1 + build.COMMAND_PARAMETERS.get(command, 0)])
+                    for position, command in build.scan_commands(data)
+                    if command in important_commands]
+        assert signature(encoded) == signature(source[start:end]), spec["id"]
+        # English words must not survive inside the translated payload.
+        operands = {i for pos, cmd in build.scan_commands(encoded)
+                    for i in range(pos, pos + 1 + build.COMMAND_PARAMETERS.get(cmd, 0))}
+        assert not any((65 <= value <= 90 or 97 <= value <= 122)
+                       for i, value in enumerate(encoded) if i not in operands), spec["id"]
+        if start in (0x05F5F1, 0x0AE981):
+            new_lines = [p for p, c in build.scan_commands(encoded) if c == 0xCD]
+            old_lines = [p for p, c in build.scan_commands(source[start:end]) if c == 0xCD]
+            assert len(new_lines) == len(old_lines) == (3 if start == 0x05F5F1 else 1)
+            assert output[end] == 0xCC
+            assert output[end + 1:end + 17] == source[end + 1:end + 17]
+
     speaker_rows = manifest["speaker_name_applied"]
     assert len(speaker_rows) == len(build.SPEAKER_NAME_DRAFTS)
     assert len(speaker_rows) == manifest["speaker_names_applied"]

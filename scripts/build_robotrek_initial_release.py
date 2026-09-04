@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "v0.1.13-alpha"
+VERSION = "v0.1.14-alpha"
 SOURCE = ROOT / "Robotrek (USA).sfc"
 TARGET = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.sfc"
 BUILD_MANIFEST = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.json"
@@ -99,12 +99,16 @@ def main() -> None:
         ],
         "ips_sha256": sha256(IPS.read_bytes()),
         "notes": [
+            "2026-09-04 추가 스크린샷 9장의 중복 제외 7개 미번역 구간과 로즈·촌장 후속 2개 구간 번역",
+            "상점 공용 구매/구경 선택지, 연구소 안내 선택지, 쿠키 대사, 우주선의 짧은 웃음·반응 대사 반영",
+            "창 크기·색상·화자·대기/속도 명령과 선택지 줄 수, CC/DE 고정 복귀 주소 보존 검증",
+            "정적 검증과 IPS 재적용 일치 검증 완료; 새 제보 장면의 실제 플레이 확인은 별도",
+            "v0.1.14 로컬 테스트본; GitHub 공개본은 v0.1.12 유지",
+        ],
+        "prior_version_improvements": [
             "폴론의 대사 종료 뒤 C8과 CC 사이에 남은 공백이 창 테두리 VRAM 타일을 덮어쓰던 문제 수정",
             "고정 구간 패딩을 창 닫기(C8)·커서 초기화(D1)·복귀(CC) 연속 명령 앞에 배치; 복귀 주소 유지",
             "제공된 PC 슬롯 1을 Snes9x Libretro로 재생해 대사 종료, 로코코 이동, 후속 NPC 대화의 테두리 정상 확인",
-            "v0.1.13 로컬 테스트본이며 사용자 에뮬레이터 확인 및 게임 전체 진행 검증은 별도; 공개본은 v0.1.12 유지",
-        ],
-        "prior_version_improvements": [
             "쥐 실험 이벤트의 '실험! 실험!' 대사 번역 추가; CC 복귀 주소와 뒤따르는 이벤트 코드 보존",
             "2026-09-02 사용자가 v0.1.12에서 컴퓨터 내부 이동 장면 정상 동작 확인; 근본 원인 및 다른 장면은 별도 검증 대상",
             "동굴의 탈영 해커 재대화가 참조하는 보석 상자 문단을 0x0C9865에 고정해 빈 대화창 원인 수정",

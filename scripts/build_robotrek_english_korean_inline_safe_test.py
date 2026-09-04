@@ -3203,6 +3203,37 @@ SCREEN_TEXT_PATCHES += (
     },
 )
 
+# Screens reported 2026-09-04. These independent windows/choice tails are
+# absent from the D7-only catalogue; preserve all fixed CC/DE handoffs.
+SCREEN_TEXT_PATCHES += (
+    {"id": "REPORT-05F5F1-SHARED-SHOP-CHOICE", "start": 0x05F5F1, "end": 0x05F621,
+     "end_command": 0xCC, "draft": "뭘 찾니?\n필요한 건?\n 살게요.\n 구경할게요."},
+    {"id": "REPORT-08CD9A-SHIP-CHUCKLE", "start": 0x08CD9A, "end": 0x08CDB3,
+     "end_command": 0xC0,
+     "draft": "[BYTE:C1][BYTE:08][BYTE:16][BYTE:C7][BYTE:07][BYTE:01][BYTE:00][PAL:03][NXT][BYTE:06]흐흐흐.[NXT][BYTE:00]"},
+    {"id": "REPORT-08CDB4-SHIP-OVERHEARD", "start": 0x08CDB4, "end": 0x08CDC6,
+     "end_command": 0xC0,
+     "draft": "[BYTE:C1][BYTE:04][BYTE:16][BYTE:C7][BYTE:0C][BYTE:01][BYTE:00][PAL:03]들었어!"},
+    {"id": "REPORT-09C508-COOKIE-THEN-I", "start": 0x09C508, "end": 0x09C518,
+     "end_command": 0xC0, "draft": "[BYTE:D9][SPEAKER:12]그럼[PAU:1E]난…"},
+    {"id": "REPORT-09EF77-ROSE-MAYOR-FAVOR", "start": 0x09EF77, "end": 0x09EFE9,
+     "end_command": 0xDE,
+     "draft": ("[BYTE:D8][SPEAKER:0B]촌장님, 부탁이 있어요…[FIN]"
+               "[SPEAKER:09]뭔가? 돈? 뭐든 말하게.[FIN]"
+               "[SPEAKER:0B]정말요?\n[PAU:1E][NAM:00]의 돌 세 개가 갖고 싶어요.")},
+    {"id": "REPORT-09EFEA-MAYOR-OTHER-STONES", "start": 0x09EFEA, "end": 0x09F01E,
+     "end_command": 0xDE,
+     "draft": "[BYTE:D8][SPEAKER:09]남의 물건?\n[PAU:1E]다른 건 안 되나?\n새로 사 주지."},
+    {"id": "REPORT-09F01F-ROSE-ONLY-THOSE", "start": 0x09F01F, "end": 0x09F04B,
+     "end_command": 0xC0,
+     "draft": "[BYTE:D8][SPEAKER:0B]그 돌이어야 해요!\n[PAU:28]꼭[PAU:1E] 필요[PAU:1E]해요."},
+    {"id": "REPORT-0AE47B-SO-THATS-IT", "start": 0x0AE47B, "end": 0x0AE48D,
+     "end_command": 0xC0,
+     "draft": "[BYTE:C1][BYTE:04][BYTE:16][BYTE:C7][BYTE:0C][BYTE:01][BYTE:00]그랬군…!"},
+    {"id": "REPORT-0AE981-LAB-ESCORT-CHOICE", "start": 0x0AE981, "end": 0x0AE99A,
+     "end_command": 0xCC, "draft": " 생각해 볼게요.\n 싫어요."},
+)
+
 # Runtime re-audit batch 14: remaining battle/shop/invention system prompts.
 SCREEN_TEXT_PATCHES += (
     {"id": "SYSTEM-01CF16-ROBOT-SELECT", "start": 0x01CF16, "end": 0x01CF2C, "end_command": 0xCC,
