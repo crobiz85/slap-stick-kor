@@ -3203,6 +3203,43 @@ SCREEN_TEXT_PATCHES += (
     },
 )
 
+# Attract-mode opening narration. Each page is called at a fixed address by
+# the timed scene script. Patch only the printable body, retaining the C1/C7
+# window setup, DC/D6 font/speed setup and every E1/D0/CC handoff in place.
+OPENING_NARRATION_PATCHES = (
+    {"id": "INTRO-04E74B-SPACE", "start": 0x04E74B, "end": 0x04E754,
+     "end_command": 0xE1, "draft": " 우주…"},
+    {"id": "INTRO-04E75A-LIFE", "start": 0x04E75A, "end": 0x04E779,
+     "end_command": 0xE1, "draft": " 다양한 생명체가\n 살아가는 곳."},
+    {"id": "INTRO-04E77F-QUINTENIX", "start": 0x04E77F, "end": 0x04E7C4,
+     "end_command": 0xCC, "draft": "우주 어딘가의 퀸티닉스 행성.\n그곳에는 로코코라는\n마을이 있었다."},
+    {"id": "INTRO-04E840-ROCOCO", "start": 0x04E840, "end": 0x04E875,
+     "end_command": 0xE1, "draft": "로코코는 문화가 꽃피는\n작고 살기 좋은\n마을이었다."},
+    {"id": "INTRO-04E87B-HAPPY", "start": 0x04E87B, "end": 0x04E893,
+     "end_command": 0xE1, "draft": "모두 행복하게\n살았다."},
+    {"id": "INTRO-04E899-PEACE", "start": 0x04E899, "end": 0x04E8B1,
+     "end_command": 0xCC, "draft": "평화는 오래가지\n못했다."},
+    {"id": "INTRO-04E92A-HACKERS", "start": 0x04E92A, "end": 0x04E96B,
+     "end_command": 0xE1, "draft": "어느 날, 해커라는\n흉악한 해적 무리가\n로코코에 나타났다."},
+    {"id": "INTRO-04E971-EVIL", "start": 0x04E971, "end": 0x04E98B,
+     "end_command": 0xCC, "draft": "곳곳에 악행을\n퍼뜨렸다…"},
+    {"id": "INTRO-04E9E7-ROBBING", "start": 0x04E9E7, "end": 0x04E9F8,
+     "end_command": 0xE1, "draft": "\n   …약탈…"},
+    {"id": "INTRO-04EA00-DESTROYING", "start": 0x04EA00, "end": 0x04EA13,
+     "end_command": 0xE1, "draft": "\n  …파괴…"},
+    {"id": "INTRO-04EA19-DISRUPTING", "start": 0x04EA19, "end": 0x04EA2C,
+     "end_command": 0xCC, "draft": "\n  …혼란…"},
+    {"id": "INTRO-04EACC-ANDROIDS", "start": 0x04EACC, "end": 0x04EB06,
+     "end_command": 0xE1, "draft": "해커가 만든 안드로이드에\n사람들의 불안은\n커져 갔다…"},
+    {"id": "INTRO-04EB0C-MYSTERY", "start": 0x04EB0C, "end": 0x04EB33,
+     "end_command": 0xCC, "draft": "어디서, 왜 왔는지\n아무도 몰랐다…"},
+    {"id": "INTRO-04EBF3-SON", "start": 0x04EBF3, "end": 0x04EC16,
+     "end_command": 0xE1, "draft": "발명가의 아들이\n로코코로 이사 왔다."},
+    {"id": "INTRO-04EC1C-DREAM", "start": 0x04EC1C, "end": 0x04EC3E,
+     "end_command": 0xCC, "draft": "아버지처럼\n발명가를 꿈꿨다."},
+)
+SCREEN_TEXT_PATCHES += OPENING_NARRATION_PATCHES
+
 # Screens reported 2026-09-04. These independent windows/choice tails are
 # absent from the D7-only catalogue; preserve all fixed CC/DE handoffs.
 SCREEN_TEXT_PATCHES += (

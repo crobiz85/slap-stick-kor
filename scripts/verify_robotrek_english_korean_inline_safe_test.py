@@ -202,6 +202,24 @@ def main() -> None:
 
     assert len(screen_by_id) == manifest["screen_text_spans_applied"]
 
+    # Opening pages are independently called by the timed attract-mode
+    # script. Only printable bodies may change; every intervening opcode,
+    # parameter, window prefix and E1/D0/CC return stays byte-identical.
+    intro_ranges = [(int(spec["start"]), int(spec["end"]))
+                    for spec in build.OPENING_NARRATION_PATCHES]
+    assert len(intro_ranges) == 15
+    for spec in build.OPENING_NARRATION_PATCHES:
+        start, end = int(spec["start"]), int(spec["end"])
+        assert output[start - 2:start] == source[start - 2:start] == b"\xD6\x00"
+        assert output[end] == source[end] == int(spec["end_command"])
+        encoded = common.encode_text(str(spec["draft"]), code_for)
+        commands = build.scan_commands(encoded)
+        assert any(0xE4 <= c <= 0xE7 for _, c in commands), spec["id"]
+        assert all(c in (0xCD, 0xE4, 0xE5, 0xE6, 0xE7) for _, c in commands), spec["id"]
+    for address in range(0x04E700, 0x04EC40):
+        if not any(start <= address < end for start, end in intro_ranges):
+            assert output[address] == source[address], f"opening script changed at {address:06X}"
+
     # 2026-09-04 screenshots: preserve window geometry, speaker/palette,
     # speed/pause operands and both shared-choice layouts, not merely text.
     new_screen_starts = {0x05F5F1, 0x08CD9A, 0x08CDB4, 0x09C508,

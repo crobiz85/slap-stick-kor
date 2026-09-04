@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "v0.1.14-alpha"
+VERSION = "v0.1.15-alpha"
 SOURCE = ROOT / "Robotrek (USA).sfc"
 TARGET = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.sfc"
 BUILD_MANIFEST = ROOT / "build" / "robotrek-usa-korean-dialogue-inline-safe-test.json"
@@ -99,13 +99,16 @@ def main() -> None:
         ],
         "ips_sha256": sha256(IPS.read_bytes()),
         "notes": [
+            "오프닝 내레이션 15개 화면 전체 번역: 우주·생명체, 퀸티닉스·로코코, 해커의 습격, 안드로이드, 주인공의 꿈",
+            "각 페이지의 고정 주소와 E1/D0/CC 전환, 창 설정·글꼴/출력 속도 명령을 보존",
+            "Snes9x Libretro 새 부팅에서 한글 표시와 자동 장면 전환, 오프닝 종료 후 타이틀 복귀 확인",
+            "정적 검증과 IPS 재적용 일치 검증 완료; v0.1.15 로컬 테스트본이며 GitHub 공개본은 v0.1.12 유지",
+        ],
+        "prior_version_improvements": [
             "2026-09-04 추가 스크린샷 9장의 중복 제외 7개 미번역 구간과 로즈·촌장 후속 2개 구간 번역",
             "상점 공용 구매/구경 선택지, 연구소 안내 선택지, 쿠키 대사, 우주선의 짧은 웃음·반응 대사 반영",
             "창 크기·색상·화자·대기/속도 명령과 선택지 줄 수, CC/DE 고정 복귀 주소 보존 검증",
             "정적 검증과 IPS 재적용 일치 검증 완료; 새 제보 장면의 실제 플레이 확인은 별도",
-            "v0.1.14 로컬 테스트본; GitHub 공개본은 v0.1.12 유지",
-        ],
-        "prior_version_improvements": [
             "폴론의 대사 종료 뒤 C8과 CC 사이에 남은 공백이 창 테두리 VRAM 타일을 덮어쓰던 문제 수정",
             "고정 구간 패딩을 창 닫기(C8)·커서 초기화(D1)·복귀(CC) 연속 명령 앞에 배치; 복귀 주소 유지",
             "제공된 PC 슬롯 1을 Snes9x Libretro로 재생해 대사 종료, 로코코 이동, 후속 NPC 대화의 테두리 정상 확인",
