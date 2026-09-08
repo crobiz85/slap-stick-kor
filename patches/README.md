@@ -2,15 +2,14 @@
 
 이 디렉터리에는 원본 ROM이 있어야 사용할 수 있는 IPS 패치만 둡니다.
 
-- 현재 공개 버전: [`robotrek-korean-v0.1.15-alpha.ips`](robotrek-korean-v0.1.15-alpha.ips)
+- 현재 공개 버전: [`robotrek-korean-v0.1.17-alpha.ips`](robotrek-korean-v0.1.17-alpha.ips)
 - 적용 대상: 무헤더 `Robotrek (USA)`
 - 원본 SHA-256: `1E2DED7B1E350449B7A99B7EC414525E4B9B086C416DEEEE5EB3E48E032C46BD`
-- IPS SHA-256: `3C31613673DC9B6C6BC5BFAC75F14296D96D69F7A9E55287ADEAB53F6F45D34A`
+- IPS SHA-256: `884C3109C48AA9EDCDF1C261960BF1AF8758016CE8D216A1FD03FF8C49FF2DC6`
 
-2026-09-04 사용자가 오프닝 정상 출력을 확인하고 공개를 요청한 테스트본과
-동일한 파일입니다. 로컬 v0.1.13의 테두리 수정과 v0.1.14의 추가 번역도 포함합니다.
-사용자 확인은 오프닝에 한정되며 다른 장면의 진행 검증은 남아 있습니다.
-이전 `v0.1.10-alpha`와 `v0.1.12-alpha` IPS는 비교·복구용으로 보존합니다.
+2026-09-08 사용자가 엔딩 전체의 정상 진행을 확인하고 공개를 요청한 테스트본과
+동일한 파일입니다. v0.1.16의 블랙모어 재대화 멈춤 수정과 v0.1.17의 엔딩 대사 번역을
+포함합니다. 이전 공개 IPS는 비교·복구용으로 보존합니다.
 
 원본 ROM, 패치 적용 완료 ROM, BPS 및 배포 ZIP은 포함하지 않습니다.
 
